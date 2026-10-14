@@ -9,6 +9,7 @@
 - [趋势与灵感](trends/INDEX.md)
 - [网站目录](sources/INDEX.md)
 - [Agent 工作规范](AGENTS.md)
+- [研究执行手册](docs/agent/RESEARCH-WORKFLOW.md)
 - [机会索引](ideas/INDEX.md)
 - [运行状态](research/STATE.md)
 
