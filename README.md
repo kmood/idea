@@ -5,7 +5,8 @@
 工作顺序：交流网站收录 → 讨论采样与需求核验 → 机会评分 → 小规模验证。
 
 - [已确认需求意图](docs/intent/personal-opportunity-library.md)
-- [能力划分草案](CAPABILITY-MAP.md)
+- [已确认能力划分](CAPABILITY-MAP.md)
+- [资料与历史规格（待审阅）](SPEC-records-history.md)
 - [趋势与灵感](trends/INDEX.md)
 - [网站目录](sources/INDEX.md)
 - [Agent 工作规范](AGENTS.md)

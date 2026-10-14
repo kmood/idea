@@ -1,6 +1,6 @@
-# 能力划分草案：个人副业研究库
+# 能力划分：个人副业研究库
 
-状态：待用户审阅。依据 [已确认意图](docs/intent/personal-opportunity-library.md)。这是一套单机应用的逻辑模块，不代表需要多个服务或分别部署。
+状态：已获用户明确同意（2026-10-14）。依据 [已确认意图](docs/intent/personal-opportunity-library.md)。这是一套单机应用的逻辑模块，不代表需要多个服务或分别部署。
 
 | 模块 ID | 职责与边界 | 依赖 | 可独立检查的结果 |
 | --- | --- | --- | --- |
@@ -24,6 +24,14 @@ records-history → source-research → opportunity-review → local-web → sch
 - 记录合并需关联旧 ID，历史不得被新版本静默覆盖。
 - 技术栈、具体字段/API、服务端口及访问控制在各模块规格与技术方案中确定，本表不作预选。
 
-## 审阅范围与后续
+## 规格索引与状态
 
-请审阅职责是否完整、依赖是否合理，以及是否接受上述先后顺序。通过后按稳定模块 ID 编写 SPEC-records-history.md 等模块规格；模块规格通过后再进入技术计划和任务拆分。目前没有任何模块规格或实现被标为完成。
+| 模块 | 规格 | 状态 |
+| --- | --- | --- |
+| records-history | [资料与历史](SPEC-records-history.md) | 草案待审阅 |
+| source-research | 尚未编写 | 待基础契约确定 |
+| opportunity-review | 尚未编写 | 待基础契约确定 |
+| local-web | 尚未编写 | 待基础契约确定 |
+| scheduled-sync | 尚未编写 | 待基础契约确定 |
+
+模块划分已确认；模块规格通过后再进入技术计划和任务拆分。尚无应用模块完成实现。
