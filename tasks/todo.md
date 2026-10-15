@@ -1,16 +1,16 @@
 # records-history 任务清单
 
-状态：待用户批准计划，所有任务未开始。规格已批准；本文件是唯一任务勾选位置。下面路径与测试入口是拟新增/修改目标。
+状态：用户于 2026-10-15 批准计划，按序执行。规格已批准；本文件是唯一任务勾选位置。下面路径与测试入口是拟新增/修改目标。
 
 每项先编写有意义的失败测试，再实现最小行为。测试必须使用临时真实数据库；通用语法检查为 `python3 -m compileall -q src/records`，不替代功能测试。
 
 ## T01：保存并重新读取一个来源
 
-- [ ] 完成
+- [x] 完成
 - 依赖：无；预计范围：中（3–5文件）
 验收：
-- [ ] 创建合法 Source 后关闭连接再打开，内容与首次历史一致
-- [ ] 非法字段/缺少入口拒绝；本机目录受 Git 忽略
+- [x] 创建合法 Source 后关闭连接再打开，内容与首次历史一致
+- [x] 非法字段/缺少入口拒绝；本机目录受 Git 忽略
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_source.py' -v`。
 涉及文件：`src/records/contracts.py`、`src/records/storage.py`、`src/records/service.py`、`tests/records/test_source.py`、`.gitignore`。
 

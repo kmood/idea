@@ -28,7 +28,7 @@ records-history → source-research → opportunity-review → local-web → sch
 
 | 模块 | 规格 | 状态 |
 | --- | --- | --- |
-| records-history | [资料与历史](SPEC-records-history.md) | 已批准；技术计划待审阅 |
+| records-history | [资料与历史](SPEC-records-history.md) | 已批准；技术计划已批准，实施中 |
 | source-research | 尚未编写 | 待基础契约确定 |
 | opportunity-review | 尚未编写 | 待基础契约确定 |
 | local-web | 尚未编写 | 待基础契约确定 |
