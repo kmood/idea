@@ -18,13 +18,15 @@
 
 ## R02：兼容研究快照的格式升级
 
-- [ ] 完成
+- [x] 完成
 - 依赖：R01；预计范围：中（3 个主要文件）
 验收：
-- [ ] v1 包校验后导入，旧 ID/事件/请求摘要不改写；首个 v2 包基线可核验
-- [ ] v2 往返字节稳定；旧检查点转换、外部快照变化及分叉仍被正确识别
+- [x] v1 包校验后导入，旧 ID/事件/请求摘要不改写；首个 v2 包基线可核验
+- [x] v2 往返字节稳定；旧检查点转换、外部快照变化及分叉仍被正确识别
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_bundle_versions.py' -v`。
 涉及文件：`src/records/exchange.py`、`src/records/bundles.py`、`tests/records/test_bundle_versions.py`。
+
+验证记录：2026-10-16，4 项格式用例中先确认 2 项失败，实施后 records 全部 46 项通过；v2 往返字节一致，旧基线和分叉检查保留。
 
 ## R03：保存来源档案与准确日期精度
 

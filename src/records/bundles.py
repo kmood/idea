@@ -9,7 +9,7 @@ def hash_string(value) -> bool:
 def validate_bundle(bundle: dict) -> None:
     from .exchange import EVENT_FIELDS, digest
     fields(bundle, {'schemaVersion', 'baseBundleId', 'bundleId', 'data'}, {'schemaVersion', 'baseBundleId', 'bundleId', 'data'})
-    require(type(bundle['schemaVersion']) is int and bundle['schemaVersion'] == 1)
+    require(type(bundle['schemaVersion']) is int and bundle['schemaVersion'] in (1, 2))
     require(bundle['baseBundleId'] is None or hash_string(bundle['baseBundleId']))
     require(bundle['bundleId'] == digest({key: value for key, value in bundle.items() if key != 'bundleId'}), 'Bundle digest mismatch')
     data = bundle['data']

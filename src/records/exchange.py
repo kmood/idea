@@ -46,7 +46,8 @@ def checkpoint(conn) -> dict | None:
 
 
 def mark_checkpoint(conn, bundle: dict) -> None:
-    value = dict(bundleId=bundle['bundleId'], baseBundleId=bundle['baseBundleId'], contentHash=digest(bundle['data']))
+    value = dict(schemaVersion=bundle['schemaVersion'], bundleId=bundle['bundleId'],
+                 baseBundleId=bundle['baseBundleId'], contentHash=digest(bundle['data']))
     conn.execute("INSERT INTO metadata VALUES ('checkpoint',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value", (encoded(value),))
 
 
@@ -92,9 +93,10 @@ class Exchange:
             try:
                 data = snapshot(conn)
                 previous = checkpoint(conn)
-                unchanged = previous and previous['contentHash'] == digest(data)
+                unchanged = (previous and previous.get('schemaVersion', 1) == 2
+                             and previous['contentHash'] == digest(data))
                 base = (previous['baseBundleId'] if unchanged else previous['bundleId']) if previous else None
-                bundle = dict(schemaVersion=1, baseBundleId=base, data=data)
+                bundle = dict(schemaVersion=2, baseBundleId=base, data=data)
                 bundle['bundleId'] = digest(bundle)
                 if Path(output).exists():
                     try:
