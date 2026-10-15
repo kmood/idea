@@ -126,18 +126,18 @@
 
 ## T11：预览现有 Markdown 迁移
 
-- [ ] 完成
+- [x] 完成
 - 依赖：T10；预计范围：中（3–5文件）
 验收：
-- [ ] 生成保留原ID、原文引用及收录时间的预览；未知不补造
-- [ ] 无法解析字段明确报告，原文未修改，源摘要改变阻止应用旧预览
+- [x] 生成保留原ID、原文引用及收录时间的预览；未知不补造
+- [x] 无法解析字段明确报告，原文未修改，源摘要改变阻止应用旧预览
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_legacy.py' -v`。
 涉及文件：`src/records/legacy.py`、`tests/records/test_legacy.py`、`tests/fixtures/records/legacy-source.md`、`tests/fixtures/records/legacy-idea.md`。
 
 ### 检查点：T11 后
 
-- [ ] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
-- [ ] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
+- [x] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
+- [x] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
 
 ## T12：提供可执行的资料管理入口
 

@@ -8,7 +8,7 @@ from urllib.parse import urlsplit
 Result = dict[str, Any]
 PRIVATE = {'favorite', 'ignored', 'validationStage', 'notes'}
 BASE = {'schemaVersion', 'id', 'kind', 'revision', 'createdAt', 'updatedAt', 'archived', 'mergedInto'}
-SYSTEM_LINKS = {'evidenceVersions', 'derivedFrom', 'derivedIdeas'}
+SYSTEM_LINKS = {'legacy', 'evidenceVersions', 'derivedFrom', 'derivedIdeas'}
 FIELDS = {'Source': {'name', 'url', 'audience', 'languages', 'accessStatus', 'lastAttempt', 'lastSuccess'}}
 
 FIELDS.update({
@@ -112,6 +112,13 @@ def validate_record(record: dict) -> None:
             require(text(record['summary']) and string_list(record['questions']))
             fields(record['impact'], {'nature', 'text'}, {'nature', 'text'})
             require(record['impact']['nature'] in ('fact', 'author_claim', 'inference') and text(record['impact']['text']))
+    if 'legacy' in record:
+        legacy = record['legacy']
+        fields(legacy, {'path', 'sha256', 'originalText', 'firstCollectedAt'}, {'path', 'sha256', 'originalText', 'firstCollectedAt'})
+        require(all(text(legacy[k]) for k in ('path', 'sha256', 'originalText')))
+        require(len(legacy['sha256']) == 64 and all(c in '0123456789abcdef' for c in legacy['sha256']))
+        first = legacy['firstCollectedAt']
+        require(first is None or stamp(first) or (isinstance(first, str) and len(first) == 10 and date_valid(first)))
     for key in ('derivedFrom', 'derivedIdeas'):
         if key in record:
             require(string_list(record[key]))
@@ -137,3 +144,12 @@ def validate_assessment(record: dict) -> None:
         fields(cost, {'min', 'max', 'currency', 'assumptions'}, {'min', 'max', 'currency', 'assumptions'})
         require(type(cost['min']) in (int, float) and type(cost['max']) in (int, float))
         require(0 <= cost['min'] <= cost['max'] and text(cost['currency']) and text(cost['assumptions']))
+
+
+def date_valid(value: str) -> bool:
+    from datetime import date
+    try:
+        date.fromisoformat(value)
+        return True
+    except ValueError:
+        return False
