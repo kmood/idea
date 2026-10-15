@@ -6,7 +6,9 @@
 
 - [已确认需求意图](docs/intent/personal-opportunity-library.md)
 - [已确认能力划分](CAPABILITY-MAP.md)
-- [资料与历史规格（待审阅）](SPEC-records-history.md)
+- [资料与历史规格（已批准）](SPEC-records-history.md)
+- [资料与历史技术计划（待审阅）](tasks/plan.md)
+- [任务清单](tasks/todo.md)
 - [趋势与灵感](trends/INDEX.md)
 - [网站目录](sources/INDEX.md)
 - [Agent 工作规范](AGENTS.md)

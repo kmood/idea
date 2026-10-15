@@ -10,7 +10,7 @@
 - 调度状态：已创建 ACTIVE 自动化 idea，每天 21:00（Asia/Shanghai），附着当前聊天。
 
 - 需求意图：已确认并保存到 docs/intent/personal-opportunity-library.md。
-- 产品阶段：能力划分已确认；SPEC-records-history.md 草案待审阅。尚未实现网站、结构化历史和用户交互持久化。
+- 产品阶段：能力划分已确认；SPEC-records-history.md 已批准，tasks/plan.md 与 tasks/todo.md 待审阅。尚未实现网站、结构化历史和用户交互持久化。
 - 研究阶段：集中收集。按质量与行业覆盖推进，不设硬性条数；既有首批目录仍保留。
 
 - Agent 优化：稳定规则与执行手册已分离；未知不计零分，入库与精选分开，新增重复处理/历史/断点/失败规则。
