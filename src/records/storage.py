@@ -15,6 +15,8 @@ CREATE TABLE IF NOT EXISTS research_records(id TEXT PRIMARY KEY, kind TEXT NOT N
 CREATE TABLE IF NOT EXISTS record_versions(record_id TEXT NOT NULL REFERENCES research_records(id), revision INTEGER NOT NULL, payload TEXT NOT NULL, PRIMARY KEY(record_id, revision));
 CREATE TABLE IF NOT EXISTS research_events(seq INTEGER PRIMARY KEY AUTOINCREMENT, event_id TEXT UNIQUE NOT NULL, record_id TEXT NOT NULL REFERENCES research_records(id), payload TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS evidence_links(record_id TEXT NOT NULL REFERENCES research_records(id), evidence_id TEXT NOT NULL REFERENCES research_records(id), evidence_revision INTEGER NOT NULL, PRIMARY KEY(record_id, evidence_id), FOREIGN KEY(evidence_id,evidence_revision) REFERENCES record_versions(record_id,revision));
+CREATE TABLE IF NOT EXISTS personal_states(record_id TEXT PRIMARY KEY REFERENCES research_records(id), payload TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS personal_events(seq INTEGER PRIMARY KEY AUTOINCREMENT, event_id TEXT UNIQUE NOT NULL, record_id TEXT NOT NULL REFERENCES research_records(id), payload TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS operations(scope TEXT NOT NULL, key TEXT NOT NULL, request_hash TEXT NOT NULL, result TEXT NOT NULL, PRIMARY KEY(scope, key));
 '''
 

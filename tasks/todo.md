@@ -51,18 +51,18 @@
 
 ## T05：保存个人选择且不被采集覆盖
 
-- [ ] 完成
+- [x] 完成
 - 依赖：T04；预计范围：中（3–5文件）
 验收：
-- [ ] 初始 null revision 可保存，重启后收藏/忽略/验证阶段保留
-- [ ] 个人并发冲突有提示；研究入口拒绝个人字段写入
+- [x] 初始 null revision 可保存，重启后收藏/忽略/验证阶段保留
+- [x] 个人并发冲突有提示；研究入口拒绝个人字段写入
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_personal.py' -v`。
 涉及文件：`src/records/personal.py`、`src/records/storage.py`、`src/records/contracts.py`、`tests/records/test_personal.py`。
 
 ### 检查点：T05 后
 
-- [ ] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
-- [ ] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
+- [x] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
+- [x] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
 
 ## T06：保存评估并按条件浏览
 
