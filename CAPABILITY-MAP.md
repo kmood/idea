@@ -29,7 +29,7 @@ records-history → source-research → opportunity-review → local-web → sch
 | 模块 | 规格 | 状态 |
 | --- | --- | --- |
 | records-history | [资料与历史](SPEC-records-history.md) | 已实现；37 项测试通过，正式迁移未切换 |
-| source-research | [来源采集与研究](SPEC-source-research.md) | 规格草案待审阅；尚未规划或实现 |
+| source-research | [来源采集与研究](SPEC-source-research.md) | 规格已批准；技术计划与任务清单待审阅 |
 | opportunity-review | 尚未编写 | 待基础契约确定 |
 | local-web | 尚未编写 | 待基础契约确定 |
 | scheduled-sync | 尚未编写 | 待基础契约确定 |

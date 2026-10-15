@@ -10,7 +10,7 @@
 - 调度状态：已创建 ACTIVE 自动化 idea，每天 21:00（Asia/Shanghai），附着当前聊天。
 
 - 需求意图：已确认并保存到 docs/intent/personal-opportunity-library.md。
-- 产品阶段：能力划分已确认；SPEC-records-history.md 已批准，tasks/plan.md 与 tasks/todo.md 已完成。records-history 的资料/历史/个人状态、CLI、导入导出及备份恢复已实现，37 项测试通过；网站尚未实现。正式研究仍使用 Markdown，自动任务数据入口未切换。
+- 产品阶段：能力划分已确认；SPEC-records-history.md 已批准，tasks/records-history/plan.md 与 tasks/records-history/todo.md 已完成。records-history 的资料/历史/个人状态、CLI、导入导出及备份恢复已实现，37 项测试通过；网站尚未实现。正式研究仍使用 Markdown，自动任务数据入口未切换。
 - 研究阶段：集中收集。按质量与行业覆盖推进，不设硬性条数；既有首批目录仍保留。
 
 - Agent 优化：稳定规则与执行手册已分离；未知不计零分，入库与精选分开，新增重复处理/历史/断点/失败规则。
@@ -19,4 +19,4 @@
 - 集中收集未结束：本轮集中电商/客服，教育、内容及其他专业服务仍明显不足；没有以数量代替覆盖质量。
 - 最近轮次：6 组搜索；5 个具体讨论候选中读到 3 个、2 个失败；读取 3 份官方辅助文档。未联系客户或执行付费实验。
 
-- 实现交接：docs/records-operations.md。现有资料在临时库迁移演练为 11 来源、5 证据、1 点子、1 趋势；保留原 ID/原文/日期精度。research/migrations/2026-10-15-records-map.json 绑定原文摘要，源资料变化后需重审映射。source-research 模块规格草案已保存到 SPEC-source-research.md，待用户审阅；尚未进入技术计划或实现，不影响上述下一轮研究工作。
+- 实现交接：docs/records-operations.md。现有资料在临时库迁移演练为 11 来源、5 证据、1 点子、1 趋势；保留原 ID/原文/日期精度。research/migrations/2026-10-15-records-map.json 绑定原文摘要，源资料变化后需重审映射。source-research 模块规格 SPEC-source-research.md 已获用户批准；当前 tasks/plan.md、tasks/todo.md、ADR-002 及资料扩展提案待审阅，尚未实现，不影响上述下一轮研究工作。

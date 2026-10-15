@@ -130,6 +130,8 @@ git diff --check
 
 已确认默认方案：个人操作/实验反馈只在本机保存并单独备份，研究资料通过仓库同步。后续技术计划需解决存储格式、并发/事务机制、导入导出与备份命令；这些实现选择不要求用户预先指定技术栈。
 
-本规格已批准；[技术计划](tasks/plan.md)、[任务清单](tasks/todo.md)及 ADR-001 已批准并完成实施。实现仅覆盖本模块，不代表其他模块规格已批准。
+本规格已批准；[技术计划](tasks/records-history/plan.md)、[任务清单](tasks/records-history/todo.md)及 ADR-001 已批准并完成实施。实现仅覆盖本模块，不代表其他模块规格已批准。
 
 实际接口、旧文日期精度约定及迁移切换条件见 [操作说明](docs/records-operations.md)。
+
+来源研究所需的提供方扩展见 [待审阅扩展提案](docs/records-research-extension.md)，尚未改变本模块已实现行为。

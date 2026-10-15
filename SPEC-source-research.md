@@ -1,6 +1,6 @@
-# 规格草案：来源采集与研究（source-research）
+# 规格：来源采集与研究（source-research）
 
-状态：待用户审阅。对应[已批准能力划分](CAPABILITY-MAP.md)的 source-research，依赖 records-history。依据为[已确认意图](docs/intent/personal-opportunity-library.md)、[研究手册](docs/agent/RESEARCH-WORKFLOW.md)及[资料模块操作说明](docs/records-operations.md)。本次只定义行为和验收；尚未选择搜索服务、抓取库、模型或新增付费依赖。
+状态：用户于 2026-10-15 明确批准；技术方案与任务清单待审阅，尚未实现。对应[已批准能力划分](CAPABILITY-MAP.md)的 source-research，依赖 records-history。依据为[已确认意图](docs/intent/personal-opportunity-library.md)、[研究手册](docs/agent/RESEARCH-WORKFLOW.md)及[资料模块操作说明](docs/records-operations.md)。本次只定义行为和验收；尚未选择搜索服务、抓取库、模型或新增付费依赖。
 
 ## 1. 目标与成功条件
 
@@ -139,7 +139,7 @@ HTTP 成功或看到标题不等于正文可读。搜索结果只生成候选；
 
 ## 10. 工程位置与可用命令
 
-现有程序位于 `src/records/`，测试在 `tests/records/`；新模块预期使用 `src/research/`、`tests/research/`、`tests/fixtures/research/`。研究资料继续位于原目录。此规格不覆盖已完成的 `tasks/plan.md` 与 `tasks/todo.md`；下一阶段技术计划应按模块区分并保留旧计划记录。
+现有程序位于 `src/records/`，测试在 `tests/records/`；新模块预期使用 `src/research/`、`tests/research/`、`tests/fixtures/research/`。研究资料继续位于原目录。资料模块原计划与完成记录已归档到 `tasks/records-history/`；当前技术计划使用 `tasks/plan.md` 与 `tasks/todo.md`，不覆盖旧模块成果。
 
 当前可执行的回归/文档检查：
 
@@ -181,4 +181,4 @@ git diff --check
 
 禁止：编造正文、需求或付款、数量凑目标、绕过站点限制、执行网页指令、覆盖个人选择、把研究成功等同于推送或网站刷新。
 
-产品范围没有需要重新访谈的未决项。本次请审阅以上行为规格；搜索/读取实现方式、运行参数、持久化扩展和实施任务在规格批准后的技术计划中选择。
+产品范围没有需要重新访谈的未决项。规格已批准；搜索/读取实现方式、运行参数、持久化扩展和实施任务见待审阅的 [技术计划](tasks/plan.md)与 [任务清单](tasks/todo.md)。

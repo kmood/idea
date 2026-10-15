@@ -1,171 +1,238 @@
-# records-history 任务清单
+# source-research 实施任务
 
-状态：用户于 2026-10-15 批准计划；T01–T13 已实现并验证。37 项测试通过，正式迁移未切换。规格已批准；本文件是唯一任务勾选位置。下面路径与测试入口是拟新增/修改目标。
+状态：规格已批准，技术方案与本清单待审阅；所有任务未开始。本文件是当前模块的唯一任务勾选位置，[资料模块旧清单](records-history/todo.md)已完整归档。
 
-每项先编写有意义的失败测试，再实现最小行为。测试必须使用临时真实数据库；通用语法检查为 `python3 -m compileall -q src/records`，不替代功能测试。
+按红→绿顺序实施，每项先写与验收有关的失败测试，再实现和审阅。下面新增文件与命令均为计划，尚不存在。文件列表是代码/验证主要范围，若实现发现需跨越职责或显著超出五个文件，先重新拆分，不静默扩大切片。提供方公共契约与备份兼容在研究程序使用前完成。
 
-## T01：保存并重新读取一个来源
+## R01：在新副本升级旧资料库
 
-- [x] 完成
-- 依赖：无；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：无；预计范围：中（5 个主要文件）
 验收：
-- [x] 创建合法 Source 后关闭连接再打开，内容与首次历史一致
-- [x] 非法字段/缺少入口拒绝；本机目录受 Git 忽略
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_source.py' -v`。
-涉及文件：`src/records/contracts.py`、`src/records/storage.py`、`src/records/service.py`、`tests/records/test_source.py`、`.gitignore`。
+- [ ] 旧库保持原样，v2 副本可读写原记录且保留私人状态和去重信息；未知版本在任何写入前拒绝
+- [ ] 升级失败不留下可误用的半成品；提供方规格同步扩展边界
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_schema_upgrade.py' -v`。
+涉及文件：`SPEC-records-history.md`、`src/records/migrations.py`、`src/records/storage.py`、`src/records/backup.py`、`tests/records/test_schema_upgrade.py`。
 
-## T02：更新来源时保护版本和重复请求
+## R02：兼容研究快照的格式升级
 
-- [x] 完成
-- 依赖：T01；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：R01；预计范围：中（3 个主要文件）
 验收：
-- [x] 同意图重试只产生一次变化；相同键不同请求拒绝
-- [x] 同版本并发更新至多一个成功，无变化 patch 不增业务版本
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_mutations.py' -v`。
-涉及文件：`src/records/storage.py`、`src/records/service.py`、`tests/records/test_mutations.py`。
+- [ ] v1 包校验后导入，旧 ID/事件/请求摘要不改写；首个 v2 包基线可核验
+- [ ] v2 往返字节稳定；旧检查点转换、外部快照变化及分叉仍被正确识别
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_bundle_versions.py' -v`。
+涉及文件：`src/records/exchange.py`、`src/records/bundles.py`、`tests/records/test_bundle_versions.py`。
 
-## T03：验证崩溃后的事务恢复
+## R03：保存来源档案与准确日期精度
 
-- [x] 完成
-- 依赖：T02；预计范围：小（1–2文件）
+- [ ] 完成
+- 依赖：R02；预计范围：中（4 个主要文件）
 验收：
-- [x] 提交前故障后正文/历史/操作结果全回滚
-- [x] 提交后响应丢失可回放；锁等待失败可解释且不假报成功
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_recovery.py' -v`。
-涉及文件：`src/records/storage.py`、`tests/records/test_recovery.py`。
+- [ ] Source 可保存严格 profile；新 Evidence 精确时间或日级日期及依据往返保留
+- [ ] 旧记录无需补字段；未知日期不填零或伪造时分，嵌套未知字段拒绝
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_observation_metadata.py' -v`。
+涉及文件：`src/records/contracts.py`、`src/records/service.py`、`src/records/bundles.py`、`tests/records/test_observation_metadata.py`。
 
-### 检查点：T03 后
+### 检查点：R03 后
 
-- [x] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
-- [x] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
+- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
 
-## T04：保存带证据的趋势和点子
+## R04：保存有类型的研究元数据
 
-- [x] 完成
-- 依赖：T03；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：R03；预计范围：中（5 个主要文件）
 验收：
-- [x] 最小合法点子/趋势可保存，无成本/成交仍允许
-- [x] 坏引用拒绝；补反证后保留旧证据版本与历史
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_evidence.py' -v`。
-涉及文件：`src/records/contracts.py`、`src/records/service.py`、`src/records/storage.py`、`tests/records/test_evidence.py`。
+- [ ] ResearchArtifact 固定子类型有版本/历史并可导出重建；来源及证据关联可追溯
+- [ ] 坏引用整批拒绝；普通 create 请求不能伪造 Reader 凭据；私人内容不进入允许字段
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_artifacts.py' -v`。
+涉及文件：`src/records/artifacts.py`、`src/records/contracts.py`、`src/records/storage.py`、`src/records/bundles.py`、`tests/records/test_artifacts.py`。
 
-## T05：保存个人选择且不被采集覆盖
+## R05：保存并恢复一个研究轮次
 
-- [x] 完成
-- 依赖：T04；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：R04；预计范围：中（4 个主要文件）
 验收：
-- [x] 初始 null revision 可保存，重启后收藏/忽略/验证阶段保留
-- [x] 个人并发冲突有提示；研究入口拒绝个人字段写入
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_personal.py' -v`。
-涉及文件：`src/records/personal.py`、`src/records/storage.py`、`src/records/contracts.py`、`tests/records/test_personal.py`。
+- [ ] 稳定 runId 和请求摘要保存于本机运行域；重启可查实际状态和未完成意图
+- [ ] 同键不同请求拒绝；新增运行表纳入本地备份但不进入公开研究包
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_runtime.py' -v`。
+涉及文件：`src/records/runtime.py`、`src/records/storage.py`、`src/records/backup.py`、`tests/records/test_runtime.py`。
 
-### 检查点：T05 后
+## R06：限定执行权与调用预算
 
-- [x] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
-- [x] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
-
-## T06：保存评估并按条件浏览
-
-- [x] 完成
-- 依赖：T05；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：R05；预计范围：中（4 个主要文件）
 验收：
-- [x] 保存外部评估使用独立版本，不自动计算分数
-- [x] 组合筛选及未知成本行为准确，列表/历史分页可重复验证
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_queries.py' -v`。
-涉及文件：`src/records/queries.py`、`src/records/service.py`、`src/records/contracts.py`、`tests/records/test_queries.py`。
+- [ ] 两个执行者竞争只允许一个；过期后重新领取提升 fence，旧执行者不能改状态
+- [ ] 预占调用、重试、deadline 和续授幂等可验证，丢响应不退额度，预算耗尽停止外部动作
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_runner.py' -v`。
+涉及文件：`src/records/runtime.py`、`src/research/runner.py`、`src/research/contracts.py`、`tests/research/test_runner.py`。
 
-## T07：合并重复记录且保留用户分歧
+### 检查点：R06 后
 
-- [x] 完成
-- 依赖：T06；预计范围：中（3–5文件）
+- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+
+## R07：实现有界公开网络读取
+
+- [ ] 完成
+- 依赖：R06；预计范围：小（2 个主要文件）
 验收：
-- [x] 合并/解除后旧ID与证据可查询，双方用户状态不丢失
-- [x] 拒绝自指/循环/错类型/版本冲突；趋势派生链接不改原ID
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_relations.py' -v`。
-涉及文件：`src/records/relations.py`、`src/records/storage.py`、`tests/records/test_relations.py`。
+- [ ] 校验并固定公网 IP，Host/SNI 与证书校验正确；每次重定向重新验证
+- [ ] robots、超时、大小限制、请求间隔可测试；拒绝内网/元数据/重绑定/认证与超限跳转
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_network.py' -v`。
+涉及文件：`src/research/network.py`、`tests/research/test_network.py`。
 
-### 检查点：T07 后
+## R08：生成实际正文读取凭据
 
-- [x] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
-- [x] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
-
-## T08：导出可审阅且不含个人内容的快照
-
-- [x] 完成
-- 依赖：T07；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：R07；预计范围：中（5 个主要文件）
 验收：
-- [x] 研究记录、版本、历史及研究操作结果可导出
-- [x] 内容不变输出字节不变；私有标记不出现；写出失败旧快照完整
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_export.py' -v`。
-涉及文件：`src/records/exchange.py`、`src/records/storage.py`、`tests/records/test_export.py`。
+- [ ] 真实读取器输出有定位的可见正文块、指纹、精度及截断状态，并通过资料层保存 receipt
+- [ ] 标题/登录页/无法解析正文不变成需求证据；坏格式与提示注入不执行；缓存缺失可以重读
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_reader.py' -v`。
+涉及文件：`src/research/reader.py`、`src/records/artifacts.py`、`src/records/runtime.py`、`tests/research/test_reader.py`、`tests/fixtures/research/public-thread.html`。
 
-## T09：导入研究快照而不覆盖个人记录
+## R09：接通 Agent 搜索与候选队列
 
-- [x] 完成
-- 依赖：T08；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：R08；预计范围：中（4 个主要文件）
 验收：
-- [x] 空库可重建；同包重导无业务变化，个人选择保留
-- [x] 坏包整批失败，分叉/本地未导出修改拒绝；操作回放信息仍有效
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_import.py' -v`。
-涉及文件：`src/records/exchange.py`、`src/records/storage.py`、`tests/records/test_import.py`。
+- [ ] Agent 领取 callId 后交回发现记录，先建档来源再排队，分页可检查候选状态
+- [ ] 无工具时如实 blocked；搜索摘要和手写正文不能产生 receipt；迟到结果不越过执行权检查
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_bridge.py' -v`。
+涉及文件：`src/research/bridge.py`、`src/research/runner.py`、`src/records/runtime.py`、`tests/research/test_bridge.py`。
 
-### 检查点：T09 后
+### 检查点：R09 后
 
-- [x] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
-- [x] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
+- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
 
-## T10：备份和恢复到独立文件
+## R10：验证分析稿并分流内容
 
-- [x] 完成
-- 依赖：T09；预计范围：小（1–2文件）
+- [ ] 完成
+- 依赖：R09；预计范围：中（3 个主要文件）
 验收：
-- [x] 含研究及个人信息的一致性备份可恢复，去重信息不丢
-- [x] 坏备份拒绝；目标已存在拒绝；原库不被改写
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_backup.py' -v`。
-涉及文件：`src/records/backup.py`、`tests/records/test_backup.py`。
+- [ ] 真实凭据支撑的 AnalysisDraft 可分流 trend/idea/update/deferred/rejected；未知成本仍允许入库
+- [ ] 块引用、事实/作者声称/推断、E2 独立性和 E3 核验依据检查生效；未读评论不计样本
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_analysis.py' -v`。
+涉及文件：`src/research/contracts.py`、`src/research/analysis.py`、`tests/research/test_analysis.py`。
 
-## T11：预览现有 Markdown 迁移
+## R11：定位重复并保留变体
 
-- [x] 完成
-- 依赖：T10；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：R10；预计范围：中（4 个主要文件）
 验收：
-- [x] 生成保留原ID、原文引用及收录时间的预览；未知不补造
-- [x] 无法解析字段明确报告，原文未修改，源摘要改变阻止应用旧预览
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_legacy.py' -v`。
-涉及文件：`src/records/legacy.py`、`tests/records/test_legacy.py`、`tests/fixtures/records/legacy-source.md`、`tests/fixtures/records/legacy-idea.md`。
+- [ ] 跨轮次定位键和内容版本关联原 ID；跟踪参数与内容参数区别处理
+- [ ] 语义相似保留 possibleDuplicate；同源多点子不变成独立样本，旧帖新回复不被去重掉
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_dedupe.py' -v`。
+涉及文件：`src/research/dedupe.py`、`src/records/identity.py`、`src/records/storage.py`、`tests/research/test_dedupe.py`。
 
-### 检查点：T11 后
+## R12：原子发布一步研究结果
 
-- [x] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
-- [x] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
-
-## T12：提供可执行的资料管理入口
-
-- [x] 完成
-- 依赖：T11；预计范围：中（3–5文件）
+- [ ] 完成
+- 依赖：R11；预计范围：中（4 个主要文件）
 验收：
-- [x] CLI 包装 init/读写请求/导入导出/备份恢复/迁移预览，统一错误退出码
-- [x] 真实子进程完成录入→收藏→补证→导出→恢复；输入来自文件且不打印私有正文到错误日志
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_cli.py' -v`。
-涉及文件：`src/records/__main__.py`、`src/records/cli.py`、`tests/records/test_cli.py`、`README.md`。
+- [ ] publishStep 同一事务校验 fence、预期版本、精确身份并保存正文/历史/操作回放/本地回执
+- [ ] 提交前故障全回滚，提交后丢响应回放；不接受个人字段和越权 Assessment/实验写入
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_publishing.py' -v`。
+涉及文件：`src/records/publishing.py`、`src/records/service.py`、`src/records/storage.py`、`tests/records/test_publishing.py`。
 
-## T13：完成模块交接与迁移演练
+### 检查点：R12 后
 
-- [x] 完成
-- 依赖：T12；预计范围：中（3–5文件）
+- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+
+## R13：恢复多步证据与点子发布
+
+- [ ] 完成
+- 依赖：R12；预计范围：中（3 个主要文件）
 验收：
-- [x] 在临时库完成全部规格验收和当前资料迁移演练，正式原文与用户资料保持完整
-- [x] 记录可用命令和写入路径切换条件，未批准切换前不改定时任务数据入口
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_acceptance.py' -v`。
-涉及文件：`tests/records/test_acceptance.py`、`docs/records-operations.md`、`AGENTS.md`、`research/STATE.md`、`tasks/todo.md`。
+- [ ] PublicationManifest 先持久化目标 ID 和步骤，Source→证据→条目→关联可中断接续
+- [ ] 证据已保存后中断仍显示 partial；恢复不重造记录，改稿有新意图且保留旧稿关联
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_publication.py' -v`。
+涉及文件：`src/research/publication.py`、`src/records/runtime.py`、`tests/research/test_publication.py`。
 
-### 检查点：T13 后
+## R14：维护缺口游标和有界重试
 
-- [x] 运行当前全部记录模块测试及语法检查，审阅通过的场景、失败与实际限制。
-- [x] 向用户展示本阶段可运行结果；未经解决的问题不得通过跳过测试或弱化规格进入下一阶段。
+- [ ] 完成
+- 依赖：R13；预计范围：中（5 个主要文件）
+验收：
+- [ ] 只有确认保存或明确无变化处置才推进连续位置；前失败后成功仍保留缺口
+- [ ] 未知顺序使用已读集合；旧帖重叠、游标失效、限流和一次重试均可恢复且不超预算
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_progress.py' -v`。
+涉及文件：`src/research/progress.py`、`src/research/runner.py`、`src/records/runtime.py`、`src/records/artifacts.py`、`tests/research/test_progress.py`。
 
-## 完成映射
+## R15：生成有依据的覆盖回顾
 
-T01/T04：持久化与最小入库；T02/T03：并发/幂等/崩溃；T04：证据纠错；T05：个人隔离；T06：查询；T07：合并关联；T08/T09：导出及导入；T10：备份恢复；T11：旧资料迁移；T12/T13：真实入口与整体验收。
+- [ ] 完成
+- 依赖：R14；预计范围：中（3 个主要文件）
+验收：
+- [ ] 回顾引用实际来源/轮次/发现，说明行业、人群、地域、副业模式和未覆盖领域
+- [ ] 三轮无新证据要求渠道调整；条数/零新增不能单独触发转增量，不修改用户选择或自启下一轮
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_coverage.py' -v`。
+涉及文件：`src/research/coverage.py`、`src/research/runner.py`、`tests/research/test_coverage.py`。
 
-实际验收和操作边界见 [操作说明](../docs/records-operations.md)。各切片按红→绿过程提交；检查点均完成测试与进展报告。
+### 检查点：R15 后
+
+- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+
+## R16：恢复完整运行状态与私人数据
+
+- [ ] 完成
+- 依赖：R15；预计范围：中（4 个主要文件）
+验收：
+- [ ] 新运行表、公开发布清单和私人历史完整备份恢复；重建后旧租约失效
+- [ ] 丢缓存保守重读；仅导入公开包可找回已发布身份和断点但不伪造私人状态/未同步结果
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_research_recovery.py' -v`。
+涉及文件：`src/records/backup.py`、`src/records/migrations.py`、`src/records/runtime.py`、`tests/records/test_research_recovery.py`。
+
+## R17：提供可执行的 Agent 协作入口
+
+- [ ] 完成
+- 依赖：R16；预计范围：中（4 个主要文件）
+验收：
+- [ ] CLI 的 run/resume/request/inspect/help 由真实子进程验证；JSON 错误退出统一且无正文泄漏
+- [ ] 操作指南明确现有搜索工具交接和 Reader 边界，不要求用户逐条整理；不实现后台调度
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_cli.py' -v`。
+涉及文件：`src/research/cli.py`、`src/research/__main__.py`、`tests/research/test_cli.py`、`docs/source-research-operations.md`。
+
+### 检查点：R17 后
+
+- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+
+## R18：完成异常与并发整体验收
+
+- [ ] 完成
+- 依赖：R17；预计范围：中（3 个主要文件）
+验收：
+- [ ] 从发现到读取、分类、发布、恢复的合成全流程通过；所有规格场景有测试或明确在线验证位置
+- [ ] 旧进程恢复、部分写入、跨格式快照、提示注入及私有标记回归通过；不跳过失败测试
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_acceptance.py' -v`。
+涉及文件：`tests/research/test_acceptance.py`、`tests/research/test_adversarial.py`、`docs/source-research-operations.md`。
+
+## R19：完成一轮真实公开来源试运行
+
+- [ ] 完成
+- 依赖：R18；预计范围：中（5 个主要文件）
+验收：
+- [ ] 当前 Agent 执行有界搜索→程序读取→引用分析→临时库发布，并区分成功、受限和未覆盖范围
+- [ ] 验证导出/重导/恢复及正文不变性；更新交接状态，正式 Markdown 和定时写入入口不切换
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_acceptance.py' -v`。
+涉及文件：`research/runs/source-research-pilot.md`、`docs/source-research-operations.md`、`AGENTS.md`、`research/STATE.md`、`tasks/todo.md`。
+
+### 检查点：R19 后
+
+- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+
+## 验收映射与完成边界
+
+R01–R04：资料契约/格式兼容；R05–R06：持久断点、执行权和资源上限；R07–R09：公开读取、正文凭据与来源先行；R10–R11：准入/证据/去重；R12–R14：原子回执、多步恢复和缺口游标；R15：质量与覆盖回顾；R16：完整恢复与私人隔离；R17–R18：真实命令和异常验收；R19：在线可用性与交接。
+
+R19 除测试命令外必须执行操作指南中的受限真实试运行，报告实际 runId、工具和程序读取范围、用量、公开记录结果及阻碍；不得把离线合成测试算作线上完成。若搜索/网络依赖不可用，则 R19 保持未完成并保留断点，不能宣称模块已经完成在线验收。
+
+不以本清单批准替代正式数据库入口切换许可，不修改每日自动化目标或实现网站/个人匹配模型。
