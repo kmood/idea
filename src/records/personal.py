@@ -59,3 +59,13 @@ class PersonalStore:
             rows = conn.execute('SELECT seq,payload FROM personal_events WHERE record_id=? AND seq>? ORDER BY seq LIMIT ?', (id, cursor, limit+1)).fetchall()
             return dict(items=[json.loads(row['payload']) | {'seq': row['seq']} for row in rows[:limit]],
                         nextCursor=rows[limit-1]['seq'] if len(rows) > limit else None)
+
+    @boundary
+    def related_states(self, id: str) -> dict:
+        from .relations import canonical
+        with closing(self.db.connect()) as conn:
+            target = canonical(conn, id)
+            rows = conn.execute('SELECT id FROM research_records').fetchall()
+            states = {row['id']: read(conn, row['id']) for row in rows if canonical(conn, row['id']) == target}
+            choices = {encoded({key: state[key] for key in PRIVATE}) for state in states.values()}
+            return dict(canonicalId=target, states=states, conflict=len(choices)>1)

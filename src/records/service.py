@@ -34,7 +34,8 @@ class ResearchStore:
                 if not row:
                     raise Fault('NOT_FOUND', 'Version not found')
                 record = json.loads(row[0])
-            return {'record': record, 'canonicalId': record.get('mergedInto') or id}
+            from .relations import canonical
+            return {'record': record, 'canonicalId': canonical(conn, id)}
 
     @boundary
     def list_history(self, id: str, cursor: int = 0, limit: int = 20) -> dict:
