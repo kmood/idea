@@ -91,11 +91,11 @@
 
 ## T08：导出可审阅且不含个人内容的快照
 
-- [ ] 完成
+- [x] 完成
 - 依赖：T07；预计范围：中（3–5文件）
 验收：
-- [ ] 研究记录、版本、历史及研究操作结果可导出
-- [ ] 内容不变输出字节不变；私有标记不出现；写出失败旧快照完整
+- [x] 研究记录、版本、历史及研究操作结果可导出
+- [x] 内容不变输出字节不变；私有标记不出现；写出失败旧快照完整
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_export.py' -v`。
 涉及文件：`src/records/exchange.py`、`src/records/storage.py`、`tests/records/test_export.py`。
 
