@@ -116,11 +116,11 @@
 
 ## T10：备份和恢复到独立文件
 
-- [ ] 完成
+- [x] 完成
 - 依赖：T09；预计范围：小（1–2文件）
 验收：
-- [ ] 含研究及个人信息的一致性备份可恢复，去重信息不丢
-- [ ] 坏备份拒绝；目标已存在拒绝；原库不被改写
+- [x] 含研究及个人信息的一致性备份可恢复，去重信息不丢
+- [x] 坏备份拒绝；目标已存在拒绝；原库不被改写
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_backup.py' -v`。
 涉及文件：`src/records/backup.py`、`tests/records/test_backup.py`。
 
