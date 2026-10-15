@@ -66,11 +66,11 @@
 
 ## T06：保存评估并按条件浏览
 
-- [ ] 完成
+- [x] 完成
 - 依赖：T05；预计范围：中（3–5文件）
 验收：
-- [ ] 保存外部评估使用独立版本，不自动计算分数
-- [ ] 组合筛选及未知成本行为准确，列表/历史分页可重复验证
+- [x] 保存外部评估使用独立版本，不自动计算分数
+- [x] 组合筛选及未知成本行为准确，列表/历史分页可重复验证
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_queries.py' -v`。
 涉及文件：`src/records/queries.py`、`src/records/service.py`、`src/records/contracts.py`、`tests/records/test_queries.py`。
 

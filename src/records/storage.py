@@ -90,7 +90,9 @@ def save(conn: sqlite3.Connection, record: dict, before: dict | None, operation:
 def references(conn: sqlite3.Connection, record: dict) -> None:
     if record['kind'] == 'Evidence':
         require(get(conn, record['sourceId'])['kind'] == 'Source', 'Evidence requires a source')
-    if record['kind'] in ('Idea', 'Trend'):
+    if record['kind'] == 'Assessment':
+        require(get(conn, record['ideaId'])['kind'] == 'Idea', 'Assessment requires an idea')
+    if record['kind'] in ('Idea', 'Trend', 'Assessment'):
         pinned = []
         for id in record['evidenceIds']:
             evidence = get(conn, id)

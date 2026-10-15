@@ -13,7 +13,7 @@
 
 ## 数据层设计
 
-最小表族按能力逐步增加：research_records（id/kind/revision/payload）、evidence_links（引用关系）、record_versions（不可变研究版本）、research_events（事件序列）、personal_states/personal_events（私有）、assessments（独立版本）、operations（scope/key/requestHash/result）、metadata（schemaVersion/导入导出检查点）。索引由查询需要决定；不提前构建搜索引擎。
+最小表族按能力逐步增加：research_records（id/kind/revision/payload）、evidence_links（引用关系）、record_versions（不可变研究版本）、research_events（事件序列）、personal_states/personal_events（私有）、Assessment 类型记录（独立版本，复用研究版本表）、operations（scope/key/requestHash/result）、metadata（schemaVersion/导入导出检查点）。索引由查询需要决定；不提前构建搜索引擎。
 
 所有外键每连接显式启用，SQL 参数绑定。JSON 内部嵌套字段必须校验，历史引用保存 recordId+revision。存储字段可 snake_case，外部 JSON 保持规格 camelCase。后端代码使用类型注解和清晰函数边界，业务结果均走统一 Result，不靠异常文本决定行为。
 

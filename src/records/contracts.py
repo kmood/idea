@@ -12,6 +12,7 @@ SYSTEM_LINKS = {'evidenceVersions', 'derivedFrom', 'derivedIdeas'}
 FIELDS = {'Source': {'name', 'url', 'audience', 'languages', 'accessStatus', 'lastAttempt', 'lastSuccess'}}
 
 FIELDS.update({
+    'Assessment': {'ideaId', 'fit', 'reasons', 'unknowns', 'evidenceIds', 'generatedAt', 'cost'},
     'Evidence': {'sourceId', 'url', 'claim', 'summary', 'publishedAt', 'accessedAt', 'nature', 'level', 'paymentSignal', 'rebutsClaim'},
     'Trend': {'title', 'summary', 'evidenceIds', 'impact', 'questions'},
     'Idea': {'title', 'audience', 'problem', 'earningHypothesis', 'industry', 'sideHustleTypes', 'markets', 'researchStatus', 'evidenceIds'},
@@ -98,6 +99,8 @@ def validate_record(record: dict) -> None:
         require(record['level'] in ('E0', 'E1', 'E2', 'E3'))
         require(record['paymentSignal'] in (None, 'intent', 'quote', 'paid'))
         require(record['rebutsClaim'] is None or text(record['rebutsClaim']))
+    elif kind == 'Assessment':
+        validate_assessment(record)
     else:
         require(text(record['title']))
         require(string_list(record['evidenceIds']) and bool(record['evidenceIds']))
@@ -121,3 +124,16 @@ def validate_record(record: dict) -> None:
 
 def string_list(value: Any) -> bool:
     return isinstance(value, list) and all(text(x) for x in value) and len(set(value)) == len(value)
+
+
+def validate_assessment(record: dict) -> None:
+    require(text(record['ideaId']))
+    require(record['fit'] in ('较适合', '有条件适合', '暂不适合', '未知'))
+    require(isinstance(record['reasons'], dict) and all(text(k) and text(v) for k, v in record['reasons'].items()))
+    require(string_list(record['unknowns']) and string_list(record['evidenceIds']))
+    require(stamp(record['generatedAt']))
+    cost = record['cost']
+    if cost is not None:
+        fields(cost, {'min', 'max', 'currency', 'assumptions'}, {'min', 'max', 'currency', 'assumptions'})
+        require(type(cost['min']) in (int, float) and type(cost['max']) in (int, float))
+        require(0 <= cost['min'] <= cost['max'] and text(cost['currency']) and text(cost['assumptions']))
