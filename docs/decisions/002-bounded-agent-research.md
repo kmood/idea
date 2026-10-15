@@ -2,7 +2,7 @@
 
 ## 状态与日期
 
-Proposed，2026-10-15。source-research 规格已批准，本决策及技术计划待审阅；尚未实施。
+Accepted，2026-10-15。source-research 规格已批准，本决策及技术计划待审阅；尚未实施。
 
 ## 背景
 

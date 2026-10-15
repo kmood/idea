@@ -1,6 +1,6 @@
 # records-history 提供方扩展提案：研究运行与可追溯发布
 
-状态：技术方案待审阅；不是已实现接口。服务于已批准的 [source-research](../SPEC-source-research.md)，保持 [资料原规格](../SPEC-records-history.md)的个人域与历史约束。批准后实施前将这些兼容扩展纳入提供方规格。
+状态：技术方案已批准（2026-10-16）；按 tasks/todo.md 逐项实施，不代表全部接口已实现。服务于已批准的 [source-research](../SPEC-source-research.md)，保持 [资料原规格](../SPEC-records-history.md)的个人域与历史约束。批准后实施前将这些兼容扩展纳入提供方规格。
 
 ## 公开数据契约
 

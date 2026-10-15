@@ -7,7 +7,7 @@
 - 个人匹配用于精选，不限制入库。不设网站数/点子数指标，不承诺收益。
 - [能力划分](CAPABILITY-MAP.md)已获用户确认（2026-10-14），[资料与历史规格](SPEC-records-history.md)已获继续授权（2026-10-15），[资料模块技术计划](tasks/records-history/plan.md)已批准，records-history 已实现并通过 37 项测试；[操作说明](docs/records-operations.md)包含当前接口和切换条件。网站尚未实现，正式研究继续写 Markdown，未切换数据库入口。不能把研究任务当作网站实现授权，不能声称已更新不存在的网站。
 
-- 下一模块 [来源采集与研究](SPEC-source-research.md)已获用户批准；当前 [技术计划](tasks/plan.md)与 [任务清单](tasks/todo.md)待审阅，尚未实现；当前正式研究仍遵循现有执行手册。
+- 下一模块 [来源采集与研究](SPEC-source-research.md)已获用户批准；当前 [技术计划](tasks/plan.md)与 [任务清单](tasks/todo.md)已批准（2026-10-16），正在逐项实施，进度以任务勾选为准；当前正式研究仍遵循现有执行手册。
 
 ## 按需读取
 

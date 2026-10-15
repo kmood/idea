@@ -8,6 +8,7 @@ from pathlib import Path
 from .bundles import validate_bundle
 from .contracts import boundary, require
 from .exchange import digest, snapshot
+from .storage import database_version
 
 TABLES = ('research_records', 'record_versions', 'research_events', 'evidence_links',
           'personal_states', 'personal_events', 'operations', 'metadata')
@@ -16,7 +17,7 @@ TABLES = ('research_records', 'record_versions', 'research_events', 'evidence_li
 def validate_database(conn) -> dict:
     require(conn.execute('PRAGMA integrity_check').fetchone()[0] == 'ok', 'Database integrity check failed')
     require(not conn.execute('PRAGMA foreign_key_check').fetchall(), 'Broken database references')
-    require(conn.execute("SELECT value FROM metadata WHERE key='schemaVersion'").fetchone()[0] == '1', 'Unsupported database version')
+    database_version(conn)
     bundle = dict(schemaVersion=1, baseBundleId=None, data=snapshot(conn))
     bundle['bundleId'] = digest(bundle)
     validate_bundle(bundle)
@@ -31,7 +32,7 @@ def validate_database(conn) -> dict:
     return dict(counts=counts, hashes=hashes)
 
 
-def copy_validated(source: Path, target: Path) -> dict:
+def copy_validated(source: Path, target: Path, *, transform=None) -> dict:
     require(source.is_file(), 'Source database does not exist')
     require(not target.exists() and not target.is_symlink(), 'Destination already exists; use a new path')
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -48,6 +49,9 @@ def copy_validated(source: Path, target: Path) -> dict:
                 src.backup(dst)
                 actual = validate_database(dst)
                 require(actual == expected, 'Backup verification differs')
+                if transform is not None:
+                    transform(dst)
+                    actual = validate_database(dst)
             src.execute('ROLLBACK')
         with open(name, 'rb') as handle:
             os.fsync(handle.fileno())

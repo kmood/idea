@@ -135,3 +135,9 @@ git diff --check
 实际接口、旧文日期精度约定及迁移切换条件见 [操作说明](docs/records-operations.md)。
 
 来源研究所需的提供方扩展见 [待审阅扩展提案](docs/records-research-extension.md)，尚未改变本模块已实现行为。
+
+## 已批准的研究提供方扩展（2026-10-16）
+
+[研究扩展契约](docs/records-research-extension.md)随技术方案获批准，纳入本规格：可选来源/证据字段、有类型公共研究元数据、本机运行域、事务内执行权检查，以及 DB/研究包 v2。旧业务记录 schemaVersion=1、历史与操作摘要不变；个人域隔离保持原约束。实施进度以 [任务清单](tasks/todo.md)为准。
+
+R01 已实现：新库使用 DB v2，旧 v1 库须通过 `records.migrations.upgrade_database` 复制到新路径再升级；失败不发布半成品，原库保留。构造和连接检查版本后才允许写入。快照 v2 与其他扩展按后续任务落地。

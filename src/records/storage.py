@@ -10,7 +10,7 @@ from .contracts import Fault, encoded, now, require, text
 
 SCHEMA = '''
 CREATE TABLE IF NOT EXISTS metadata(key TEXT PRIMARY KEY, value TEXT NOT NULL);
-INSERT OR IGNORE INTO metadata VALUES ('schemaVersion', '1');
+INSERT OR IGNORE INTO metadata VALUES ('schemaVersion', '2');
 CREATE TABLE IF NOT EXISTS research_records(id TEXT PRIMARY KEY, kind TEXT NOT NULL, revision INTEGER NOT NULL, payload TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS record_versions(record_id TEXT NOT NULL REFERENCES research_records(id), revision INTEGER NOT NULL, payload TEXT NOT NULL, PRIMARY KEY(record_id, revision));
 CREATE TABLE IF NOT EXISTS research_events(seq INTEGER PRIMARY KEY AUTOINCREMENT, event_id TEXT UNIQUE NOT NULL, record_id TEXT NOT NULL REFERENCES research_records(id), payload TEXT NOT NULL);
@@ -21,21 +21,52 @@ CREATE TABLE IF NOT EXISTS operations(scope TEXT NOT NULL, key TEXT NOT NULL, re
 '''
 
 
+def database_version(conn) -> str:
+    exists = conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='metadata'").fetchone()
+    require(exists is not None, 'Missing database metadata')
+    row = conn.execute("SELECT value FROM metadata WHERE key='schemaVersion'").fetchone()
+    require(row is not None and row[0] in ('1', '2'), 'Unsupported database version')
+    return row[0]
+
+
 class Database:
     def __init__(self, path: str | Path, timeout: float = 5):
         self.path = Path(path)
         self.timeout = timeout
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        with closing(self.connect()) as conn:
-            conn.executescript(SCHEMA)
-            require(conn.execute("SELECT value FROM metadata WHERE key='schemaVersion'").fetchone()[0] == '1', 'Unsupported database version')
+        if self.path.exists():
+            # Inspect before schema creation or any write, including future versions.
+            with closing(sqlite3.connect(self.path.resolve().as_uri() + '?mode=ro', uri=True)) as conn:
+                require(database_version(conn) == '2', 'Database requires an explicit upgrade')
+        else:
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            with closing(sqlite3.connect(self.path, timeout=timeout, autocommit=True)) as conn:
+                conn.execute('BEGIN IMMEDIATE')
+                try:
+                    tables = conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
+                    if tables:
+                        require(database_version(conn) == '2', 'Database requires an explicit upgrade')
+                    else:
+                        for statement in SCHEMA.split(';'):
+                            if statement.strip():
+                                conn.execute(statement)
+                        conn.execute("INSERT INTO metadata VALUES ('dbInstanceId', ?)", (str(uuid.uuid4()),))
+                    conn.execute('COMMIT')
+                finally:
+                    if conn.in_transaction:
+                        conn.execute('ROLLBACK')
 
     def connect(self) -> sqlite3.Connection:
-        # Callers close connections explicitly; the context manager alone does not.
-        conn = sqlite3.connect(self.path, timeout=self.timeout, autocommit=True)
-        conn.row_factory = sqlite3.Row
-        conn.execute('PRAGMA foreign_keys=ON')
-        return conn
+        # Every new connection rechecks the version before business writes.
+        conn = sqlite3.connect(self.path.resolve().as_uri() + '?mode=rw', uri=True,
+                               timeout=self.timeout, autocommit=True)
+        try:
+            require(database_version(conn) == '2', 'Database requires an explicit upgrade')
+            conn.row_factory = sqlite3.Row
+            conn.execute('PRAGMA foreign_keys=ON')
+            return conn
+        except BaseException:
+            conn.close()
+            raise
 
     def run(self, scope: str, operation_id: str, intent: dict, action: Callable) -> dict:
         require(text(operation_id), 'Operation ID is required')
