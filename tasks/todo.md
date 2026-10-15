@@ -30,18 +30,20 @@
 
 ## R03：保存来源档案与准确日期精度
 
-- [ ] 完成
+- [x] 完成
 - 依赖：R02；预计范围：中（4 个主要文件）
 验收：
-- [ ] Source 可保存严格 profile；新 Evidence 精确时间或日级日期及依据往返保留
-- [ ] 旧记录无需补字段；未知日期不填零或伪造时分，嵌套未知字段拒绝
+- [x] Source 可保存严格 profile；新 Evidence 精确时间或日级日期及依据往返保留
+- [x] 旧记录无需补字段；未知日期不填零或伪造时分，嵌套未知字段拒绝
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_observation_metadata.py' -v`。
 涉及文件：`src/records/contracts.py`、`src/records/service.py`、`src/records/bundles.py`、`tests/records/test_observation_metadata.py`。
 
 ### 检查点：R03 后
 
-- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
-- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+- [x] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [x] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+
+验证记录：2026-10-16，5 项元数据用例先验证缺失能力及 URL 校验错误；修复后 51 项 records 测试、compileall 和 diff --check 通过。research 尚无实现，不声称运行该测试目录。备份格式判定涉及 backup.py 一行行为修改，为第五个实现/验证文件。
 
 ## R04：保存有类型的研究元数据
 

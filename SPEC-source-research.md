@@ -1,6 +1,6 @@
 # 规格：来源采集与研究（source-research）
 
-状态：用户于 2026-10-15 明确批准；技术方案与任务清单待审阅，尚未实现。对应[已批准能力划分](CAPABILITY-MAP.md)的 source-research，依赖 records-history。依据为[已确认意图](docs/intent/personal-opportunity-library.md)、[研究手册](docs/agent/RESEARCH-WORKFLOW.md)及[资料模块操作说明](docs/records-operations.md)。本次只定义行为和验收；尚未选择搜索服务、抓取库、模型或新增付费依赖。
+状态：用户于 2026-10-15 明确批准；技术方案与任务清单已批准（2026-10-16），按清单实施中。对应[已批准能力划分](CAPABILITY-MAP.md)的 source-research，依赖 records-history。依据为[已确认意图](docs/intent/personal-opportunity-library.md)、[研究手册](docs/agent/RESEARCH-WORKFLOW.md)及[资料模块操作说明](docs/records-operations.md)。本次只定义行为和验收；尚未选择搜索服务、抓取库、模型或新增付费依赖。
 
 ## 1. 目标与成功条件
 

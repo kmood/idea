@@ -2,7 +2,7 @@
 import json
 from contextlib import closing
 from pathlib import Path
-from .contracts import BASE, FIELDS, Fault, boundary, fields, now, require, text, validate_record
+from .contracts import BASE, FIELDS, OPTIONAL, Fault, boundary, fields, now, require, text, validate_record
 from .storage import Database, expected, get, references, save
 
 
@@ -14,7 +14,7 @@ class ResearchStore:
     def create_research(self, record: dict, operation_id: str) -> dict:
         require(isinstance(record, dict) and isinstance(record.get('kind'), str) and record['kind'] in FIELDS)
         require(record['kind'] != 'Assessment', 'Use saveAssessment')
-        fields(record, {'id', 'kind', 'legacy'} | FIELDS[record['kind']], {'id', 'kind'} | FIELDS[record['kind']])
+        fields(record, {'id', 'kind', 'legacy'} | FIELDS[record['kind']], {'id', 'kind'} | (FIELDS[record['kind']] - OPTIONAL.get(record['kind'], set())))
         require(text(record['id']), 'Record ID required')
         def action(conn):
             if conn.execute('SELECT 1 FROM research_records WHERE id=?', (record['id'],)).fetchone():

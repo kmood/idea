@@ -1,5 +1,5 @@
 """Validate complete research graphs before any import writes."""
-from .contracts import fields, require, stamp, text, validate_record
+from .contracts import OPTIONAL, fields, require, stamp, text, validate_record
 
 
 def hash_string(value) -> bool:
@@ -12,16 +12,21 @@ def validate_bundle(bundle: dict) -> None:
     require(type(bundle['schemaVersion']) is int and bundle['schemaVersion'] in (1, 2))
     require(bundle['baseBundleId'] is None or hash_string(bundle['baseBundleId']))
     require(bundle['bundleId'] == digest({key: value for key, value in bundle.items() if key != 'bundleId'}), 'Bundle digest mismatch')
+    def validate_versioned_record(record):
+        validate_record(record)
+        if bundle['schemaVersion'] == 1:
+            require(not (OPTIONAL.get(record['kind'], set()) & record.keys()), 'v1 bundle contains v2 fields')
+
     data = bundle['data']
     fields(data, {'records', 'versions', 'events', 'operations'}, {'records', 'versions', 'events', 'operations'})
     require(all(isinstance(items, list) for items in data.values()))
     records, versions = {}, {}
     for record in data['records']:
-        validate_record(record)
+        validate_versioned_record(record)
         require(record['id'] not in records, 'Duplicate ID')
         records[record['id']] = record
     for record in data['versions']:
-        validate_record(record)
+        validate_versioned_record(record)
         key = (record['id'], record['revision'])
         require(key not in versions and record['id'] in records, 'Duplicate or orphan version')
         versions[key] = record
@@ -68,7 +73,7 @@ def validate_bundle(bundle: dict) -> None:
         require(isinstance(result, dict))
         results = list(result.values()) if set(result) == {'source', 'target'} else [result]
         for record in results:
-            validate_record(record)
+            validate_versioned_record(record)
             require(versions.get((record['id'], record['revision'])) == record, 'Operation result differs from version')
         operations[operation['operationId']] = operation
     event_ids, covered = set(), set()

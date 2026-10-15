@@ -17,8 +17,8 @@ TABLES = ('research_records', 'record_versions', 'research_events', 'evidence_li
 def validate_database(conn) -> dict:
     require(conn.execute('PRAGMA integrity_check').fetchone()[0] == 'ok', 'Database integrity check failed')
     require(not conn.execute('PRAGMA foreign_key_check').fetchall(), 'Broken database references')
-    database_version(conn)
-    bundle = dict(schemaVersion=1, baseBundleId=None, data=snapshot(conn))
+    version = database_version(conn)
+    bundle = dict(schemaVersion=int(version), baseBundleId=None, data=snapshot(conn))
     bundle['bundleId'] = digest(bundle)
     validate_bundle(bundle)
     from .personal import validate_private_history

@@ -19,6 +19,11 @@ FIELDS.update({
 })
 
 
+OPTIONAL = {'Source': {'profile'}, 'Evidence': {'observation', 'publishedDate'}}
+for _kind, _fields in OPTIONAL.items():
+    FIELDS[_kind] |= _fields
+
+
 class Fault(Exception):
     def __init__(self, code: str, message: str = 'Request rejected', **details: Any):
         self.error = dict(code=code, message=message, **details)
@@ -78,7 +83,7 @@ def validate_record(record: dict) -> None:
     require(isinstance(record, dict))
     kind = record.get('kind')
     require(isinstance(kind, str) and kind in FIELDS, 'Unknown record kind')
-    fields(record, BASE | FIELDS[kind] | SYSTEM_LINKS, BASE | FIELDS[kind])
+    fields(record, BASE | FIELDS[kind] | SYSTEM_LINKS, BASE | (FIELDS[kind] - OPTIONAL.get(kind, set())))
     require(text(record['id']) and type(record['revision']) is int and record['revision'] > 0)
     require(type(record['schemaVersion']) is int and record['schemaVersion'] == 1)
     require(stamp(record['createdAt']) and stamp(record['updatedAt']))
@@ -125,6 +130,7 @@ def validate_record(record: dict) -> None:
             require(text(record['summary']) and string_list(record['questions']))
             fields(record['impact'], {'nature', 'text'}, {'nature', 'text'})
             require(record['impact']['nature'] in ('fact', 'author_claim', 'inference') and text(record['impact']['text']))
+    validate_collection_metadata(record)
     for key in ('derivedFrom', 'derivedIdeas'):
         if key in record:
             require(string_list(record[key]))
@@ -171,3 +177,42 @@ def valid_url(value: Any) -> bool:
         return parsed.scheme in ('https', 'http') and bool(parsed.hostname)
     except ValueError:
         return False
+
+
+def validate_collection_metadata(record: dict) -> None:
+    if 'profile' in record:
+        profile = record['profile']
+        keys = {'domain', 'subentries', 'industries', 'sourceType', 'accessBoundary', 'recheckReason'}
+        fields(profile, keys, keys)
+        require(text(profile['domain']) and profile['domain'] == urlsplit(record['url']).hostname)
+        require(string_list(profile['subentries']) and all(valid_url(url) for url in profile['subentries']))
+        require(string_list(profile['industries']))
+        require(profile['sourceType'] in ('community', 'official', 'report'))
+        require(text(profile['accessBoundary']) and text(profile['recheckReason']))
+    if 'publishedDate' in record:
+        value = record['publishedDate']
+        require(isinstance(value, str) and len(value) == 10 and date_valid(value))
+        require('observation' in record, 'Day precision requires its observation basis')
+    if 'observation' not in record:
+        return
+    observation = record['observation']
+    keys = {'receiptId', 'blockIds', 'replyIds', 'independence', 'precision', 'dateBasis', 'paymentVerification'}
+    fields(observation, keys, keys)
+    require(text(observation['receiptId']))
+    require(string_list(observation['blockIds']) and bool(observation['blockIds']))
+    require(string_list(observation['replyIds']))
+    require(isinstance(observation['independence'], list))
+    for item in observation['independence']:
+        keys = {'groupId', 'basis', 'scope'}
+        fields(item, keys, keys)
+        require(text(item['groupId']) and text(item['basis']) and item['scope'] in ('same_site', 'cross_site'))
+    payment = observation['paymentVerification']
+    require(payment is None or text(payment))
+    precision = observation['precision']
+    require(precision in ('unknown', 'date', 'instant'))
+    if precision == 'unknown':
+        require(record['publishedAt'] is None and 'publishedDate' not in record and observation['dateBasis'] is None)
+    elif precision == 'date':
+        require(record['publishedAt'] is None and 'publishedDate' in record and text(observation['dateBasis']))
+    else:
+        require(stamp(record['publishedAt']) and 'publishedDate' not in record and text(observation['dateBasis']))
