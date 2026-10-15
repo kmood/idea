@@ -15,6 +15,7 @@ class ResearchStore:
         require(isinstance(record, dict) and isinstance(record.get('kind'), str) and record['kind'] in FIELDS)
         require(record['kind'] != 'Assessment', 'Use saveAssessment')
         fields(record, {'id', 'kind', 'legacy'} | FIELDS[record['kind']], {'id', 'kind'} | FIELDS[record['kind']])
+        require(text(record['id']), 'Record ID required')
         def action(conn):
             if conn.execute('SELECT 1 FROM research_records WHERE id=?', (record['id'],)).fetchone():
                 raise Fault('DUPLICATE_ID', 'Record ID already exists', recordId=record['id'])

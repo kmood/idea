@@ -85,7 +85,7 @@ def validate_record(record: dict) -> None:
     require(type(record['archived']) is bool and (record['mergedInto'] is None or text(record['mergedInto'])))
     if kind == 'Source':
         require(text(record['name']))
-        require(text(record['url']) and urlsplit(record['url']).scheme in {'https', 'http'} and bool(urlsplit(record['url']).hostname))
+        require(valid_url(record['url']))
         for key in ('audience', 'languages'):
             require(isinstance(record[key], list) and bool(record[key]) and all(text(x) for x in record[key]))
         require(record['accessStatus'] in ('untried', 'readable', 'restricted', 'failed'))
@@ -93,7 +93,7 @@ def validate_record(record: dict) -> None:
 
     elif kind == 'Evidence':
         require(all(text(record[k]) for k in ('sourceId', 'url', 'claim', 'summary')))
-        require(urlsplit(record['url']).scheme in ('https', 'http') and bool(urlsplit(record['url']).hostname))
+        require(valid_url(record['url']))
         require(stamp(record['publishedAt'], True) and stamp(record['accessedAt']))
         require(record['nature'] in ('fact', 'author_claim', 'inference'))
         require(record['level'] in ('E0', 'E1', 'E2', 'E3'))
@@ -151,5 +151,15 @@ def date_valid(value: str) -> bool:
     try:
         date.fromisoformat(value)
         return True
+    except ValueError:
+        return False
+
+
+def valid_url(value: Any) -> bool:
+    if not text(value):
+        return False
+    try:
+        parsed = urlsplit(value)
+        return parsed.scheme in ('https', 'http') and bool(parsed.hostname)
     except ValueError:
         return False

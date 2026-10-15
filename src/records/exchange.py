@@ -5,7 +5,7 @@ import os
 import tempfile
 from contextlib import closing
 from pathlib import Path
-from .contracts import BASE, FIELDS, SYSTEM_LINKS, boundary, encoded, fields, validate_record
+from .contracts import BASE, FIELDS, SYSTEM_LINKS, boundary, encoded, fields, require, Fault, validate_record
 from .storage import Database
 
 EVENT_FIELDS = {'eventId', 'recordId', 'scope', 'operationId', 'time', 'actor', 'eventType', 'before', 'after', 'reason', 'evidence'}
@@ -51,6 +51,15 @@ def mark_checkpoint(conn, bundle: dict) -> None:
 
 
 def atomic_json(path: Path, payload: dict) -> None:
+    require(path.suffix == '.json' and not path.is_symlink(), 'Output must be a JSON file, not a symlink')
+    if path.exists():
+        try:
+            previous = json.loads(path.read_text(encoding='utf-8'))
+        except (ValueError, UnicodeError):
+            raise Fault('VALIDATION_ERROR', 'Refusing to replace an unrelated file') from None
+        require(isinstance(previous, dict) and previous.keys() == payload.keys(), 'Refusing to replace an unrelated file')
+        marker = 'bundleId' if 'bundleId' in payload else 'previewId'
+        require(previous.get(marker) == digest({k: v for k, v in previous.items() if k != marker}), 'Invalid output ownership marker')
     path.parent.mkdir(parents=True, exist_ok=True)
     name = None
     try:
@@ -76,6 +85,7 @@ class Exchange:
 
     @boundary
     def export_research(self, output: str | Path) -> dict:
+        require(Path(output).resolve() != self.db.path.resolve(), 'Output cannot replace database')
         # Serialize local exports with writers, including checkpoint publication.
         with closing(self.db.connect()) as conn:
             conn.execute('BEGIN IMMEDIATE')
@@ -86,6 +96,14 @@ class Exchange:
                 base = (previous['baseBundleId'] if unchanged else previous['bundleId']) if previous else None
                 bundle = dict(schemaVersion=1, baseBundleId=base, data=data)
                 bundle['bundleId'] = digest(bundle)
+                if Path(output).exists():
+                    try:
+                        existing = json.loads(Path(output).read_text(encoding='utf-8'))
+                    except (ValueError, UnicodeError):
+                        raise Fault('VALIDATION_ERROR', 'Refusing to replace an unrelated file') from None
+                    allowed = {bundle['bundleId'], previous['bundleId'] if previous else None}
+                    require(isinstance(existing, dict) and isinstance(existing.get('bundleId'), str) and existing['bundleId'] in allowed,
+                            'Output has external changes; import or choose a new path')
                 atomic_json(Path(output), bundle)
                 mark_checkpoint(conn, bundle)
                 conn.execute('COMMIT')

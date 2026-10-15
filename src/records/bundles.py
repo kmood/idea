@@ -76,6 +76,7 @@ def validate_bundle(bundle: dict) -> None:
         fields(event, EVENT_FIELDS, EVENT_FIELDS)
         require(text(event['eventId']) and event['eventId'] not in event_ids)
         event_ids.add(event['eventId'])
+        require(text(event['recordId']) and text(event['operationId']))
         require(event['recordId'] in records and event['operationId'] in operations)
         require(event['scope'] == 'research' and event['actor'] == 'research' and stamp(event['time']))
         require(event['eventType'] in ('created', 'updated', 'assessment_saved', 'merge', 'unmerge', 'derive'))
