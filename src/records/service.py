@@ -3,7 +3,7 @@ import json
 from contextlib import closing
 from pathlib import Path
 from .contracts import BASE, FIELDS, Fault, boundary, fields, now, require, text, validate_record
-from .storage import Database, expected, get, save
+from .storage import Database, expected, get, references, save
 
 
 class ResearchStore:
@@ -12,7 +12,7 @@ class ResearchStore:
 
     @boundary
     def create_research(self, record: dict, operation_id: str) -> dict:
-        require(isinstance(record, dict) and record.get('kind') in FIELDS)
+        require(isinstance(record, dict) and isinstance(record.get('kind'), str) and record['kind'] in FIELDS)
         fields(record, {'id', 'kind'} | FIELDS[record['kind']], {'id', 'kind'} | FIELDS[record['kind']])
         def action(conn):
             if conn.execute('SELECT 1 FROM research_records WHERE id=?', (record['id'],)).fetchone():
@@ -20,6 +20,7 @@ class ResearchStore:
             timestamp = now()
             full = record | dict(schemaVersion=1, revision=1, createdAt=timestamp, updatedAt=timestamp, archived=False, mergedInto=None)
             validate_record(full)
+            references(conn, full)
             return save(conn, full, None, operation_id, 'created', 'Initial collection')
         return self.db.run('research', operation_id, {'action': 'create', 'record': record}, action)
 
@@ -56,6 +57,7 @@ class ResearchStore:
                 require(updated['lastSuccess'] == before['lastSuccess'], 'Failed access cannot advance success')
             if updated == before:
                 return before
+            references(conn, updated)
             updated.update(revision=before['revision'] + 1, updatedAt=now())
             return save(conn, updated, before, operation_id, 'updated', reason)
         return self.db.run('research', operation_id, dict(action='patch', id=id, expectedRevision=expected_revision, patch=patch, reason=reason), action)

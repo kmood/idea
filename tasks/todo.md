@@ -41,11 +41,11 @@
 
 ## T04：保存带证据的趋势和点子
 
-- [ ] 完成
+- [x] 完成
 - 依赖：T03；预计范围：中（3–5文件）
 验收：
-- [ ] 最小合法点子/趋势可保存，无成本/成交仍允许
-- [ ] 坏引用拒绝；补反证后保留旧证据版本与历史
+- [x] 最小合法点子/趋势可保存，无成本/成交仍允许
+- [x] 坏引用拒绝；补反证后保留旧证据版本与历史
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_evidence.py' -v`。
 涉及文件：`src/records/contracts.py`、`src/records/service.py`、`src/records/storage.py`、`tests/records/test_evidence.py`。
 

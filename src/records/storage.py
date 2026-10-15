@@ -14,6 +14,7 @@ INSERT OR IGNORE INTO metadata VALUES ('schemaVersion', '1');
 CREATE TABLE IF NOT EXISTS research_records(id TEXT PRIMARY KEY, kind TEXT NOT NULL, revision INTEGER NOT NULL, payload TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS record_versions(record_id TEXT NOT NULL REFERENCES research_records(id), revision INTEGER NOT NULL, payload TEXT NOT NULL, PRIMARY KEY(record_id, revision));
 CREATE TABLE IF NOT EXISTS research_events(seq INTEGER PRIMARY KEY AUTOINCREMENT, event_id TEXT UNIQUE NOT NULL, record_id TEXT NOT NULL REFERENCES research_records(id), payload TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS evidence_links(record_id TEXT NOT NULL REFERENCES research_records(id), evidence_id TEXT NOT NULL REFERENCES research_records(id), evidence_revision INTEGER NOT NULL, PRIMARY KEY(record_id, evidence_id), FOREIGN KEY(evidence_id,evidence_revision) REFERENCES record_versions(record_id,revision));
 CREATE TABLE IF NOT EXISTS operations(scope TEXT NOT NULL, key TEXT NOT NULL, request_hash TEXT NOT NULL, result TEXT NOT NULL, PRIMARY KEY(scope, key));
 '''
 
@@ -73,9 +74,24 @@ def save(conn: sqlite3.Connection, record: dict, before: dict | None, operation:
     conn.execute('INSERT INTO research_records VALUES (?,?,?,?) ON CONFLICT(id) DO UPDATE SET revision=excluded.revision,payload=excluded.payload',
                  (record['id'], record['kind'], record['revision'], encoded(record)))
     conn.execute('INSERT INTO record_versions VALUES (?,?,?)', (record['id'], record['revision'], encoded(record)))
+    conn.execute('DELETE FROM evidence_links WHERE record_id=?', (record['id'],))
+    for ref in record.get('evidenceVersions', []):
+        conn.execute('INSERT INTO evidence_links VALUES (?,?,?)', (record['id'], ref['recordId'], ref['revision']))
     event = dict(eventId=str(uuid.uuid4()), recordId=record['id'], scope='research', operationId=operation,
                  time=now(), actor='research', eventType=event_type, reason=reason,
                  before=None if before is None else {'recordId': before['id'], 'revision': before['revision']},
-                 after={'recordId': record['id'], 'revision': record['revision']}, evidence=record.get('evidenceIds', []))
+                 after={'recordId': record['id'], 'revision': record['revision']}, evidence=record.get('evidenceVersions', []))
     conn.execute('INSERT INTO research_events(event_id,record_id,payload) VALUES (?,?,?)', (event['eventId'], record['id'], encoded(event)))
     return record
+
+
+def references(conn: sqlite3.Connection, record: dict) -> None:
+    if record['kind'] == 'Evidence':
+        require(get(conn, record['sourceId'])['kind'] == 'Source', 'Evidence requires a source')
+    if record['kind'] in ('Idea', 'Trend'):
+        pinned = []
+        for id in record['evidenceIds']:
+            evidence = get(conn, id)
+            require(evidence['kind'] == 'Evidence', 'Invalid evidence reference')
+            pinned.append({'recordId': id, 'revision': evidence['revision']})
+        record['evidenceVersions'] = pinned
