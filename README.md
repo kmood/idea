@@ -7,7 +7,7 @@
 - [已确认需求意图](docs/intent/personal-opportunity-library.md)
 - [已确认能力划分](CAPABILITY-MAP.md)
 - [资料与历史规格（已批准）](SPEC-records-history.md)
-- [资料与历史技术计划（待审阅）](tasks/plan.md)
+- [资料与历史技术计划（已批准）](tasks/plan.md)
 - [任务清单](tasks/todo.md)
 - [趋势与灵感](trends/INDEX.md)
 - [网站目录](sources/INDEX.md)
@@ -19,3 +19,16 @@
 已配置当前聊天循环任务：每天北京时间 21:00。任务会核验、去重并推送研究文档；没有有效机会时允许零新增。
 
 先集中收集，再增量更新；重质量和行业覆盖，不按数量凑目标。网站计划本机运行并支持局域网访问，目前仍处于规格准备阶段。
+
+## 资料模块
+
+Python 3.14 标准库实现，无第三方依赖。正式研究仍写 Markdown；数据库迁移尚未切换。
+
+```bash
+PYTHONPATH=src python3 -m records --help
+PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_*.py' -v
+python3 -m compileall -q src/records
+```
+
+命令支持 init、request（JSON 文件）、export/import、backup/restore、legacy-preview/legacy-apply。
+私人状态使用 `request --scope personal`；研究入口拒绝私人字段。`.local/` 和 SQLite 文件默认不入 Git。

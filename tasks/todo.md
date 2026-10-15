@@ -141,11 +141,11 @@
 
 ## T12：提供可执行的资料管理入口
 
-- [ ] 完成
+- [x] 完成
 - 依赖：T11；预计范围：中（3–5文件）
 验收：
-- [ ] CLI 包装 init/读写请求/导入导出/备份恢复/迁移预览，统一错误退出码
-- [ ] 真实子进程完成录入→收藏→补证→导出→恢复；输入来自文件且不打印私有正文到错误日志
+- [x] CLI 包装 init/读写请求/导入导出/备份恢复/迁移预览，统一错误退出码
+- [x] 真实子进程完成录入→收藏→补证→导出→恢复；输入来自文件且不打印私有正文到错误日志
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_cli.py' -v`。
 涉及文件：`src/records/__main__.py`、`src/records/cli.py`、`tests/records/test_cli.py`、`README.md`。
 
