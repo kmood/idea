@@ -19,4 +19,4 @@
 - 集中收集未结束：本轮集中电商/客服，教育、内容及其他专业服务仍明显不足；没有以数量代替覆盖质量。
 - 最近轮次：6 组搜索；5 个具体讨论候选中读到 3 个、2 个失败；读取 3 份官方辅助文档。未联系客户或执行付费实验。
 
-- 实现交接：docs/records-operations.md。现有资料在临时库迁移演练为 11 来源、5 证据、1 点子、1 趋势；保留原 ID/原文/日期精度。research/migrations/2026-10-15-records-map.json 绑定原文摘要，源资料变化后需重审映射。下一产品步骤为 source-research 模块规格；不影响上述下一轮研究工作。
+- 实现交接：docs/records-operations.md。现有资料在临时库迁移演练为 11 来源、5 证据、1 点子、1 趋势；保留原 ID/原文/日期精度。research/migrations/2026-10-15-records-map.json 绑定原文摘要，源资料变化后需重审映射。source-research 模块规格草案已保存到 SPEC-source-research.md，待用户审阅；尚未进入技术计划或实现，不影响上述下一轮研究工作。
