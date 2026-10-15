@@ -28,6 +28,7 @@ class ResearchStore:
 
     @boundary
     def read_record(self, id: str, revision: int | None = None) -> dict:
+        require(revision is None or (type(revision) is int and revision > 0))
         with closing(self.db.connect()) as conn:
             record = get(conn, id)
             if revision is not None:
@@ -95,4 +96,4 @@ class ResearchStore:
     def list_records(self, kind: str | None = None, query: str = '', filters: dict | None = None, cursor: int = 0, limit: int = 20) -> dict:
         from .queries import list_records
         with closing(self.db.connect()) as conn:
-            return list_records(conn, kind, query, filters or {}, cursor, limit)
+            return list_records(conn, kind, query, {} if filters is None else filters, cursor, limit)

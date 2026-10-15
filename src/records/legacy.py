@@ -44,8 +44,12 @@ def build_preview(root: Path, mappings: dict) -> dict:
         for entry in entries:
             require(isinstance(entry, dict))
             entry = dict(entry)
+            expected_hash = entry.pop('expectedSha256', fingerprint)
+            if expected_hash != fingerprint:
+                raise Fault('REVISION_CONFLICT', 'Mapping refers to older source content; review it again')
+            dates = entry.pop('legacyDates', {})
             first = entry.pop('firstCollectedAt', date_match[1] if date_match else None)
-            entry['legacy'] = dict(path=relative, sha256=fingerprint, originalText=original, firstCollectedAt=first)
+            entry['legacy'] = dict(path=relative, sha256=fingerprint, originalText=original, firstCollectedAt=first, dates=dates)
             records.append(entry)
     order = {'Source': 0, 'Evidence': 1, 'Trend': 2, 'Idea': 3}
     records.sort(key=lambda r: (order.get(r.get('kind'), 9), r.get('id', '')))

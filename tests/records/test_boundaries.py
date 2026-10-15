@@ -37,3 +37,31 @@ class BoundaryTests(StoreCase):
             with self.subTest(bad=bad):
                 result = self.store.create_research(source() | bad, 'bad')
                 self.assertEqual(result['error']['code'], 'VALIDATION_ERROR')
+
+    def test_record_contract_rejects_fake_verification_and_bad_optional_shapes(self):
+        from test_evidence import evidence
+        self.value(self.store.create_research(source(), 's'))
+        for n, bad in enumerate(({'level': 'E3', 'paymentSignal': 'paid', 'nature': 'author_claim'},
+                    {'level': 'E3', 'paymentSignal': None, 'nature': 'fact'},
+                    {'legacy': None, 'accessedAt': None})):
+            with self.subTest(bad=bad):
+                self.assertFalse(self.store.create_research(evidence('EV-'+str(n)) | bad, 'e'+str(n))['ok'])
+        self.assertFalse(self.store.list_records(filters=[])['ok'])
+        self.assertFalse(self.store.read_record('CN-TEST', revision=True)['ok'])
+
+    def test_export_detects_external_snapshot_changes(self):
+        self.value(self.store.create_research(source(), 's'))
+        exchange = Exchange(self.path)
+        target = self.path.parent/'public.json'
+        self.value(exchange.export_research(target))
+        original = json.loads(target.read_text())
+        other_path = self.path.parent/'other.sqlite3'
+        other = Exchange(other_path)
+        self.value(other.import_research(original, 'initial'))
+        from records.service import ResearchStore
+        self.value(ResearchStore(other_path).patch_research('CN-TEST', 1, {'name': 'remote'}, 'remote', 'r'))
+        remote = self.path.parent/'remote.json'
+        self.value(other.export_research(remote))
+        target.write_bytes(remote.read_bytes())
+        self.assertFalse(exchange.export_research(target)['ok'])
+        self.assertEqual(target.read_bytes(), remote.read_bytes())

@@ -83,6 +83,16 @@ def validate_record(record: dict) -> None:
     require(type(record['schemaVersion']) is int and record['schemaVersion'] == 1)
     require(stamp(record['createdAt']) and stamp(record['updatedAt']))
     require(type(record['archived']) is bool and (record['mergedInto'] is None or text(record['mergedInto'])))
+    if 'legacy' in record:
+        legacy = record['legacy']
+        fields(legacy, {'path', 'sha256', 'originalText', 'firstCollectedAt', 'dates'}, {'path', 'sha256', 'originalText', 'firstCollectedAt'})
+        require(all(text(legacy[k]) for k in ('path', 'sha256', 'originalText')))
+        require(len(legacy['sha256']) == 64 and all(c in '0123456789abcdef' for c in legacy['sha256']))
+        dates = legacy.get('dates', {})
+        fields(dates, {'publishedAt', 'accessedAt', 'lastAttempt', 'lastSuccess'})
+        require(all(date_valid(value) for value in dates.values()))
+        first = legacy['firstCollectedAt']
+        require(first is None or stamp(first) or (isinstance(first, str) and len(first) == 10 and date_valid(first)))
     if kind == 'Source':
         require(text(record['name']))
         require(valid_url(record['url']))
@@ -94,10 +104,13 @@ def validate_record(record: dict) -> None:
     elif kind == 'Evidence':
         require(all(text(record[k]) for k in ('sourceId', 'url', 'claim', 'summary')))
         require(valid_url(record['url']))
-        require(stamp(record['publishedAt'], True) and stamp(record['accessedAt']))
+        require(stamp(record['publishedAt'], True))
+        require(stamp(record['accessedAt']) or (record['accessedAt'] is None and date_valid(record.get('legacy', {}).get('dates', {}).get('accessedAt'))))
         require(record['nature'] in ('fact', 'author_claim', 'inference'))
         require(record['level'] in ('E0', 'E1', 'E2', 'E3'))
         require(record['paymentSignal'] in (None, 'intent', 'quote', 'paid'))
+        if record['level'] == 'E3':
+            require(record['nature'] == 'fact' and record['paymentSignal'] is not None, 'E3 needs a verified payment signal')
         require(record['rebutsClaim'] is None or text(record['rebutsClaim']))
     elif kind == 'Assessment':
         validate_assessment(record)
@@ -112,13 +125,6 @@ def validate_record(record: dict) -> None:
             require(text(record['summary']) and string_list(record['questions']))
             fields(record['impact'], {'nature', 'text'}, {'nature', 'text'})
             require(record['impact']['nature'] in ('fact', 'author_claim', 'inference') and text(record['impact']['text']))
-    if 'legacy' in record:
-        legacy = record['legacy']
-        fields(legacy, {'path', 'sha256', 'originalText', 'firstCollectedAt'}, {'path', 'sha256', 'originalText', 'firstCollectedAt'})
-        require(all(text(legacy[k]) for k in ('path', 'sha256', 'originalText')))
-        require(len(legacy['sha256']) == 64 and all(c in '0123456789abcdef' for c in legacy['sha256']))
-        first = legacy['firstCollectedAt']
-        require(first is None or stamp(first) or (isinstance(first, str) and len(first) == 10 and date_valid(first)))
     for key in ('derivedFrom', 'derivedIdeas'):
         if key in record:
             require(string_list(record[key]))
@@ -147,6 +153,8 @@ def validate_assessment(record: dict) -> None:
 
 
 def date_valid(value: str) -> bool:
+    if not isinstance(value, str):
+        return False
     from datetime import date
     try:
         date.fromisoformat(value)

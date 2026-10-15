@@ -1,0 +1,374 @@
+{
+  "sources/INDEX.md": [
+    {
+      "id": "CN01",
+      "kind": "Source",
+      "name": "V2EX 奇思妙想",
+      "url": "https://www.v2ex.com/go/ideas",
+      "audience": [
+        "中文开发者、创意讨论"
+      ],
+      "languages": [
+        "zh"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-14"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "CN02",
+      "kind": "Source",
+      "name": "电鸭",
+      "url": "https://eleduck.com/",
+      "audience": [
+        "中文远程工作与自由职业"
+      ],
+      "languages": [
+        "zh"
+      ],
+      "accessStatus": "restricted",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-14"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "CN03",
+      "kind": "Source",
+      "name": "NodeSeek",
+      "url": "https://www.nodeseek.com/",
+      "audience": [
+        "中文技术、主机与开发交流"
+      ],
+      "languages": [
+        "zh"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-14"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "CN04",
+      "kind": "Source",
+      "name": "LINUX DO",
+      "url": "https://linux.do/",
+      "audience": [
+        "中文技术交流"
+      ],
+      "languages": [
+        "zh"
+      ],
+      "accessStatus": "restricted",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-14"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "CN05",
+      "kind": "Source",
+      "name": "知无不言",
+      "url": "https://www.wearesellers.com/",
+      "audience": [
+        "中文跨境卖家、运营与美工"
+      ],
+      "languages": [
+        "zh"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-15",
+      "legacyDates": {
+        "lastAttempt": "2026-10-15"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "GL01",
+      "kind": "Source",
+      "name": "Indie Hackers",
+      "url": "https://www.indiehackers.com/",
+      "audience": [
+        "英文独立创业者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-14"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "GL02",
+      "kind": "Source",
+      "name": "Hacker News / Ask",
+      "url": "https://news.ycombinator.com/ask",
+      "audience": [
+        "英文开发者与创业者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-14"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "GL03",
+      "kind": "Source",
+      "name": "Reddit / smallbusiness",
+      "url": "https://www.reddit.com/r/smallbusiness/",
+      "audience": [
+        "英文小企业经营者问答"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-15",
+        "lastSuccess": "2026-10-15"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "GL04",
+      "kind": "Source",
+      "name": "Shopify Community",
+      "url": "https://community.shopify.com/",
+      "audience": [
+        "英文商家与电商开发者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-15",
+        "lastSuccess": "2026-10-15"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "GL05",
+      "kind": "Source",
+      "name": "n8n Community",
+      "url": "https://community.n8n.io/",
+      "audience": [
+        "英文自动化用户与开发者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-14"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    },
+    {
+      "id": "GL06",
+      "kind": "Source",
+      "name": "Discourse Meta",
+      "url": "https://meta.discourse.org/",
+      "audience": [
+        "英文社区运营者与开发者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-14",
+      "legacyDates": {
+        "lastAttempt": "2026-10-14"
+      },
+      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+    }
+  ],
+  "ideas/IDEA-20261015-001.md": [
+    {
+      "id": "EV-20261015-001",
+      "kind": "Evidence",
+      "sourceId": "GL04",
+      "url": "https://community.shopify.com/t/how-to-export-translate-adapt-translations-to-csv/209362",
+      "claim": "历史上同站不同商家重复提出翻译后的批量修词与商品关联问题",
+      "summary": "2023 年商家原帖及回复；E2 只描述历史重复需求，不能当作当前购买或规模依据。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E2",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-15T21:02:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-15",
+        "publishedAt": "2023-04-18"
+      },
+      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+    },
+    {
+      "id": "EV-20261015-002",
+      "kind": "Evidence",
+      "sourceId": "GL04",
+      "url": "https://community.shopify.com/t/translate-and-adapt-stuck-for-10-minutes/630362",
+      "claim": "作者报告翻译处理延迟",
+      "summary": "原帖 2026-06-01，补充 06-09；与术语一致性并非同一问题，不能凑成第二份服务需求证明。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-15T21:02:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-15",
+        "publishedAt": "2026-06-01"
+      },
+      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+    },
+    {
+      "id": "EV-20261015-003",
+      "kind": "Evidence",
+      "sourceId": "GL04",
+      "url": "https://help.shopify.com/en/manual/international/languages/csv-translations",
+      "claim": "平台已有翻译 CSV 导入导出、过时状态与资源 ID 字段",
+      "summary": "官方能力构成反证；旧帖的产品关联局限仍需重新实测。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E0",
+      "paymentSignal": null,
+      "rebutsClaim": "旧帖描述的产品关联局限今天仍然存在",
+      "firstCollectedAt": "2026-10-15T21:02:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-15"
+      },
+      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+    },
+    {
+      "id": "EV-20261015-004",
+      "kind": "Evidence",
+      "sourceId": "GL04",
+      "url": "https://help.shopify.com/en/manual/international/languages/translate-adapt-app",
+      "claim": "平台已有人工与 AI 翻译能力",
+      "summary": "商家可能使用现有工具解决，不需要额外服务。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E0",
+      "paymentSignal": null,
+      "rebutsClaim": "商家必须购买额外通用翻译服务",
+      "firstCollectedAt": "2026-10-15T21:02:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-15"
+      },
+      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+    },
+    {
+      "id": "IDEA-20261015-001",
+      "kind": "Idea",
+      "title": "商家商品翻译后的术语清理与批量检查服务",
+      "audience": "商品较多、已经机器翻译的海外 Shopify 商家",
+      "problem": "品牌名误译、术语不一致与批量修订",
+      "earningHypothesis": "Agent 假设：限定语言及批次，交付术语表、疑似错误清单和经商家确认的修订文件，按批次收费；定价及成本未知。",
+      "industry": [
+        "电商运营",
+        "本地化"
+      ],
+      "sideHustleTypes": [
+        "交付服务"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261015-001",
+        "EV-20261015-002",
+        "EV-20261015-003",
+        "EV-20261015-004"
+      ],
+      "firstCollectedAt": "2026-10-15T21:02:00+08:00",
+      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+    }
+  ],
+  "trends/TREND-20261015-001.md": [
+    {
+      "id": "EV-20261015-005",
+      "kind": "Evidence",
+      "sourceId": "GL03",
+      "url": "https://www.reddit.com/r/smallbusiness/comments/1vxr2l4/for_businesses_using_ai_customer_support_how_do/",
+      "claim": "发帖者询问 AI 客服政策变化后的答案检查方法",
+      "summary": "原帖可能带有市场调研性质；未确认其为购买者。回复自述已有工具能解决部分问题，未独立审计。绝对发布日期未确认。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E0",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-15T21:02:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-15"
+      },
+      "expectedSha256": "1972d9b13819b12540eb55089239bd00bcb19115491207e7600910a871d9ed85"
+    },
+    {
+      "id": "TREND-20261015-001",
+      "kind": "Trend",
+      "title": "AI 客服采用后，政策更新与答案质检成为维护话题",
+      "summary": "退款、价格等政策变化引出答案复核讨论；未证明付费需求，已有替代产品。",
+      "evidenceIds": [
+        "EV-20261015-005"
+      ],
+      "impact": {
+        "nature": "inference",
+        "text": "可能出现小范围知识库维护、规则更新检查或质检服务；独立付费需求未知。"
+      },
+      "questions": [
+        "是否有明确自述运行困境的商家？",
+        "现有产品是否已覆盖问题？",
+        "是否存在配置服务需求？"
+      ],
+      "firstCollectedAt": "2026-10-15T21:02:00+08:00",
+      "expectedSha256": "1972d9b13819b12540eb55089239bd00bcb19115491207e7600910a871d9ed85"
+    }
+  ]
+}
