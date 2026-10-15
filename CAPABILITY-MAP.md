@@ -28,10 +28,10 @@ records-history → source-research → opportunity-review → local-web → sch
 
 | 模块 | 规格 | 状态 |
 | --- | --- | --- |
-| records-history | [资料与历史](SPEC-records-history.md) | 已批准；技术计划已批准，实施中 |
+| records-history | [资料与历史](SPEC-records-history.md) | 已实现；37 项测试通过，正式迁移未切换 |
 | source-research | 尚未编写 | 待基础契约确定 |
 | opportunity-review | 尚未编写 | 待基础契约确定 |
 | local-web | 尚未编写 | 待基础契约确定 |
 | scheduled-sync | 尚未编写 | 待基础契约确定 |
 
-模块划分已确认；模块规格通过后再进入技术计划和任务拆分。尚无应用模块完成实现。
+模块划分已确认；模块规格通过后再进入技术计划和任务拆分。records-history 已完成；其他模块尚未实现。

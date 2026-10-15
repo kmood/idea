@@ -1,6 +1,6 @@
 # 规格：资料与历史（records-history）
 
-状态：用户于 2026-10-15 要求继续本规格后的技术方案与任务拆分，按批准记录；尚未实现。依赖：无。依据：[已确认意图](docs/intent/personal-opportunity-library.md)与[已批准能力划分](CAPABILITY-MAP.md)。本文件规定可验证的行为和模块边界，不预选数据库、框架或 HTTP 路由。
+状态：用户于 2026-10-15 要求继续本规格后的技术方案与任务拆分，按批准记录；2026-10-15 已完成 records-history 实现与验收，正式资料未迁移。依赖：无。依据：[已确认意图](docs/intent/personal-opportunity-library.md)与[已批准能力划分](CAPABILITY-MAP.md)。本文件规定可验证的行为和模块边界，不预选数据库、框架或 HTTP 路由。
 
 ## 1. 目标与范围
 
@@ -88,7 +88,7 @@
 
 ## 7. 结构、技术与风格
 
-目前只有 Markdown 文档；技术选型/依赖版本/运行时未确定，属于下一阶段技术计划。此处不宣称已有测试或构建命令。
+本规格批准后采用 Python 标准库 + SQLite + 公开 JSON 快照，技术决策见 ADR-001；实际操作和数据边界见 docs/records-operations.md。
 
 现有：AGENTS.md、docs/intent/、docs/agent/、sources/、trends/、ideas/、research/。
 拟新增职责目录（具体语言后缀在计划中确定）：src/records/ 数据契约与存储入口、tests/records/ 契约和故障测试、tests/fixtures/records/ 合成样例；私人存储路径与忽略规则必须在实现前明确。
@@ -113,13 +113,14 @@
 | 导入迁移 | 既有来源 ID 保留，重复导入不重复；冲突/坏引用明确报告，原文未丢失 |
 | 备份恢复 | 本地备份恢复后用户记录完整，研究导出无个人字段，去重信息仍有效 |
 
-当前仅可运行的规格检查：
+实现后的验证命令：
 ```bash
-git -C /data/code/idea diff --check
-git -C /data/code/idea diff --cached --check
+PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_*.py' -v
+python3 -m compileall -q src/records
+git diff --check
 ```
 
-应用构建/单元/集成/开发命令在技术计划选型后补齐，再开始实现；此阶段不能以不存在的命令宣称验收通过。
+2026-10-15：37 项测试、语法及真实 CLI 验证通过；原文迁移只在临时库演练。
 
 ## 9. 边界与待确认项
 
@@ -129,6 +130,6 @@ git -C /data/code/idea diff --cached --check
 
 已确认默认方案：个人操作/实验反馈只在本机保存并单独备份，研究资料通过仓库同步。后续技术计划需解决存储格式、并发/事务机制、导入导出与备份命令；这些实现选择不要求用户预先指定技术栈。
 
-本规格已批准；[技术计划](tasks/plan.md)、[任务清单](tasks/todo.md)及 ADR-001 已批准，实施中。本文件不代表应用已实现或其他模块规格已批准。
+本规格已批准；[技术计划](tasks/plan.md)、[任务清单](tasks/todo.md)及 ADR-001 已批准并完成实施。实现仅覆盖本模块，不代表其他模块规格已批准。
 
-技术选型提案与未来命令见 [技术计划](tasks/plan.md)，未实现前仍以本文件所述的现有检查命令为准。
+实际接口、旧文日期精度约定及迁移切换条件见 [操作说明](docs/records-operations.md)。

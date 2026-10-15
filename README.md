@@ -30,5 +30,7 @@ PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_*.py' -v
 python3 -m compileall -q src/records
 ```
 
-命令支持 init、request（JSON 文件）、export/import、backup/restore、legacy-preview/legacy-apply。
+命令支持 init、status、request（JSON 文件）、export/import、backup/restore、legacy-preview/legacy-apply。
 私人状态使用 `request --scope personal`；研究入口拒绝私人字段。`.local/` 和 SQLite 文件默认不入 Git。
+
+资料与历史模块的 13 项任务已完成，37 项测试通过。接口、迁移、同步和恢复操作见 [操作说明](docs/records-operations.md)。

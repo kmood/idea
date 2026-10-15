@@ -1,12 +1,12 @@
 # 技术实施计划：records-history
 
-状态：用户于 2026-10-15 批准，执行中。依赖 [已批准规格](../SPEC-records-history.md)；任务勾选只在 [todo.md](todo.md) 维护。实现进度见任务清单。其他模块不在本轮实施范围。
+状态：用户于 2026-10-15 批准，T01–T13 已完成。依赖 [已批准规格](../SPEC-records-history.md)；任务勾选只在 [todo.md](todo.md) 维护。实现进度见任务清单。其他模块不在本轮实施范围。
 
 ## 技术与存储
 
 采用 [ADR-001](../docs/decisions/001-local-records-storage.md) 的 Python 标准库 + 本机 SQLite + 研究 JSON 快照方案。现有 Python 3.14.4、SQLite 3.46.1 已核实；不在本轮升级运行时。
 
-拟新增路径：
+实际路径：
 - src/records/：contracts.py（边界校验/错误）、storage.py（事务/建库）、service.py（研究操作）、personal.py、relations.py、queries.py、exchange.py、backup.py、legacy.py；按任务需要增加，不先建空壳。
 - tests/records/：对应的契约、真实落盘、并发、故障和导入导出测试；合成样例与临时库不进入正式内容库。
 - .local/：本机库、备份、临时请求；data/research.json：未来研究快照。
@@ -45,9 +45,9 @@ legacy 入口读取受支持的现有 Markdown，生成预览包与源文件摘�
 
 backup 使用 SQLite backup API 生成新文件并校验 integrity_check、foreign_key_check、版本/引用及关键行数。restore 仅写入不存在的新目标，默认禁止覆盖；恢复后比对历史和去重信息。只有在完整迁移演练和显式切换后才更新 Agent 的正式写入路径，当前自动研究仍采用现有 Markdown。
 
-## 验证命令（待相应任务实现后执行）
+## 验证与操作命令
 
-以下都是计划中的入口，当前不存在应用代码，不把它们列为已通过检查。命令在仓库根执行：
+以下入口均已实现；37 项测试、语法检查及 CLI 验收已通过。数据写入命令仅在临时库演练，未用于正式切换。命令在仓库根执行：
 
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_*.py' -v
@@ -81,4 +81,4 @@ operation-id 示例必须对应一次具体导入，重试同意图复用，其�
 
 ## 审阅点
 
-建议采用上述单机存储方案及任务顺序。产品数据边界已确认，暂无需要补充的产品问题；技术计划已批准。从 T01 开始，不顺带实现网站或其他模块。
+技术计划已批准且已实施。完成记录与实际命令见 [操作说明](../docs/records-operations.md)；其他模块和正式数据切换独立推进。

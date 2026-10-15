@@ -5,7 +5,7 @@
 - 目标：持续积累高质量跨行业副业资料，重点关注 AI 带来的变化，筛出值得用户投入两周验证的 1–3 个方向。接单、产品、内容、培训、行业服务均可。
 - 已确认产品意图见 [需求意图](docs/intent/personal-opportunity-library.md)。用户后端开发背景，每天两小时，启动预算一万元以内；可借助 AI 处理英文文字，避免依赖频繁英语语音。
 - 个人匹配用于精选，不限制入库。不设网站数/点子数指标，不承诺收益。
-- [能力划分](CAPABILITY-MAP.md)已获用户确认（2026-10-14），[资料与历史规格](SPEC-records-history.md)已获继续授权（2026-10-15），[技术计划](tasks/plan.md)已批准，实施中；网站和结构化历史程序尚未实现。不能把研究任务当作网站实现授权，不能声称已更新不存在的网站。
+- [能力划分](CAPABILITY-MAP.md)已获用户确认（2026-10-14），[资料与历史规格](SPEC-records-history.md)已获继续授权（2026-10-15），[技术计划](tasks/plan.md)已批准，records-history 已实现并通过 37 项测试；[操作说明](docs/records-operations.md)包含当前接口和切换条件。网站尚未实现，正式研究继续写 Markdown，未切换数据库入口。不能把研究任务当作网站实现授权，不能声称已更新不存在的网站。
 
 ## 按需读取
 
@@ -40,4 +40,4 @@
 
 ## 当前可用检查命令
 
-在目标仓库运行 `git status --short`、`git diff --check`；提交前检查 `git diff --cached --check` 与 `git diff --cached`。目前没有应用构建/测试命令；不得虚构检查通过。调度以现有自动化配置为准，本文件不另建调度器。
+在目标仓库运行 `git status --short`、`git diff --check`；提交前检查 `git diff --cached --check` 与 `git diff --cached`。资料模块检查：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_*.py' -v`、`python3 -m compileall -q src/records`；研究资料更新不必重复运行无关程序测试。调度以现有自动化配置为准，本文件不另建调度器。
