@@ -69,3 +69,38 @@ class PersonalStore:
             states = {row['id']: read(conn, row['id']) for row in rows if canonical(conn, row['id']) == target}
             choices = {encoded({key: state[key] for key in PRIVATE}) for state in states.values()}
             return dict(canonicalId=target, states=states, conflict=len(choices)>1)
+
+
+def validate_private_history(conn) -> None:
+    """Recovery checks the private version chain as well as SQLite page integrity."""
+    from .contracts import stamp, text
+    state_fields = {'schemaVersion', 'id', 'recordId', 'revision', 'createdAt', 'updatedAt'} | PRIVATE
+    latest, versions = {}, {}
+    for row in conn.execute('SELECT payload FROM personal_events ORDER BY seq'):
+        event = json.loads(row[0])
+        require(isinstance(event, dict) and event.get('scope') == 'personal' and event.get('actor') == 'user')
+        id = event.get('recordId')
+        require(text(id) and stamp(event.get('time')) and text(event.get('operationId')))
+        after, before = event.get('after'), event.get('before')
+        fields(after, state_fields, state_fields)
+        require(after['schemaVersion'] == 1 and after['id'] == id and after['recordId'] == id)
+        require(type(after['revision']) is int and after['revision'] == (latest[id]['revision']+1 if id in latest else 1))
+        require(stamp(after['createdAt']) and stamp(after['updatedAt']))
+        require(type(after['favorite']) is bool and type(after['ignored']) is bool and isinstance(after['notes'], str))
+        require(after['validationStage'] in ('未开始', '准备验证', '验证中', '结束'))
+        if id in latest:
+            require(before == latest[id] and after['createdAt'] == before['createdAt'], 'Broken private history')
+        else:
+            require(before == dict(schemaVersion=1, id=id, recordId=id, revision=None, createdAt=None,
+                                   updatedAt=None, favorite=False, ignored=False, validationStage='未开始', notes=''))
+        replay = conn.execute("SELECT result FROM operations WHERE scope='personal' AND key=?", (event['operationId'],)).fetchone()
+        require(replay is not None and json.loads(replay[0]) == after, 'Missing private replay information')
+        latest[id] = after
+        versions[(id, after['revision'])] = after
+    current = {row['record_id']: json.loads(row['payload']) for row in conn.execute('SELECT * FROM personal_states')}
+    require(current == latest, 'Private state differs from its history')
+    for row in conn.execute("SELECT result FROM operations WHERE scope='personal'"):
+        result = json.loads(row[0])
+        fields(result, state_fields, state_fields)
+        require(text(result['id']) and type(result['revision']) is int)
+        require(versions.get((result['id'], result['revision'])) == result, 'Private replay differs from history')

@@ -56,6 +56,8 @@ def execute(args) -> dict:
         return unwrap(apply_preview(args.root, load_json(args.input), args.db, args.operation_id))
     if args.command == 'backup':
         return unwrap(backup_local(args.db, args.output))
+    if args.command == 'status':
+        return unwrap(Exchange(args.db).status())
     if args.command == 'export':
         return unwrap(Exchange(args.db).export_research(args.output))
     if args.command == 'import':
@@ -96,6 +98,7 @@ def main(argv=None) -> int:
     parser.add_argument('--db', default='.local/records.sqlite3')
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('init')
+    sub.add_parser('status')
     request = sub.add_parser('request')
     request.add_argument('--scope', choices=('research', 'personal'), default='research')
     request.add_argument('--input', required=True)

@@ -25,3 +25,19 @@ class BackupTests(StoreCase):
         self.assertFalse(target.exists())
         self.assertFalse(backup_local(self.path, self.path)['ok'])
         self.assertEqual(ResearchStore(self.path).list_records()['value']['items'], [])
+
+    def test_invalid_private_revision_history_is_rejected(self):
+        import json
+        self.value(self.store.create_research(source(), 'create'))
+        private = PersonalStore(self.path)
+        self.value(private.set_personal_state('CN-TEST', None, {'notes': 'PRIVATE'}, 'personal'))
+        conn = self.store.db.connect()
+        try:
+            row = json.loads(conn.execute('SELECT payload FROM personal_states').fetchone()[0])
+            row['revision'] = 8
+            conn.execute('UPDATE personal_states SET payload=?', (json.dumps(row),))
+        finally:
+            conn.close()
+        result = backup_local(self.path, self.path.parent/'bad-private.sqlite3')
+        self.assertFalse(result['ok'])
+        self.assertNotIn('PRIVATE', str(result))

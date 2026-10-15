@@ -27,3 +27,14 @@ class ExportTests(StoreCase):
         self.assertNotIn('PRIVATE-ERROR', str(failure))
         self.assertEqual(output.read_bytes(), original)
         self.assertNotEqual(self.value(exchange.export_research(output))['bundleId'], first['bundleId'])
+
+    def test_status_distinguishes_unexported_research_from_private_changes(self):
+        exchange = Exchange(self.path)
+        self.value(self.store.create_research(source(), 'create'))
+        self.assertTrue(self.value(exchange.status())['researchDirty'])
+        self.value(exchange.export_research(self.path.parent/'status.json'))
+        self.value(PersonalStore(self.path).set_personal_state('CN-TEST', None, {'notes': 'PRIVATE'}, 'p'))
+        status = self.value(exchange.status())
+        self.assertFalse(status['researchDirty'])
+        self.assertEqual(status['privateStates'], 1)
+        self.assertNotIn('PRIVATE', str(status))

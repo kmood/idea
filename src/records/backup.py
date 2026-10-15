@@ -20,6 +20,8 @@ def validate_database(conn) -> dict:
     bundle = dict(schemaVersion=1, baseBundleId=None, data=snapshot(conn))
     bundle['bundleId'] = digest(bundle)
     validate_bundle(bundle)
+    from .personal import validate_private_history
+    validate_private_history(conn)
     # Full local rows are compared inside this process, never returned or exported.
     counts, hashes = {}, {}
     for table in TABLES:

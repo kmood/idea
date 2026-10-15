@@ -37,7 +37,7 @@ def boundary(fn: Callable) -> Callable:
             return {'ok': True, 'value': fn(*args, **kwargs)}
         except Fault as exc:
             return {'ok': False, 'error': exc.error}
-        except (sqlite3.Error, OSError):
+        except (sqlite3.Error, OSError, json.JSONDecodeError):
             return {'ok': False, 'error': {'code': 'STORAGE_ERROR', 'message': 'Storage unavailable; retry the same operation ID'}}
     return wrapped
 

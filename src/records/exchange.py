@@ -145,3 +145,17 @@ class Exchange:
             mark_checkpoint(conn, bundle)
             return dict(bundleId=bundle['bundleId'], changed=True, scope='research')
         return self.db.run('import', operation_id, dict(action='import', bundleId=bundle['bundleId']), action)
+
+    @boundary
+    def status(self) -> dict:
+        with closing(self.db.connect()) as conn:
+            conn.execute('BEGIN')
+            try:
+                data = snapshot(conn)
+                previous = checkpoint(conn)
+                dirty = digest(data) != previous['contentHash'] if previous else bool(data['records'])
+                return dict(researchDirty=dirty, lastBundleId=previous['bundleId'] if previous else None,
+                            researchRecords=len(data['records']), privateStates=conn.execute('SELECT count(*) FROM personal_states').fetchone()[0],
+                            scope='local; private data requires local backup')
+            finally:
+                conn.execute('ROLLBACK')
