@@ -1,6 +1,6 @@
 # 国内外交流网站目录
 
-核验日期：2026-10-14（Asia/Shanghai）。先收录来源，再从来源内提取原始需求。地域按主要交流语言/受众区分，不代表注册地。
+初始入口核验：2026-10-14；本轮采样更新：2026-10-15（Asia/Shanghai）。先收录来源，再从来源内提取原始需求。地域按主要交流语言/受众区分，不代表注册地。
 
 状态说明：可读表示本轮工具成功读取入口，不保证所有帖子可读；部分可读表示只取得部分内容。优先级是研究判断，不是盈利结论。下表链接同时为核验来源。
 
@@ -10,10 +10,11 @@
 | CN02 | [电鸭](https://eleduck.com/) | 中文远程工作与自由职业 | 机会、项目、自由职业、曝光/反馈；区分全职招聘与小项目 | 导航可读，本次未取得完整帖子列表；需浏览器或搜索补充 | A，补验后轮巡 |
 | CN03 | [NodeSeek](https://www.nodeseek.com/) | 中文技术、主机与开发交流 | 技术、Dev、测评中的部署/监控痛点 | 帖子列表可读；交易、抽奖和推广噪声较多 | B |
 | CN04 | [LINUX DO](https://linux.do/) | 中文技术交流 | 工具体验、产品反馈；具体分类下一轮核验 | 本轮仅取得有限公开话题；不推定其他分区可访问 | B，部分可读 |
+| CN05 | [知无不言](https://www.wearesellers.com/) | 中文跨境卖家、运营与美工 | AI 素材、广告工作流、运营提效的具体问题 | 2026-10-15：根首页可读；Home.html 与两个具体帖子请求失败，各重试一次后停止；部分悬赏受限 | 待讨论采样 |
 | GL01 | [Indie Hackers](https://www.indiehackers.com/) | 英文独立创业者 | 产品复盘、获客困难、用户评论；收入自述需交叉核验 | 首页可读；/groups 本次直接访问失败，不用其摘要替代正文 | B |
 | GL02 | [Hacker News / Ask](https://news.ycombinator.com/ask) | 英文开发者与创业者 | Ask HN 求推荐、替代工具、工作流程讨论 | 问答列表可读；高票不等于付费意愿 | A |
-| GL03 | [Reddit / smallbusiness](https://www.reddit.com/r/smallbusiness/) | 英文小企业经营者问答 | 日常运营、软件选型、人工操作成本 | 社区页面可读；帖子可能删除或受限，遵守版规 | A |
-| GL04 | [Shopify Community](https://community.shopify.com/) | 英文商家与电商开发者 | Technical Q&A、Shopify Apps、Shopify Flow、库存与订单问题 | 分类目录可读；逐帖检查是否已有内置功能解决 | A |
+| GL03 | [Reddit / smallbusiness](https://www.reddit.com/r/smallbusiness/) | 英文小企业经营者问答 | 日常运营、软件选型、人工操作成本 | 2026-10-15：已读客服政策质检原帖及回复；禁止发市场调研/推广帖，购买证据未确认 | A |
+| GL04 | [Shopify Community](https://community.shopify.com/) | 英文商家与电商开发者 | Technical Q&A、Shopify Apps、Shopify Flow、库存与订单问题 | 2026-10-15：已读翻译导出/延迟两帖并核对官方能力；旧需求不可当当前缺口 | A |
 | GL05 | [n8n Community](https://community.n8n.io/) | 英文自动化用户与开发者 | Questions、Jobs；连接器、流程故障、小企业项目 | 列表可读；许可、交付和维护成本须另行核验 | A |
 | GL06 | [Discourse Meta](https://meta.discourse.org/) | 英文社区运营者与开发者 | Support、Feature、Self-hosting；插件和运营工作流 | 列表可读；区分软件缺陷、配置问题与可收费需求 | B |
 
@@ -22,9 +23,19 @@
 通用采集、证据、去重与增量规则以 [研究执行手册](../docs/agent/RESEARCH-WORKFLOW.md) 为准；本表只保存来源实测状态。
 
 1. 每站保持稳定 ID，记录主域名、具体入口、语言/受众、需求类型、访问状态、最近核验日期及轮巡优先级。同站不同板块作为子入口，不计为独立站。
-2. 新站先核验社区页面和至少一个具体讨论页，再标记“可挖掘”；当前本批仅完成入口核验，具体讨论采样待下一轮。
-3. 本轮建立目录，不将标题直接升级为机会。下一轮优先 CN01、CN02、GL03、GL04、GL05，各采样最多 3 个近期讨论；无法读取的站记录阻碍并替换为可访问来源。
+2. 新站先核验社区页面和至少一个具体讨论页，再标记“可挖掘”；各站是否完成具体讨论采样以本表及下方日志为准。
+3. 不得将标题直接升级为机会。后续优先补齐中文非技术行业与教育/内容服务讨论；读取失败记录阻碍，不推进成功采样位置。
 4. 集中收集阶段优先补齐跨行业来源和讨论采样，数量服从质量与单轮工作预算；进入增量阶段后再按来源质量和更新情况安排复检、补充。每周回顾有效需求数/已读帖数，降低低产出来源频率。
 5. 阅读优先公开页面和站点提供的订阅入口；不绕过登录、验证码或访问限制，不自动发帖或私信。
 6. 机会卡必须引用网站 ID 和具体帖子 URL；社区首页只能证明来源存在，不能作为需求或付费证据。
 7. 下一批补充中文非技术行业社区，避免只观察开发者；海外同时保留小企业和垂直行业社区，降低成功案例偏差。
+
+## 采样与访问历史
+
+| 来源 | last_attempt | last_success（具体讨论） | 本轮结果 / 下次起点 |
+| --- | --- | --- | --- |
+| CN05 | 2026-10-15 | 未成功 | 根首页可读；[125033](https://www.wearesellers.com/question/125033)、[120338](https://www.wearesellers.com/question/120338) 各两次失败，未读正文不入库；下轮可换公开来源，不密集重试 |
+| GL03 | 2026-10-15 | 2026-10-15 | 已读 [1vxr2l4](https://www.reddit.com/r/smallbusiness/comments/1vxr2l4/for_businesses_using_ai_customer_support_how_do/)；下轮查真实商家经历，不能将提问者直接视作买家 |
+| GL04 | 2026-10-15 | 2026-10-15 | 已读 [209362](https://community.shopify.com/t/how-to-export-translate-adapt-translations-to-csv/209362)、[630362](https://community.shopify.com/t/translate-and-adapt-stuck-for-10-minutes/630362)；下轮核验近期术语清理问题 |
+
+以上为已读范围，不是按时间完整遍历网站的游标。2026-10-15 新增 CN05，保留其访问失败历史；GL03/GL04 从入口核验推进为具体讨论采样。
