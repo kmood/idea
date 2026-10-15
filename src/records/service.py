@@ -2,8 +2,8 @@
 import json
 from contextlib import closing
 from pathlib import Path
-from .contracts import BASE, FIELDS, Fault, boundary, fields, now, require, validate_record
-from .storage import Database, get, save
+from .contracts import BASE, FIELDS, Fault, boundary, fields, now, require, text, validate_record
+from .storage import Database, expected, get, save
 
 
 class ResearchStore:
@@ -42,3 +42,20 @@ class ResearchStore:
             rows = conn.execute('SELECT seq,payload FROM research_events WHERE record_id=? AND seq>? ORDER BY seq LIMIT ?', (id, cursor, limit + 1)).fetchall()
             return {'items': [json.loads(row['payload']) | {'seq': row['seq']} for row in rows[:limit]],
                     'nextCursor': rows[limit-1]['seq'] if len(rows) > limit else None}
+
+    @boundary
+    def patch_research(self, id: str, expected_revision: int, patch: dict, reason: str, operation_id: str) -> dict:
+        require(text(reason))
+        def action(conn):
+            before = get(conn, id)
+            fields(patch, FIELDS[before['kind']] | {'archived'})
+            expected(before, expected_revision)
+            updated = before | patch
+            validate_record(updated)
+            if before['kind'] == 'Source' and updated['accessStatus'] != 'readable':
+                require(updated['lastSuccess'] == before['lastSuccess'], 'Failed access cannot advance success')
+            if updated == before:
+                return before
+            updated.update(revision=before['revision'] + 1, updatedAt=now())
+            return save(conn, updated, before, operation_id, 'updated', reason)
+        return self.db.run('research', operation_id, dict(action='patch', id=id, expectedRevision=expected_revision, patch=patch, reason=reason), action)

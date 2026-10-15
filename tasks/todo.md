@@ -16,11 +16,11 @@
 
 ## T02：更新来源时保护版本和重复请求
 
-- [ ] 完成
+- [x] 完成
 - 依赖：T01；预计范围：中（3–5文件）
 验收：
-- [ ] 同意图重试只产生一次变化；相同键不同请求拒绝
-- [ ] 同版本并发更新至多一个成功，无变化 patch 不增业务版本
+- [x] 同意图重试只产生一次变化；相同键不同请求拒绝
+- [x] 同版本并发更新至多一个成功，无变化 patch 不增业务版本
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_mutations.py' -v`。
 涉及文件：`src/records/storage.py`、`src/records/service.py`、`tests/records/test_mutations.py`。
 

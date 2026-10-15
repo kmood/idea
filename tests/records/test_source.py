@@ -11,7 +11,7 @@ def source(id='CN-TEST'):
                 lastAttempt=None, lastSuccess=None)
 
 
-class SourceTests(unittest.TestCase):
+class StoreCase(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
@@ -22,6 +22,8 @@ class SourceTests(unittest.TestCase):
         self.assertTrue(result['ok'], result)
         return result['value']
 
+
+class SourceTests(StoreCase):
     def test_reopen_preserves_record_and_first_history(self):
         created = self.value(self.store.create_research(source(), 'create'))
         reopened = ResearchStore(self.path)
