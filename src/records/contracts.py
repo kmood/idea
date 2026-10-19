@@ -12,6 +12,7 @@ SYSTEM_LINKS = {'legacy', 'evidenceVersions', 'derivedFrom', 'derivedIdeas'}
 FIELDS = {'Source': {'name', 'url', 'audience', 'languages', 'accessStatus', 'lastAttempt', 'lastSuccess'}}
 
 FIELDS.update({
+    'ResearchArtifact': {'artifactType', 'data'},
     'Assessment': {'ideaId', 'fit', 'reasons', 'unknowns', 'evidenceIds', 'generatedAt', 'cost'},
     'Evidence': {'sourceId', 'url', 'claim', 'summary', 'publishedAt', 'accessedAt', 'nature', 'level', 'paymentSignal', 'rebutsClaim'},
     'Trend': {'title', 'summary', 'evidenceIds', 'impact', 'questions'},
@@ -117,6 +118,9 @@ def validate_record(record: dict) -> None:
         if record['level'] == 'E3':
             require(record['nature'] == 'fact' and record['paymentSignal'] is not None, 'E3 needs a verified payment signal')
         require(record['rebutsClaim'] is None or text(record['rebutsClaim']))
+    elif kind == 'ResearchArtifact':
+        from .artifacts import validate_artifact
+        validate_artifact(record)
     elif kind == 'Assessment':
         validate_assessment(record)
     else:

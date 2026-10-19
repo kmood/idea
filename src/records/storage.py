@@ -103,7 +103,12 @@ def expected(record: dict, revision: int | None) -> None:
         raise Fault('REVISION_CONFLICT', 'Record changed; read it again', recordId=record['id'], currentRevision=record['revision'])
 
 
-def save(conn: sqlite3.Connection, record: dict, before: dict | None, operation: str, event_type: str, reason: str) -> dict:
+def save(conn: sqlite3.Connection, record: dict, before: dict | None, operation: str, event_type: str, reason: str, *, authority=None) -> dict:
+    if record['kind'] == 'ResearchArtifact' and record['artifactType'] == 'ReadReceipt':
+        from .artifacts import _READER_AUTHORITY
+        require(authority is _READER_AUTHORITY, 'Only Reader may publish reading receipts')
+    if before and before['kind'] == 'ResearchArtifact':
+        require(record['artifactType'] == before['artifactType'], 'Artifact type is immutable')
     conn.execute('INSERT INTO research_records VALUES (?,?,?,?) ON CONFLICT(id) DO UPDATE SET revision=excluded.revision,payload=excluded.payload',
                  (record['id'], record['kind'], record['revision'], encoded(record)))
     conn.execute('INSERT INTO record_versions VALUES (?,?,?)', (record['id'], record['revision'], encoded(record)))
@@ -119,6 +124,15 @@ def save(conn: sqlite3.Connection, record: dict, before: dict | None, operation:
 
 
 def references(conn: sqlite3.Connection, record: dict) -> None:
+    if record['kind'] == 'ResearchArtifact':
+        from .artifacts import validate_references
+        def lookup(id, revision):
+            if revision is None:
+                return get(conn, id)
+            row = conn.execute('SELECT payload FROM record_versions WHERE record_id=? AND revision=?', (id, revision)).fetchone()
+            require(row is not None, 'Missing artifact reference')
+            return json.loads(row[0])
+        validate_references(record, lookup)
     if record['kind'] == 'Evidence':
         require(get(conn, record['sourceId'])['kind'] == 'Source', 'Evidence requires a source')
     if record['kind'] == 'Assessment':

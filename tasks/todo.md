@@ -47,13 +47,15 @@
 
 ## R04：保存有类型的研究元数据
 
-- [ ] 完成
+- [x] 完成
 - 依赖：R03；预计范围：中（5 个主要文件）
 验收：
-- [ ] ResearchArtifact 固定子类型有版本/历史并可导出重建；来源及证据关联可追溯
-- [ ] 坏引用整批拒绝；普通 create 请求不能伪造 Reader 凭据；私人内容不进入允许字段
+- [x] ResearchArtifact 固定子类型有版本/历史并可导出重建；来源及证据关联可追溯
+- [x] 坏引用整批拒绝；普通 create 请求不能伪造 Reader 凭据；私人内容不进入允许字段
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_artifacts.py' -v`。
 涉及文件：`src/records/artifacts.py`、`src/records/contracts.py`、`src/records/storage.py`、`src/records/bundles.py`、`tests/records/test_artifacts.py`。
+
+验证记录：2026-10-19，7 项元数据/凭据边界用例；全量 58 项 records 测试、compileall、diff --check 通过。Reader 专用能力使用合成凭据测试，实际网络读取尚待 R07/R08；导入/恢复属于可信资料恢复入口，不等同于新的读取证明。
 
 ## R05：保存并恢复一个研究轮次
 

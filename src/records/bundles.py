@@ -15,6 +15,7 @@ def validate_bundle(bundle: dict) -> None:
     def validate_versioned_record(record):
         validate_record(record)
         if bundle['schemaVersion'] == 1:
+            require(record['kind'] != 'ResearchArtifact', 'v1 bundle contains v2 record type')
             require(not (OPTIONAL.get(record['kind'], set()) & record.keys()), 'v1 bundle contains v2 fields')
 
     data = bundle['data']
@@ -36,9 +37,17 @@ def validate_bundle(bundle: dict) -> None:
         require(versions.get((id, record['revision'])) == record, 'Current record differs from latest version')
         for rev in history:
             old = versions[(id, rev)]
-            require(old['kind'] == record['kind'] and old['createdAt'] == record['createdAt'], 'Identity changed')
+            require(old['kind'] == record['kind'] and old['createdAt'] == record['createdAt'] and old.get('artifactType') == record.get('artifactType'), 'Identity changed')
+    def lookup_artifact(id, revision):
+        target = records.get(id) if revision is None else versions.get((id, revision))
+        require(target is not None, 'Missing artifact reference')
+        return target
+
     for record in versions.values():
         kind = record['kind']
+        if kind == 'ResearchArtifact':
+            from .artifacts import validate_references
+            validate_references(record, lookup_artifact)
         if kind == 'Evidence':
             require(record['sourceId'] in records and records[record['sourceId']]['kind'] == 'Source', 'Bad source')
         if kind == 'Assessment':
