@@ -11,7 +11,7 @@ class ResearchStore:
         self.db = Database(path, timeout)
 
     @boundary
-    def create_research(self, record: dict, operation_id: str) -> dict:
+    def create_research(self, record: dict, operation_id: str, *, guard=None) -> dict:
         require(isinstance(record, dict) and isinstance(record.get('kind'), str) and record['kind'] in FIELDS)
         require(record['kind'] != 'Assessment', 'Use saveAssessment')
         fields(record, {'id', 'kind', 'legacy'} | FIELDS[record['kind']], {'id', 'kind'} | (FIELDS[record['kind']] - OPTIONAL.get(record['kind'], set())))
@@ -24,7 +24,7 @@ class ResearchStore:
             validate_record(full)
             references(conn, full)
             return save(conn, full, None, operation_id, 'created', 'Initial collection')
-        return self.db.run('research', operation_id, {'action': 'create', 'record': record}, action)
+        return self.db.run('research', operation_id, {'action': 'create', 'record': record}, action, guard=guard)
 
     @boundary
     def read_record(self, id: str, revision: int | None = None) -> dict:

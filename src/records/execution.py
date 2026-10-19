@@ -96,52 +96,54 @@ class ExecutionStore:
 
     @boundary
     def reserve(self,run_id,token,call_id,kind,identity=None):
+        return self.transaction(lambda conn:self.reserve_in(conn,run_id,token,call_id,kind,identity))
+
+    def reserve_in(self,conn,run_id,token,call_id,kind,identity=None):
         require(text(call_id) and kind in KINDS)
         require(text(identity) if kind in ('discussion','auxiliary') else identity is None)
-        def action(conn):
-            current = self.guard(conn,run_id,token)
-            ledger = self.ledger(conn,run_id)
-            limits,deadline = self.limits(conn,run_id,ledger)
-            if ledger['cancelled']:
-                raise Fault('CANCELLED','Research run was cancelled')
-            if current >= deadline:
-                raise Fault('DEADLINE_EXCEEDED','Explicit extension required')
-            prior = ledger['calls'].get(call_id)
-            if prior:
-                if prior['kind'] != kind or prior['identity'] != identity:
-                    raise Fault('IDEMPOTENCY_CONFLICT','Call ID has a different request')
-                if current >= prior['expiresAt']:
-                    raise Fault('CALL_EXPIRED','A new attempt needs a new call ID and budget')
-                return prior
-            calls = list(ledger['calls'].values()) + [dict(kind=kind,identity=identity)]
-            used = usage(calls)
-            if any(used[key]>limits[key] for key in limits):
-                raise Fault('BUDGET_EXHAUSTED','No remaining call budget')
-            grant = dict(callId=call_id,kind=kind,identity=identity,reservedAt=current,
-                         expiresAt=min(current+30,deadline),status='reserved',resultHash=None)
-            ledger['calls'][call_id] = grant
-            self.save(conn,run_id,ledger)
-            return grant
-        return self.transaction(action)
+        current = self.guard(conn,run_id,token)
+        ledger = self.ledger(conn,run_id)
+        limits,deadline = self.limits(conn,run_id,ledger)
+        if ledger['cancelled']:
+            raise Fault('CANCELLED','Research run was cancelled')
+        if current >= deadline:
+            raise Fault('DEADLINE_EXCEEDED','Explicit extension required')
+        prior = ledger['calls'].get(call_id)
+        if prior:
+            if prior['kind'] != kind or prior['identity'] != identity:
+                raise Fault('IDEMPOTENCY_CONFLICT','Call ID has a different request')
+            if current >= prior['expiresAt']:
+                raise Fault('CALL_EXPIRED','A new attempt needs a new call ID and budget')
+            return prior
+        calls = list(ledger['calls'].values()) + [dict(kind=kind,identity=identity)]
+        used = usage(calls)
+        if any(used[key]>limits[key] for key in limits):
+            raise Fault('BUDGET_EXHAUSTED','No remaining call budget')
+        grant = dict(callId=call_id,kind=kind,identity=identity,reservedAt=current,
+                     expiresAt=min(current+30,deadline),status='reserved',resultHash=None)
+        ledger['calls'][call_id] = grant
+        self.save(conn,run_id,ledger)
+        return grant
 
     @boundary
     def finish(self,run_id,token,call_id,result_hash):
+        return self.transaction(lambda conn:self.finish_in(conn,run_id,token,call_id,result_hash))
+
+    def finish_in(self,conn,run_id,token,call_id,result_hash):
         require(text(call_id) and hash_value(result_hash))
-        def action(conn):
-            current = self.guard(conn,run_id,token)
-            ledger = self.ledger(conn,run_id)
-            call = ledger['calls'].get(call_id)
-            require(call is not None,'Call was never reserved')
-            if call['status'] == 'completed':
-                if call['resultHash'] != result_hash:
-                    raise Fault('IDEMPOTENCY_CONFLICT','Call result changed')
-                return call
-            if ledger['cancelled'] or current >= call['expiresAt']:
-                raise Fault('CALL_EXPIRED','Late results are not accepted')
-            call.update(status='completed',resultHash=result_hash)
-            self.save(conn,run_id,ledger)
+        current = self.guard(conn,run_id,token)
+        ledger = self.ledger(conn,run_id)
+        call = ledger['calls'].get(call_id)
+        require(call is not None,'Call was never reserved')
+        if call['status'] == 'completed':
+            if call['resultHash'] != result_hash:
+                raise Fault('IDEMPOTENCY_CONFLICT','Call result changed')
             return call
-        return self.transaction(action)
+        if ledger['cancelled'] or current >= call['expiresAt']:
+            raise Fault('CALL_EXPIRED','Late results are not accepted')
+        call.update(status='completed',resultHash=result_hash)
+        self.save(conn,run_id,ledger)
+        return call
 
     @boundary
     def extend(self,run_id,token,authorization_id,increments,deadline):

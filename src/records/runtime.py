@@ -125,6 +125,11 @@ def validate_runtime(conn):
         from .readings import validate_readings
         validate_readings(conn)
         extra += ('research_readings',)
+    if {'research_searches','research_candidates'} & present:
+        from .discovery import TABLES as discovery_tables,validate_discovery
+        require(set(discovery_tables)<=present,'Incomplete discovery schema')
+        validate_discovery(conn)
+        extra += discovery_tables
     return TABLES + extra
 
 

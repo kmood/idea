@@ -1,4 +1,4 @@
-"""Bounded run ownership and recovery. Search/analysis adapters follow in R09."""
+"""Bounded run ownership and recovery. Agent search handoff is available through bridge()."""
 import time
 from records.contracts import Fault, boundary
 from records.runtime import ResearchRuntimeStore
@@ -16,6 +16,10 @@ class Runner:
     def __init__(self,path,clock=None):
         self.clock = clock or time.time
         self.store = ResearchRuntimeStore(path,clock=self.clock)
+
+    def bridge(self,run_id,token):
+        from .bridge import AgentBridge
+        return AgentBridge(self.store,run_id,token)
 
     @boundary
     def start(self,run_id,owner_id,source_ids,queries,limits=None):

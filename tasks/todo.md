@@ -111,18 +111,19 @@
 
 ## R09：接通 Agent 搜索与候选队列
 
-- [ ] 完成
-- 依赖：R08；预计范围：中（4 个主要文件）
+- [x] 完成
+- 依赖：R08；实际范围：交接接口与独立 discovery 资料适配器；抽出 execution 事务内方法，使预算与队列原子提交，补充本机备份验证和来源创建执行权守卫。
 验收：
-- [ ] Agent 领取 callId 后交回发现记录，先建档来源再排队，分页可检查候选状态
-- [ ] 无工具时如实 blocked；搜索摘要和手写正文不能产生 receipt；迟到结果不越过执行权检查
+- [x] Agent 领取 callId 后交回发现记录，先建档来源再排队，分页可检查候选状态
+- [x] 无工具时如实 blocked；搜索摘要和手写正文不能产生 receipt；迟到结果不越过执行权检查
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_bridge.py' -v`。
+补充文件：`src/records/discovery.py`、`src/records/execution.py`、`src/records/service.py`、`docs/research-agent-bridge.md`。
 涉及文件：`src/research/bridge.py`、`src/research/runner.py`、`src/records/runtime.py`、`tests/research/test_bridge.py`。
 
 ### 检查点：R09 后
 
-- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
-- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+- [x] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [x] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
 
 ## R10：验证分析稿并分流内容
 
