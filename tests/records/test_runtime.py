@@ -18,20 +18,22 @@ class RuntimeTests(StoreCase):
         from records.runtime import ResearchRuntimeStore
         store = ResearchRuntimeStore(self.path)
         initial = self.value(store.begin('RUN-1',request()))
-        saved = self.value(store.save_intent('RUN-1','STEP-1',intent()))
+        token = self.value(store.execution.acquire('RUN-1','test'))
+        saved = self.value(store.save_intent('RUN-1','STEP-1',intent(),token=token))
         reopened = ResearchRuntimeStore(self.path)
         self.assertEqual(self.value(reopened.begin('RUN-1',request())), initial)
         state = self.value(reopened.inspect_run('RUN-1'))
         self.assertEqual(state['run'],initial)
         self.assertEqual(state['intents'],[saved])
         self.assertFalse(reopened.begin('RUN-1', request() | {'queries':['different']})['ok'])
-        self.assertFalse(reopened.save_intent('RUN-1','STEP-1',intent() | {'requestHash':'b'*64})['ok'])
+        self.assertFalse(reopened.save_intent('RUN-1','STEP-1',intent() | {'requestHash':'b'*64},token=token)['ok'])
 
     def test_backup_contains_runtime_and_public_snapshot_excludes_it(self):
         from records.runtime import ResearchRuntimeStore
         store = ResearchRuntimeStore(self.path)
         self.value(store.begin('RUN-PRIVATE',request()))
-        self.value(store.save_intent('RUN-PRIVATE','STEP-PRIVATE',intent()))
+        token = self.value(store.execution.acquire('RUN-PRIVATE','test'))
+        self.value(store.save_intent('RUN-PRIVATE','STEP-PRIVATE',intent(),token=token))
         path = self.path.parent / 'public.json'
         self.value(Exchange(self.path).export_research(path))
         self.assertNotIn('RUN-PRIVATE',path.read_text())

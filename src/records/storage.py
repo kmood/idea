@@ -68,12 +68,14 @@ class Database:
             conn.close()
             raise
 
-    def run(self, scope: str, operation_id: str, intent: dict, action: Callable) -> dict:
+    def run(self, scope: str, operation_id: str, intent: dict, action: Callable, *, guard: Callable | None = None) -> dict:
         require(text(operation_id), 'Operation ID is required')
         digest = hashlib.sha256(encoded(intent).encode()).hexdigest()
         conn = self.connect()
         try:
             conn.execute('BEGIN IMMEDIATE')
+            if guard is not None:
+                guard(conn)
             prior = conn.execute('SELECT * FROM operations WHERE scope=? AND key=?', (scope, operation_id)).fetchone()
             if prior:
                 if prior['request_hash'] != digest:

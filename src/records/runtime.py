@@ -39,13 +39,16 @@ def get_run(conn, run_id):
 
 
 class ResearchRuntimeStore:
-    def __init__(self, path):
+    def __init__(self, path, clock=None):
         self.db = Database(path)
+        from .execution import ExecutionStore
+        self.execution = ExecutionStore(self.db, clock)
         with closing(self.db.connect()) as conn:
             conn.execute('BEGIN IMMEDIATE')
             try:
                 for statement in SCHEMA:
                     conn.execute(statement)
+                conn.execute('CREATE TABLE IF NOT EXISTS research_execution(run_id TEXT PRIMARY KEY REFERENCES research_runs(run_id), payload TEXT NOT NULL)')
                 conn.execute('COMMIT')
             finally:
                 if conn.in_transaction:
@@ -61,14 +64,15 @@ class ResearchRuntimeStore:
         return self.db.run('runtime-run', run_id, request, action)
 
     @boundary
-    def save_intent(self, run_id, intent_id, intent):
+    def save_intent(self, run_id, intent_id, intent, *, token=None):
         require(text(run_id) and text(intent_id)); validate_intent(intent)
         def action(conn):
             get_run(conn, run_id)
             result = dict(runId=run_id, intentId=intent_id, intent=intent, status='pending', result=None)
             conn.execute('INSERT INTO research_intents VALUES (?,?,?,?)', (run_id,intent_id,digest(intent),encoded(result)))
             return result
-        return self.db.run('runtime-intent:' + run_id, intent_id, intent, action)
+        return self.db.run('runtime-intent:' + run_id, intent_id, intent, action,
+                           guard=lambda conn:self.execution.guard(conn, run_id, token))
 
     @boundary
     def inspect_run(self, run_id, cursor='', limit=20):
@@ -107,6 +111,10 @@ def validate_runtime(conn):
         require(item['status'] == 'pending' and item['result'] is None)
         require(row['request_hash'] == digest(item['intent']))
         validate_replay(conn, 'runtime-intent:' + item['runId'], item['intentId'], row['request_hash'], item)
+    if 'research_execution' in present:
+        from .execution import validate_execution
+        validate_execution(conn)
+        return TABLES + ('research_execution',)
     return TABLES
 
 

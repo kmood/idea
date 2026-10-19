@@ -76,4 +76,5 @@ def backup_local(source: str | Path, output: str | Path) -> dict:
 
 @boundary
 def restore_local(source: str | Path, output: str | Path) -> dict:
-    return copy_validated(Path(source), Path(output))
+    from .execution import reset_restored_execution
+    return copy_validated(Path(source), Path(output), transform=reset_restored_execution)
