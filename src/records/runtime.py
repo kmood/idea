@@ -114,8 +114,14 @@ def validate_runtime(conn):
     if 'research_execution' in present:
         from .execution import validate_execution
         validate_execution(conn)
-        return TABLES + ('research_execution',)
-    return TABLES
+        extra = ('research_execution',)
+    else:
+        extra = ()
+    if 'research_network' in present:
+        from .network_policy import validate_network
+        validate_network(conn)
+        extra += ('research_network',)
+    return TABLES + extra
 
 
 def validate_replay(conn, scope, key, request_hash, result):

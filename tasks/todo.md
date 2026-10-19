@@ -88,13 +88,15 @@
 
 ## R07：实现有界公开网络读取
 
-- [ ] 完成
-- 依赖：R06；预计范围：小（2 个主要文件）
+- [x] 完成
+- 依赖：R06；实施拆分：R07a 受控连接/可终止进程（network.py 与 test_network_transport.py），R07b robots、预算和跨命令间隔（fetcher.py、records/network_policy.py、runtime.py 备份接入及 test_network.py）。原两文件估计不足以保持研究层不直接访问 SQLite。
 验收：
-- [ ] 校验并固定公网 IP，Host/SNI 与证书校验正确；每次重定向重新验证
-- [ ] robots、超时、大小限制、请求间隔可测试；拒绝内网/元数据/重绑定/认证与超限跳转
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_network.py' -v`。
+- [x] 校验并固定公网 IP，Host/SNI 与证书校验正确；每次重定向重新验证
+- [x] robots、超时、大小限制、请求间隔可测试；拒绝内网/元数据/重绑定/认证与超限跳转
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_network*.py' -v`。
 涉及文件：`src/research/network.py`、`tests/research/test_network.py`。
+
+验证记录：2026-10-20，13 项网络用例覆盖固定连接、TLS 原域名、阻塞进程终止、压缩体、robots/重定向、Retry-After、跨实例间隔及备份。全量 62 records + 23 research 通过。在线临时库试读 Python 官方文档时，系统 DNS 返回 198.18.0.135（非公网测试网段），因此在首个 robots 请求的地址检查阶段拒绝，未绕过；该限制留给 R19 在线验收处理，不声称读到了正文。
 
 ## R08：生成实际正文读取凭据
 
