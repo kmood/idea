@@ -71,18 +71,20 @@
 
 ## R06：限定执行权与调用预算
 
-- [ ] 完成
-- 依赖：R05；预计范围：中（4 个主要文件）
+- [x] 完成
+- 依赖：R05；预计范围：中；实施拆为提供方执行权/预算与研究层运行器两个提交
 验收：
-- [ ] 两个执行者竞争只允许一个；过期后重新领取提升 fence，旧执行者不能改状态
-- [ ] 预占调用、重试、deadline 和续授幂等可验证，丢响应不退额度，预算耗尽停止外部动作
-验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_runner.py' -v`。
-涉及文件：`src/records/runtime.py`、`src/research/runner.py`、`src/research/contracts.py`、`tests/research/test_runner.py`。
+- [x] 两个执行者竞争只允许一个；过期后重新领取提升 fence，旧执行者不能改状态
+- [x] 预占调用、重试、deadline 和续授幂等可验证，丢响应不退额度，预算耗尽停止外部动作
+验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_runner*.py' -v`。
+涉及文件：提供方核心拆入 `src/records/execution.py`，由 runtime.py 接入，storage.py 增加事务内 guard；backup.py 提前接入 R16 的恢复身份失效部分，避免提交已知旧凭证漏洞。现有 test_runtime.py 适配租约参数，test_runner.py 验证执行权/预算；研究层 contracts.py、runner.py 与 test_runner_facade.py 单独提交。
 
 ### 检查点：R06 后
 
-- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
-- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+- [x] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [x] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+
+验证记录：2026-10-20，62 项 records + 10 项 research 测试、compileall 与 diff --check 通过。并发连接竞争只产生一个持有者；start 重试不重置截止时间；损坏超额账本不能备份。真实网络、搜索和分析尚未接入。
 
 ## R07：实现有界公开网络读取
 

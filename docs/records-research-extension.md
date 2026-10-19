@@ -46,3 +46,11 @@ v1 库/包可读且升级不改旧历史；v2 往返确定性；新嵌套字段�
 ## R04 实现边界（2026-10-19）
 
 五类 ResearchArtifact 固定字段与引用校验已实现，字段名见 `src/records/artifacts.py` 的 SHAPES。普通 ResearchStore 可以保存非凭据元数据，但不能创建或修改 ReadReceipt；Reader 将使用仅进程内可持有、不能由 JSON 提供的能力对象。可信快照导入与本地恢复允许重建已有凭据，不表示本机重新读取过网页。此边界不防御同一系统账号恶意代码直接访问存储内核。真实读取器、队列与发布执行权按后续任务接入。
+
+## R05–R06 实现边界（2026-10-20）
+
+本机运行域包含 research_runs、research_intents 与 research_execution；执行权保存在本机 metadata.researchLease，预算账本不进入公开包。ExecutionStore 的 acquire/reserve/finish/extend/cancel/inspect 提供短事务能力；外部调用在预占成功后由后续执行器完成。search 与所有请求计数，discussion/auxiliary 用稳定身份计候选/辅助页名额，重复读取仍消耗总请求。每次新网络尝试必须使用新 callId；重复返回的已完成 grant 不能再次派发。
+
+保存意图和回放均需当前租约；研究业务的 publishStep 将在 R12 接入相同事务 guard。租约 90 秒，调用授权最多 30 秒；Runner 默认整轮 20 分钟，start 重试保留原截止时间，resume 报告剩余额度。显式续授使用稳定授权 ID，不因恢复自动加额。Runner 的 ready 仅表示有执行权和可用总预算，不能解释为已搜索或已阅读。
+
+备份包含执行账本并校验预算；restore_local 对 v2 副本更换 dbInstanceId、提升 fence 并使租约立即到期。该安全前置已从 R16 提前完成；完整候选/缓存/发布恢复仍待后续任务。
