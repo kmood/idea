@@ -121,6 +121,10 @@ def validate_runtime(conn):
         from .network_policy import validate_network
         validate_network(conn)
         extra += ('research_network',)
+    if 'research_readings' in present:
+        from .readings import validate_readings
+        validate_readings(conn)
+        extra += ('research_readings',)
     return TABLES + extra
 
 

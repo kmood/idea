@@ -100,12 +100,13 @@
 
 ## R08：生成实际正文读取凭据
 
-- [ ] 完成
-- 依赖：R07；预计范围：中（5 个主要文件）
+- [x] 完成
+- 依赖：R07；实际拆分：正文解析、Reader 编排、资料事务与本机缓存指针；独立文件避免将网络解析混入资料契约。新增缓存忽略规则与操作说明。
 验收：
-- [ ] 真实读取器输出有定位的可见正文块、指纹、精度及截断状态，并通过资料层保存 receipt
-- [ ] 标题/登录页/无法解析正文不变成需求证据；坏格式与提示注入不执行；缓存缺失可以重读
+- [x] 真实读取器输出有定位的可见正文块、指纹、精度及截断状态，并通过资料层保存 receipt
+- [x] 标题/登录页/无法解析正文不变成需求证据；坏格式与提示注入不执行；缓存缺失可以重读
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_reader.py' -v`。
+补充文件：`src/research/document.py`、`src/records/readings.py`、`.gitignore`、`docs/research-reader.md`。
 涉及文件：`src/research/reader.py`、`src/records/artifacts.py`、`src/records/runtime.py`、`tests/research/test_reader.py`、`tests/fixtures/research/public-thread.html`。
 
 ## R09：接通 Agent 搜索与候选队列

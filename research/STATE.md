@@ -19,6 +19,6 @@
 - 集中收集未结束：本轮集中电商/客服，教育、内容及其他专业服务仍明显不足；没有以数量代替覆盖质量。
 - 最近轮次：6 组搜索；5 个具体讨论候选中读到 3 个、2 个失败；读取 3 份官方辅助文档。未联系客户或执行付费实验。
 
-- 实现交接：docs/records-operations.md。现有资料在临时库迁移演练为 11 来源、5 证据、1 点子、1 趋势；保留原 ID/原文/日期精度。research/migrations/2026-10-15-records-map.json 绑定原文摘要，源资料变化后需重审映射。source-research 模块规格 SPEC-source-research.md 已获用户批准；tasks/plan.md、tasks/todo.md、ADR-002 及资料扩展提案已于 2026-10-16 获批准；R01–R07 已完成，62 项 records + 23 项 research 测试通过（2026-10-20），下一项 R08。正式研究入口未切换，不影响上述下一轮研究工作。
+- 实现交接：docs/records-operations.md。现有资料在临时库迁移演练为 11 来源、5 证据、1 点子、1 趋势；保留原 ID/原文/日期精度。research/migrations/2026-10-15-records-map.json 绑定原文摘要，源资料变化后需重审映射。source-research 模块规格 SPEC-source-research.md 已获用户批准；tasks/plan.md、tasks/todo.md、ADR-002 及资料扩展提案已于 2026-10-16 获批准；R01–R08 已完成，62 项 records + 27 项 research 测试通过（2026-10-20），下一项 R09：Agent 搜索交接与候选队列。正式研究入口未切换，不影响上述下一轮研究工作。
 
 - 在线读取环境限制（2026-10-20）：系统将 docs.python.org/www.python.org 解析到 198.18.0.0/15 测试网段。受控读取器拒绝非公网 IP；实际 HTTP 正文未读取。保留安全检查，R19 在线验收仍需可验证的公网解析环境，同一限制无需重复提醒。
