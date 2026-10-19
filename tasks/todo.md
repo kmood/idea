@@ -59,13 +59,15 @@
 
 ## R05：保存并恢复一个研究轮次
 
-- [ ] 完成
+- [x] 完成
 - 依赖：R04；预计范围：中（4 个主要文件）
 验收：
-- [ ] 稳定 runId 和请求摘要保存于本机运行域；重启可查实际状态和未完成意图
-- [ ] 同键不同请求拒绝；新增运行表纳入本地备份但不进入公开研究包
+- [x] 稳定 runId 和请求摘要保存于本机运行域；重启可查实际状态和未完成意图
+- [x] 同键不同请求拒绝；新增运行表纳入本地备份但不进入公开研究包
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_runtime.py' -v`。
 涉及文件：`src/records/runtime.py`、`src/records/storage.py`、`src/records/backup.py`、`tests/records/test_runtime.py`。
+
+验证记录：2026-10-19，4 项持久化/备份用例；全量 62 项 records 测试、编译与差异检查通过。运行表按需在提供方短事务中创建，未改普通资料构造路径；执行权与预算由 R06 接入。
 
 ## R06：限定执行权与调用预算
 

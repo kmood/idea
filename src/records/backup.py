@@ -24,8 +24,10 @@ def validate_database(conn) -> dict:
     from .personal import validate_private_history
     validate_private_history(conn)
     # Full local rows are compared inside this process, never returned or exported.
+    from .runtime import validate_runtime
+    runtime_tables = validate_runtime(conn)
     counts, hashes = {}, {}
-    for table in TABLES:
+    for table in TABLES + runtime_tables:
         rows = [tuple(row) for row in conn.execute(f'SELECT * FROM {table} ORDER BY 1,2')]
         counts[table] = len(rows)
         hashes[table] = digest(rows)
