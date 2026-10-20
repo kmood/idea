@@ -16,6 +16,8 @@
 
 首次从标准输入脚本调用 Reader 时，独立读取进程无法重载 `<stdin>`，返回通用 network 失败；随后改用 R17 的真实 CLI 子进程重试。Reddit、Hacker News 与 GitHub 候选各一次均返回 `restricted`。程序没有缓存正文，也没有生成读取凭据。
 
+进一步诊断确认本机 Python DNS 把 `www.reddit.com`、`news.ycombinator.com`、`github.com`、`raw.githubusercontent.com`、`docs.python.org` 和 `example.com` 全部解析为 `198.18.0.0/15` 内的地址。该网段不是公网目标，Reader 在发出 robots 或正文请求前按 SSRF 防护拒绝，因此网络策略表没有可缓存的 robots 响应。换普通域名不能绕过此环境限制；不得关闭公网地址检查或把会话搜索返回内容伪装成本机 Reader 正文。
+
 最终账本为 searches=3、total=7、candidates=0、auxiliary=0。四个读取调用均已预占且不退款，符合丢失/受限结果仍消耗预算的约定；剩余 total=33。本轮未联系客户、未发帖、未付费、未从搜索摘要提交分析。
 
 ## 导出、重导与恢复
@@ -26,4 +28,4 @@
 
 ## 可恢复下一步
 
-保留当前临时库和候选队列。下一次在 Reader 可访问公开正文的网络环境中先 `resume` 取得新 token，再选择允许 robots 且无需登录的具体讨论重读；若原站持续 restricted，新增替代公开来源并领取新的实际 query/callId。只有形成 ReadReceipt 后才提交分析、发布结果、推进 SourceCheckpoint，并再次验证带正文指纹的导出/重导/恢复链路。
+保留当前临时库和候选队列。下一次在 DNS 返回可验证公网地址的 Reader 环境中先 `resume` 取得新 token，再选择允许 robots 且无需登录的具体讨论重读。只有形成 ReadReceipt 后才提交分析、发布结果、推进 SourceCheckpoint，并再次验证带正文指纹的导出/重导/恢复链路。若桌面运行环境必须经过代理，应另行设计能保持目标校验、Host/SNI 和重绑定防护的显式传输方案，不能直接信任当前 `198.18.0.0/15` 映射。

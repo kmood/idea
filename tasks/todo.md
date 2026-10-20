@@ -259,7 +259,7 @@
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_acceptance.py' -v`。
 涉及文件：`research/runs/source-research-pilot.md`、`docs/source-research-operations.md`、`AGENTS.md`、`research/STATE.md`、`tasks/todo.md`。
 
-试运行记录：2026-10-20，真实 `web.search` 执行 3 个 query，建档 3 个来源并交回 4 个候选；本机 Reader 的 Reddit/Hacker News/GitHub 正文读取均返回 restricted，没有生成凭据或研究结论。公开导出/重导及完整备份恢复通过，但正文不变性无法验证，故 R19 保持未完成并保留 `.local/r19/` 断点。详见 `research/runs/source-research-pilot.md`。
+试运行记录：2026-10-20，真实 `web.search` 执行 3 个 query，建档 3 个来源并交回 4 个候选；本机 Reader 的 Reddit/Hacker News/GitHub 正文读取均返回 restricted，没有生成凭据或研究结论。诊断确认本机 Python DNS 将测试域名统一映射到非公网 `198.18.0.0/15`，地址检查在请求前正确拒绝。公开导出/重导及完整备份恢复通过，但正文不变性无法验证，故 R19 保持未完成并保留 `.local/r19/` 断点。详见 `research/runs/source-research-pilot.md`。
 
 ### 检查点：R19 后
 
