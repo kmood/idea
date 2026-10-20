@@ -84,6 +84,16 @@ class AnalysisTests(unittest.TestCase):
         self.ok(self.runner.store.execution.cancel('run',self.token))
         self.assertFalse(self.analyzer.validate(self.draft)['ok'])
 
+    def test_typed_counter_evidence_keeps_its_rebuttal_target(self):
+        draft=copy.deepcopy(self.draft)
+        draft['counterEvidence']=[dict(text='Another author reports terminology was already consistent',
+            nature='author_claim',level='E1',refs=[self.ref],rebutsClaim='Terminology is always inconsistent')]
+        result=self.ok(self.analyzer.validate(draft))
+        self.assertEqual(result['draft']['counterEvidence'][0]['rebutsClaim'],
+                         'Terminology is always inconsistent')
+        draft['counterEvidence'][0].update(nature='inference',level='E1')
+        self.assertFalse(self.analyzer.validate(draft)['ok'])
+
     def test_update_requires_current_existing_business_record(self):
         from records.service import ResearchStore
         store=ResearchStore(self.path)

@@ -165,13 +165,16 @@
 
 ## R13：恢复多步证据与点子发布
 
-- [ ] 完成
-- 依赖：R12；预计范围：中（3 个主要文件）
+- [x] 完成
+- 依赖：R12；实际范围：中；拆分为本机发布计划、公开清单和研究层恢复编排，并补充公开身份查询与反证类型，避免摘要承诺与实际请求漂移。
 验收：
-- [ ] PublicationManifest 先持久化目标 ID 和步骤，Source→证据→条目→关联可中断接续
-- [ ] 证据已保存后中断仍显示 partial；恢复不重造记录，改稿有新意图且保留旧稿关联
+- [x] PublicationManifest 先持久化目标 ID 和步骤，Source→证据→条目→关联可中断接续
+- [x] 证据已保存后中断仍显示 partial；恢复不重造记录，改稿有新意图且保留旧稿关联
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_publication.py' -v`。
-涉及文件：`src/research/publication.py`、`src/records/runtime.py`、`tests/research/test_publication.py`。
+操作说明：`docs/research-publication.md`。
+涉及文件：`src/research/publication.py`、`src/research/analysis.py`、`src/research/runner.py`、`src/records/publishing.py`、`src/records/runtime.py`、`src/records/identity.py`、`tests/research/test_publication.py`、`tests/research/test_analysis.py`。
+
+验证记录：2026-10-20，9 项发布恢复用例覆盖清单先行、部分发布、本地备份、提交后确认丢失、清单承诺冲突、改稿 supersedes、反证、既有条目更新及旧执行者拒绝；全量 69 项 records + 56 项 research 测试、编译与差异检查通过。公开包缺少本机请求计划时不从摘要猜测正文，留给 R16 保守恢复；正式研究入口未切换。
 
 ## R14：维护缺口游标和有界重试
 

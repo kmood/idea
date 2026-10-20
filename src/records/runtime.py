@@ -49,6 +49,7 @@ class ResearchRuntimeStore:
                 for statement in SCHEMA:
                     conn.execute(statement)
                 conn.execute('CREATE TABLE IF NOT EXISTS research_execution(run_id TEXT PRIMARY KEY REFERENCES research_runs(run_id), payload TEXT NOT NULL)')
+                conn.execute('CREATE TABLE IF NOT EXISTS research_publications(manifest_id TEXT PRIMARY KEY,run_id TEXT NOT NULL REFERENCES research_runs(run_id),draft_hash TEXT NOT NULL,payload TEXT NOT NULL)')
                 conn.execute('COMMIT')
             finally:
                 if conn.in_transaction:
@@ -86,6 +87,37 @@ class ResearchRuntimeStore:
                             nextCursor=rows[limit-1]['intent_id'] if len(rows)>limit else None)
             finally:
                 conn.execute('ROLLBACK')
+
+    @boundary
+    def save_publication_plan(self, run_id, manifest_id, draft_hash, plan, *, token=None):
+        from .artifacts import hash_value
+        from .publishing import validate_plan
+        require(text(run_id) and text(manifest_id) and hash_value(draft_hash))
+        validate_plan(plan,run_id)
+        require(plan['manifestId'] == manifest_id and plan['draftHash'] == draft_hash)
+        require(len(encoded(plan).encode()) <= 1024*1024, 'Publication plan is too large')
+        def action(conn):
+            get_run(conn,run_id)
+            conn.execute('INSERT INTO research_publications VALUES (?,?,?,?)',
+                         (manifest_id,run_id,draft_hash,encoded(plan)))
+            return plan
+        return self.db.run('runtime-publication:'+run_id,manifest_id,plan,action,
+                           guard=lambda conn:self.execution.guard(conn,run_id,token))
+
+    @boundary
+    def publication_plan(self, run_id, manifest_id, *, token=None):
+        require(text(run_id) and text(manifest_id))
+        def action(conn):
+            from .publishing import validate_plan
+            self.execution.guard(conn,run_id,token)
+            row=conn.execute('SELECT draft_hash,payload FROM research_publications WHERE run_id=? AND manifest_id=?',
+                             (run_id,manifest_id)).fetchone()
+            if row is None:raise Fault('NOT_FOUND','Publication plan is not available locally')
+            plan=json.loads(row['payload'])
+            validate_plan(plan,run_id)
+            require(plan['manifestId']==manifest_id and plan['draftHash']==row['draft_hash'])
+            return plan
+        return self.execution.transaction(action)
 
 
 def validate_runtime(conn):
@@ -148,6 +180,15 @@ def validate_runtime(conn):
         require(set(discovery_tables)<=present,'Incomplete discovery schema')
         validate_discovery(conn)
         extra += discovery_tables
+    if 'research_publications' in present:
+        from .publishing import validate_plan
+        for row in conn.execute('SELECT * FROM research_publications'):
+            get_run(conn,row['run_id'])
+            plan=json.loads(row['payload'])
+            validate_plan(plan,row['run_id'])
+            require(plan['manifestId']==row['manifest_id'] and plan['draftHash']==row['draft_hash'])
+            validate_replay(conn,'runtime-publication:'+row['run_id'],row['manifest_id'],digest(plan),plan)
+        extra += ('research_publications',)
     return TABLES + extra
 
 

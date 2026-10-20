@@ -36,3 +36,18 @@ class IdentityStore:
                     WHERE l.record_id=r.id AND json_extract(v.payload,'$.observation.receiptId')=?)))
                 ORDER BY r.id LIMIT ?""",(cursor,receipt_id,receipt_id,limit+1)).fetchall()
             return dict(items=[dict(recordId=row['id'],revision=row['revision']) for row in rows[:limit]],nextCursor=rows[limit-1]['id'] if len(rows)>limit else None)
+
+    @boundary
+    def latest_manifest(self,source_id,candidate_id,exclude_id=None):
+        require(text(source_id) and text(candidate_id))
+        require(exclude_id is None or text(exclude_id))
+        with closing(self.db.connect()) as conn:
+            row=conn.execute("""SELECT id,revision FROM research_records
+                WHERE kind='ResearchArtifact' AND json_extract(payload,'$.artifactType')='PublicationManifest'
+                  AND json_extract(payload,'$.archived')=0
+                  AND json_extract(payload,'$.data.sourceId')=?
+                  AND json_extract(payload,'$.data.candidateId')=?
+                  AND (? IS NULL OR id<>?)
+                ORDER BY json_extract(payload,'$.updatedAt') DESC,id DESC LIMIT 1""",
+                (source_id,candidate_id,exclude_id,exclude_id)).fetchone()
+            return None if row is None else dict(recordId=row['id'],revision=row['revision'])

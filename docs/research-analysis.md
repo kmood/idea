@@ -16,6 +16,6 @@ E2 的 independence 每项包含 receiptId、blockId、actorId、originId、basi
 
 payment 为空或包含 stage（intent/quote/paid）、basis 和 refs，引用必须来自该主张的已读材料。E3 必须是 fact 且有支付核验材料；作者声称收入不能以 author_claim 标记直接升为 E3。程序只核验前置材料齐备及引用一致，语义真假、采购是否真实、作者身份及核验说明是否充分仍由研究判断，不能把通过校验称为交易认证。
 
-counterEvidence 每项包含 text/refs，也必须引用实际读取块。rebutsClaim 保存所反驳主张的文字定位。校验输出不复制正文缓存；所有阅读文字仍按外部不可信资料处理。partial 凭据仅支持已见块，不证明评论完整，更不能按页面总评论数补样本。
+counterEvidence 每项包含 text、nature、level、refs、rebutsClaim，也必须引用实际读取块。反证只允许 E0/E1；推断仍只能是 E0。rebutsClaim 保存所反驳主张的文字定位，使发布时能以独立 Evidence 记录保留反驳关系。校验输出不复制正文缓存；所有阅读文字仍按外部不可信资料处理。partial 凭据仅支持已见块，不证明评论完整，更不能按页面总评论数补样本。
 
 测试使用受控合成读取结果，覆盖未知成本、来源/日期绑定、假凭据和未读回复、缓存缺失、推断等级、作者收入自述、E2 重复作者/转载、E3 核验材料、分流、反证、取消及更新版本冲突。不代表已完成在线研究。

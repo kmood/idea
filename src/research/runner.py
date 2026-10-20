@@ -21,6 +21,10 @@ class Runner:
         from .bridge import AgentBridge
         return AgentBridge(self.store,run_id,token)
 
+    def publication(self,run_id,token):
+        from .publication import Publication
+        return Publication(self.store,run_id,token)
+
     @boundary
     def start(self,run_id,owner_id,source_ids,queries,limits=None):
         request = new_request(source_ids,queries,self.clock(),limits)

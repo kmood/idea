@@ -68,7 +68,13 @@ class Analyzer:
                 require(references(payment['refs'])<=pairs,'Payment verification must cite the claim material')
             if claim['level']=='E3':require(claim['nature']=='fact' and payment is not None,'E3 requires verified payment material')
         for counter in draft['counterEvidence']:
-            fields(counter,{'text','refs'},{'text','refs'});require(text(counter['text']));references(counter['refs'])
+            keys={'text','nature','level','refs','rebutsClaim'}
+            fields(counter,keys,keys)
+            require(text(counter['text']) and text(counter['rebutsClaim']))
+            require(counter['nature'] in ('fact','author_claim','inference'))
+            require(counter['level'] in ('E0','E1') and
+                    (counter['nature']!='inference' or counter['level']=='E0'))
+            references(counter['refs'])
         if draft['disposition']!='deferred':
             require(any(data['sourceId']==candidate['sourceId'] and candidate['url'] in (data['originalUrl'],data['finalUrl']) for data in receipts.values()),'Read the candidate itself before disposition')
         if draft['target'] is not None:

@@ -23,6 +23,51 @@ def validate_request(request):
         raise Fault('VALIDATION_ERROR', 'Unknown publishing action')
 
 
+def validate_plan(plan,run_id=None):
+    """Keep the local request bodies identical to the public manifest commitments."""
+    from .artifacts import hash_value,validate_artifact
+    fields(plan,{'manifestId','draftHash','manifestRequest','steps'},
+           {'manifestId','draftHash','manifestRequest','steps'})
+    require(text(plan['manifestId']) and hash_value(plan['draftHash']))
+    validate_request(plan['manifestRequest'])
+    require(plan['manifestRequest']['action']=='create')
+    manifest=plan['manifestRequest']['record']
+    require(manifest.get('id')==plan['manifestId'] and manifest.get('kind')=='ResearchArtifact' and
+            manifest.get('artifactType')=='PublicationManifest')
+    validate_artifact(manifest)
+    require(run_id is None or manifest['data']['runId']==run_id)
+    require(isinstance(plan['steps'],list) and len(plan['steps'])==len(manifest['data']['steps']))
+    seen=set()
+    for local,public in zip(plan['steps'],manifest['data']['steps']):
+        fields(local,{'stepId','request'},{'stepId','request'})
+        require(text(local['stepId']) and local['stepId'] not in seen and local['stepId']==public['stepId'])
+        validate_request(local['request'])
+        request=local['request']
+        target=request['record'].get('id') if request['action']=='create' else request['recordId']
+        require(text(target))
+        expected=None if request['action']=='create' else request['expectedRevision']
+        require(public['targetId']==target and public['expectedRevision']==expected and
+                public['requestHash']==digest(request))
+        seen.add(local['stepId'])
+
+
+def validate_manifest_progress(plan,record):
+    """Allow result confirmations while keeping every prepared commitment fixed."""
+    from .artifacts import validate_artifact
+    validate_plan(plan)
+    require(record.get('id')==plan['manifestId'] and record.get('kind')=='ResearchArtifact' and
+            record.get('artifactType')=='PublicationManifest')
+    validate_artifact(record)
+    require(not record.get('archived') and record.get('mergedInto') is None)
+    prepared=plan['manifestRequest']['record']['data'];current=record['data']
+    require({key:value for key,value in current.items() if key!='steps'}==
+            {key:value for key,value in prepared.items() if key!='steps'})
+    require(len(current['steps'])==len(prepared['steps']))
+    for actual,expected in zip(current['steps'],prepared['steps']):
+        require({key:value for key,value in actual.items() if key!='result'}==
+                {key:value for key,value in expected.items() if key!='result'})
+
+
 def validate_observation(conn, record):
     """New Evidence must stay bound to the exact Reader output used by analysis."""
     if record['kind'] != 'Evidence':
