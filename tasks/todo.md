@@ -222,18 +222,20 @@
 
 ## R17：提供可执行的 Agent 协作入口
 
-- [ ] 完成
-- 依赖：R16；预计范围：中（4 个主要文件）
+- [x] 完成
+- 依赖：R16；实际范围：中；新增严格 JSON 文件 CLI 和明确动作白名单，复用现有 Runner/Bridge/Reader/Analyzer/Publication/Coverage 边界。
 验收：
-- [ ] CLI 的 run/resume/request/inspect/help 由真实子进程验证；JSON 错误退出统一且无正文泄漏
-- [ ] 操作指南明确现有搜索工具交接和 Reader 边界，不要求用户逐条整理；不实现后台调度
+- [x] CLI 的 run/resume/request/inspect/help 由真实子进程验证；JSON 错误退出统一且无正文泄漏
+- [x] 操作指南明确现有搜索工具交接和 Reader 边界，不要求用户逐条整理；不实现后台调度
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_cli.py' -v`。
 涉及文件：`src/research/cli.py`、`src/research/__main__.py`、`tests/research/test_cli.py`、`docs/source-research-operations.md`。
 
+验证记录：2026-10-20，2 项真实子进程用例覆盖帮助、启动、来源先行、搜索预占/交回、候选检查、恢复及输入不回显；完整测试与检查见本次提交记录。搜索仍由当前会话 Agent 显式执行，未增加后台调度。
+
 ### 检查点：R17 后
 
-- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
-- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+- [x] 运行现有 records 测试，以及已实现的 research 测试；执行对应源目录 compileall 与 git diff --check。
+- [x] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
 
 ## R18：完成异常与并发整体验收
 
