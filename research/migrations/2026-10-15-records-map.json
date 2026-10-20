@@ -18,7 +18,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "CN02",
@@ -38,7 +38,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "CN03",
@@ -58,7 +58,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "CN04",
@@ -78,7 +78,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "CN05",
@@ -98,7 +98,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "GL01",
@@ -118,7 +118,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "GL02",
@@ -138,7 +138,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "GL03",
@@ -159,7 +159,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "GL04",
@@ -180,7 +180,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "GL05",
@@ -200,7 +200,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     },
     {
       "id": "GL06",
@@ -220,7 +220,27 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "b427239c5cd5baca2b9a8b30cc279ed6522ed6907716372ce190e19c931b857f"
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+    },
+    {
+      "id": "GL07",
+      "kind": "Source",
+      "name": "Reddit / msp",
+      "url": "https://www.reddit.com/r/msp/",
+      "audience": [
+        "英文托管 IT 服务商、咨询与交付团队"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "restricted",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-20",
+      "legacyDates": {
+        "lastAttempt": "2026-10-20"
+      },
+      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -369,6 +389,72 @@
       ],
       "firstCollectedAt": "2026-10-15T21:02:00+08:00",
       "expectedSha256": "1972d9b13819b12540eb55089239bd00bcb19115491207e7600910a871d9ed85"
+    }
+  ],
+  "ideas/IDEA-20261020-001.md": [
+    {
+      "id": "EV-20261020-001",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://www.v2ex.com/t/1107777",
+      "claim": "作者称短视频英译配音的数百段对话存在时长不一致，逐段处理工作量大",
+      "summary": "E1 作者声称；与第二篇帖子为同一作者，不构成独立需求样本，付费意愿未知。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-20T22:23:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-20"
+      },
+      "expectedSha256": "d2c5e20b5a6db87bb8fa6f8ef46c21beb867d434d465011f6e545f24b3407787"
+    },
+    {
+      "id": "EV-20261020-002",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://www.v2ex.com/t/1105237",
+      "claim": "同一作者再次描述配音后音画不同步及批量检测处理需求",
+      "summary": "同一作者的补充说明；现有自动调时长仍需微调，强制变速可能损伤听感。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-20T22:23:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-20"
+      },
+      "expectedSha256": "d2c5e20b5a6db87bb8fa6f8ef46c21beb867d434d465011f6e545f24b3407787"
+    },
+    {
+      "id": "IDEA-20261020-001",
+      "kind": "Idea",
+      "title": "多语言短视频配音时长对齐与人工复核服务",
+      "audience": "需要把中文短视频翻译并配成其他语言的创作者或小团队",
+      "problem": "逐句翻译配音时长不同造成音画错位，批量人工调整耗时且强制变速可能影响听感",
+      "earningHypothesis": "Agent 假设：按单条视频或成片分钟数交付时长检测、对齐建议、局部重生成及人工复核；定价、成本和工时未知。",
+      "industry": [
+        "内容创作",
+        "视频本地化"
+      ],
+      "sideHustleTypes": [
+        "交付服务",
+        "自动化工具"
+      ],
+      "markets": [
+        "国内创作者出海"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261020-001",
+        "EV-20261020-002"
+      ],
+      "firstCollectedAt": "2026-10-20T22:23:00+08:00",
+      "expectedSha256": "d2c5e20b5a6db87bb8fa6f8ef46c21beb867d434d465011f6e545f24b3407787"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # 国内外交流网站目录
 
-初始入口核验：2026-10-14；本轮采样更新：2026-10-15（Asia/Shanghai）。先收录来源，再从来源内提取原始需求。地域按主要交流语言/受众区分，不代表注册地。
+初始入口核验：2026-10-14；最近采样更新：2026-10-20（Asia/Shanghai）。先收录来源，再从来源内提取原始需求。地域按主要交流语言/受众区分，不代表注册地。
 
 状态说明：可读表示本轮工具成功读取入口，不保证所有帖子可读；部分可读表示只取得部分内容。优先级是研究判断，不是盈利结论。下表链接同时为核验来源。
 
@@ -17,6 +17,7 @@
 | GL04 | [Shopify Community](https://community.shopify.com/) | 英文商家与电商开发者 | Technical Q&A、Shopify Apps、Shopify Flow、库存与订单问题 | 2026-10-15：已读翻译导出/延迟两帖并核对官方能力；旧需求不可当当前缺口 | A |
 | GL05 | [n8n Community](https://community.n8n.io/) | 英文自动化用户与开发者 | Questions、Jobs；连接器、流程故障、小企业项目 | 列表可读；许可、交付和维护成本须另行核验 | A |
 | GL06 | [Discourse Meta](https://meta.discourse.org/) | 英文社区运营者与开发者 | Support、Feature、Self-hosting；插件和运营工作流 | 列表可读；区分软件缺陷、配置问题与可收费需求 | B |
+| GL07 | [Reddit / msp](https://www.reddit.com/r/msp/) | 英文托管 IT 服务商、咨询与交付团队 | 新客户接入、资料交接、凭据收集、流程标准化 | 2026-10-20：搜索发现多篇具体讨论，但本机 Reader 按站点访问限制拒绝；未生成需求证据 | A，换授权浏览器适配后复检 |
 
 ## 收录和复检规则
 
@@ -37,5 +38,7 @@
 | CN05 | 2026-10-15 | 未成功 | 根首页可读；[125033](https://www.wearesellers.com/question/125033)、[120338](https://www.wearesellers.com/question/120338) 各两次失败，未读正文不入库；下轮可换公开来源，不密集重试 |
 | GL03 | 2026-10-15 | 2026-10-15 | 已读 [1vxr2l4](https://www.reddit.com/r/smallbusiness/comments/1vxr2l4/for_businesses_using_ai_customer_support_how_do/)；下轮查真实商家经历，不能将提问者直接视作买家 |
 | GL04 | 2026-10-15 | 2026-10-15 | 已读 [209362](https://community.shopify.com/t/how-to-export-translate-adapt-translations-to-csv/209362)、[630362](https://community.shopify.com/t/translate-and-adapt-stuck-for-10-minutes/630362)；下轮核验近期术语清理问题 |
+| CN01 | 2026-10-20 | 2026-10-20 | 已读 [1107777](https://www.v2ex.com/t/1107777)、[1105237](https://www.v2ex.com/t/1105237)；两帖为同一作者，不能计两个独立需求样本 |
+| GL07 | 2026-10-20 | 未成功 | 搜索发现客户接入与安全资料收集讨论；Reader 返回 restricted，未推进成功采样位置 |
 
-以上为已读范围，不是按时间完整遍历网站的游标。2026-10-15 新增 CN05，保留其访问失败历史；GL03/GL04 从入口核验推进为具体讨论采样。
+以上为已读范围，不是按时间完整遍历网站的游标。2026-10-20 新增 GL07 并保留访问限制；CN01 从入口核验推进为具体讨论采样。
