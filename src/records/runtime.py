@@ -1,5 +1,9 @@
 """Durable local run state. Public exports intentionally never read these tables."""
+import hashlib
 import json
+import os
+import stat
+import time
 from contextlib import closing
 from .contracts import Fault, boundary, encoded, fields, now, require, stamp, string_list, text
 from .exchange import digest
@@ -7,10 +11,38 @@ from .storage import Database
 from .artifacts import hash_value
 
 TABLES = ('research_runs', 'research_intents')
+MAX_CACHE_BYTES = 16 * 1024 * 1024
 SCHEMA = (
     'CREATE TABLE IF NOT EXISTS research_runs(run_id TEXT PRIMARY KEY, request_hash TEXT NOT NULL, payload TEXT NOT NULL)',
     'CREATE TABLE IF NOT EXISTS research_intents(run_id TEXT NOT NULL REFERENCES research_runs(run_id), intent_id TEXT NOT NULL, request_hash TEXT NOT NULL, payload TEXT NOT NULL, PRIMARY KEY(run_id,intent_id))',
 )
+
+
+def cache_available(cache_dir, pointer):
+    """Accept only an unexpired, bounded regular file matching its content address."""
+    if not isinstance(pointer, dict):
+        return False
+    cache_key = pointer.get('cacheKey')
+    expires_at = pointer.get('expiresAt')
+    if not hash_value(cache_key) or type(expires_at) not in (int, float) or expires_at <= time.time():
+        return False
+    descriptor = None
+    try:
+        descriptor = os.open(cache_dir / (cache_key + '.json'), os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+        with os.fdopen(descriptor, 'rb') as stream:
+            descriptor = None
+            if not stat.S_ISREG(os.fstat(stream.fileno()).st_mode):
+                return False
+            payload = stream.read(MAX_CACHE_BYTES + 1)
+        if len(payload) > MAX_CACHE_BYTES or hashlib.sha256(payload).hexdigest() != cache_key:
+            return False
+        json.loads(payload)
+        return True
+    except (OSError, ValueError, UnicodeError):
+        return False
+    finally:
+        if descriptor is not None:
+            os.close(descriptor)
 
 
 def validate_request(request):
@@ -118,6 +150,49 @@ class ResearchRuntimeStore:
             require(plan['manifestId']==manifest_id and plan['draftHash']==row['draft_hash'])
             return plan
         return self.execution.transaction(action)
+
+    @boundary
+    def recovery_inventory(self):
+        """Describe recoverable state without inventing private or unpublished data."""
+        with closing(self.db.connect()) as conn:
+            tables={row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+            artifacts=[json.loads(row[0]) for row in conn.execute("""SELECT payload FROM research_records
+                WHERE kind='ResearchArtifact' AND json_extract(payload,'$.artifactType') IN
+                ('ReadReceipt','PublicationManifest','SourceCheckpoint')
+                AND json_extract(payload,'$.archived')=0 ORDER BY id""")]
+            plan_ids=set()
+            if 'research_publications' in tables:
+                plan_ids={row[0] for row in conn.execute('SELECT manifest_id FROM research_publications')}
+            pointers={}
+            if 'research_readings' in tables:
+                pointers={row['receipt_id']:json.loads(row['payload'])
+                          for row in conn.execute('SELECT receipt_id,payload FROM research_readings')}
+            manifests=[];checkpoints=[];receipts=[]
+            cache_dir=self.db.path.parent/'research-cache'
+            for record in artifacts:
+                kind=record['artifactType'];data=record['data']
+                if kind=='PublicationManifest':
+                    pending=[step['targetId'] for step in data['steps'] if step['result'] is None]
+                    local=record['id'] in plan_ids
+                    action='complete' if not pending else ('resume_local_plan' if local else 'reread_and_reanalyze')
+                    manifests.append(dict(recordId=record['id'],revision=record['revision'],runId=data['runId'],
+                        candidateId=data['candidateId'],sourceId=data['sourceId'],pendingTargets=pending,
+                        completedTargets=[step['targetId'] for step in data['steps'] if step['result'] is not None],
+                        localPlan=local,nextAction=action))
+                elif kind=='SourceCheckpoint':
+                    checkpoints.append(dict(recordId=record['id'],revision=record['revision'],**data))
+                else:
+                    available=cache_available(cache_dir,pointers.get(record['id']))
+                    receipts.append(dict(recordId=record['id'],revision=record['revision'],runId=data['runId'],
+                        sourceId=data['sourceId'],originalUrl=data['originalUrl'],finalUrl=data['finalUrl'],
+                        cacheStatus='available' if available else 'missing',
+                        nextAction=None if available else 'reread'))
+            run_count=conn.execute('SELECT count(*) FROM research_runs').fetchone()[0]
+            pending=conn.execute("SELECT count(*) FROM research_intents WHERE json_extract(payload,'$.status')='pending'").fetchone()[0]
+            private=conn.execute('SELECT count(*) FROM personal_states').fetchone()[0]
+            return dict(mode='local-backup' if run_count else 'public-only',manifests=manifests,
+                        checkpoints=checkpoints,receipts=receipts,localOnly=dict(runCount=run_count,
+                        publicationPlanCount=len(plan_ids),pendingIntentCount=pending,privateStateCount=private))
 
 
 def validate_runtime(conn):

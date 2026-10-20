@@ -22,3 +22,9 @@ def migrate_v1(conn) -> None:
 def upgrade_database(source: str | Path, output: str | Path) -> dict:
     result = copy_validated(Path(source), Path(output), transform=migrate_v1)
     return result | {'schemaVersion': 2}
+
+
+def inspect_recovery(path: str | Path) -> dict:
+    """Open a local restore or public-only import and report conservative next actions."""
+    from .runtime import ResearchRuntimeStore
+    return ResearchRuntimeStore(path).recovery_inventory()

@@ -209,13 +209,16 @@
 
 ## R16：恢复完整运行状态与私人数据
 
-- [ ] 完成
-- 依赖：R15；预计范围：中（4 个主要文件）
+- [x] 完成
+- 依赖：R15；实际范围：中；在既有动态备份校验上增加保守恢复清单，不复制正文缓存，也不从公开摘要重建私有请求。
 验收：
-- [ ] 新运行表、公开发布清单和私人历史完整备份恢复；重建后旧租约失效
-- [ ] 丢缓存保守重读；仅导入公开包可找回已发布身份和断点但不伪造私人状态/未同步结果
+- [x] 新运行表、公开发布清单和私人历史完整备份恢复；重建后旧租约失效
+- [x] 丢缓存保守重读；仅导入公开包可找回已发布身份和断点但不伪造私人状态/未同步结果
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_research_recovery.py' -v`。
-涉及文件：`src/records/backup.py`、`src/records/migrations.py`、`src/records/runtime.py`、`tests/records/test_research_recovery.py`。
+操作说明：`docs/research-recovery.md`。
+涉及文件：`src/records/migrations.py`、`src/records/runtime.py`、`tests/records/test_research_recovery.py`。
+
+验证记录：2026-10-20，2 项恢复用例覆盖现有运行表、私人历史、旧租约失效、缓存缺失重读、稳定 receipt ID、部分发布续接及仅公开包降级；完整测试与检查见本次提交记录。正式研究入口未切换。
 
 ## R17：提供可执行的 Agent 协作入口
 
