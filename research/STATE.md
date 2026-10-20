@@ -21,4 +21,4 @@
 
 - 实现交接：docs/records-operations.md。现有资料在临时库迁移演练为 11 来源、5 证据、1 点子、1 趋势；保留原 ID/原文/日期精度。research/migrations/2026-10-15-records-map.json 绑定原文摘要，源资料变化后需重审映射。source-research 模块规格 SPEC-source-research.md 已获用户批准；tasks/plan.md、tasks/todo.md、ADR-002 及资料扩展提案已于 2026-10-16 获批准；R01–R18 已完成，71 项 records + 70 项 research 测试通过（2026-10-20），下一项 R19：完成一轮真实公开来源试运行。合成全流程、并发恢复、故障、格式兼容、提示注入和私人隔离已有回归映射，见 docs/source-research-operations.md。正式研究入口未切换，不影响上述下一轮研究工作。
 
-- 在线读取环境限制（2026-10-20）：系统将 docs.python.org/www.python.org 解析到 198.18.0.0/15 测试网段。受控读取器拒绝非公网 IP；实际 HTTP 正文未读取。保留安全检查，R19 在线验收仍需可验证的公网解析环境，同一限制无需重复提醒。
+- 在线读取环境限制（2026-10-20）：R19 已用真实 `web.search` 建档 3 个来源、交回 4 个候选；本机 Reader 对 Reddit、Hacker News 与 GitHub 的 CLI 正文读取均返回 restricted，未生成 ReadReceipt 或研究结论。公开导出/重导和完整备份恢复通过；临时 runId `pilot-2026-10-20` 与断点保留在 `.local/r19/`，详见 research/runs/source-research-pilot.md。R19 保持未完成，下一次换 Reader 可访问的公开来源或网络环境继续，同一限制无需重复提醒。
