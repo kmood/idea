@@ -25,6 +25,10 @@ class Runner:
         from .publication import Publication
         return Publication(self.store,run_id,token)
 
+    def progress(self,run_id,token):
+        from .progress import Progress
+        return Progress(self.store,run_id,token)
+
     @boundary
     def start(self,run_id,owner_id,source_ids,queries,limits=None):
         request = new_request(source_ids,queries,self.clock(),limits)

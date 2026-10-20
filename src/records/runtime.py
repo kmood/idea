@@ -189,6 +189,9 @@ def validate_runtime(conn):
             require(plan['manifestId']==row['manifest_id'] and plan['draftHash']==row['draft_hash'])
             validate_replay(conn,'runtime-publication:'+row['run_id'],row['manifest_id'],digest(plan),plan)
         extra += ('research_publications',)
+    if 'research_progress' in present:
+        from .progress import validate_progress
+        validate_progress(conn);extra += ('research_progress',)
     return TABLES + extra
 
 

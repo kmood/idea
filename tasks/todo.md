@@ -178,13 +178,16 @@
 
 ## R14：维护缺口游标和有界重试
 
-- [ ] 完成
-- 依赖：R13；预计范围：中（5 个主要文件）
+- [x] 完成
+- 依赖：R13；实际范围：中；本机进度适配器保存序列/尝试状态，研究层只从已落盘 CandidateOutcome 推进公开 SourceCheckpoint。
 验收：
-- [ ] 只有确认保存或明确无变化处置才推进连续位置；前失败后成功仍保留缺口
-- [ ] 未知顺序使用已读集合；旧帖重叠、游标失效、限流和一次重试均可恢复且不超预算
+- [x] 只有确认保存或明确无变化处置才推进连续位置；前失败后成功仍保留缺口
+- [x] 未知顺序使用已读集合；旧帖重叠、游标失效、限流和一次重试均可恢复且不超预算
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_progress.py' -v`。
-涉及文件：`src/research/progress.py`、`src/research/runner.py`、`src/records/runtime.py`、`src/records/artifacts.py`、`tests/research/test_progress.py`。
+操作说明：`docs/research-progress.md`。
+涉及文件：`src/research/progress.py`、`src/research/runner.py`、`src/records/progress.py`、`src/records/runtime.py`、`tests/research/test_progress.py`。
+
+验证记录：2026-10-20，6 项进度用例覆盖连续缺口、无序集合、重叠/失效游标、限流/单次重试、Outcome 绑定及备份恢复；全量 69 项 records + 62 项 research 测试、编译与差异检查通过。进度层不预占或返还额度，每次真实外部尝试仍由 execution 账本强制计数；正式研究入口未切换。
 
 ## R15：生成有依据的覆盖回顾
 
