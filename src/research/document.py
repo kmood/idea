@@ -9,7 +9,8 @@ from .network import NetworkError,MAX_BYTES
 VOID={'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 IGNORE={'script','style','nav','header','footer','aside','form','svg','template','noscript','h1','h2','h3','h4','h5','h6'}
 BLOCK={'p','li','blockquote','pre','h1','h2','h3','h4','div','section','article','main','br'}
-SCOPES={'post-content','message-body','comment-body','topic-body','cooked'}
+SCOPES={'post-content','message-body','comment-body','topic-body','cooked',
+        'topic_content','reply_content'}
 
 
 class VisibleHTML(HTMLParser):

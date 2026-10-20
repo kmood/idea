@@ -36,6 +36,17 @@ class ReaderTests(unittest.TestCase):
         self.assertIsNone(parsed['publishedDate'])
         self.assertNotIn('hidden',str(parsed['blocks']))
 
+    def test_v2ex_discussion_bodies_are_scoped_without_navigation_cells(self):
+        from research.reader import parse_document
+        document=('''<html><title>Discussion</title><body><div class="cell">Navigation noise</div>
+            <div class="topic_content"><p>Hundreds of clips require manual timing.</p></div>
+            <div class="reply_content">Use subtitle timestamps to align each clip.</div></body></html>''').encode()
+        parsed=parse_document(document,'text/html; charset=utf-8')
+        text=' '.join(block['text'] for block in parsed['blocks'])
+        self.assertIn('Hundreds of clips',text)
+        self.assertIn('subtitle timestamps',text)
+        self.assertNotIn('Navigation noise',text)
+
     def test_reader_persists_receipt_replays_and_rebuilds_missing_cache(self):
         from research.reader import Reader
         from records.exchange import Exchange
