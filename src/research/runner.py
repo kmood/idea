@@ -29,6 +29,10 @@ class Runner:
         from .progress import Progress
         return Progress(self.store,run_id,token)
 
+    def coverage(self,run_id,token):
+        from .coverage import Coverage
+        return Coverage(self.store,run_id,token)
+
     @boundary
     def start(self,run_id,owner_id,source_ids,queries,limits=None):
         request = new_request(source_ids,queries,self.clock(),limits)

@@ -51,3 +51,23 @@ class IdentityStore:
                 ORDER BY json_extract(payload,'$.updatedAt') DESC,id DESC LIMIT 1""",
                 (source_id,candidate_id,exclude_id,exclude_id)).fetchone()
             return None if row is None else dict(recordId=row['id'],revision=row['revision'])
+
+    @boundary
+    def evidence_counts(self,run_ids):
+        require(isinstance(run_ids,list) and 0<len(run_ids)<=20 and
+                len(set(run_ids))==len(run_ids) and all(text(item) for item in run_ids))
+        placeholders=','.join('?' for _ in run_ids)
+        with closing(self.db.connect()) as conn:
+            rows=conn.execute(f"""SELECT json_extract(receipt.payload,'$.data.runId') run_id,
+                    COUNT(DISTINCT evidence.id) amount
+                FROM research_records evidence
+                JOIN research_records receipt
+                  ON receipt.id=json_extract(evidence.payload,'$.observation.receiptId')
+                WHERE evidence.kind='Evidence' AND json_extract(evidence.payload,'$.archived')=0
+                  AND receipt.kind='ResearchArtifact'
+                  AND json_extract(receipt.payload,'$.artifactType')='ReadReceipt'
+                  AND json_extract(receipt.payload,'$.data.runId') IN ({placeholders})
+                GROUP BY json_extract(receipt.payload,'$.data.runId')""",run_ids).fetchall()
+            counts={item:0 for item in run_ids}
+            counts.update({row['run_id']:row['amount'] for row in rows})
+            return counts

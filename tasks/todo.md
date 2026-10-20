@@ -191,18 +191,21 @@
 
 ## R15：生成有依据的覆盖回顾
 
-- [ ] 完成
-- 依赖：R14；预计范围：中（3 个主要文件）
+- [x] 完成
+- 依赖：R14；实际范围：中；新增结构化覆盖维度、运行证据计数和公开引用校验，旧 CoverageReview 仍可读取。
 验收：
-- [ ] 回顾引用实际来源/轮次/发现，说明行业、人群、地域、副业模式和未覆盖领域
-- [ ] 三轮无新证据要求渠道调整；条数/零新增不能单独触发转增量，不修改用户选择或自启下一轮
+- [x] 回顾引用实际来源/轮次/发现，说明行业、人群、地域、副业模式和未覆盖领域
+- [x] 三轮无新证据要求渠道调整；条数/零新增不能单独触发转增量，不修改用户选择或自启下一轮
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_coverage.py' -v`。
-涉及文件：`src/research/coverage.py`、`src/research/runner.py`、`tests/research/test_coverage.py`。
+操作说明：`docs/research-coverage.md`。
+涉及文件：`src/research/coverage.py`、`src/research/runner.py`、`src/records/artifacts.py`、`src/records/identity.py`、`tests/research/test_coverage.py`。
+
+验证记录：2026-10-20，4 项覆盖回顾用例覆盖维度/引用归属、三轮空窗调整、增量准入、幂等发布及公开包往返；全量 69 项 records + 66 项 research 测试、编译与差异检查通过。建议只作为公开研究结论保存，不修改个人状态、不切换阶段且不启动新轮次。
 
 ### 检查点：R15 后
 
-- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
-- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+- [x] 运行现有 records 测试，以及已实现的 research 测试；执行对应源目录 compileall 与 git diff --check。
+- [x] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
 
 ## R16：恢复完整运行状态与私人数据
 

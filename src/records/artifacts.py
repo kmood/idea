@@ -31,7 +31,7 @@ def validate_artifact(record):
     kind, data = record['artifactType'], record['data']
     require(isinstance(kind, str) and kind in SHAPES, 'Unknown artifact type')
     keys = set(SHAPES[kind].split())
-    fields(data, keys, keys)
+    fields(data,keys | ({'coverage'} if kind=='CoverageReview' else set()),keys)
     require(not ({'legacy', 'derivedFrom', 'derivedIdeas', 'evidenceVersions'} & record.keys()))
     for key in ('sourceId', 'runId', 'candidateId', 'reason'):
         if key in data:
@@ -64,6 +64,19 @@ def validate_artifact(record):
         require(bool(data['sourceRefs']) and string_list(data['gaps']))
         require(string_list(data['qualityReasons']) and bool(data['qualityReasons']))
         require(data['recommendation'] in ('concentrate', 'incremental', 'adjust'))
+        if 'coverage' in data:
+            coverage=data['coverage']
+            dimensions={'industries','audiences','markets','sideHustleTypes','sourceTypes','readScopes'}
+            keys=dimensions | {'sustainableSources','alternatives','duplicateHandling','patrolPlan',
+                               'channelAdjustment','noNewEvidenceRuns'}
+            fields(coverage,keys,keys)
+            for key in dimensions:
+                require(string_list(coverage[key]) and bool(coverage[key]))
+            require(string_list(coverage['sustainableSources']) and string_list(coverage['alternatives']))
+            require(text(coverage['duplicateHandling']) and text(coverage['patrolPlan']))
+            require(coverage['channelAdjustment'] is None or text(coverage['channelAdjustment']))
+            require(string_list(coverage['noNewEvidenceRuns']) and
+                    set(coverage['noNewEvidenceRuns'])<=set(data['runIds']))
 
 
 def validate_manifest(data):
@@ -142,3 +155,26 @@ def validate_references(record, lookup):
                     (target['kind'] == 'ResearchArtifact' and target['artifactType'] == expected_kind), 'Wrong referenced type')
         if expected_kind == 'ReadReceipt':
             require(target['data']['sourceId'] == data['sourceId'], 'Receipt belongs to another source')
+    if kind=='CoverageReview' and 'coverage' in data:
+        source_ids={item['recordId'] for item in data['sourceRefs']}
+        sources=[lookup(item['recordId'],item['revision']) for item in data['sourceRefs']]
+        source_types={item['profile']['sourceType'] for item in sources if 'profile' in item}
+        read_scopes=set();readable_sources=set()
+        for pin in data['evidenceRefs']:
+            evidence=lookup(pin['recordId'],pin['revision'])
+            require('observation' in evidence,'Coverage evidence requires Reader provenance')
+            receipt=lookup(evidence['observation']['receiptId'],None)
+            require(receipt['kind']=='ResearchArtifact' and receipt['artifactType']=='ReadReceipt' and
+                    receipt['data']['runId'] in data['runIds'] and
+                    receipt['data']['sourceId'] in source_ids and evidence['sourceId'] in source_ids,
+                    'Coverage evidence belongs to another run or source')
+            receipt_data=receipt['data'];observation=evidence['observation']
+            require(set(observation['blockIds'])<={item['blockId'] for item in receipt_data['blocks']} and
+                    evidence['url'] in (receipt_data['originalUrl'],receipt_data['finalUrl']) and
+                    evidence['accessedAt']==receipt_data['fetchedAt'],
+                    'Coverage evidence differs from its reading receipt')
+            read_scopes.add(receipt_data['visibleScope']);readable_sources.add(receipt_data['sourceId'])
+        require(set(data['coverage']['sustainableSources'])<=readable_sources and
+                set(data['coverage']['sourceTypes'])<=source_types and
+                set(data['coverage']['readScopes'])<=read_scopes,
+                'Coverage dimensions differ from referenced research')
