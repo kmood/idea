@@ -1,6 +1,7 @@
 """One-hop public HTTP transport. No proxies, credentials, cookies or redirects."""
 import http.client
 import ipaddress
+import json
 import multiprocessing
 import re
 import socket
@@ -10,6 +11,8 @@ from urllib.parse import quote, urlsplit
 
 MAX_BYTES = 2 * 1024 * 1024
 USER_AGENT = 'IdeaResearchBot/1.0'
+BENCHMARK = ipaddress.ip_network('198.18.0.0/15')
+DOH_BOOTSTRAP = ('8.8.8.8','8.8.4.4')
 
 
 class NetworkError(Exception):
@@ -43,16 +46,34 @@ def target(url):
         raise NetworkError('restricted') from None
 
 
-def resolve_public(host,port,*,resolver=socket.getaddrinfo):
+def public_address(entry):
+    family,_,_,_,address=entry
+    ip=ipaddress.ip_address(address[0])
+    underlying=ip.ipv4_mapped if isinstance(ip,ipaddress.IPv6Address) and ip.ipv4_mapped else ip
+    return (family in (socket.AF_INET,socket.AF_INET6) and underlying.is_global and
+            not underlying.is_multicast and not underlying.is_reserved and
+            not (isinstance(ip,ipaddress.IPv6Address) and (ip.teredo or ip.sixtofour)))
+
+
+def benchmark_address(entry):
+    try:
+        ip=ipaddress.ip_address(entry[4][0])
+        underlying=(ip.ipv4_mapped if isinstance(ip,ipaddress.IPv6Address) and ip.ipv4_mapped
+                    else ip)
+        return isinstance(underlying,ipaddress.IPv4Address) and underlying in BENCHMARK
+    except (ValueError,IndexError,TypeError):
+        return False
+
+
+def resolve_public(host,port,*,resolver=socket.getaddrinfo,fallback=None):
     addresses = resolver(host,port,type=socket.SOCK_STREAM)
     if not addresses or len(addresses)>128:
         raise NetworkError('restricted')
-    for family,_,_,_,address in addresses:
-        ip = ipaddress.ip_address(address[0])
-        underlying = ip.ipv4_mapped if isinstance(ip,ipaddress.IPv6Address) and ip.ipv4_mapped else ip
-        if (family not in (socket.AF_INET,socket.AF_INET6) or not underlying.is_global or
-                underlying.is_multicast or underlying.is_reserved or
-                (isinstance(ip,ipaddress.IPv6Address) and (ip.teredo or ip.sixtofour))):
+    if not all(public_address(entry) for entry in addresses):
+        if fallback is None or not all(benchmark_address(entry) for entry in addresses):
+            raise NetworkError('restricted')
+        addresses=fallback(host,port)
+        if not addresses or len(addresses)>128 or not all(public_address(entry) for entry in addresses):
             raise NetworkError('restricted')
     return addresses[0][0],addresses[0][4][0]
 
@@ -76,6 +97,63 @@ def open_connection(destination,address,timeout):
         raise
 
 
+def doh_query(host,record_type,bootstrap,timeout=5):
+    """Query the configured HTTPS resolver through a pinned public bootstrap IP."""
+    # RFC 8484 requires authenticated HTTPS transport: https://www.rfc-editor.org/rfc/rfc8484.html
+    # Google JSON response contract and privacy parameter:
+    # https://developers.google.com/speed/public-dns/docs/doh/json
+    destination=target('https://dns.google/resolve?name='+quote(host,safe='')+
+                       '&type='+str(record_type)+'&edns_client_subnet=0.0.0.0%2F0')
+    conn=open_connection(destination,(socket.AF_INET,bootstrap),timeout)
+    try:
+        conn.request('GET',destination['path'],headers={'Host':destination['authority'],
+                     'User-Agent':USER_AGENT,'Accept':'application/json','Connection':'close'})
+        response=conn.getresponse()
+        length=response.getheader('Content-Length')
+        if response.status!=200 or (length is not None and (not length.isdecimal() or int(length)>65536)):
+            raise NetworkError('network')
+        body=response.read(65537)
+        if len(body)>65536 or not response.getheader('Content-Type','').lower().startswith('application/json'):
+            raise NetworkError('parse')
+        data=json.loads(body)
+        question=data.get('Question')
+        if (data.get('Status')!=0 or data.get('TC') is not False or data.get('CD') is not False or
+                not isinstance(question,list) or len(question)!=1 or
+                question[0].get('name','').rstrip('.').lower()!=host or question[0].get('type')!=record_type):
+            raise NetworkError('restricted')
+        return data.get('Answer',[])
+    except (OSError,http.client.HTTPException,ValueError,UnicodeError,AttributeError):
+        raise NetworkError('network') from None
+    finally:
+        conn.close()
+
+
+def resolve_doh(host,port):
+    addresses=[]
+    for record_type,family in ((1,socket.AF_INET),(28,socket.AF_INET6)):
+        answers=None
+        for bootstrap in DOH_BOOTSTRAP:
+            try:
+                answers=doh_query(host,record_type,bootstrap);break
+            except NetworkError:
+                continue
+        if answers is None:continue
+        if not isinstance(answers,list) or len(answers)>128:raise NetworkError('restricted')
+        for answer in answers:
+            if isinstance(answer,dict) and answer.get('type')==record_type:
+                value=answer.get('data')
+                try:
+                    ip=ipaddress.ip_address(value)
+                except ValueError:
+                    raise NetworkError('restricted') from None
+                if (family==socket.AF_INET and isinstance(ip,ipaddress.IPv4Address)) or (
+                        family==socket.AF_INET6 and isinstance(ip,ipaddress.IPv6Address)):
+                    addresses.append((family,socket.SOCK_STREAM,6,'',(value,port)))
+                else:raise NetworkError('restricted')
+    if not addresses:raise NetworkError('restricted')
+    return addresses
+
+
 def decode_body(body,encoding,limit):
     if len(body)>limit:
         raise NetworkError('size')
@@ -97,7 +175,7 @@ def decode_body(body,encoding,limit):
 
 def request_once(url,timeout,limit):
     destination = target(url)
-    address = resolve_public(destination['host'],destination['port'])
+    address = resolve_public(destination['host'],destination['port'],fallback=resolve_doh)
     conn = open_connection(destination,address,timeout)
     try:
         conn.request('GET',destination['path'],headers={'Host':destination['authority'],

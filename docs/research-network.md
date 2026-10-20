@@ -4,6 +4,12 @@
 
 `research.fetcher.Fetcher` 通过资料提供方保存 robots 缓存与来源/域名两级请求间隔；robots、重定向及正文分别预占请求预算。最多三跳重定向，每跳重新执行访问约束。robots 缓存最多一天，404/410 视为不存在，其他失败保守延期，robots 本身重定向暂不跟随。robots 另设 64 KiB 上限。Crawl-delay、Request-rate 和 Retry-After 比默认三秒更严格时优先。超限/受限/超时不返回成功正文；没有在此实现无条件自动重试。
 
-保存完整正文及可信读取凭据属于 R08，本层仅返回临时字节。当前在线环境对公开域名返回 198.18.0.0/15 测试地址，因此真实试读被地址检查阻止；没有把离线替身验证称为线上读取成功。
+保存完整正文及可信读取凭据属于 R08，本层仅返回临时字节。
 
-实现依据：[Python HTTPConnection](https://docs.python.org/3.14/library/http.client.html)、[TLS 默认上下文](https://docs.python.org/3.14/library/ssl.html)、[robots 解析器](https://docs.python.org/3.14/library/urllib.robotparser.html)。查阅文档版本 3.14.8，本机运行时保持原有版本，未为此升级依赖。
+## 基准测试网段 DNS 降级
+
+部分桌面环境会把所有域名的系统 DNS 结果映射到 `198.18.0.0/15`。该网段不能作为目标地址直接连接。只有系统解析结果全部属于这个网段时，读取器才启用固定的 Google Public DNS HTTPS 解析入口；普通私网、特殊地址、混合公网/基准地址仍直接拒绝。读取器用固定公开 IP 建立连接，但 TLS SNI 和证书始终校验 `dns.google`，不接受代理或系统 DNS 对解析器域名的替换。
+
+DoH 请求只查询 A/AAAA，设置 `edns_client_subnet=0.0.0.0/0`，限制响应为 64 KiB，并校验 HTTP 状态、JSON 类型、DNS 状态、截断标记、问题名称和记录类型。DoH 得到的每个地址仍通过原有公网地址检查，正文连接继续固定已验证 IP 并使用原站 Host/SNI。两个固定入口都失败时保守失败，不回退到未验证地址。该降级不携带用户 Cookie、认证头或正文 URL 以外的数据。
+
+实现依据：[RFC 8484 DNS Queries over HTTPS](https://www.rfc-editor.org/rfc/rfc8484.html)、[Google Public DNS JSON API](https://developers.google.com/speed/public-dns/docs/doh/json)、[Python HTTPConnection](https://docs.python.org/3.14/library/http.client.html)、[TLS 默认上下文](https://docs.python.org/3.14/library/ssl.html)、[robots 解析器](https://docs.python.org/3.14/library/urllib.robotparser.html)。查阅日期为 2026-10-20；本机运行时保持原有版本，未为此升级依赖。

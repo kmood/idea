@@ -1,4 +1,5 @@
 import gzip
+import json
 import socket
 import time
 import unittest
@@ -29,6 +30,20 @@ class TransportTests(unittest.TestCase):
                 resolve_public('example.com',443,resolver=lambda *a,**k:entries(ips))
         self.assertEqual(resolve_public('example.com',443,resolver=lambda *a,**k:entries(['93.184.216.34']))[1], '93.184.216.34')
 
+    def test_benchmark_dns_can_use_pinned_doh_without_weakening_private_rejection(self):
+        from research.network import resolve_public, NetworkError
+        def entries(ips):
+            return [(socket.AF_INET6 if ':' in ip else socket.AF_INET,socket.SOCK_STREAM,6,'',(ip,443)) for ip in ips]
+        fallback=lambda host,port:entries(['93.184.216.34','2606:2800:220:1:248:1893:25c8:1946'])
+        result=resolve_public('example.com',443,resolver=lambda *a,**k:entries(['198.18.0.135']),fallback=fallback)
+        self.assertEqual(result,(socket.AF_INET,'93.184.216.34'))
+        for system in (['10.0.0.1'],['198.18.0.1','10.0.0.1'],['93.184.216.34','198.18.0.1']):
+            with self.subTest(system=system),self.assertRaises(NetworkError):
+                resolve_public('example.com',443,resolver=lambda *a,ips=system,**k:entries(ips),fallback=fallback)
+        with self.assertRaises(NetworkError):
+            resolve_public('example.com',443,resolver=lambda *a,**k:entries(['198.18.0.2']),
+                           fallback=lambda *a:entries(['127.0.0.1']))
+
     def test_pinned_socket_keeps_original_tls_hostname(self):
         from research.network import open_connection, target
         from unittest.mock import Mock
@@ -41,6 +56,25 @@ class TransportTests(unittest.TestCase):
             self.assertEqual(conn.host,'example.com')
             self.assertIs(conn.sock,tls)
             context.set_alpn_protocols.assert_called_once_with(['http/1.1'])
+
+    def test_pinned_doh_validates_question_and_disables_client_subnet(self):
+        from research.network import doh_query
+        from unittest.mock import Mock
+        answer={'Status':0,'TC':False,'CD':False,'Question':[{'name':'example.com.','type':1}],
+                'Answer':[{'name':'example.com.','type':1,'TTL':60,'data':'93.184.216.34'}]}
+        response=Mock(status=200)
+        response.getheader.side_effect=lambda name,default=None: {
+            'Content-Length':None,'Content-Type':'application/json; charset=UTF-8'}.get(name,default)
+        response.read.return_value=json.dumps(answer).encode()
+        conn=Mock();conn.getresponse.return_value=response
+        with patch('research.network.open_connection',return_value=conn) as opened:
+            self.assertEqual(doh_query('example.com',1,'8.8.8.8'),answer['Answer'])
+        destination=opened.call_args.args[0]
+        self.assertEqual((destination['host'],opened.call_args.args[1]),('dns.google',(socket.AF_INET,'8.8.8.8')))
+        request=conn.request.call_args
+        self.assertEqual(request.args[0],'GET')
+        self.assertIn('edns_client_subnet=0.0.0.0%2F0',request.args[1])
+        self.assertEqual(request.kwargs['headers']['Host'],'dns.google')
 
     def test_compressed_and_uncompressed_bodies_are_bounded(self):
         from research.network import decode_body, NetworkError

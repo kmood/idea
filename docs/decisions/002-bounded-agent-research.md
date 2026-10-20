@@ -26,3 +26,7 @@ Accepted，2026-10-15。source-research 规格已批准，本决策及技术计�
 ## 依据
 
 已核验 [http.client](https://docs.python.org/3.14/library/http.client.html)、[ssl](https://docs.python.org/3.14/library/ssl.html)、[ipaddress](https://docs.python.org/3.14/library/ipaddress.html)、[robotparser](https://docs.python.org/3.14/library/urllib.robotparser.html)。这些标准库提供 HTTP、证书校验、地址分类和 robots 解析；它们不会自动完成本文的 SSRF 防护、正文识别或 Agent 工具桥接，这些必须由实现与测试证明。网页当前显示 Python 3.14.8 文档，不代表要升级本机已验证的 3.14.4。
+
+## 2026-10-20 补充：受限桌面 DNS
+
+真实试运行发现桌面环境把公开域名统一映射到 `198.18.0.0/15`。保留原有“目标必须解析为公网地址”约束，并增加窄范围降级：仅当系统答案全部属于该基准测试网段时，通过固定 Google Public DNS 地址进行 HTTPS 解析；TLS 验证 `dns.google`，返回地址再次执行完整公网检查。普通私网、混合答案、认证请求、代理和地址检查开关仍不允许。依据为 [RFC 8484](https://www.rfc-editor.org/rfc/rfc8484.html) 与 [Google JSON DoH 文档](https://developers.google.com/speed/public-dns/docs/doh/json)。
