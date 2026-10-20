@@ -108,9 +108,27 @@ def validate_runtime(conn):
         fields(item,keys,keys); validate_intent(item['intent'])
         require(item['runId'] == row['run_id'] and text(item['intentId']) and item['intentId'] == row['intent_id'])
         get_run(conn,item['runId'])
-        require(item['status'] == 'pending' and item['result'] is None)
+        require(item['status'] in ('pending','completed'))
+        if item['status'] == 'pending':
+            require(item['result'] is None)
+        else:
+            from .artifacts import ref
+            ref(item['result'])
+            version = conn.execute('SELECT payload FROM record_versions WHERE record_id=? AND revision=?',
+                                   (item['result']['recordId'],item['result']['revision'])).fetchone()
+            require(version is not None, 'Completed publishing receipt lost its record version')
+            operation = conn.execute('SELECT request_hash,result FROM operations WHERE scope=? AND key=?',
+                                     ('research',item['intent']['operationId'])).fetchone()
+            require(operation is not None and operation['request_hash'] == item['intent']['requestHash'],
+                    'Completed publishing receipt lost its business operation')
+            published = json.loads(operation['result'])
+            require(published['id'] == item['result']['recordId'] and
+                    published['revision'] == item['result']['revision'] and
+                    published == json.loads(version['payload']),
+                    'Completed publishing receipt differs from its business result')
         require(row['request_hash'] == digest(item['intent']))
-        validate_replay(conn, 'runtime-intent:' + item['runId'], item['intentId'], row['request_hash'], item)
+        replay = item | {'status':'pending','result':None}
+        validate_replay(conn, 'runtime-intent:' + item['runId'], item['intentId'], row['request_hash'], replay)
     if 'research_execution' in present:
         from .execution import validate_execution
         validate_execution(conn)

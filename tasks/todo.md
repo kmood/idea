@@ -149,18 +149,19 @@
 
 ## R12：原子发布一步研究结果
 
-- [ ] 完成
-- 依赖：R11；预计范围：中（4 个主要文件）
+- [x] 完成
+- 依赖：R11；实际范围：共享资料保存内核、fenced 发布接口、运行回执完整性和故障/恢复测试；未修改 storage schema。
 验收：
-- [ ] publishStep 同一事务校验 fence、预期版本、精确身份并保存正文/历史/操作回放/本地回执
-- [ ] 提交前故障全回滚，提交后丢响应回放；不接受个人字段和越权 Assessment/实验写入
+- [x] publishStep 同一事务校验 fence、预期版本、精确身份并保存正文/历史/操作回放/本地回执
+- [x] 提交前故障全回滚，提交后丢响应回放；不接受个人字段和越权 Assessment/实验写入
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/records -p 'test_publishing.py' -v`。
-涉及文件：`src/records/publishing.py`、`src/records/service.py`、`src/records/storage.py`、`tests/records/test_publishing.py`。
+操作说明：`docs/research-publishing-step.md`。
+涉及文件：`src/records/publishing.py`、`src/records/service.py`、`src/records/runtime.py`、`tests/records/test_publishing.py`。
 
 ### 检查点：R12 后
 
-- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
-- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+- [x] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
+- [x] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
 
 ## R13：恢复多步证据与点子发布
 

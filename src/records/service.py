@@ -17,13 +17,7 @@ class ResearchStore:
         fields(record, {'id', 'kind', 'legacy'} | FIELDS[record['kind']], {'id', 'kind'} | (FIELDS[record['kind']] - OPTIONAL.get(record['kind'], set())))
         require(text(record['id']), 'Record ID required')
         def action(conn):
-            if conn.execute('SELECT 1 FROM research_records WHERE id=?', (record['id'],)).fetchone():
-                raise Fault('DUPLICATE_ID', 'Record ID already exists', recordId=record['id'])
-            timestamp = now()
-            full = record | dict(schemaVersion=1, revision=1, createdAt=timestamp, updatedAt=timestamp, archived=False, mergedInto=None)
-            validate_record(full)
-            references(conn, full)
-            return save(conn, full, None, operation_id, 'created', 'Initial collection')
+            return create_research_in(conn, record, operation_id, 'Initial collection')
         return self.db.run('research', operation_id, {'action': 'create', 'record': record}, action, guard=guard)
 
     @boundary
@@ -52,19 +46,7 @@ class ResearchStore:
     def patch_research(self, id: str, expected_revision: int, patch: dict, reason: str, operation_id: str) -> dict:
         require(text(reason))
         def action(conn):
-            before = get(conn, id)
-            require(before['kind'] != 'Assessment', 'Use saveAssessment')
-            fields(patch, FIELDS[before['kind']] | {'archived'})
-            expected(before, expected_revision)
-            updated = before | patch
-            validate_record(updated)
-            if before['kind'] == 'Source' and updated['accessStatus'] != 'readable':
-                require(updated['lastSuccess'] == before['lastSuccess'], 'Failed access cannot advance success')
-            if updated == before:
-                return before
-            references(conn, updated)
-            updated.update(revision=before['revision'] + 1, updatedAt=now())
-            return save(conn, updated, before, operation_id, 'updated', reason)
+            return patch_research_in(conn, id, expected_revision, patch, reason, operation_id)
         return self.db.run('research', operation_id, dict(action='patch', id=id, expectedRevision=expected_revision, patch=patch, reason=reason), action)
 
     @boundary
@@ -97,3 +79,39 @@ class ResearchStore:
         from .queries import list_records
         with closing(self.db.connect()) as conn:
             return list_records(conn, kind, query, {} if filters is None else filters, cursor, limit)
+
+
+def create_research_in(conn, record: dict, operation_id: str, reason: str) -> dict:
+    """Shared transaction body for ordinary and fenced research writes."""
+    require(isinstance(record, dict) and isinstance(record.get('kind'), str) and record['kind'] in FIELDS)
+    require(record['kind'] != 'Assessment', 'Research publishing cannot write assessments')
+    fields(record, {'id', 'kind', 'legacy'} | FIELDS[record['kind']],
+           {'id', 'kind'} | (FIELDS[record['kind']] - OPTIONAL.get(record['kind'], set())))
+    require(text(record['id']) and text(operation_id) and text(reason))
+    if conn.execute('SELECT 1 FROM research_records WHERE id=?', (record['id'],)).fetchone():
+        raise Fault('DUPLICATE_ID', 'Record ID already exists', recordId=record['id'])
+    timestamp = now()
+    full = record | dict(schemaVersion=1, revision=1, createdAt=timestamp, updatedAt=timestamp,
+                         archived=False, mergedInto=None)
+    validate_record(full)
+    references(conn, full)
+    return save(conn, full, None, operation_id, 'created', reason)
+
+
+def patch_research_in(conn, id: str, expected_revision: int, patch: dict, reason: str,
+                      operation_id: str) -> dict:
+    """Shared transaction body with the existing revision and field rules."""
+    require(text(id) and text(reason) and text(operation_id))
+    before = get(conn, id)
+    require(before['kind'] != 'Assessment', 'Research publishing cannot write assessments')
+    fields(patch, FIELDS[before['kind']] | {'archived'})
+    expected(before, expected_revision)
+    updated = before | patch
+    validate_record(updated)
+    if before['kind'] == 'Source' and updated['accessStatus'] != 'readable':
+        require(updated['lastSuccess'] == before['lastSuccess'], 'Failed access cannot advance success')
+    if updated == before:
+        return before
+    references(conn, updated)
+    updated.update(revision=before['revision'] + 1, updatedAt=now())
+    return save(conn, updated, before, operation_id, 'updated', reason)
