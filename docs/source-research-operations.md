@@ -34,3 +34,18 @@ PYTHONPATH=src python3 -m research --db .local/research.sqlite3 inspect --run-id
 Agent 先 `run` 或 `resume`，再用 `reserveSearch` 为每个实际 query 领取独立 callId。只有 awaiting_agent 才调用当前会话可用的搜索工具，随后先 `registerSource`，再用 `submitDiscovery` 回交严格结构。候选必须经 `readCandidate` 读取具体讨论，搜索摘要不能直接进入 `submitAnalysis`。验证稿通过后使用 publish 的 prepare/resume 两阶段落盘，处置结果再推进来源进度；覆盖回顾只在实际引用足够时发布。
 
 每次操作后可以检查 state/candidates/searches 决定下一项有界动作。CLI 不无限循环、不在无人值守时替 Agent 搜索、不联系客户，也不绕过登录、验证码或付费墙。自动化仍由现有 Codex heartbeat 驱动；本入口不另建调度器。正式 Markdown 研究入口尚未切换，真实公网协作试运行留给 R19。
+
+## 离线验收映射
+
+| 风险或规格场景 | 回归位置 |
+| --- | --- |
+| 发现→读取→引用分析→部分发布→备份恢复→断点→公开导入 | `tests/research/test_acceptance.py` |
+| 两个执行者竞争、旧 token 失效、预算/截止时间/取消 | `test_adversarial.py`、`test_runner.py` |
+| 提交前故障全回滚、提交后丢响应重放、并发版本冲突 | `tests/records/test_publishing.py`、`test_recovery.py`、`test_mutations.py` |
+| v1/v2 快照升级、历史与摘要稳定、错误谱系拒绝 | `tests/records/test_bundle_versions.py`、`test_schema_upgrade.py` |
+| 私有收藏/备注不进入公开包，备份恢复仍保留历史 | `test_acceptance.py`、`tests/records/test_personal.py`、`test_research_recovery.py` |
+| 网页提示注入只作为正文、未读块/回复不能作为证据 | `test_acceptance.py`、`test_reader.py`、`test_analysis.py`、`tests/records/test_publishing.py` |
+| 固定公网地址、TLS 原主机、robots、重定向、压缩和大小/时间边界 | `test_network_transport.py`、`test_network.py` |
+| 重复、变体、旧帖新回复、缺口游标和有依据覆盖回顾 | `test_dedupe.py`、`test_progress.py`、`test_coverage.py` |
+
+这些测试只证明离线契约和合成流程。真实会话搜索、真实公网 Reader、实际用量以及导出/重导演练必须在 R19 的受限试运行报告中单独记录；网络环境不允许时保持 R19 未完成并保留断点。
