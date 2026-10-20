@@ -138,13 +138,14 @@
 
 ## R11：定位重复并保留变体
 
-- [ ] 完成
-- 依赖：R10；预计范围：中（4 个主要文件）
+- [x] 完成
+- 依赖：R10；实际范围：去重接口、公开身份查询与测试；直接从公开凭据/处置/关系恢复定位，不新增本机身份表，也不更改 storage。
 验收：
-- [ ] 跨轮次定位键和内容版本关联原 ID；跟踪参数与内容参数区别处理
-- [ ] 语义相似保留 possibleDuplicate；同源多点子不变成独立样本，旧帖新回复不被去重掉
+- [x] 跨轮次定位键和内容版本关联原 ID；跟踪参数与内容参数区别处理
+- [x] 语义相似保留 possibleDuplicate；同源多点子不变成独立样本，旧帖新回复不被去重掉
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_dedupe.py' -v`。
-涉及文件：`src/research/dedupe.py`、`src/records/identity.py`、`src/records/storage.py`、`tests/research/test_dedupe.py`。
+操作说明：`docs/research-deduplication.md`。
+涉及文件：`src/research/dedupe.py`、`src/records/identity.py`、`tests/research/test_dedupe.py`。
 
 ## R12：原子发布一步研究结果
 
