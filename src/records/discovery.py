@@ -83,6 +83,14 @@ class DiscoveryStore:
         return self.runtime.execution.transaction(action)
 
     @boundary
+    def candidate(self,run_id,candidate_id):
+        require(text(run_id) and text(candidate_id))
+        with closing(self.runtime.db.connect()) as conn:
+            row=conn.execute('SELECT payload FROM research_candidates WHERE run_id=? AND candidate_id=?',(run_id,candidate_id)).fetchone()
+            if row is None:raise Fault('NOT_FOUND','Candidate was not discovered in this run')
+            return json.loads(row[0])
+
+    @boundary
     def inspect(self,run_id,cursor='',limit=20,*,searches=False):
         require(isinstance(cursor,str) and type(limit) is int and 1<=limit<=100)
         table,key=('research_searches','call_id') if searches else ('research_candidates','candidate_id')

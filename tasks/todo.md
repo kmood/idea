@@ -127,12 +127,13 @@
 
 ## R10：验证分析稿并分流内容
 
-- [ ] 完成
-- 依赖：R09；预计范围：中（3 个主要文件）
+- [x] 完成
+- 依赖：R09；实际范围：分析契约、引用校验与测试；补充 discovery 单候选查询，避免研究层直接访问 SQLite。
 验收：
-- [ ] 真实凭据支撑的 AnalysisDraft 可分流 trend/idea/update/deferred/rejected；未知成本仍允许入库
-- [ ] 块引用、事实/作者声称/推断、E2 独立性和 E3 核验依据检查生效；未读评论不计样本
+- [x] 真实凭据支撑的 AnalysisDraft 可分流 trend/idea/update/deferred/rejected；未知成本仍允许入库
+- [x] 块引用、事实/作者声称/推断、E2 独立性和 E3 核验依据检查生效；未读评论不计样本
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_analysis.py' -v`。
+补充文件：`src/records/discovery.py`、`docs/research-analysis.md`。
 涉及文件：`src/research/contracts.py`、`src/research/analysis.py`、`tests/research/test_analysis.py`。
 
 ## R11：定位重复并保留变体
