@@ -251,20 +251,22 @@
 
 ## R19：完成一轮真实公开来源试运行
 
-- [ ] 完成
+- [x] 完成
 - 依赖：R18；预计范围：中（5 个主要文件）
 验收：
-- [ ] 当前 Agent 执行有界搜索→程序读取→引用分析→临时库发布，并区分成功、受限和未覆盖范围
-- [ ] 验证导出/重导/恢复及正文不变性；更新交接状态，正式 Markdown 和定时写入入口不切换
+- [x] 当前 Agent 执行有界搜索→程序读取→引用分析→临时库发布，并区分成功、受限和未覆盖范围
+- [x] 验证导出/重导/恢复及正文不变性；更新交接状态，正式 Markdown 和定时写入入口不切换
 验证：`PYTHONPATH=src python3 -m unittest discover -s tests/research -p 'test_acceptance.py' -v`。
 涉及文件：`research/runs/source-research-pilot.md`、`docs/source-research-operations.md`、`AGENTS.md`、`research/STATE.md`、`tasks/todo.md`。
 
-试运行记录：2026-10-20，真实 `web.search` 执行 3 个 query，建档 3 个来源并交回 4 个候选；本机 Reader 的 Reddit/Hacker News/GitHub 正文读取均返回 restricted，没有生成凭据或研究结论。诊断确认本机 Python DNS 将测试域名统一映射到非公网 `198.18.0.0/15`，地址检查在请求前正确拒绝。公开导出/重导及完整备份恢复通过，但正文不变性无法验证，故 R19 保持未完成并保留 `.local/r19/` 断点。详见 `research/runs/source-research-pilot.md`。
+试运行记录：2026-10-20，真实 `web.search` 执行 3 个 query，建档 3 个来源并交回 4 个候选。系统 DNS 的 `198.18.0.0/15` 映射通过仅限该网段、固定 IP、TLS 校验及二次公网检查的 DoH 降级解决。GitHub issue 形成 1 个 ReadReceipt、E1 Evidence、待验证 Idea、完整 Outcome 和 SourceCheckpoint；Hacker News 成功获取页面但正文结构暂不支持，Reddit 未在修复后重试。公开导出/重导、完整备份、隔离 public-only 恢复及正文指纹不变性通过；正式入口不切换。详见 `research/runs/source-research-pilot.md`。
+
+验证记录：2026-10-20，71 项 records + 72 项 research 测试、compileall 与 diff 检查通过。将 DoH 降级条件从“全部基准测试地址”变异为“任一基准测试地址”后，私网混合与公网混合两个断言均失败，恢复原实现后目标及全量测试通过。提交前审阅未发现凭据、私有正文、新依赖或未有界网络路径。
 
 ### 检查点：R19 后
 
-- [ ] 运行现有 records 测试，以及已实现的 research 测试（该目录尚未建立时不伪称运行）；执行对应源目录 compileall 与 git diff --check。
-- [ ] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
+- [x] 运行现有 records 测试，以及已实现的 research 测试；执行对应源目录 compileall 与 git diff --check。
+- [x] 审阅场景覆盖、失败和限制并向用户报告可运行结果；未解决问题不得通过跳过测试进入下一阶段。
 
 ## 验收映射与完成边界
 
