@@ -29,9 +29,9 @@ records-history → source-research → opportunity-review → local-web → sch
 | 模块 | 规格 | 状态 |
 | --- | --- | --- |
 | records-history | [资料与历史](SPEC-records-history.md) | 已实现；37 项测试通过，正式迁移未切换 |
-| source-research | [来源采集与研究](SPEC-source-research.md) | 规格已批准；技术计划与任务清单待审阅 |
+| source-research | [来源采集与研究](SPEC-source-research.md) | R01–R19 已完成；继续执行有界研究轮次 |
 | opportunity-review | 尚未编写 | 待基础契约确定 |
-| local-web | 尚未编写 | 待基础契约确定 |
+| local-web | [本机研究看板](SPEC-local-web.md) | 只读切片已实现；私人操作待正式状态入口 |
 | scheduled-sync | 尚未编写 | 待基础契约确定 |
 
-模块划分已确认；模块规格通过后再进入技术计划和任务拆分。records-history 已完成；其他模块尚未实现。
+模块划分已确认。records-history 和 source-research 的当前清单已完成；local-web 已交付读取正式 Markdown 的只读切片。opportunity-review、私人操作和 scheduled-sync 的后续切片尚待实施。
