@@ -297,3 +297,9 @@
 
 - GL42：专业协会公开社区，受众为博物馆工作人员；last_attempt / last_success=2026-10-22。[自助导览讨论](https://community.aam-us.org/communities/community-home/digestviewer/viewthread?CommunityKey=d34b2dfb-4151-4629-a59a-553d0ae428d9&GroupId=31&MID=3154&hlmlt=VT)2015-03-19至03-24，八条公开发言可读，形成历史E1；页面只读无需登录，未采联系方式。下次仅有近期买方或完成反馈再采样，旧供应介绍和价格不当当前需求。
 - GL27：last_attempt / last_success=2026-10-22；[超大幅面装裱](https://www.thegrumble.com/threads/how-to-mount-oversized-art-over-60-on-both-sides.102157/)本轮抽读原问题及早期回复，可读但未复核整条线程；所读部分未见新交易结果，保持029历史E1，不重复新增。下次有作者实际外协反馈再复检。
+
+## 2026-10-22 家居设计与门店任务复检
+
+- CN01：last_attempt / last_success=2026-10-22；读[自装设计咨询](https://v2ex.com/t/956447)原文、2023-07-13补充与部分回复，形成历史E3意向；后续自画、币种与成交未知，不当当前订单。下次寻找近期具体委托及验收反馈。
+- GL26：last_attempt / last_success=2026-10-22；[礼品店任务积压](https://www.ukbusinessforums.co.uk/threads/can-i-just-is-killing-me.430719/)第一页抽读原问与早期回复，仍为2026-04-30起的历史问题，零碎任务不足以雇人的反证仍在，未见所读部分有新采购，027不升级。第二页本轮未读，下次只追交付/外包结果。
+- 新域名探索：齐家网检索命中以首页、营销案例及表单为主，未读具体原始需求，不建可挖掘来源、不计证据；库存服务查询也未取得合格新源。下轮换从业者论坛或公开采购入口，不靠同站重复板块堆数。
