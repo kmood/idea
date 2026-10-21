@@ -34,11 +34,13 @@
 | GL20 | [BiggerPockets Forums](https://www.biggerpockets.com/forums) | 英文房东、物业投资人与小型出租业务经营者 | 维修记录、资产清单、收据、税务交接与物业软件 | 2026-10-21：近期具体讨论可读；市场调研帖和供应商推广多，需优先识别真实房东经历 | A，主流垂直 |
 | GL21 | [Reddit / paralegal、LawFirm 与 legaltech](https://www.reddit.com/r/paralegal/) | 英文律师、律所运营与法律科技从业者 | 客户接洽、统计报表、表格迁移与隐私边界 | 2026-10-21：会话浏览器读到具体讨论；同一平台多个板块只算一个来源域，现有律所系统替代强 | A，部分可读 |
 | GL22 | [Make Community / Hire a Pro](https://community.make.com/c/hire-a-pro/50) | 英文自动化买家、实施者与代理商 | 付费排障、长期维护、白标交付、行业系统集成与成交后反馈 | 2026-10-21：入口和多篇具体招聘/结果更新可读；供应方报价很多，必须与买方预算、选人和上线结果分开 | A，采购与结果信号 |
+| GL23 | [Square Community](https://community.squareup.com/) | 英文零售、餐饮、活动和本地服务商家 | POS、库存导入、成本报表、订单 API 与门店工作流 | 2026-10-21：入口及近期具体商家讨论可读；平台缺陷可能由官方修复，定制服务必须先核对现有功能与 API 边界 | A，主流平台 |
+| GL24 | [AutoShopOwner](https://www.autoshopowner.com/forums/) | 英文汽修店主、服务顾问和行业服务商 | 工单、报价、技师工时、KPI、门店软件与经营流程 | 2026-10-21：论坛及具体店主讨论可读；教练/供应商文章较多，优先采用可识别的门店用户问题 | B，小众垂直 |
 
 ## 来源组合与轮巡
 
-- 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
-- 小众垂直层：CN06、GL12–GL15、GL17、GL19、GL21 等更容易出现专业流程、术语和现有替代，用于理解交付边界；样本偏旧、同域或人群混合时明确降权。
+- 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22、GL23 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
+- 小众垂直层：CN06、GL12–GL15、GL17、GL19、GL21、GL24 等更容易出现专业流程、术语和现有替代，用于理解交付边界；样本偏旧、同域或人群混合时明确降权。
 - 社区类型不能替代证据质量。主流站的高互动不等于愿付费，小众站的一篇具体帖子也不等于市场规模；升级点子仍需独立样本或采购信号。
 
 ## 收录和复检规则
@@ -82,5 +84,7 @@
 | GL21 | 2026-10-21 | 2026-10-21（会话浏览） | 已读 [律所接洽统计](https://www.reddit.com/r/paralegal/comments/1q4zbz1/new_client_intake_tracking_help/)、[家事律所接洽求助](https://www.reddit.com/r/LawFirm/comments/1q06cxk/help_on_client_intake/) 与 [标准化反证](https://www.reddit.com/r/legaltech/comments/1vk0a22/what_does_client_intake_actually_look_like_at/)；同域样本不冒充跨站证据 |
 | GL22 | 2026-10-21 | 2026-10-21 | 已读 [愿付费修复现有流程](https://community.make.com/t/make-freelancer-needed-for-project/115431)、[长期 Airtable + Make 维护岗位](https://community.make.com/t/hiring-long-term-airtable-make-automation-systems-specialist-18-25-hr/113873)、[白标实施伙伴招募](https://community.make.com/t/looking-for-white-label-make-com-automation-developers-agency-partner/116649?page=2) 和 [选人及上线结果](https://community.make.com/t/hiring-make-com-specialist-with-mindbody-api-experience/111598/18)；最后一帖确认已聘用、流程上线和后续合作，但未公开付款凭证 |
 | CN01 | 2026-10-21 | 2026-10-21 | 已读 [海外酒店分销 SaaS 后端兼职](https://www.v2ex.com/t/1125476)：2025-04-15 发布，明确每日 2–3 小时、任务/时薪、API 适配和短周会；属于历史采购样本，当前是否招聘未知 |
+| GL23 | 2026-10-21 | 2026-10-21 | 已读 [库存导入后全部售罄](https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Item-inventory-quantities-showing-Sold-Out-after-importing/td-p/847561)、[成本与供应商字段未进入报表](https://community.squareup.com/t5/Retail-eCommerce/Unit-Cost-and-Vendor-Entered-for-new-inventory-in-Item-Library/m-p/839768/highlight/true) 和 [食品节订单预填到 Square POS](https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Seeking-Web-App-Order-Form-to-push-into-Square-POS-Cart-for-a/td-p/843781)；前两帖为独立商家，第三帖是具体项目需求但无采购表达 |
+| GL24 | 2026-10-21 | 2026-10-21 | 已读 [RO Writer 与 AutoVitals 的 KPI 汇总](https://www.autoshopowner.com/forums/topic/20742-ro-writer-auto-vitals-do-you-use-this-combo-in-your-shop/)；店主已自建 Google Sheet，回复指出后台报表和厂商培训可能直接解决，作为强替代保留 |
 
-以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 CN06、GL08–GL22；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。
+以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 CN06、GL08–GL24；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。

@@ -19,7 +19,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "CN02",
@@ -39,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "CN03",
@@ -59,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "CN04",
@@ -79,7 +79,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "CN05",
@@ -99,7 +99,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL01",
@@ -119,7 +119,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL02",
@@ -139,7 +139,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL03",
@@ -160,7 +160,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL04",
@@ -181,7 +181,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL05",
@@ -201,7 +201,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL06",
@@ -221,7 +221,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL07",
@@ -241,7 +241,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL08",
@@ -262,7 +262,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL09",
@@ -284,7 +284,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL10",
@@ -305,7 +305,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "CN06",
@@ -326,7 +326,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL11",
@@ -347,7 +347,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL12",
@@ -368,7 +368,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL13",
@@ -389,7 +389,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL14",
@@ -410,7 +410,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL15",
@@ -431,7 +431,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL16",
@@ -452,7 +452,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL17",
@@ -473,7 +473,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL18",
@@ -494,7 +494,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL19",
@@ -515,7 +515,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL20",
@@ -536,7 +536,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL21",
@@ -557,7 +557,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     },
     {
       "id": "GL22",
@@ -578,7 +578,49 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
+    },
+    {
+      "id": "GL23",
+      "kind": "Source",
+      "name": "Square Community",
+      "url": "https://community.squareup.com/",
+      "audience": [
+        "英文零售、餐饮、活动和本地服务商家"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
+    },
+    {
+      "id": "GL24",
+      "kind": "Source",
+      "name": "AutoShopOwner",
+      "url": "https://www.autoshopowner.com/forums/",
+      "audience": [
+        "英文汽修店主、服务顾问和行业服务商"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "2cb553f0df53560caf01897c5f275fac46a74c9103b7c8e7879a608962c00dd7"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -1935,6 +1977,187 @@
       ],
       "firstCollectedAt": "2026-10-21T13:25:00+08:00",
       "expectedSha256": "2c703785400423fdffb1854b411383ca59bb3d06acfe4a77d19f3f37e9869bc1"
+    }
+  ],
+  "ideas/IDEA-20261021-015.md": [
+    {
+      "id": "EV-20261021-039",
+      "kind": "Evidence",
+      "sourceId": "GL23",
+      "url": "https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Item-inventory-quantities-showing-Sold-Out-after-importing/td-p/847561",
+      "claim": "商家导入库存后全部商品显示售罄，为次日开业手工录入 432 项近两小时",
+      "summary": "近期 E1 商家工作流；平台缺陷或文件问题尚未区分。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:45:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-08-06"
+      },
+      "expectedSha256": "5ff1046a64b650483df5ebeee64eaf459f3b9398121512a013cddb3e0dbe3850"
+    },
+    {
+      "id": "EV-20261021-040",
+      "kind": "Evidence",
+      "sourceId": "GL23",
+      "url": "https://community.squareup.com/t5/Retail-eCommerce/Unit-Cost-and-Vendor-Entered-for-new-inventory-in-Item-Library/m-p/839768/highlight/true",
+      "claim": "独立商家称商品库成本与供应商字段正确但未进入成本和库存报告",
+      "summary": "同站独立近期 E1；可能由平台更新或设置导致。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "导入前文件正确即可保证 Square 库存和成本报表正确",
+      "firstCollectedAt": "2026-10-21T13:45:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-03-31"
+      },
+      "expectedSha256": "5ff1046a64b650483df5ebeee64eaf459f3b9398121512a013cddb3e0dbe3850"
+    },
+    {
+      "id": "IDEA-20261021-015",
+      "kind": "Idea",
+      "title": "Square 库存导入预检与差异报告",
+      "audience": "需要把数百个商品、数量、成本和供应商字段导入 Square 的小型零售商",
+      "problem": "导入后可能出现售罄、重复 SKU 或成本字段缺失，临近营业只能手工补录",
+      "earningHypothesis": "Agent 假设：交付脱敏文件预检、试导计划、前后只读差异和回滚清单；价格与愿付费程度未知。",
+      "industry": [
+        "线下零售",
+        "POS"
+      ],
+      "sideHustleTypes": [
+        "数据预检",
+        "差异审计"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-039",
+        "EV-20261021-040"
+      ],
+      "firstCollectedAt": "2026-10-21T13:45:00+08:00",
+      "expectedSha256": "5ff1046a64b650483df5ebeee64eaf459f3b9398121512a013cddb3e0dbe3850"
+    }
+  ],
+  "ideas/IDEA-20261021-016.md": [
+    {
+      "id": "EV-20261021-041",
+      "kind": "Evidence",
+      "sourceId": "GL23",
+      "url": "https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Seeking-Web-App-Order-Form-to-push-into-Square-POS-Cart-for-a/td-p/843781",
+      "claim": "非营利食品节有 8 个收银窗口和两个月期限，希望消除纸单逐项录入的延迟与错误",
+      "summary": "具体项目 E1；已有网页原型，但 API 可行性、预算和采购均未知。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:45:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "f2db253a273daeeffabb24751ccdee143be8fee784c56b4da360ac8c59485e18"
+    },
+    {
+      "id": "IDEA-20261021-016",
+      "kind": "Idea",
+      "title": "临时活动 Square POS 订单预填可行性与原型",
+      "audience": "使用多台 Square Stand、纸质点单和中央厨房的活动餐饮组织",
+      "problem": "收银员逐项录入十余种商品造成队列延迟和转录错误，但线上下单可能冲击厨房节奏",
+      "earningHypothesis": "Agent 假设：先交付 API/设备支持矩阵和最小原型，可行后再做二维码订单预填；预算与平台边界未知。",
+      "industry": [
+        "活动餐饮",
+        "POS"
+      ],
+      "sideHustleTypes": [
+        "可行性验证",
+        "集成原型"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-041"
+      ],
+      "firstCollectedAt": "2026-10-21T13:45:00+08:00",
+      "expectedSha256": "f2db253a273daeeffabb24751ccdee143be8fee784c56b4da360ac8c59485e18"
+    }
+  ],
+  "ideas/IDEA-20261021-017.md": [
+    {
+      "id": "EV-20261021-042",
+      "kind": "Evidence",
+      "sourceId": "GL24",
+      "url": "https://www.autoshopowner.com/forums/topic/20742-ro-writer-auto-vitals-do-you-use-this-combo-in-your-shop/",
+      "claim": "汽修店使用 RO Writer 与 AutoVitals 后难以合并技师工时和每日每周 KPI，正在自建 Google Sheet",
+      "summary": "E1 门店用户工作流；希望减少重复录入。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:45:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2025-01-29"
+      },
+      "expectedSha256": "c5beadc814a3a75877ce0c4a7aad56caa3fd9a36d7cacc391410022edc9d4e3f"
+    },
+    {
+      "id": "EV-20261021-043",
+      "kind": "Evidence",
+      "sourceId": "GL24",
+      "url": "https://www.autoshopowner.com/forums/topic/20742-ro-writer-auto-vitals-do-you-use-this-combo-in-your-shop/",
+      "claim": "同行指出 AutoVitals 后台报表可导出 Excel，建议升级系统并接受厂商培训",
+      "summary": "强替代反证；原生能力可能已满足需求。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "两套汽修系统必然需要第三方自建报表",
+      "firstCollectedAt": "2026-10-21T13:45:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2025-02-06"
+      },
+      "expectedSha256": "c5beadc814a3a75877ce0c4a7aad56caa3fd9a36d7cacc391410022edc9d4e3f"
+    },
+    {
+      "id": "IDEA-20261021-017",
+      "kind": "Idea",
+      "title": "汽修门店跨系统 KPI 对账与日报模板",
+      "audience": "同时使用 RO Writer 管工单和 AutoVitals 管技师工时的独立汽修店",
+      "problem": "两套系统各有部分数据，难以统一查看技师工时、返工和拒绝项目转化",
+      "earningHypothesis": "Agent 假设：交付字段定义、导出对账规则、日报模板和书面更新流程；原生报表可能已解决。",
+      "industry": [
+        "汽修门店"
+      ],
+      "sideHustleTypes": [
+        "数据对账",
+        "报表实施"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-042",
+        "EV-20261021-043"
+      ],
+      "firstCollectedAt": "2026-10-21T13:45:00+08:00",
+      "expectedSha256": "c5beadc814a3a75877ce0c4a7aad56caa3fd9a36d7cacc391410022edc9d4e3f"
     }
   ]
 }
