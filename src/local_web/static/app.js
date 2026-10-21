@@ -1,5 +1,5 @@
 const labels={source:'来源',trend:'趋势',idea:'点子'};
-const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',ideaFit:'',accessStatus:'',compareIds:new Set()};
+const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',ideaFit:'',accessStatus:'',sort:'recent',compareIds:new Set()};
 const list=document.querySelector('#record-list');
 const empty=document.querySelector('#empty');
 const errorBox=document.querySelector('#error');
@@ -19,7 +19,7 @@ function filtered(){
 function text(tag,className,value){const node=document.createElement(tag);if(className)node.className=className;node.textContent=value;return node;}
 
 function render(){
-  const records=filtered();list.replaceChildren();
+  const records=filtered().sort(compareRecords);list.replaceChildren();
   records.forEach(record=>{
     const row=document.createElement('div');row.className='record-row';
     if(record.kind==='idea'){
@@ -40,6 +40,13 @@ function render(){
   renderCompare();
   list.setAttribute('aria-busy','false');empty.hidden=records.length!==0;
   document.querySelector('#result-count').textContent=`显示 ${records.length} / ${state.records.length} 条`;
+}
+
+function compareRecords(left,right){
+  if(state.sort==='id')return left.id.localeCompare(right.id);
+  if(state.sort==='status')return (left.researchStatus||left.accessStatus||'未知').localeCompare(right.researchStatus||right.accessStatus||'未知')||left.id.localeCompare(right.id);
+  const leftDate=left.updatedAt||'';const rightDate=right.updatedAt||'';
+  return (rightDate?1:0)-(leftDate?1:0)||rightDate.localeCompare(leftDate)||left.id.localeCompare(right.id);
 }
 
 function renderCompare(){
@@ -63,6 +70,7 @@ async function openDetail(record){
 }
 
 document.querySelector('#search').addEventListener('input',event=>{state.query=event.target.value;render();});
+document.querySelector('#sort').addEventListener('change',event=>{state.sort=event.target.value;render();});
 document.querySelectorAll('input[name="kind"]').forEach(input=>input.addEventListener('change',event=>{
   state.kind=event.target.value;
   if(state.kind==='idea')state.accessStatus='';
@@ -76,7 +84,7 @@ document.querySelector('#evidence').addEventListener('change',event=>{state.evid
 document.querySelector('#research-status').addEventListener('change',event=>{state.researchStatus=event.target.value;render();});
 document.querySelector('#idea-fit').addEventListener('change',event=>{state.ideaFit=event.target.value;render();});
 document.querySelector('#access-status').addEventListener('change',event=>{state.accessStatus=event.target.value;render();});
-document.querySelector('#reset').addEventListener('click',()=>{state.query='';state.kind='';state.evidence='';state.researchStatus='';state.ideaFit='';state.accessStatus='';state.compareIds.clear();document.querySelector('#search').value='';document.querySelector('input[name="kind"][value=""]').checked=true;document.querySelector('#evidence').value='';document.querySelector('#research-status').value='';document.querySelector('#idea-fit').value='';document.querySelector('#access-status').value='';render();});
+document.querySelector('#reset').addEventListener('click',()=>{state.query='';state.kind='';state.evidence='';state.researchStatus='';state.ideaFit='';state.accessStatus='';state.sort='recent';state.compareIds.clear();document.querySelector('#search').value='';document.querySelector('#sort').value='recent';document.querySelector('input[name="kind"][value=""]').checked=true;document.querySelector('#evidence').value='';document.querySelector('#research-status').value='';document.querySelector('#idea-fit').value='';document.querySelector('#access-status').value='';render();});
 dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
 
