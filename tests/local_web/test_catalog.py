@@ -100,7 +100,7 @@ class CatalogTests(unittest.TestCase):
         status,_,body=LocalWebApp(self.root).dispatch('GET','/')
         page=body.decode('utf-8')
         self.assertEqual(status,200)
-        for marker in ('source-hostname-count','idea-status-counts','research-status','access-status','selected-count','advanced-filters','compare-panel','compare-list'):
+        for marker in ('source-hostname-count','idea-status-counts','research-status','access-status','selected-count','advanced-filters','compare-panel','compare-list','refresh','check-consistency','refresh-status'):
             self.assertIn(marker,page)
         self.assertIn('value="idea" checked',page)
 

@@ -84,14 +84,29 @@ function updateFilterAvailability(){
   document.querySelector('#access-status').disabled=state.kind==='idea';
 }
 function statusSummary(counts){return ['待验证','候选','搁置'].filter(value=>counts[value]).map(value=>`${value} ${counts[value]}`).join(' · ')||'暂无状态统计';}
-
-fetch('/api/catalog').then(response=>{if(!response.ok)throw new Error('catalog');return response.json();}).then(catalog=>{
-  state.records=catalog.records;state.meta=catalog.meta;document.querySelector('#phase').textContent=catalog.meta.phase||'未知';
+function applyCatalog(catalog){
+  state.records=catalog.records;state.meta=catalog.meta;state.compareIds=new Set([...state.compareIds].filter(id=>state.records.some(record=>record.kind==='idea'&&record.id===id)));document.querySelector('#phase').textContent=catalog.meta.phase||'未知';
   Object.entries(catalog.meta.counts).forEach(([kind,count])=>document.querySelector(`#${kind}-count`).textContent=count);
   document.querySelector('#selected-count').textContent=catalog.meta.selectedCount??0;
   document.querySelector('#source-hostname-count').textContent=`不同 hostname ${catalog.meta.sourceMetrics.hostnameCount}`;
   document.querySelector('#idea-status-counts').textContent=statusSummary(catalog.meta.statusCounts.idea||{});
-  setOptions('#research-status',catalog.meta.filters.ideaResearchStatus||[],'全部点子状态');
-  setOptions('#access-status',catalog.meta.filters.sourceAccessStatus||[],'全部来源状态');
+  const researchOptions=catalog.meta.filters.ideaResearchStatus||[];const accessOptions=catalog.meta.filters.sourceAccessStatus||[];
+  if(state.researchStatus&&!researchOptions.includes(state.researchStatus))state.researchStatus='';
+  if(state.accessStatus&&!accessOptions.includes(state.accessStatus))state.accessStatus='';
+  setOptions('#research-status',researchOptions,'全部点子状态');document.querySelector('#research-status').value=state.researchStatus;
+  setOptions('#access-status',accessOptions,'全部来源状态');document.querySelector('#access-status').value=state.accessStatus;
   updateFilterAvailability();render();
-}).catch(()=>{list.hidden=true;errorBox.hidden=false;document.querySelector('#result-count').textContent='读取失败';});
+}
+async function refreshCatalog(){
+  const button=document.querySelector('#refresh');const status=document.querySelector('#refresh-status');button.disabled=true;status.textContent='读取中…';
+  try{const response=await fetch('/api/catalog',{cache:'no-store'});if(!response.ok)throw new Error('catalog');applyCatalog(await response.json());status.textContent='已刷新';}
+  catch{status.textContent=state.records.length?'刷新失败，保留当前资料':'资料读取失败';if(!state.records.length){list.hidden=true;errorBox.hidden=false;document.querySelector('#result-count').textContent='读取失败';}}
+  finally{button.disabled=false;}
+}
+document.querySelector('#refresh').addEventListener('click',refreshCatalog);
+document.querySelector('#check-consistency').addEventListener('click',async()=>{
+  const status=document.querySelector('#refresh-status');status.textContent='检查中…';
+  try{const response=await fetch('/api/consistency',{cache:'no-store'});if(!response.ok)throw new Error('consistency');const result=await response.json();status.textContent=result.ok?`资料检查通过${result.warnings.length?`，${result.warnings.length} 个警告`:''}`:`发现 ${result.errors.length} 个错误`;}
+  catch{status.textContent='检查失败';}
+});
+refreshCatalog().catch(()=>{});
