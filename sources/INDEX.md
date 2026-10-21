@@ -114,3 +114,9 @@
 
 - GL26：last_attempt / last_success 均为 2026-10-21；[定制礼品店急单积压](https://www.ukbusinessforums.co.uk/threads/can-i-just-is-killing-me.430719/)为 2026-04-30 具体讨论，第一页可读，第二页未读；形成 E1 图稿交付假设。来源从只见历史清洁样本扩展到当年门店样本，下次寻找独立门店外包经历。
 - CN07：last_attempt / last_success 均为 2026-10-21；[验房流程问答](https://ask.shejiben.com/wenda/492476.html)可读，问题显示十年前，2026 年回复含服务推广及未经官方核验的法规/尺寸主张。近期回复不等于近期买方问题；不升级旧装修方向证据，不记录为法律或工程事实，继续低频寻找近期业主。
+
+### 本轮复检（2026-10-21，22:11 +08:00）
+
+- CN04：last_attempt / last_success 均为 2026-10-21；[假期如何照看猫](https://linux.do/t/topic/1441916)公开正文与首批 20 条回复可读，2026-01-13 发布；后续分页未读，不推定全站/登录后可读。形成上门照看 E1，价格仅作者自述；下次补本地近期买方与服务纠纷。
+- GL27：last_attempt / last_success 均为 2026-10-21；[超大图像装裱讨论](https://www.thegrumble.com/threads/how-to-mount-oversized-art-over-60-on-both-sides.102157/)正文及回复可读，明确 2026-10-05 至 10-09，产生外协协调 E1。作者接受外包建议不等于成交；下次核对实际外协过程与费用。
+- GL26：仅定向搜索校对服务，未读新讨论；last_attempt=2026-10-21，last_success 沿用上一轮，不推进新正文游标。新增来源探索命中新闻转载、供给推广，未将其建成可挖掘站点。

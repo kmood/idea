@@ -19,7 +19,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "CN02",
@@ -39,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "CN03",
@@ -59,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "CN04",
@@ -72,14 +72,15 @@
       "languages": [
         "zh"
       ],
-      "accessStatus": "restricted",
+      "accessStatus": "readable",
       "lastAttempt": null,
       "lastSuccess": null,
       "firstCollectedAt": "2026-10-14",
       "legacyDates": {
-        "lastAttempt": "2026-10-14"
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "CN05",
@@ -99,7 +100,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL01",
@@ -119,7 +120,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL02",
@@ -139,7 +140,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL03",
@@ -160,7 +161,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL04",
@@ -181,7 +182,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL05",
@@ -201,7 +202,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL06",
@@ -221,7 +222,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL07",
@@ -241,7 +242,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL08",
@@ -262,7 +263,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL09",
@@ -284,7 +285,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL10",
@@ -305,7 +306,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "CN06",
@@ -326,7 +327,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL11",
@@ -347,7 +348,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL12",
@@ -368,7 +369,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL13",
@@ -389,7 +390,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL14",
@@ -410,7 +411,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL15",
@@ -431,7 +432,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL16",
@@ -452,7 +453,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL17",
@@ -473,7 +474,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL18",
@@ -494,7 +495,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL19",
@@ -515,7 +516,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL20",
@@ -536,7 +537,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL21",
@@ -557,7 +558,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL22",
@@ -578,7 +579,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL23",
@@ -599,7 +600,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL24",
@@ -620,7 +621,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL25",
@@ -641,7 +642,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL26",
@@ -662,7 +663,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL27",
@@ -683,7 +684,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "GL28",
@@ -703,7 +704,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     },
     {
       "id": "CN07",
@@ -724,7 +725,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "9303247dad3f2132a8e3a7e6deaaeef71c10848c0665fbcb2d8067f164dcb8da"
+      "expectedSha256": "fcd5c59a87f471f29d2cf4018365e320d553f20640ea73e25f51473b8c652698"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -2790,6 +2791,96 @@
       ],
       "firstCollectedAt": "2026-10-21T22:06:41+08:00",
       "expectedSha256": "cf8cea5aae38bb7c4238a9db4eb3f0c665f1c7ecf5e1cedec9b07164d0db97b0"
+    }
+  ],
+  "ideas/IDEA-20261021-028.md": [
+    {
+      "id": "EV-20261021-057",
+      "kind": "Evidence",
+      "sourceId": "CN04",
+      "url": "https://linux.do/t/topic/1441916",
+      "claim": "假期离家需要补水添粮、清理猫砂与现场照看，同时担心陌生人入户和宠物安全",
+      "summary": "E1 作者声称；付费、可持续性和个人交付未知，建议或自述不代表成交。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T22:11:41+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-01-13",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "00e2a415bfa83348e270ff255386bdf3144a1743ba2d1605f3316151467c1ca2"
+    },
+    {
+      "id": "IDEA-20261021-028",
+      "kind": "Idea",
+      "title": "邻里短距离上门喂猫与照看反馈服务",
+      "audience": "短期离家、无法携猫出行的邻里养猫家庭",
+      "problem": "假期离家需要补水添粮、清理猫砂与现场照看，同时担心陌生人入户和宠物安全",
+      "earningHypothesis": "研究助手假设：限定服务半径与时间窗，按次提供基础照看和经主人同意的反馈；不提供诊疗。实际价格、保险和可排班量未知。",
+      "industry": [
+        "宠物照护"
+      ],
+      "sideHustleTypes": [
+        "上门服务"
+      ],
+      "markets": [
+        "国内"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-057"
+      ],
+      "firstCollectedAt": "2026-10-21T22:11:41+08:00",
+      "expectedSha256": "00e2a415bfa83348e270ff255386bdf3144a1743ba2d1605f3316151467c1ca2"
+    }
+  ],
+  "ideas/IDEA-20261021-029.md": [
+    {
+      "id": "EV-20261021-058",
+      "kind": "Evidence",
+      "sourceId": "GL27",
+      "url": "https://www.thegrumble.com/threads/how-to-mount-oversized-art-over-60-on-both-sides.102157/",
+      "claim": "超大尺寸图像超出门店热压设备与背板规格，店主需要找到可处理大幅面的外协渠道",
+      "summary": "E1 作者声称；付费、可持续性和个人交付未知，建议或自述不代表成交。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T22:11:41+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-10-05",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "9ace4e60c93fbc3259c0059dea1e570420fcb0d0482218f19d5be1ffc72e61da"
+    },
+    {
+      "id": "IDEA-20261021-029",
+      "kind": "Idea",
+      "title": "装裱店超大幅面展品的外协询价与交付协调",
+      "audience": "设备幅面不足、需要处理可替换展品的独立装裱店",
+      "problem": "超大尺寸图像超出门店热压设备与背板规格，店主需要找到可处理大幅面的外协渠道",
+      "earningHypothesis": "研究助手假设：对接已有大幅面制作商，按单提供规格清单、询价比较、包装运输与验收协调并收取透明服务费；不购买设备或处理唯一艺术原作。合作价格和利润未知。",
+      "industry": [
+        "装裱与展陈"
+      ],
+      "sideHustleTypes": [
+        "外协协调"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-058"
+      ],
+      "firstCollectedAt": "2026-10-21T22:11:41+08:00",
+      "expectedSha256": "9ace4e60c93fbc3259c0059dea1e570420fcb0d0482218f19d5be1ffc72e61da"
     }
   ]
 }
