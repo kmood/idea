@@ -62,6 +62,8 @@
 
 | GL38 | [Jotform 公开支持问答](https://www.jotform.com/answers/) | 英文表单用户、小企业与活动组织者；厂商独立问答 | PDF表单、支付、自动化及原生限制 | 2026-10-22：2015年PDF支付问题及用户接受替代的回复可读 | B，历史样本低频 |
 
+| GL39 | [Ghost 出版与开发者社区](https://forum.ghost.org/) | 英文独立出版者、自托管站长与开发者；厂商问答 | 内容/会员迁移、邮件及服务器维护 | 2026-10-22：2025年VPS迁移求助及自助完成反馈可读 | B，历史样本低频 |
+
 ## 来源组合与轮巡
 
 - 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22、GL23 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
@@ -225,3 +227,8 @@
 - GL38：厂商公开问答，受众为表单用户及小企业；last_attempt / last_success=2026-10-22。[PDF支付问题](https://www.jotform.com/answers/578258-payment-tool-in-fillable-pdf)2015-05-28原问与05-29回复可读；厂商解释限制后用户明确改用在线表单。已解决的旧问题不据此建点子；不把旧产品限制当当前官方能力。下次找近期未解决具体流程及采购，旧帖降频。
 - GL32：last_attempt / last_success=2026-10-22；[表单提交与既有库字段](https://community.airtable.com/other-questions-13/fillable-form-to-submit-request-11947)，2020-02-06原帖及2023-06-17回复可读。原生表单与字段操作可处理大量诉求，后续PDF脚本为方案供给；未见付费，不新增通用表单实施变体。
 - PDF-XChange、PDF24、Google Workspace及Reddit线索只检索未读，不计可挖掘来源或成交；国内家教/维修探索未命中合格具体原页。
+
+### 本轮复检（2026-10-22，00:31 +08:00）
+
+- GL06：last_attempt / last_success=2026-10-22；市场目录及[后端部署采购](https://meta.discourse.org/t/paid-backend-setup-for-new-discourse-instance-self-hosted-docker/400431)可读，2026-04-10买方预算及范围明确，已自动关闭，形成历史E3，不当当前订单。[wpForo迁移](https://meta.discourse.org/t/migrate-from-wpforo-to-discourse/400777)实际为供应方推广，不能凭标题当买方；不增迁移点子。下次优先近期开放采购及完成反馈。
+- GL39：厂商社区、受众为独立出版者及自托管站长；last_attempt / last_success=2026-10-22。[VPS迁移求助](https://forum.ghost.org/t/urgent-help-needed-migrating-ghost-blog-to-new-vps/55191)，2025-02-11至02-17，17条发言可读，作者先完成迁移再解决邮件，免费社区及官方指引构成强替代，不新建迁移点子。[官方迁移服务](https://ghost.org/move-to-ghost/)本轮可读，免费服务有计划/范围条件，不能当所有自托管迁移均免费；付款和用户个案资格未知。下次找当前未覆盖的真实采购，历史教程求助低频。
