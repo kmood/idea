@@ -18,7 +18,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "CN02",
@@ -38,7 +38,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "CN03",
@@ -58,7 +58,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "CN04",
@@ -78,7 +78,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "CN05",
@@ -98,7 +98,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "GL01",
@@ -118,7 +118,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "GL02",
@@ -138,7 +138,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "GL03",
@@ -159,7 +159,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "GL04",
@@ -180,7 +180,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "GL05",
@@ -200,7 +200,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "GL06",
@@ -220,7 +220,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     },
     {
       "id": "GL07",
@@ -240,7 +240,71 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "dfec41c92e320485a0a4931cafe9165d5aafd999827d73e07c2838455d843928"
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+    },
+    {
+      "id": "GL08",
+      "kind": "Source",
+      "name": "Hugging Face Forums / Beginners",
+      "url": "https://discuss.huggingface.co/c/beginners/5",
+      "audience": [
+        "英文 AI 开发者与实践者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+    },
+    {
+      "id": "GL09",
+      "kind": "Source",
+      "name": "Reddit / computervision",
+      "url": "https://www.reddit.com/r/computervision/",
+      "audience": [
+        "中英文计算机视觉开发者与项目方"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+    },
+    {
+      "id": "GL10",
+      "kind": "Source",
+      "name": "Reddit / EnglishTeachers 与 Teachers",
+      "url": "https://www.reddit.com/r/englishteachers/",
+      "audience": [
+        "英文教师与学校从业者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -409,7 +473,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-20"
       },
-      "expectedSha256": "d2c5e20b5a6db87bb8fa6f8ef46c21beb867d434d465011f6e545f24b3407787"
+      "expectedSha256": "26ec64b1db7b2e2f0f310358622a7db0383581ee204192ee5f011581f3d48401"
     },
     {
       "id": "EV-20261020-002",
@@ -428,7 +492,27 @@
       "legacyDates": {
         "accessedAt": "2026-10-20"
       },
-      "expectedSha256": "d2c5e20b5a6db87bb8fa6f8ef46c21beb867d434d465011f6e545f24b3407787"
+      "expectedSha256": "26ec64b1db7b2e2f0f310358622a7db0383581ee204192ee5f011581f3d48401"
+    },
+    {
+      "id": "EV-20261021-001",
+      "kind": "Evidence",
+      "sourceId": "GL08",
+      "url": "https://discuss.huggingface.co/t/how-to-make-tts-voice-in-sync-with-the-video/175719",
+      "claim": "独立作者称跨语言 TTS 时长不同导致故事视频场景与旁白无法同步",
+      "summary": "跨站独立 E1 样本；与 CN01 合并支持核心问题达到 E2，但没有付费信号。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-05-02",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "26ec64b1db7b2e2f0f310358622a7db0383581ee204192ee5f011581f3d48401"
     },
     {
       "id": "IDEA-20261020-001",
@@ -451,10 +535,275 @@
       "researchStatus": "待验证",
       "evidenceIds": [
         "EV-20261020-001",
-        "EV-20261020-002"
+        "EV-20261020-002",
+        "EV-20261021-001"
       ],
       "firstCollectedAt": "2026-10-20T22:23:00+08:00",
-      "expectedSha256": "d2c5e20b5a6db87bb8fa6f8ef46c21beb867d434d465011f6e545f24b3407787"
+      "expectedSha256": "26ec64b1db7b2e2f0f310358622a7db0383581ee204192ee5f011581f3d48401"
+    }
+  ],
+  "ideas/IDEA-20261021-001.md": [
+    {
+      "id": "EV-20261021-002",
+      "kind": "Evidence",
+      "sourceId": "GL09",
+      "url": "https://www.reddit.com/r/computervision/comments/1wsya8m/",
+      "claim": "项目方依赖人工逐段审校中文数学教学视频，希望自动定位疑似问题并输出时间和证据",
+      "summary": "E1 项目方具体工作流与期望交付；预算、规模和第二个样本未知。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "51ef91742ca78e4fca4bf02f7b88dabe25bb91cb99c6a1a738fe542d319de5d7"
+    },
+    {
+      "id": "IDEA-20261021-001",
+      "kind": "Idea",
+      "title": "中文教学视频多模态预审与证据定位服务",
+      "audience": "制作中文数学课程视频的教培机构和课程团队",
+      "problem": "人工从头观看难以规模化发现口误、字幕、板书、公式、遮挡和显示缺陷",
+      "earningHypothesis": "Agent 假设：按视频分钟数交付机器预审加人工确认的疑似问题报告，稳定后提供本地批处理或内网部署；价格和成本未知。",
+      "industry": [
+        "教育内容制作",
+        "视频质检"
+      ],
+      "sideHustleTypes": [
+        "交付服务",
+        "自动化工具"
+      ],
+      "markets": [
+        "国内"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-002"
+      ],
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "expectedSha256": "51ef91742ca78e4fca4bf02f7b88dabe25bb91cb99c6a1a738fe542d319de5d7"
+    }
+  ],
+  "ideas/IDEA-20261021-002.md": [
+    {
+      "id": "EV-20261021-003",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://www.v2ex.com/t/1242500",
+      "claim": "作者转述线下 K12 客户希望把不可用的 Agent 原型做成讲义、OCR 批改和错题推荐 MVP",
+      "summary": "E1 客户接触转述；未核验采购、报价或付款。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "331a48fac65019dadc961ce56937ee0c7b57c7ff1eed727251b2e021d81ac206"
+    },
+    {
+      "id": "IDEA-20261021-002",
+      "kind": "Idea",
+      "title": "K12 教培机构 Agent 工作流集成与 MVP 交付",
+      "audience": "已有学生、作业和错题数据的国内线下一对一教培机构",
+      "problem": "机构自制 Agent 只有界面，数据库和 API 对接不可用，无法进入教师工作流",
+      "earningHypothesis": "Agent 假设：按两周诊断和窄范围 MVP 收费，后续按维护或私有部署收费；报价和合规成本未知。",
+      "industry": [
+        "K12 教培",
+        "教育技术"
+      ],
+      "sideHustleTypes": [
+        "定制开发",
+        "实施服务"
+      ],
+      "markets": [
+        "国内"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-003"
+      ],
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "expectedSha256": "331a48fac65019dadc961ce56937ee0c7b57c7ff1eed727251b2e021d81ac206"
+    }
+  ],
+  "ideas/IDEA-20261021-003.md": [
+    {
+      "id": "EV-20261021-004",
+      "kind": "Evidence",
+      "sourceId": "GL10",
+      "url": "https://www.reddit.com/r/englishteachers/comments/1viimx5/has_anyones_school_adopted_an_ai_grading_tool/",
+      "claim": "教研组希望统一工具减少批改工作量，同时保留教师判断和量规一致性",
+      "summary": "E1 教师需求；工具采用效果和预算未知。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "75c94e5e6fae34fe1a46f1b463cb6e0da86ce45337425d7ff8b993ffe34017cc"
+    },
+    {
+      "id": "EV-20261021-005",
+      "kind": "Evidence",
+      "sourceId": "GL10",
+      "url": "https://www.reddit.com/r/Teachers/comments/1sh65iy/teachers_using_ai/",
+      "claim": "教师对 AI 生成作业和反馈的信任、错误及责任风险存在强烈分歧",
+      "summary": "多位教师的反证；也有人声称量规作文批改节省时间。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "AI 批改会被教师普遍接受且稳定节省工时",
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "75c94e5e6fae34fe1a46f1b463cb6e0da86ce45337425d7ff8b993ffe34017cc"
+    },
+    {
+      "id": "EV-20261021-006",
+      "kind": "Evidence",
+      "sourceId": "GL10",
+      "url": "https://www.cdut.edu.cn/__local/9/9D/28/A0F14FFB08FC1BBDEE63CCD0383_803EF976_74E521.pdf",
+      "claim": "高校指南要求隐私、同意和教师最终责任，并指出校验工时可能抵消节省",
+      "summary": "官方风险边界事实；不是采购或效果证据。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E0",
+      "paymentSignal": null,
+      "rebutsClaim": "通用 AI 批改可以无条件安全省时",
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "75c94e5e6fae34fe1a46f1b463cb6e0da86ce45337425d7ff8b993ffe34017cc"
+    },
+    {
+      "id": "IDEA-20261021-003",
+      "kind": "Idea",
+      "title": "隐私与教师复核优先的 AI 批改试点实施服务",
+      "audience": "正在评估统一 AI 批改工具的海外学校或教研组",
+      "problem": "学校希望减少反馈工时并保持量规一致，同时面临隐私、公平、教师信任和复核成本",
+      "earningHypothesis": "Agent 假设：提供匿名离线样本评估、量规一致性测试、教师复核流程和风险清单，按小试点收费；预算未知。",
+      "industry": [
+        "教育技术",
+        "教师工作流"
+      ],
+      "sideHustleTypes": [
+        "咨询服务",
+        "实施培训"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-004",
+        "EV-20261021-005",
+        "EV-20261021-006"
+      ],
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "expectedSha256": "75c94e5e6fae34fe1a46f1b463cb6e0da86ce45337425d7ff8b993ffe34017cc"
+    }
+  ],
+  "ideas/IDEA-20261021-004.md": [
+    {
+      "id": "EV-20261021-007",
+      "kind": "Evidence",
+      "sourceId": "GL02",
+      "url": "https://news.ycombinator.com/item?id=48045237",
+      "claim": "自由职业者希望按职位和客户条件收到 Upwork 邮件提醒，避免反复检查且不满现有提醒",
+      "summary": "E1 用户问题；该评论者未明确确认愿付价格。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
+    },
+    {
+      "id": "EV-20261021-008",
+      "kind": "Evidence",
+      "sourceId": "GL02",
+      "url": "https://support.upwork.com/hc/en-us/articles/52052528243731-RSS-deprecation",
+      "claim": "Upwork 在 2024-08-20 后停止 RSS，并提供保存搜索、通知和部分用户摘要邮件",
+      "summary": "官方平台变化与免费替代。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E0",
+      "paymentSignal": null,
+      "rebutsClaim": "用户只能依赖第三方提醒",
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
+    },
+    {
+      "id": "EV-20261021-009",
+      "kind": "Evidence",
+      "sourceId": "GL02",
+      "url": "https://support.upwork.com/hc/en-us/articles/43342677368467-Use-bots-and-other-automation-properly",
+      "claim": "Upwork 明确警告未授权 watcher、抓取和定时刷新可能导致账号限制",
+      "summary": "官方实施限制，只能在合规 API 权限内继续。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E0",
+      "paymentSignal": null,
+      "rebutsClaim": "可以通过网页抓取安全实现职位提醒",
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
+    },
+    {
+      "id": "IDEA-20261021-004",
+      "kind": "Idea",
+      "title": "合规 API 版自由职业机会筛选与邮件提醒",
+      "audience": "依赖海外平台接单并需要细粒度职位筛选的自由职业者",
+      "problem": "RSS 移除后需要反复查看职位，内置提醒的过滤和邮件体验不能满足部分用户",
+      "earningHypothesis": "Agent 假设：仅在获得平台 API 权限后提供过滤、摘要和邮件提醒订阅；API 资格和价格未知。",
+      "industry": [
+        "自由职业",
+        "招聘平台"
+      ],
+      "sideHustleTypes": [
+        "微型 SaaS",
+        "自托管工具"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "搁置",
+      "evidenceIds": [
+        "EV-20261021-007",
+        "EV-20261021-008",
+        "EV-20261021-009"
+      ],
+      "firstCollectedAt": "2026-10-21T12:00:00+08:00",
+      "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
     }
   ]
 }

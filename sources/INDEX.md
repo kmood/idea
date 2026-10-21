@@ -1,6 +1,6 @@
 # 国内外交流网站目录
 
-初始入口核验：2026-10-14；最近采样更新：2026-10-20（Asia/Shanghai）。先收录来源，再从来源内提取原始需求。地域按主要交流语言/受众区分，不代表注册地。
+初始入口核验：2026-10-14；最近采样更新：2026-10-21（Asia/Shanghai）。先收录来源，再从来源内提取原始需求。地域按主要交流语言/受众区分，不代表注册地。
 
 状态说明：可读表示本轮工具成功读取入口，不保证所有帖子可读；部分可读表示只取得部分内容。优先级是研究判断，不是盈利结论。下表链接同时为核验来源。
 
@@ -18,6 +18,9 @@
 | GL05 | [n8n Community](https://community.n8n.io/) | 英文自动化用户与开发者 | Questions、Jobs；连接器、流程故障、小企业项目 | 列表可读；许可、交付和维护成本须另行核验 | A |
 | GL06 | [Discourse Meta](https://meta.discourse.org/) | 英文社区运营者与开发者 | Support、Feature、Self-hosting；插件和运营工作流 | 列表可读；区分软件缺陷、配置问题与可收费需求 | B |
 | GL07 | [Reddit / msp](https://www.reddit.com/r/msp/) | 英文托管 IT 服务商、咨询与交付团队 | 新客户接入、资料交接、凭据收集、流程标准化 | 2026-10-20：搜索发现多篇具体讨论，但本机 Reader 按站点访问限制拒绝；未生成需求证据 | A，换授权浏览器适配后复检 |
+| GL08 | [Hugging Face Forums / Beginners](https://discuss.huggingface.co/c/beginners/5) | 英文 AI 开发者与实践者 | 模型管线落地、音视频处理、现有方案失效 | 2026-10-21：入口及具体配音同步讨论可读；回复混有长篇方案，需区分原作者问题与回复者建议 | A |
+| GL09 | [Reddit / computervision](https://www.reddit.com/r/computervision/) | 中英文计算机视觉开发者与项目方 | 多模态、OCR、视频质检的具体项目问题 | 2026-10-21：会话浏览器读到教学视频审校原帖；本机 Reader 的 Reddit 限制仍在，不推进 Reader 游标 | A，部分可读 |
+| GL10 | [Reddit / EnglishTeachers 与 Teachers](https://www.reddit.com/r/englishteachers/) | 英文教师与学校从业者 | 教师工作量、AI 批改、隐私、公平与实际采用阻力 | 2026-10-21：会话浏览器读到学校评估 AI 批改和教师反对讨论；Reader 限制仍在 | A，部分可读 |
 
 ## 收录和复检规则
 
@@ -40,5 +43,8 @@
 | GL04 | 2026-10-15 | 2026-10-15 | 已读 [209362](https://community.shopify.com/t/how-to-export-translate-adapt-translations-to-csv/209362)、[630362](https://community.shopify.com/t/translate-and-adapt-stuck-for-10-minutes/630362)；下轮核验近期术语清理问题 |
 | CN01 | 2026-10-20 | 2026-10-20 | 已读 [1107777](https://www.v2ex.com/t/1107777)、[1105237](https://www.v2ex.com/t/1105237)；两帖为同一作者，不能计两个独立需求样本 |
 | GL07 | 2026-10-20 | 未成功 | 搜索发现客户接入与安全资料收集讨论；Reader 返回 restricted，未推进成功采样位置 |
+| GL08 | 2026-10-21 | 2026-10-21 | 已读 [TTS 配音同步讨论](https://discuss.huggingface.co/t/how-to-make-tts-voice-in-sync-with-the-video/175719)，为现有配音点子增加独立作者样本 |
+| GL09 | 2026-10-21 | 2026-10-21（会话浏览） | 已读 [教学视频自动审校需求](https://www.reddit.com/r/computervision/comments/1wsya8m/)，正文公开可读；Reader 仍受限 |
+| GL10 | 2026-10-21 | 2026-10-21（会话浏览） | 已读 [学校采用 AI 批改工具](https://www.reddit.com/r/englishteachers/comments/1viimx5/) 与 [教师使用 AI 争议](https://www.reddit.com/r/Teachers/comments/1sh65iy/)；保留隐私、公平和信任反证 |
 
-以上为已读范围，不是按时间完整遍历网站的游标。2026-10-20 新增 GL07 并保留访问限制；CN01 从入口核验推进为具体讨论采样。
+以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 GL08–GL10；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。
