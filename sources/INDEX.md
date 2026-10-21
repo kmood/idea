@@ -6,7 +6,7 @@
 
 | ID | 网站与入口 | 受众/类型 | 优先观察入口与信号 | 访问实测与限制 | 优先级 |
 | --- | --- | --- | --- | --- | --- |
-| CN01 | [V2EX 奇思妙想](https://www.v2ex.com/go/ideas) | 中文开发者、创意讨论 | 求工具、重复操作、现有方案不满意；追踪讨论回复 | 列表可读，有 RSS/JSON Feed 入口；具体帖需逐条核验 | A |
+| CN01 | [V2EX 奇思妙想与远程工作](https://www.v2ex.com/go/ideas) | 中文开发者、创意讨论与远程协作 | 求工具、重复操作、兼职交付和现有方案不满意；追踪讨论回复 | 2026-10-21：列表及具体帖子可读；招聘帖会过时，必须记录发布日期和后续回复 | A |
 | CN02 | [电鸭](https://eleduck.com/) | 中文远程工作与自由职业 | 机会、项目、自由职业、曝光/反馈；区分全职招聘与小项目 | 导航可读，本次未取得完整帖子列表；需浏览器或搜索补充 | A，补验后轮巡 |
 | CN03 | [NodeSeek](https://www.nodeseek.com/) | 中文技术、主机与开发交流 | 技术、Dev、测评中的部署/监控痛点 | 帖子列表可读；交易、抽奖和推广噪声较多 | B |
 | CN04 | [LINUX DO](https://linux.do/) | 中文技术交流 | 工具体验、产品反馈；具体分类下一轮核验 | 本轮仅取得有限公开话题；不推定其他分区可访问 | B，部分可读 |
@@ -33,10 +33,11 @@
 | GL19 | [Elsmar Cove Quality and Business Standards](https://elsmar.com/elsmarqualityforum/) | 英文质量工程、制造与合规从业者 | 来料检验、质量记录、ISO 审核与表单控制 | 2026-10-21：论坛和具体讨论可读，站点仍活跃；本轮需求样本为历史案例 | B，小众垂直 |
 | GL20 | [BiggerPockets Forums](https://www.biggerpockets.com/forums) | 英文房东、物业投资人与小型出租业务经营者 | 维修记录、资产清单、收据、税务交接与物业软件 | 2026-10-21：近期具体讨论可读；市场调研帖和供应商推广多，需优先识别真实房东经历 | A，主流垂直 |
 | GL21 | [Reddit / paralegal、LawFirm 与 legaltech](https://www.reddit.com/r/paralegal/) | 英文律师、律所运营与法律科技从业者 | 客户接洽、统计报表、表格迁移与隐私边界 | 2026-10-21：会话浏览器读到具体讨论；同一平台多个板块只算一个来源域，现有律所系统替代强 | A，部分可读 |
+| GL22 | [Make Community / Hire a Pro](https://community.make.com/c/hire-a-pro/50) | 英文自动化买家、实施者与代理商 | 付费排障、长期维护、白标交付、行业系统集成与成交后反馈 | 2026-10-21：入口和多篇具体招聘/结果更新可读；供应方报价很多，必须与买方预算、选人和上线结果分开 | A，采购与结果信号 |
 
 ## 来源组合与轮巡
 
-- 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20 等覆盖面大、更新频繁，用于发现重复问题和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
+- 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
 - 小众垂直层：CN06、GL12–GL15、GL17、GL19、GL21 等更容易出现专业流程、术语和现有替代，用于理解交付边界；样本偏旧、同域或人群混合时明确降权。
 - 社区类型不能替代证据质量。主流站的高互动不等于愿付费，小众站的一篇具体帖子也不等于市场规模；升级点子仍需独立样本或采购信号。
 
@@ -79,5 +80,7 @@
 | GL19 | 2026-10-21 | 2026-10-21 | 已读 [用 Excel 记录来料检验](https://elsmar.com/elsmarqualityforum/threads/incoming-inspection-records-using-excel-file.81503/)；手写结果和大量录入是历史独立样本，同时要求仪器、审批和记录控制 |
 | GL20 | 2026-10-21 | 2026-10-21 | 已读 [五套房的库存与维修记录](https://www.biggerpockets.com/forums/48/topics/1276787-landlords-with-3-properties-how-do-you-track-inventory-and-maintenance) 及两篇同站补充讨论；真实经历与市场调研提问分开，Stessa、Buildium、簿记员和表格均为强替代 |
 | GL21 | 2026-10-21 | 2026-10-21（会话浏览） | 已读 [律所接洽统计](https://www.reddit.com/r/paralegal/comments/1q4zbz1/new_client_intake_tracking_help/)、[家事律所接洽求助](https://www.reddit.com/r/LawFirm/comments/1q06cxk/help_on_client_intake/) 与 [标准化反证](https://www.reddit.com/r/legaltech/comments/1vk0a22/what_does_client_intake_actually_look_like_at/)；同域样本不冒充跨站证据 |
+| GL22 | 2026-10-21 | 2026-10-21 | 已读 [愿付费修复现有流程](https://community.make.com/t/make-freelancer-needed-for-project/115431)、[长期 Airtable + Make 维护岗位](https://community.make.com/t/hiring-long-term-airtable-make-automation-systems-specialist-18-25-hr/113873)、[白标实施伙伴招募](https://community.make.com/t/looking-for-white-label-make-com-automation-developers-agency-partner/116649?page=2) 和 [选人及上线结果](https://community.make.com/t/hiring-make-com-specialist-with-mindbody-api-experience/111598/18)；最后一帖确认已聘用、流程上线和后续合作，但未公开付款凭证 |
+| CN01 | 2026-10-21 | 2026-10-21 | 已读 [海外酒店分销 SaaS 后端兼职](https://www.v2ex.com/t/1125476)：2025-04-15 发布，明确每日 2–3 小时、任务/时薪、API 适配和短周会；属于历史采购样本，当前是否招聘未知 |
 
-以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 CN06、GL08–GL21；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。
+以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 CN06、GL08–GL22；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。

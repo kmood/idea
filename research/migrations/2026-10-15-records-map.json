@@ -3,10 +3,10 @@
     {
       "id": "CN01",
       "kind": "Source",
-      "name": "V2EX 奇思妙想",
+      "name": "V2EX 奇思妙想与远程工作",
       "url": "https://www.v2ex.com/go/ideas",
       "audience": [
-        "中文开发者、创意讨论"
+        "中文开发者、创意讨论与远程协作"
       ],
       "languages": [
         "zh"
@@ -16,9 +16,10 @@
       "lastSuccess": null,
       "firstCollectedAt": "2026-10-14",
       "legacyDates": {
-        "lastAttempt": "2026-10-14"
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "CN02",
@@ -38,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "CN03",
@@ -58,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "CN04",
@@ -78,7 +79,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "CN05",
@@ -98,7 +99,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL01",
@@ -118,7 +119,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL02",
@@ -138,7 +139,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL03",
@@ -159,7 +160,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL04",
@@ -180,7 +181,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL05",
@@ -200,7 +201,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL06",
@@ -220,7 +221,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL07",
@@ -240,7 +241,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL08",
@@ -261,7 +262,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL09",
@@ -283,7 +284,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL10",
@@ -304,7 +305,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "CN06",
@@ -325,7 +326,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL11",
@@ -346,7 +347,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL12",
@@ -367,7 +368,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL13",
@@ -388,7 +389,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL14",
@@ -409,7 +410,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL15",
@@ -430,7 +431,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL16",
@@ -451,7 +452,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL17",
@@ -472,7 +473,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL18",
@@ -493,7 +494,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL19",
@@ -514,7 +515,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL20",
@@ -535,7 +536,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     },
     {
       "id": "GL21",
@@ -556,7 +557,28 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
+    },
+    {
+      "id": "GL22",
+      "kind": "Source",
+      "name": "Make Community / Hire a Pro",
+      "url": "https://community.make.com/c/hire-a-pro/50",
+      "audience": [
+        "英文自动化买家、实施者与代理商"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "68f3a1aa8b56ab3361eb5f98ba02a6b7390d1be80f9e9f8232a6522426020890"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -1577,7 +1599,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-01-13"
       },
-      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
     },
     {
       "id": "EV-20261021-028",
@@ -1597,7 +1619,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2025-05-08"
       },
-      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
     },
     {
       "id": "EV-20261021-029",
@@ -1617,7 +1639,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-14"
       },
-      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
     },
     {
       "id": "EV-20261021-030",
@@ -1637,7 +1659,47 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-18"
       },
-      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+    },
+    {
+      "id": "EV-20261021-031",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/hiring-long-term-airtable-make-automation-systems-specialist-18-25-hr/113873",
+      "claim": "招聘方寻求长期 Airtable + Make 维护人员，预算每小时 18–25 美元并设付费实操",
+      "summary": "跨平台 E3 招聘报价；每周 15–20 小时与美国东部时区重叠不完全适合用户。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "quote",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-08-26"
+      },
+      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+    },
+    {
+      "id": "EV-20261021-032",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/hiring-make-com-specialist-with-mindbody-api-experience/111598/18",
+      "claim": "招聘方确认已选择实施者、课程注册流程上线并继续委托员工离职流程",
+      "summary": "跨平台 E3 选人/交付结果；没有公开付款金额或凭证。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-10-09"
+      },
+      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
     },
     {
       "id": "IDEA-20261021-011",
@@ -1663,10 +1725,216 @@
         "EV-20261021-027",
         "EV-20261021-028",
         "EV-20261021-029",
-        "EV-20261021-030"
+        "EV-20261021-030",
+        "EV-20261021-031",
+        "EV-20261021-032"
       ],
       "firstCollectedAt": "2026-10-21T13:10:00+08:00",
-      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+    }
+  ],
+  "ideas/IDEA-20261021-012.md": [
+    {
+      "id": "EV-20261021-033",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/make-freelancer-needed-for-project/115431",
+      "claim": "Make 新用户的简单流程卡住并明确表示愿意付费请自由职业者修复",
+      "summary": "当前 E3 采购意图；没有公开选择、成交或付款。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-09-18"
+      },
+      "expectedSha256": "2a9e997ab6b4b2d71a66a36905d223561b36c92d256e693606a0bb7240d58d12"
+    },
+    {
+      "id": "EV-20261021-034",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/make-freelancer-needed-for-project/115431",
+      "claim": "多名供应者用脱敏蓝图、单故障和测试记录包装固定价修复",
+      "summary": "供应方报价从小额单点修复到 290 美元交付包；不代表买方预算或成交。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "自动化故障修复是低竞争且价格稳定的市场",
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-09-18"
+      },
+      "expectedSha256": "2a9e997ab6b4b2d71a66a36905d223561b36c92d256e693606a0bb7240d58d12"
+    },
+    {
+      "id": "IDEA-20261021-012",
+      "kind": "Idea",
+      "title": "存量自动化流程固定价诊断与修复",
+      "audience": "已有 Make 或 n8n 流程但卡在一个可复现故障的小企业用户",
+      "problem": "映射、过滤器、API、webhook 或错误处理失败，用户不需要重建整个系统",
+      "earningHypothesis": "Agent 假设：按单故障交付诊断、修复蓝图、测试记录和说明；获客、返工率与支持成本未知。",
+      "industry": [
+        "小企业自动化"
+      ],
+      "sideHustleTypes": [
+        "诊断服务",
+        "修复服务"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "候选",
+      "evidenceIds": [
+        "EV-20261021-033",
+        "EV-20261021-034"
+      ],
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "expectedSha256": "2a9e997ab6b4b2d71a66a36905d223561b36c92d256e693606a0bb7240d58d12"
+    }
+  ],
+  "ideas/IDEA-20261021-013.md": [
+    {
+      "id": "EV-20261021-035",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/looking-for-white-label-make-com-automation-developers-agency-partner/116649?page=2",
+      "claim": "英国自动化代理商承担获客和客户管理，寻找 1–2 名白标开发者按项目付款或分成",
+      "summary": "当前 E3 合作采购意图；未公开授标、项目量或付款。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-10-06"
+      },
+      "expectedSha256": "d272f4f7407193ddfe3918f32b908295bdd956f10558fc2d7789fede0f54ffab"
+    },
+    {
+      "id": "EV-20261021-036",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/looking-for-white-label-make-com-automation-developers-agency-partner/116649?page=2",
+      "claim": "供应者提出固定里程碑或时薪，并强调测试、幂等、重试和书面交接",
+      "summary": "供应报价与竞争证据；不是买方预算或成交。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "白标自动化交付缺少供应者且容易获选",
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-10-06"
+      },
+      "expectedSha256": "d272f4f7407193ddfe3918f32b908295bdd956f10558fc2d7789fede0f54ffab"
+    },
+    {
+      "id": "IDEA-20261021-013",
+      "kind": "Idea",
+      "title": "自动化代理商白标后端与可靠性交付",
+      "audience": "有客户和项目范围但缺少稳定技术产能的自动化代理商",
+      "problem": "代理商需要 API、数据库、幂等、重试、监控、测试和文档交付",
+      "earningHypothesis": "Agent 假设：按明确工作流收固定里程碑费，代理商保留客户关系；项目量和付款保障未知。",
+      "industry": [
+        "自动化服务",
+        "B2B 代理商"
+      ],
+      "sideHustleTypes": [
+        "白标交付",
+        "后端实施"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "候选",
+      "evidenceIds": [
+        "EV-20261021-035",
+        "EV-20261021-036"
+      ],
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "expectedSha256": "d272f4f7407193ddfe3918f32b908295bdd956f10558fc2d7789fede0f54ffab"
+    }
+  ],
+  "ideas/IDEA-20261021-014.md": [
+    {
+      "id": "EV-20261021-037",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://www.v2ex.com/t/1125476",
+      "claim": "海外酒店分销 SaaS 团队招聘远程兼职后端，按任务或时薪结算并负责供应商 API 适配",
+      "summary": "历史 E3 招聘意图；未公开录用、付款或当前岗位状态。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2025-04-15"
+      },
+      "expectedSha256": "2c703785400423fdffb1854b411383ca59bb3d06acfe4a77d19f3f37e9869bc1"
+    },
+    {
+      "id": "EV-20261021-038",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://www.v2ex.com/t/1125476",
+      "claim": "招聘帖称每天 2–3 小时、短周会和文字复盘，并要求高容错 API 调试与单元测试",
+      "summary": "个人条件匹配证据来自招聘方声称；紧急故障响应和基础时薪仍未知。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2025-04-15"
+      },
+      "expectedSha256": "2c703785400423fdffb1854b411383ca59bb3d06acfe4a77d19f3f37e9869bc1"
+    },
+    {
+      "id": "IDEA-20261021-014",
+      "kind": "Idea",
+      "title": "垂直 SaaS 供应商 API 适配兼职",
+      "audience": "持续接入不同供应商和客户私有 API 的垂直 SaaS 团队",
+      "problem": "协议、鉴权、字段、重试和异常差异需要稳定后端开发者处理",
+      "earningHypothesis": "来源事实为任务/时薪；Agent 假设可按单一供应商适配、测试和交接里程碑收费，当前价格未知。",
+      "industry": [
+        "垂直 SaaS",
+        "酒店供应链"
+      ],
+      "sideHustleTypes": [
+        "远程兼职",
+        "API 适配"
+      ],
+      "markets": [
+        "国内团队",
+        "海外业务"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-037",
+        "EV-20261021-038"
+      ],
+      "firstCollectedAt": "2026-10-21T13:25:00+08:00",
+      "expectedSha256": "2c703785400423fdffb1854b411383ca59bb3d06acfe4a77d19f3f37e9869bc1"
     }
   ]
 }
