@@ -11,6 +11,7 @@
 | CN03 | [NodeSeek](https://www.nodeseek.com/) | 中文技术、主机与开发交流 | 技术、Dev、测评中的部署/监控痛点 | 帖子列表可读；交易、抽奖和推广噪声较多 | B |
 | CN04 | [LINUX DO](https://linux.do/) | 中文技术交流 | 工具体验、产品反馈；具体分类下一轮核验 | 本轮仅取得有限公开话题；不推定其他分区可访问 | B，部分可读 |
 | CN05 | [知无不言](https://www.wearesellers.com/) | 中文跨境卖家、运营与美工 | AI 素材、广告工作流、运营提效的具体问题 | 2026-10-15：根首页可读；Home.html 与两个具体帖子请求失败，各重试一次后停止；部分悬赏受限 | 待讨论采样 |
+| CN06 | [食品伙伴网论坛 / 生产与质量管理](https://bbs.foodmate.net/forum-37-1.html) | 中文食品工厂、质量与生产人员 | 批次追溯、审厂记录、投料与效期管理 | 2026-10-21：入口和近期具体讨论可读；首个样本含方案推广倾向，只用于发现与反证，不当作买方需求 | B，小众垂直 |
 | GL01 | [Indie Hackers](https://www.indiehackers.com/) | 英文独立创业者 | 产品复盘、获客困难、用户评论；收入自述需交叉核验 | 首页可读；/groups 本次直接访问失败，不用其摘要替代正文 | B |
 | GL02 | [Hacker News / Ask](https://news.ycombinator.com/ask) | 英文开发者与创业者 | Ask HN 求推荐、替代工具、工作流程讨论 | 问答列表可读；高票不等于付费意愿 | A |
 | GL03 | [Reddit / smallbusiness](https://www.reddit.com/r/smallbusiness/) | 英文小企业经营者问答 | 日常运营、软件选型、人工操作成本 | 2026-10-15：已读客服政策质检原帖及回复；禁止发市场调研/推广帖，购买证据未确认 | A |
@@ -21,6 +22,19 @@
 | GL08 | [Hugging Face Forums / Beginners](https://discuss.huggingface.co/c/beginners/5) | 英文 AI 开发者与实践者 | 模型管线落地、音视频处理、现有方案失效 | 2026-10-21：入口及具体配音同步讨论可读；回复混有长篇方案，需区分原作者问题与回复者建议 | A |
 | GL09 | [Reddit / computervision](https://www.reddit.com/r/computervision/) | 中英文计算机视觉开发者与项目方 | 多模态、OCR、视频质检的具体项目问题 | 2026-10-21：会话浏览器读到教学视频审校原帖；本机 Reader 的 Reddit 限制仍在，不推进 Reader 游标 | A，部分可读 |
 | GL10 | [Reddit / EnglishTeachers 与 Teachers](https://www.reddit.com/r/englishteachers/) | 英文教师与学校从业者 | 教师工作量、AI 批改、隐私、公平与实际采用阻力 | 2026-10-21：会话浏览器读到学校评估 AI 批改和教师反对讨论；Reader 限制仍在 | A，部分可读 |
+| GL11 | [QuickBooks Community](https://quickbooks.intuit.com/learn-support/en-us/) | 英文小企业、记账员与会计软件用户 | 银行流水匹配、对账、重复交易和手工修复 | 2026-10-21：入口及多个具体讨论可读；官方人员回复与用户经历需分开，删除账务仍需会计复核 | A |
+| GL12 | [Practical Machinist Forums](https://www.practicalmachinist.com/forum/) | 英文机加工厂主、操作员与制造工程人员 | 报价、工单、首件检验、设备利用率和维护记录 | 2026-10-21：入口及多个具体讨论可读；部分案例较旧，需以近期帖子复核当前需求 | A |
+| GL13 | [NAHAM Forums](https://www.naham.org/forums/) | 英文医疗服务接入、排期与授权管理人员 | 事先授权、排期、队列积压和跨岗位交接 | 2026-10-21：具体公开讨论可读；医疗数据和美国流程有合规、地域及采购门槛 | A，谨慎 |
+| GL14 | [AAACN Open Forum](https://community.aaacn.org/home) | 英文门诊护理与医疗运营人员 | 集中式授权团队、护理工作流与积压 | 2026-10-21：公开具体讨论可读；只用于流程证据，不处理患者数据或给出临床建议 | B，谨慎 |
+| GL15 | [AccountingWEB / Any Answers](https://www.accountingweb.co.uk/any-answers) | 英文会计与税务从业者 | 对账、客户资料缺失、记账纠错与软件迁移 | 2026-10-21：入口及具体讨论可读；本轮命中内容偏旧，降频并优先寻找近期从业者样本 | B，低频 |
+| GL16 | [eBay Community / Selling](https://community.ebay.com/forum/selling-57920/) | 英文 eBay 卖家与小型转售商 | 库存位置、成本记录、退款、报表和批量运营 | 2026-10-21：入口及近期具体讨论可读；税务建议不可直接采信，卖家自述与平台能力需交叉核验 | A，主流平台 |
+| GL17 | [The Garage Journal](https://www.garagejournal.com/forum/) | 英文车库、维修、工具与小型工坊从业者/爱好者 | 工具库存、零件位置、项目工时与现场记录 | 2026-10-21：多个具体讨论可读；专业用户与爱好者混合，付费意愿通常较弱 | B，小众实用 |
+
+## 来源组合与轮巡
+
+- 主流发现层：GL02、GL03、GL04、GL11、GL16 等覆盖面大、更新频繁，用于发现重复问题和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
+- 小众垂直层：CN06、GL12–GL15、GL17 等更容易出现专业流程、术语和现有替代，用于理解交付边界；样本偏旧或人群混合时明确降权。
+- 社区类型不能替代证据质量。主流站的高互动不等于愿付费，小众站的一篇具体帖子也不等于市场规模；升级点子仍需独立样本或采购信号。
 
 ## 收录和复检规则
 
@@ -33,6 +47,7 @@
 5. 阅读优先公开页面和站点提供的订阅入口；不绕过登录、验证码或访问限制，不自动发帖或私信。
 6. 机会卡必须引用网站 ID 和具体帖子 URL；社区首页只能证明来源存在，不能作为需求或付费证据。
 7. 下一批补充中文非技术行业社区，避免只观察开发者；海外同时保留小企业和垂直行业社区，降低成功案例偏差。
+8. 每轮只监测一个有界来源子集，并按“持续可读且产出具体问题 / 可读但低产出或偏旧 / 受限待替代”分层。连续受限或低产出来源降频；新增来源必须带一个已读具体讨论，且优先补行业和域名空白，不能靠同一平台的多个板块扩充数量。
 
 ## 采样与访问历史
 
@@ -46,5 +61,13 @@
 | GL08 | 2026-10-21 | 2026-10-21 | 已读 [TTS 配音同步讨论](https://discuss.huggingface.co/t/how-to-make-tts-voice-in-sync-with-the-video/175719)，为现有配音点子增加独立作者样本 |
 | GL09 | 2026-10-21 | 2026-10-21（会话浏览） | 已读 [教学视频自动审校需求](https://www.reddit.com/r/computervision/comments/1wsya8m/)，正文公开可读；Reader 仍受限 |
 | GL10 | 2026-10-21 | 2026-10-21（会话浏览） | 已读 [学校采用 AI 批改工具](https://www.reddit.com/r/englishteachers/comments/1viimx5/) 与 [教师使用 AI 争议](https://www.reddit.com/r/Teachers/comments/1sh65iy/)；保留隐私、公平和信任反证 |
+| GL11 | 2026-10-21 | 2026-10-21 | 已读 [重复交易处理](https://quickbooks.intuit.com/learn-support/en-us/banking/re-remove-duplicate-transactions/01/948481/highlight/true)、[迁移后 29,000 条未结项目](https://quickbooks.intuit.com/learn-support/en-us/account-management/re-how-do-i-ci-orrect-uncleared-transactions-in-the/01/1338727/highlight/true)；批量删除缺失与误删风险同时存在 |
+| GL12 | 2026-10-21 | 2026-10-21 | 已读 [首件检验软件或文档](https://www.practicalmachinist.com/forum/threads/first-article-inspection-software-or-documentation.382354/)、[小型机加工厂如何跟踪工作](https://www.practicalmachinist.com/forum/threads/developer-looking-for-help-understanding-how-small-shops-track-work.447345/)；后者提供近期替代与竞争反证 |
+| GL13 | 2026-10-21 | 2026-10-21 | 已读 [Scheduling / Authorization 工作流讨论](https://www.naham.org/forums/posts.aspx?topic=1763114)；14K 队列为作者自述，未独立审计 |
+| GL14 | 2026-10-21 | 2026-10-21 | 已读 [Prior Authorization](https://community.aaacn.org/discussion/prior-authorization)；独立从业者描述集中团队从数天延长到两周 |
+| GL15 | 2026-10-21 | 2026-10-21 | 已读 [供应商账户对账讨论](https://www.accountingweb.co.uk/any-answers/help-with-supplier-account-reconciliation-totally-new-to-accounting)；内容较旧，本轮只建档，不升级为当前点子证据 |
+| CN06 | 2026-10-21 | 2026-10-21 | 已读 [中小食品厂批次追溯讨论](https://bbs.foodmate.net/thread-1442018-1-1.html)；帖子称纸质记录与事后补录普遍，但带方案推广倾向，需另找食品厂人员独立样本 |
+| GL16 | 2026-10-21 | 2026-10-21 | 已读 [税务/记账与退款报表](https://community.ebay.com/forum/selling-57920/topic/taxbookeeping-questions-reports-refunds-158993/)、[近万张明信片盘点](https://community.ebay.com/forum/selling-57920/topic/how-would-you-go-about-inventorying-just-under-10000-postcards-157640/)；具体卖家样本可读 |
+| GL17 | 2026-10-21 | 2026-10-21 | 已读 [工具库存管理](https://www.garagejournal.com/forum/threads/tool-inventory-management.514286/) 与 [简单库存程序讨论](https://www.garagejournal.com/forum/threads/very-simple-home-or-business-inventory-program.540527/)；免费表格替代强，暂不生成点子 |
 
-以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 GL08–GL10；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。
+以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 CN06、GL08–GL17；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。

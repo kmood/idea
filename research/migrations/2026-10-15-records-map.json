@@ -18,7 +18,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "CN02",
@@ -38,7 +38,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "CN03",
@@ -58,7 +58,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "CN04",
@@ -78,7 +78,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "CN05",
@@ -98,7 +98,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL01",
@@ -118,7 +118,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL02",
@@ -138,7 +138,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL03",
@@ -159,7 +159,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL04",
@@ -180,7 +180,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL05",
@@ -200,7 +200,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL06",
@@ -220,7 +220,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL07",
@@ -240,7 +240,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL08",
@@ -261,7 +261,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL09",
@@ -283,7 +283,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     },
     {
       "id": "GL10",
@@ -304,7 +304,175 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "e238b166f81bc4ec3af0e1ebae837c716d54066ec703ad498b0b7421815d5e3f"
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+    },
+    {
+      "id": "CN06",
+      "kind": "Source",
+      "name": "食品伙伴网论坛 / 生产与质量管理",
+      "url": "https://bbs.foodmate.net/forum-37-1.html",
+      "audience": [
+        "中文食品工厂、质量与生产人员"
+      ],
+      "languages": [
+        "zh"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+    },
+    {
+      "id": "GL11",
+      "kind": "Source",
+      "name": "QuickBooks Community",
+      "url": "https://quickbooks.intuit.com/learn-support/en-us/",
+      "audience": [
+        "英文小企业、记账员与会计软件用户"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+    },
+    {
+      "id": "GL12",
+      "kind": "Source",
+      "name": "Practical Machinist Forums",
+      "url": "https://www.practicalmachinist.com/forum/",
+      "audience": [
+        "英文机加工厂主、操作员与制造工程人员"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+    },
+    {
+      "id": "GL13",
+      "kind": "Source",
+      "name": "NAHAM Forums",
+      "url": "https://www.naham.org/forums/",
+      "audience": [
+        "英文医疗服务接入、排期与授权管理人员"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+    },
+    {
+      "id": "GL14",
+      "kind": "Source",
+      "name": "AAACN Open Forum",
+      "url": "https://community.aaacn.org/home",
+      "audience": [
+        "英文门诊护理与医疗运营人员"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+    },
+    {
+      "id": "GL15",
+      "kind": "Source",
+      "name": "AccountingWEB / Any Answers",
+      "url": "https://www.accountingweb.co.uk/any-answers",
+      "audience": [
+        "英文会计与税务从业者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+    },
+    {
+      "id": "GL16",
+      "kind": "Source",
+      "name": "eBay Community / Selling",
+      "url": "https://community.ebay.com/forum/selling-57920/",
+      "audience": [
+        "英文 eBay 卖家与小型转售商"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+    },
+    {
+      "id": "GL17",
+      "kind": "Source",
+      "name": "The Garage Journal",
+      "url": "https://www.garagejournal.com/forum/",
+      "audience": [
+        "英文车库、维修、工具与小型工坊从业者/爱好者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -804,6 +972,315 @@
       ],
       "firstCollectedAt": "2026-10-21T12:00:00+08:00",
       "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
+    }
+  ],
+  "ideas/IDEA-20261021-005.md": [
+    {
+      "id": "EV-20261021-010",
+      "kind": "Evidence",
+      "sourceId": "GL11",
+      "url": "https://quickbooks.intuit.com/learn-support/en-us/banking/re-remove-duplicate-transactions/01/948481/highlight/true",
+      "claim": "用户称银行连接与手工录入造成持续重复，并询问是否有逐条删除之外的方法",
+      "summary": "E1 用户工作流；官方回复称已入账项目没有批量删除能力，并提示涉及冲销时咨询会计。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "7175a1a7df68b5bf7fd9d4c32b66132d02e26f9f5b765ffcbe4d1d5a42e70b3e"
+    },
+    {
+      "id": "EV-20261021-011",
+      "kind": "Evidence",
+      "sourceId": "GL11",
+      "url": "https://quickbooks.intuit.com/learn-support/en-us/account-management/re-how-do-i-ci-orrect-uncleared-transactions-in-the/01/1338727/highlight/true",
+      "claim": "独立记账员自述客户迁移后存在约 29,000 条历史未结交易",
+      "summary": "同站独立 E1；数量是作者声称，未独立审计。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "7175a1a7df68b5bf7fd9d4c32b66132d02e26f9f5b765ffcbe4d1d5a42e70b3e"
+    },
+    {
+      "id": "IDEA-20261021-005",
+      "kind": "Idea",
+      "title": "QuickBooks 重复交易审计与清理前置报告服务",
+      "audience": "银行流水重复或迁移后遗留大量未结项目的小企业与记账员",
+      "problem": "逐笔定位、解释和清理费时，错误删除会破坏已完成对账",
+      "earningHypothesis": "Agent 假设：按账户或月份交付只读疑似重复、匹配理由、风险分级和建议动作报告；价格与复核工时未知。",
+      "industry": [
+        "小企业财务运营",
+        "记账"
+      ],
+      "sideHustleTypes": [
+        "交付服务",
+        "数据审计"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-010",
+        "EV-20261021-011"
+      ],
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "expectedSha256": "7175a1a7df68b5bf7fd9d4c32b66132d02e26f9f5b765ffcbe4d1d5a42e70b3e"
+    }
+  ],
+  "ideas/IDEA-20261021-006.md": [
+    {
+      "id": "EV-20261021-012",
+      "kind": "Evidence",
+      "sourceId": "GL12",
+      "url": "https://www.practicalmachinist.com/forum/threads/first-article-inspection-software-or-documentation.382354/",
+      "claim": "从业者称 Excel 首件检验方案笨重且测量值需要手工录入",
+      "summary": "历史 E1；回复同时指出现有 OCR 检验软件仍需人工复核。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "publishedAt": "2020-09-25",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "e3b0800bea9e5f8c3704fb44fe23d5e00996ea21cfc3f2efb3c5478598dabe1d"
+    },
+    {
+      "id": "EV-20261021-013",
+      "kind": "Evidence",
+      "sourceId": "GL12",
+      "url": "https://www.practicalmachinist.com/forum/threads/inspection-sheets-and-tool-calibrations.307704/",
+      "claim": "小厂人员询问如何建立兼容 ISO 的电子或纸质检验记录",
+      "summary": "独立历史 E1；回复描述 Excel 工作流和商业软件成本权衡。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "publishedAt": "2015-08-14",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "e3b0800bea9e5f8c3704fb44fe23d5e00996ea21cfc3f2efb3c5478598dabe1d"
+    },
+    {
+      "id": "EV-20261021-014",
+      "kind": "Evidence",
+      "sourceId": "GL12",
+      "url": "https://www.practicalmachinist.com/forum/threads/developer-looking-for-help-understanding-how-small-shops-track-work.447345/",
+      "claim": "近期从业者称通用 ERP 供给拥挤，并强调报价与实际工时应联动",
+      "summary": "竞争与范围反证；不支持通用 ERP 新进入者。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "小型机加工厂通用工作跟踪软件仍是低竞争空白",
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-03-17",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "e3b0800bea9e5f8c3704fb44fe23d5e00996ea21cfc3f2efb3c5478598dabe1d"
+    },
+    {
+      "id": "IDEA-20261021-006",
+      "kind": "Idea",
+      "title": "机加工首件检验表生成与人工复核服务",
+      "audience": "收到 PDF 或扫描图纸并用 Excel 制作首件检验报告的小型机加工厂",
+      "problem": "逐项录入尺寸耗时易错，但 OCR 输出仍需合格人员复核",
+      "earningHypothesis": "Agent 假设：按图纸或批次交付气泡编号、检验表草稿、OCR 置信度和复核清单；定价与责任成本未知。",
+      "industry": [
+        "机加工",
+        "质量管理"
+      ],
+      "sideHustleTypes": [
+        "交付服务",
+        "文档自动化"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-012",
+        "EV-20261021-013",
+        "EV-20261021-014"
+      ],
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "expectedSha256": "e3b0800bea9e5f8c3704fb44fe23d5e00996ea21cfc3f2efb3c5478598dabe1d"
+    }
+  ],
+  "ideas/IDEA-20261021-007.md": [
+    {
+      "id": "EV-20261021-015",
+      "kind": "Evidence",
+      "sourceId": "GL13",
+      "url": "https://www.naham.org/forums/posts.aspx?topic=1763114",
+      "claim": "门诊授权人员称 Epic 队列约有 14,000 项、地点流程不一且授权流程非常手工",
+      "summary": "E1 专业人员自述；数量未独立审计。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "publishedAt": "2024-02-29",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "d70b61f35b1e830d0357290068cec56c79f404ebc8a64c43b67481bf6f47becd"
+    },
+    {
+      "id": "EV-20261021-016",
+      "kind": "Evidence",
+      "sourceId": "GL14",
+      "url": "https://community.aaacn.org/discussion/prior-authorization",
+      "claim": "独立医疗集团人员称集中授权团队处理时间从数天延长到最多两周",
+      "summary": "跨社区独立 E1；支持积压问题，不证明采购。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "publishedAt": "2024-07-05",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "d70b61f35b1e830d0357290068cec56c79f404ebc8a64c43b67481bf6f47becd"
+    },
+    {
+      "id": "IDEA-20261021-007",
+      "kind": "Idea",
+      "title": "医疗事先授权积压诊断与脱敏看板试点",
+      "audience": "授权队列积压且各地点流程不一致的美国门诊和专科诊所",
+      "problem": "难以区分内部提交等待与保险方决定等待，也难以用数据说明人员需求",
+      "earningHypothesis": "Agent 假设：只用脱敏汇总数据，按两周交付流程图、积压年龄、时长看板和建议；价格与采购路径未知。",
+      "industry": [
+        "医疗运营",
+        "事先授权"
+      ],
+      "sideHustleTypes": [
+        "流程诊断",
+        "数据看板"
+      ],
+      "markets": [
+        "美国"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-015",
+        "EV-20261021-016"
+      ],
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "expectedSha256": "d70b61f35b1e830d0357290068cec56c79f404ebc8a64c43b67481bf6f47becd"
+    }
+  ],
+  "ideas/IDEA-20261021-008.md": [
+    {
+      "id": "EV-20261021-017",
+      "kind": "Evidence",
+      "sourceId": "GL16",
+      "url": "https://community.ebay.com/forum/selling-57920/topic/taxbookeeping-questions-reports-refunds-158993/",
+      "claim": "卖家称记账落后两年多并希望避免逐行补录销售数据",
+      "summary": "E1 卖家工作流；回复指出平台报表与库存表各自覆盖部分数据。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
+    },
+    {
+      "id": "EV-20261021-018",
+      "kind": "Evidence",
+      "sourceId": "GL16",
+      "url": "https://community.ebay.com/forum/selling-57920/topic/how-would-you-go-about-inventorying-just-under-10000-postcards-157640/",
+      "claim": "独立卖家称滚动在售列表让近万件明信片盘点产生遗漏",
+      "summary": "同站独立 E1；回复提供平台 Active Listings CSV 免费替代。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
+    },
+    {
+      "id": "EV-20261021-019",
+      "kind": "Evidence",
+      "sourceId": "GL16",
+      "url": "https://community.ebay.com/forum/selling-57920/topic/inventory-programs-100391/",
+      "claim": "多个卖家描述使用自建表格、SKU 与箱位编号管理库存",
+      "summary": "免费替代与反证；部分用户认为表格维护并不费力。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "卖家普遍需要购买额外库存工具",
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
+    },
+    {
+      "id": "IDEA-20261021-008",
+      "kind": "Idea",
+      "title": "eBay 长尾库存与在售清单差异审计工具",
+      "audience": "维护数百到上万件长尾商品的小型 eBay 卖家",
+      "problem": "平台报表、库存表和实物位置不一致，逐行复制、盘点和定位耗时",
+      "earningHypothesis": "Agent 假设：读取用户主动导出的 CSV 与表格，生成缺失、重复、位置为空和数量不一致的只读报告；价格未知。",
+      "industry": [
+        "二手转售",
+        "长尾电商"
+      ],
+      "sideHustleTypes": [
+        "数据整理服务",
+        "轻量工具"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-017",
+        "EV-20261021-018",
+        "EV-20261021-019"
+      ],
+      "firstCollectedAt": "2026-10-21T21:00:00+08:00",
+      "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
     }
   ]
 }

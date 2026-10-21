@@ -34,4 +34,4 @@ PYTHONPATH=src python3 -m local_web --root . --host 0.0.0.0 --port 8765
 PYTHONPATH=src python3 -m unittest discover -s tests/local_web -p 'test_*.py' -v
 ```
 
-2026-10-20 已用真实目录验证 12 个来源、1 个趋势和 2 个点子；在 320、768、1440 像素宽度检查布局，无横向溢出，浏览器控制台无错误。
+2026-10-20 已在 320、768、1440 像素宽度检查布局，无横向溢出，浏览器控制台无错误。2026-10-21 再次读取 `/api/catalog`，确认真实目录显示 23 个来源、1 个趋势和 10 个点子。

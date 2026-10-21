@@ -16,10 +16,12 @@ class AcceptanceTests(StoreCase):
         preview = self.value(preview_legacy(root, mapping))
         self.assertEqual(preview['unresolved'], [])
         migrated = self.value(apply_preview(root, preview, self.path, 'rehearsal'))
-        self.assertEqual(len(migrated['recordIds']), 38)
-        for id in ('CN01', 'CN05', 'GL03', 'GL04', 'GL07', 'GL08', 'GL09', 'GL10',
+        self.assertEqual(len(migrated['recordIds']), 60)
+        for id in ('CN01', 'CN05', 'CN06', 'GL03', 'GL04', 'GL07', 'GL08', 'GL09', 'GL10',
+                   'GL11', 'GL12', 'GL13', 'GL14', 'GL15', 'GL16', 'GL17',
                    'IDEA-20261015-001', 'IDEA-20261020-001', 'IDEA-20261021-001',
-                   'IDEA-20261021-004', 'TREND-20261015-001'):
+                   'IDEA-20261021-004', 'IDEA-20261021-005', 'IDEA-20261021-006',
+                   'IDEA-20261021-007', 'IDEA-20261021-008', 'TREND-20261015-001'):
             record = self.value(self.store.read_record(id))['record']
             self.assertTrue(record['legacy']['originalText'])
         cn05 = self.value(self.store.read_record('CN05'))['record']
@@ -34,7 +36,7 @@ class AcceptanceTests(StoreCase):
         self.assertNotIn('PRIVATE-ACCEPTANCE', export.read_text())
         replica = self.path.parent/'replica.sqlite3'
         self.value(Exchange(replica).import_research(json.loads(export.read_text()), 'import'))
-        self.assertEqual(len(self.value(ResearchStore(replica).list_records(limit=100))['items']), 38)
+        self.assertEqual(len(self.value(ResearchStore(replica).list_records(limit=100))['items']), 60)
         backup, restored = self.path.parent/'backup.sqlite3', self.path.parent/'restored.sqlite3'
         self.value(backup_local(self.path, backup)); self.value(restore_local(backup, restored))
         self.assertTrue(self.value(PersonalStore(restored).read_record('IDEA-20261015-001'))['favorite'])
