@@ -2428,5 +2428,97 @@
       "firstCollectedAt": "2026-10-21T15:20:00+08:00",
       "expectedSha256": "b853210330d4827074f57f7be293922362615e492e54caf06439499fa228f422"
     }
+  ],
+  "ideas/IDEA-20261021-022.md": [
+    {
+      "id": "EV-20261021-051",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://v2ex.com/t/1189722",
+      "claim": "业主需要户型、材料、报价、预算、验收和费用管理的一体化装修规划工具",
+      "summary": "E1 具体用户需求；作者收费设想未验证。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:48:42+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-02-01"
+      },
+      "expectedSha256": "709a70ef130f520733163f41ac5df88b790644f91ae3233c0a81bfb970b2d4ef"
+    },
+    {
+      "id": "IDEA-20261021-022",
+      "kind": "Idea",
+      "title": "装修规划、预算与验收数据管理工具",
+      "audience": "准备装修的新房业主和中小装修服务商",
+      "problem": "需求、户型修改、材料用量、供应商报价、预算、施工验收和管线资料分散在表格、CAD 和记忆中",
+      "earningHypothesis": "研究助手推断：先做单户型规划清单、预算和验收模板，再向专业用户按户型量或装修团队按使用量收费；付费未知。",
+      "industry": [
+        "装修服务"
+      ],
+      "sideHustleTypes": [
+        "流程工具",
+        "数据管理"
+      ],
+      "markets": [
+        "国内"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-051"
+      ],
+      "firstCollectedAt": "2026-10-21T13:48:42+08:00",
+      "expectedSha256": "709a70ef130f520733163f41ac5df88b790644f91ae3233c0a81bfb970b2d4ef"
+    }
+  ],
+  "ideas/IDEA-20261021-023.md": [
+    {
+      "id": "EV-20261021-052",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://edge.v2ex.com/t/954415",
+      "claim": "物业项目方询问社区小程序、APP 三端定制或购买成品的报价与周期",
+      "summary": "历史 E3 采购探索；当前需求、预算和成交未知。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:48:42+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2023-07-05"
+      },
+      "expectedSha256": "f0f7207391406d1827a300c7b8bcc088116cc91a28f02e8a08e3f92e313bc665"
+    },
+    {
+      "id": "IDEA-20261021-023",
+      "kind": "Idea",
+      "title": "物业社区服务流程与多端后端试点",
+      "audience": "需要社区管理小程序、APP 或现成产品的国内物业或社区运营方",
+      "problem": "业主资料、缴费抄表、维修派单、投诉客服、商品餐饮预约和多端账号需要统一管理",
+      "earningHypothesis": "事实与研究助手推断：按固定范围做成品评估、数据/接口梳理或后端试点，避免个人承接三端完整系统；预算和付款未知。",
+      "industry": [
+        "物业与社区服务"
+      ],
+      "sideHustleTypes": [
+        "系统评估",
+        "后端试点"
+      ],
+      "markets": [
+        "国内"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-052"
+      ],
+      "firstCollectedAt": "2026-10-21T13:48:42+08:00",
+      "expectedSha256": "f0f7207391406d1827a300c7b8bcc088116cc91a28f02e8a08e3f92e313bc665"
+    }
   ]
 }
