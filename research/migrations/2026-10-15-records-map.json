@@ -19,7 +19,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "CN02",
@@ -39,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "CN03",
@@ -59,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "CN04",
@@ -80,7 +80,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "CN05",
@@ -100,7 +100,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL01",
@@ -120,7 +120,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL02",
@@ -140,7 +140,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL03",
@@ -161,7 +161,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL04",
@@ -182,7 +182,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL05",
@@ -202,7 +202,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL06",
@@ -222,7 +222,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL07",
@@ -242,7 +242,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL08",
@@ -263,7 +263,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL09",
@@ -285,7 +285,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL10",
@@ -306,7 +306,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "CN06",
@@ -327,7 +327,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL11",
@@ -348,7 +348,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL12",
@@ -369,7 +369,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL13",
@@ -390,7 +390,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL14",
@@ -411,7 +411,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL15",
@@ -432,7 +432,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL16",
@@ -453,7 +453,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL17",
@@ -474,7 +474,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL18",
@@ -495,7 +495,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL19",
@@ -516,7 +516,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL20",
@@ -537,7 +537,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL21",
@@ -558,7 +558,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL22",
@@ -579,7 +579,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL23",
@@ -600,7 +600,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL24",
@@ -621,7 +621,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL25",
@@ -642,7 +642,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL26",
@@ -663,7 +663,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL27",
@@ -684,7 +684,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL28",
@@ -704,7 +704,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "CN07",
@@ -725,7 +725,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     },
     {
       "id": "GL29",
@@ -746,7 +746,28 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7160c616d16cf5b6a79127be3b70f64c2f6decd18b5a50c75b98d174afbdc67f"
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
+    },
+    {
+      "id": "GL30",
+      "kind": "Source",
+      "name": "Photrio 摄影论坛",
+      "url": "https://www.photrio.com/forum/",
+      "audience": [
+        "胶片摄影者与影像实验室"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21T22:21:38+08:00",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "592ca480c1b67235548c8ed78638e2d31f5c7837aca3366df66e7e6882b53ca7"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -2922,6 +2943,51 @@
       ],
       "firstCollectedAt": "2026-10-21T22:11:41+08:00",
       "expectedSha256": "9ace4e60c93fbc3259c0059dea1e570420fcb0d0482218f19d5be1ffc72e61da"
+    }
+  ],
+  "ideas/IDEA-20261021-030.md": [
+    {
+      "id": "EV-20261021-060",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://www.v2ex.com/t/1194730",
+      "claim": "家庭用户自述扫描后的受潮照片修复效果不佳并有人物变形，后续找到局部工具解法",
+      "summary": "E1 原始用户问题；有强替代，购买人工服务意愿未知。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T22:21:38+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-02-28"
+      },
+      "expectedSha256": "b380283741071bc0c0c9a4ac8ddc1dcc226b5c3b7057740d80f21b95535586be"
+    },
+    {
+      "id": "IDEA-20261021-030",
+      "kind": "Idea",
+      "title": "老照片局部修补与人物一致性人工复核",
+      "audience": "已扫描受潮老照片的家庭用户",
+      "problem": "局部破损与 AI 改变人物五官，需人工核对和局部修补",
+      "earningHypothesis": "研究助手假设：按张或按批交付修补和前后对比；价格、工时和购买意愿未知。",
+      "industry": [
+        "家庭影像"
+      ],
+      "sideHustleTypes": [
+        "修图交付"
+      ],
+      "markets": [
+        "国内"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-060"
+      ],
+      "firstCollectedAt": "2026-10-21T22:21:38+08:00",
+      "expectedSha256": "b380283741071bc0c0c9a4ac8ddc1dcc226b5c3b7057740d80f21b95535586be"
     }
   ]
 }
