@@ -138,3 +138,9 @@
 - CN01：last_attempt / last_success 均为 2026-10-21；已读[老照片修复](https://www.v2ex.com/t/1194730)（2026-02-28）及[旧相册扫描](https://www.v2ex.com/t/1157344)（2025-09-05）。前者已有局部修补工具的部分解法，仅形成 E1；后者为扫描前置问题，不合并升级 E2。下次补人物一致性问题和人工修复购买经历。
 - GL30：类型为专业摄影论坛、受众为胶片摄影者和实验室；last_attempt / last_success 均为 2026-10-21。已读[扫描设备涨价与替代](https://www.photrio.com/forum/threads/has-the-epson-v850-been-going-up-a-lot-in-price-lately.219018/)第一页，2026-02-27 原帖；第二页未读。摄影者讨论时间和设备取舍，部分回复偏好外部服务；不把胶片扫描当作家庭照片修复的独立需求，不采信用户价格为当前官方报价。下次补具体服务订单与交接质量。
 - 色影无忌检索未产生可复核的具体候选，不建新站或假定站点不可用。现为 37 个来源条目（中文 7、海外/英文 30），32 个来源主机名口径；只新增一个 Photrio 来源。
+
+### 本轮复检（2026-10-21，22:26 +08:00）
+
+- CN01：last_attempt / last_success 均为 2026-10-21。已读[设计岗位及十页 PPT 询价](https://v2ex.com/t/1020862)（2024-03-05）、[AI PPT 使用问题](https://www.v2ex.com/t/1213676)（2026-05-19）。明确把混合设计的历史单价与单独 PPT 报价分开，当前采购未知；下次补近期固定页数买方。
+- GL26：last_attempt / last_success 均为 2026-10-21。已读[行政外包经历](https://www.ukbusinessforums.co.uk/threads/have-you-ever-outsourced-admin-support-how-did-it-work-for-you.429871/)（2025-09-25），原提问有供给调研语气；用户回复有正反体验，不能把原提问当买方采购。仅作外包沟通和范围风险背景，下次找直接委托。
+- 新来源探索：Chiphell 家庭照片整理检索未定位合格具体页，未建档、未计数；本轮来源仍为 37 条目，不用同站板块增加域名数。
