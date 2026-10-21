@@ -109,3 +109,8 @@
 | GL27 | 专业论坛；装裱工坊 | 2026-10-21 | 2026-10-21 | 已读[批量订单报价](https://www.thegrumble.com/threads/pricing-philosophy.1551/)（2005-05-26）和[装裱定价介绍](https://www.thegrumble.com/threads/how-to-price-custom-framing-for-profit-framing-pos-with-sheila-mccumby.100797/)（2025-10-23）；后者为厂商推广，仅作替代，未播放视频；下次找非推广近期店主 |
 | GL28 | 专业论坛；家庭烘焙和蛋糕经营 | 2026-10-21 | 未成功 | [家庭烘焙报价讨论](https://www.cakecentral.com/forum/t/822002/starting-to-sell-cakes-am-i-under-or-over-charging)两次 521；搜索正文片段不算阅读凭据，下次工具恢复再读 |
 | CN07 | 平台问答；业主 / 室内软装设计 | 2026-10-21 | 2026-10-21 | [精装房软装询价](https://ask.shejiben.com/wenda/13510.html)正文可读，提问日期仅显示相对时间、回答为 2013 年；回复价格是供应方自述，不能当作现在价格；下次找近期非推广业主问题 |
+
+### 本轮复检（2026-10-21，22:06 +08:00）
+
+- GL26：last_attempt / last_success 均为 2026-10-21；[定制礼品店急单积压](https://www.ukbusinessforums.co.uk/threads/can-i-just-is-killing-me.430719/)为 2026-04-30 具体讨论，第一页可读，第二页未读；形成 E1 图稿交付假设。来源从只见历史清洁样本扩展到当年门店样本，下次寻找独立门店外包经历。
+- CN07：last_attempt / last_success 均为 2026-10-21；[验房流程问答](https://ask.shejiben.com/wenda/492476.html)可读，问题显示十年前，2026 年回复含服务推广及未经官方核验的法规/尺寸主张。近期回复不等于近期买方问题；不升级旧装修方向证据，不记录为法律或工程事实，继续低频寻找近期业主。
