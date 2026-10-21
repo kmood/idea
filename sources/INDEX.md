@@ -48,6 +48,8 @@
 
 | GL31 | [MuseScore 乐谱软件社区](https://musescore.org/en/forum) | 英文作曲者、合唱团与音乐教师；厂商问答 | 乐谱誊写、播放、排练与付费帮助 | 2026-10-21：2022 年听写付费求助可读；2026 年合唱团话题 403，不密集重试 | B，部分可读低频 |
 
+| GL32 | [Airtable 社区](https://community.airtable.com/) | 英文运营人员、志愿组织与顾问；厂商社区 | 排班、记录建模、项目委托和原生替代 | 2026-10-21：签到及排班两篇历史正文可读；已关闭回复，采购未确认 | B，厂商问答低频 |
+
 ## 来源组合与轮巡
 
 - 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22、GL23 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
@@ -152,3 +154,9 @@
 - GL31：新建音乐专业问答来源；last_attempt / last_success 均为 2026-10-21。已读[演奏者愿付费请人听写](https://musescore.org/en/node/331386)（2022-04-19）。[合唱团备用伴奏问题](https://musescore.org/en/node/390633)返回 403，不重试、不拿搜索摘要补正文；只有旧话题成功，按低频处理，下次换可读近期采购。
 - CN01：last_attempt / last_success 均为 2026-10-21；已读[长辈手机配置](https://v2ex.com/t/1052153)（2024-06-24）及[低识字长辈的手机使用](https://www.v2ex.com/t/795931)（2021-08-15）。原生功能回复为历史观点，不能当当前产品能力或安全保证。两个不同人群问题不自动升级同一 E2；下次找近期付费辅导和免费替代。
 - Steinberg 专业音乐软件论坛探索未得到合格具体候选，不计新来源。现为 38 条来源（中文 7、海外/英文 31）、33 个来源主机名口径；仅新增 MuseScore 一个来源。
+
+### 本轮复检（2026-10-21，22:36 +08:00）
+
+- GL32：新建厂商问答来源，行业为组织运营，受众为运营人员、志愿组织和实施顾问；last_attempt / last_success 均为 2026-10-21。已读[签到签退](https://community.airtable.com/other-questions-13/check-in-out-system-14138)（2021-04-27）和[志愿者排班](https://community.airtable.com/other-questions-13/airtable-pro-challenge-schedule-for-volunteers-10840)（2019-09-14）；均历史帖，不按相邻问题升级 E2，不采信旧计费为当前价格。下次找近期同问题组织需求。
+- GL22：last_attempt / last_success 均为 2026-10-21；[非营利机构小时维护招聘](https://community.make.com/t/hiring-opportunity-remote-hourly-support/106584)（2026-03-27）具体正文可读，强调异步及每月 5–10 小时，补已有维护方向；当前是否开放未知，供应商报价不算预算，下次看买方录用或付款更新。
+- TechSoup 捐赠人资料方向检索未命中可核验具体页，不计新来源。当前来源为 39 条（中文 7、海外/英文 32），34 个来源主机名口径；仅新增 Airtable 一个域名。
