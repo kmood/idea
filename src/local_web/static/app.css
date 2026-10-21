@@ -3,3 +3,10 @@
 @media(max-width:800px){.masthead{display:block;padding-top:2rem}.phase{margin-top:1.5rem}.workspace{grid-template-columns:1fr}.filters{position:static}.record{grid-template-columns:1fr;gap:.65rem}.record-meta{grid-column:auto}.metrics article{display:block}.metrics strong{display:block;margin-top:.35rem}}
 @media(max-width:480px){.metrics{grid-template-columns:1fr}.metrics article{display:flex;border-right:0;border-bottom:1px solid var(--line)}.metrics article:last-child{border-bottom:0}.masthead h1{font-size:2.4rem}.document{padding:2.5rem 1.25rem}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+/* OPT-01/02: keep the new metrics legible without changing the existing palette. */
+.metrics{grid-template-columns:repeat(4,1fr)}
+.metrics article{gap:.75rem}
+.metrics small{color:var(--muted);font-size:.7rem;line-height:1.35;text-align:right}
+@media(max-width:800px){.metrics article{display:block}.metrics strong{display:block;margin-top:.35rem}.metrics small{display:block;margin-top:.25rem;text-align:left}}
+@media(max-width:480px){.metrics{grid-template-columns:1fr 1fr}.metrics article{display:block;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.metrics article:nth-child(2n){border-right:0}.metrics article:nth-last-child(-n+2){border-bottom:0}.metrics strong{font-size:1.6rem}}

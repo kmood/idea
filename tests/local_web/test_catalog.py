@@ -29,12 +29,40 @@ class CatalogTests(unittest.TestCase):
         from local_web.catalog import load_catalog
         catalog=load_catalog(self.root)
         self.assertEqual(catalog['meta']['counts'],{'source':1,'trend':1,'idea':1})
+        self.assertEqual(catalog['meta']['filters']['ideaResearchStatus'],['待验证'])
+        self.assertEqual(catalog['meta']['filters']['sourceAccessStatus'],['可读'])
+        self.assertEqual(catalog['meta']['sourceMetrics'],{'entryCount':1,'hostnameCount':0})
         idea=next(item for item in catalog['records'] if item['kind']=='idea')
-        self.assertEqual((idea['id'],idea['evidence'],idea['status']),('IDEA-1','E2；付费未知','待验证'))
+        self.assertEqual((idea['id'],idea['evidence'],idea['status'],idea['researchStatus']),('IDEA-1','E2；付费未知','待验证','待验证'))
         source=next(item for item in catalog['records'] if item['kind']=='source')
-        self.assertIsNone(source['evidence'])
-        self.assertIsNone(source['url'])
+        self.assertEqual((source['evidence'],source['url'],source['accessStatus']),(None,None,'可读'))
         self.assertEqual(catalog['meta']['phase'],'集中收集')
+
+    def test_catalog_counts_real_statuses_and_hostnames_without_merging_entries(self):
+        (self.root/'ideas/INDEX.md').write_text(
+            '# 点子\n\n| ID | 机会 | 市场 | 证据与时效 | 个人匹配 | 状态 | 最近核验 |\n'
+            '| --- | --- | --- | --- | --- | --- | --- |\n'
+            '| [IDEA-1](IDEA-1.md) | 待验证方向 | 国内 | E1 | 有条件适合 | 待验证 | 2026-10-15 |\n'
+            '| [IDEA-2](IDEA-2.md) | 候选方向 | 海外 | E3 | 较适合 | 候选 | 2026-10-16 |\n'
+            '| [IDEA-3](IDEA-3.md) | 搁置方向 | 国内 | E1 | 暂不适合 | 搁置 | 2026-10-17 |\n',encoding='utf-8')
+        for name in ('IDEA-2.md','IDEA-3.md'):
+            (self.root/'ideas'/name).write_text('# '+name[:-3]+' 方向\n',encoding='utf-8')
+        (self.root/'sources/INDEX.md').write_text(
+            '# 来源\n\n| ID | 网站与入口 | 受众/类型 | 优先观察入口与信号 | 访问实测与限制 | 优先级 |\n'
+            '| --- | --- | --- | --- | --- | --- |\n'
+            '| CN01 | [站点一](https://example.com/a) | 中文 | 求工具 | 入口和具体讨论可读 | A |\n'
+            '| GL01 | [站点二](https://example.com/b) | 英文 | 求工具 | 入口受限 | B |\n',encoding='utf-8')
+        from local_web.catalog import load_catalog
+        catalog=load_catalog(self.root)
+        self.assertEqual(catalog['meta']['statusCounts']['idea'],{'候选':1,'搁置':1,'待验证':1})
+        self.assertEqual(catalog['meta']['statusCounts']['source'],{'可读':1,'受限':1})
+        self.assertEqual(catalog['meta']['selectedCount'],0)
+        self.assertEqual(catalog['meta']['filters']['sourceAccessStatus'],['可读','受限'])
+        self.assertEqual(catalog['meta']['sourceMetrics'],{'entryCount':2,'hostnameCount':1})
+        records={record['id']:record for record in catalog['records']}
+        self.assertEqual(records['IDEA-2']['evidenceNote'],'存在采购/报价/付款信号，具体类型见详情。')
+        self.assertEqual(records['CN01']['accessStatus'],'可读')
+        self.assertEqual(records['GL01']['accessStatus'],'受限')
 
     def test_markdown_renderer_escapes_html_and_keeps_safe_links(self):
         from local_web.markdown import render_markdown
@@ -43,6 +71,13 @@ class CatalogTests(unittest.TestCase):
         self.assertNotIn('<script>',rendered)
         self.assertIn('href="https://example.com"',rendered)
         self.assertNotIn('href="javascript:',rendered)
+
+    def test_markdown_renderer_keeps_ordered_evidence_items_and_inline_code(self):
+        from local_web.markdown import render_markdown
+        rendered=render_markdown('## 证据\n\n1. 第一条，见 `EV-1`。\n2. 第二条，[来源](https://example.com)。\n\n- 反证\n\n| 字段 | 值 |\n| --- | --- |\n| API | `orders` |')
+        self.assertIn('<ol><li>第一条，见 <code>EV-1</code>。</li><li>第二条，<a href="https://example.com" rel="noreferrer">来源</a>。</li></ol>',rendered)
+        self.assertIn('<ul><li>反证</li></ul>',rendered)
+        self.assertIn('<td><code>orders</code></td>',rendered)
 
     def test_app_contract_serves_catalog_document_and_rejects_unknown_paths(self):
         from local_web.app import LocalWebApp
@@ -58,6 +93,14 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual((status,json.loads(body)['error']['code']),(400,'INVALID_PATH'))
         status,_,_=app.dispatch('POST','/api/catalog')
         self.assertEqual(status,405)
+
+    def test_static_page_exposes_distinct_status_filters_and_metrics(self):
+        from local_web.app import LocalWebApp
+        status,_,body=LocalWebApp(self.root).dispatch('GET','/')
+        page=body.decode('utf-8')
+        self.assertEqual(status,200)
+        for marker in ('source-hostname-count','idea-status-counts','research-status','access-status','selected-count'):
+            self.assertIn(marker,page)
 
     def test_malformed_repository_data_returns_a_bounded_error(self):
         from local_web.app import LocalWebApp

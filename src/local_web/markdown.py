@@ -4,30 +4,37 @@ import re
 from urllib.parse import urlsplit
 
 
-LINK=re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+TOKEN=re.compile(r'\[([^\]]+)\]\(([^)]+)\)|`([^`]+)`')
 
 
 def inline(text):
     parts=[];position=0
-    for match in LINK.finditer(text):
+    for match in TOKEN.finditer(text):
         parts.append(html.escape(text[position:match.start()]))
-        label=html.escape(match.group(1));url=match.group(2).strip()
-        parsed=urlsplit(url)
-        if parsed.scheme in ('http','https') or (not parsed.scheme and not url.startswith('//')):
-            parts.append(f'<a href="{html.escape(url,quote=True)}" rel="noreferrer">{label}</a>')
+        if match.group(3) is not None:
+            parts.append('<code>'+html.escape(match.group(3))+'</code>')
         else:
-            parts.append(label)
+            label=html.escape(match.group(1));url=match.group(2).strip()
+            parsed=urlsplit(url)
+            if parsed.scheme in ('http','https') or (not parsed.scheme and not url.startswith('//')):
+                parts.append(f'<a href="{html.escape(url,quote=True)}" rel="noreferrer">{label}</a>')
+            else:
+                parts.append(label)
         position=match.end()
     parts.append(html.escape(text[position:]))
     return ''.join(parts)
 
 
 def render_markdown(markdown):
-    lines=markdown.splitlines();result=[];paragraph=[];items=[];table=[];in_code=False;code=[]
+    lines=markdown.splitlines();result=[];paragraph=[];items=[];list_kind=None;table=[];in_code=False;code=[]
     def flush_paragraph():
         if paragraph:result.append('<p>'+inline(' '.join(paragraph))+'</p>');paragraph.clear()
     def flush_items():
-        if items:result.append('<ul>'+''.join('<li>'+inline(item)+'</li>' for item in items)+'</ul>');items.clear()
+        nonlocal list_kind
+        if items:
+            tag='ol' if list_kind=='ol' else 'ul'
+            result.append('<'+tag+'>'+''.join('<li>'+inline(item)+'</li>' for item in items)+'</'+tag+'>')
+            items.clear();list_kind=None
     def flush_table():
         if not table:return
         header=table[0];body=table[2:] if len(table)>1 and all(set(cell)<=set('-: ') for cell in table[1]) else table[1:]
@@ -50,8 +57,12 @@ def render_markdown(markdown):
         if heading:
             flush_paragraph();flush_items();level=len(heading.group(1));result.append(f'<h{level}>{inline(heading.group(2))}</h{level}>');continue
         bullet=re.match(r'^[-*]\s+(.+)$',line)
-        if bullet:
-            flush_paragraph();items.append(bullet.group(1));continue
+        ordered=re.match(r'^\d+[.)]\s+(.+)$',line)
+        if bullet or ordered:
+            kind='ul' if bullet else 'ol'
+            flush_paragraph()
+            if list_kind and list_kind!=kind:flush_items()
+            list_kind=kind;items.append((bullet or ordered).group(1));continue
         if not line.strip():flush_paragraph();flush_items();continue
         flush_items();paragraph.append(line.strip())
     flush_paragraph();flush_items();flush_table()
