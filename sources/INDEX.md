@@ -160,3 +160,9 @@
 - GL32：新建厂商问答来源，行业为组织运营，受众为运营人员、志愿组织和实施顾问；last_attempt / last_success 均为 2026-10-21。已读[签到签退](https://community.airtable.com/other-questions-13/check-in-out-system-14138)（2021-04-27）和[志愿者排班](https://community.airtable.com/other-questions-13/airtable-pro-challenge-schedule-for-volunteers-10840)（2019-09-14）；均历史帖，不按相邻问题升级 E2，不采信旧计费为当前价格。下次找近期同问题组织需求。
 - GL22：last_attempt / last_success 均为 2026-10-21；[非营利机构小时维护招聘](https://community.make.com/t/hiring-opportunity-remote-hourly-support/106584)（2026-03-27）具体正文可读，强调异步及每月 5–10 小时，补已有维护方向；当前是否开放未知，供应商报价不算预算，下次看买方录用或付款更新。
 - TechSoup 捐赠人资料方向检索未命中可核验具体页，不计新来源。当前来源为 39 条（中文 7、海外/英文 32），34 个来源主机名口径；仅新增 Airtable 一个域名。
+
+### 本轮复检（2026-10-21，22:41 +08:00）
+
+- CN05：last_attempt / last_success 均为 2026-10-21；成功读[卖家图片外包原问题](https://www.wearesellers.com/question/61907)（2022-07-25）、[摄影与美工流程](https://www.wearesellers.com/question/105786)（2025-05-28）、[供应商报价说明](https://www.wearesellers.com/question/20780)（2020-06-29）。只保存脱敏要点，未用页面 AI 摘要当证据；可见正文不代表全部回复、旧失败页或登录区已恢复。下次补近期直接买方。
+- 另一“单干卖家图片”推荐链接请求返回工具错误，未形成正文证据，不推进该页成功游标。福步验货新域名检索无合格具体页，Shopify 摄影检索无已读独立买方；不增加来源数。
+- 当前来源仍为 39 条目、34 个来源主机名口径。CN05 从未成功具体页转为部分具体页可读，保留旧失败历史，不把它计为新增站点。
