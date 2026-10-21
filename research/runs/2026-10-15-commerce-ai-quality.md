@@ -1,6 +1,6 @@
 # 2026-10-15：电商及小企业 AI 使用后的质量维护
 
-开始：20:59；记录：21:02（Asia/Shanghai）。阶段：集中收集，未转增量。远程已核对为 git@github.com:kmood/idea.git，开始时工作区干净、ahead/behind=0/0。
+开始：20:59；记录：21:02（Asia/Shanghai）。阶段：集中收集，未转增量。远程已核对为 git@github.com:kmood/idea.git，开始时工作区干净、本地领先/落后远程提交数为 0/0。
 
 ## 问题与结果
 
@@ -9,12 +9,12 @@
 ## 查询与已读范围
 
 6 组查询：
-- site:ikjzd.com AI 翻译 商品 描述 痛点
-- site:wearesellers.com AI 图片 翻译
-- site:community.shopify.com AI product descriptions bulk translation problems
-- site:reddit.com/r/smallbusiness AI customer service small business problems
-- site:wearesellers.com/question "AI" "图片"
-- site:wearesellers.com/question "AI" "翻译"
+- `site:ikjzd.com AI 翻译 商品 描述 痛点`
+- `site:wearesellers.com AI 图片 翻译`
+- `site:community.shopify.com AI product descriptions bulk translation problems`
+- `site:reddit.com/r/smallbusiness AI customer service small business problems`
+- `site:wearesellers.com/question "AI" "图片"`
+- `site:wearesellers.com/question "AI" "翻译"`
 
 前两组未取得可直接使用的中文原帖；后续从已读知无不言根首页定位两个具体讨论。Home.html 搜索索引与根首页内容不同，以实际读取范围为准，不用缓存标题替代帖子正文。
 

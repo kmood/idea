@@ -19,7 +19,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "CN02",
@@ -39,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "CN03",
@@ -59,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "CN04",
@@ -79,7 +79,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "CN05",
@@ -99,7 +99,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL01",
@@ -119,12 +119,12 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL02",
       "kind": "Source",
-      "name": "Hacker News / Ask",
+      "name": "Hacker News 提问板块",
       "url": "https://news.ycombinator.com/ask",
       "audience": [
         "英文开发者与创业者"
@@ -139,12 +139,12 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL03",
       "kind": "Source",
-      "name": "Reddit / smallbusiness",
+      "name": "Reddit 小企业板块",
       "url": "https://www.reddit.com/r/smallbusiness/",
       "audience": [
         "英文小企业经营者问答"
@@ -160,12 +160,12 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL04",
       "kind": "Source",
-      "name": "Shopify Community",
+      "name": "Shopify 社区",
       "url": "https://community.shopify.com/",
       "audience": [
         "英文商家与电商开发者"
@@ -181,12 +181,12 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL05",
       "kind": "Source",
-      "name": "n8n Community",
+      "name": "n8n 社区",
       "url": "https://community.n8n.io/",
       "audience": [
         "英文自动化用户与开发者"
@@ -201,7 +201,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL06",
@@ -221,12 +221,12 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL07",
       "kind": "Source",
-      "name": "Reddit / msp",
+      "name": "Reddit 托管 IT 服务商板块",
       "url": "https://www.reddit.com/r/msp/",
       "audience": [
         "英文托管 IT 服务商、咨询与交付团队"
@@ -241,12 +241,12 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL08",
       "kind": "Source",
-      "name": "Hugging Face Forums / Beginners",
+      "name": "Hugging Face 初学者论坛",
       "url": "https://discuss.huggingface.co/c/beginners/5",
       "audience": [
         "英文 AI 开发者与实践者"
@@ -262,12 +262,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL09",
       "kind": "Source",
-      "name": "Reddit / computervision",
+      "name": "Reddit 计算机视觉板块",
       "url": "https://www.reddit.com/r/computervision/",
       "audience": [
         "中英文计算机视觉开发者与项目方"
@@ -284,12 +284,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL10",
       "kind": "Source",
-      "name": "Reddit / EnglishTeachers 与 Teachers",
+      "name": "Reddit 英语教师与教师板块",
       "url": "https://www.reddit.com/r/englishteachers/",
       "audience": [
         "英文教师与学校从业者"
@@ -305,7 +305,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "CN06",
@@ -326,12 +326,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL11",
       "kind": "Source",
-      "name": "QuickBooks Community",
+      "name": "QuickBooks 社区",
       "url": "https://quickbooks.intuit.com/learn-support/en-us/",
       "audience": [
         "英文小企业、记账员与会计软件用户"
@@ -347,12 +347,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL12",
       "kind": "Source",
-      "name": "Practical Machinist Forums",
+      "name": "Practical Machinist 论坛",
       "url": "https://www.practicalmachinist.com/forum/",
       "audience": [
         "英文机加工厂主、操作员与制造工程人员"
@@ -368,12 +368,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL13",
       "kind": "Source",
-      "name": "NAHAM Forums",
+      "name": "NAHAM 论坛",
       "url": "https://www.naham.org/forums/",
       "audience": [
         "英文医疗服务接入、排期与授权管理人员"
@@ -389,12 +389,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL14",
       "kind": "Source",
-      "name": "AAACN Open Forum",
+      "name": "AAACN 公开论坛",
       "url": "https://community.aaacn.org/home",
       "audience": [
         "英文门诊护理与医疗运营人员"
@@ -410,12 +410,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL15",
       "kind": "Source",
-      "name": "AccountingWEB / Any Answers",
+      "name": "AccountingWEB 问答板块",
       "url": "https://www.accountingweb.co.uk/any-answers",
       "audience": [
         "英文会计与税务从业者"
@@ -431,12 +431,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL16",
       "kind": "Source",
-      "name": "eBay Community / Selling",
+      "name": "eBay 卖家社区",
       "url": "https://community.ebay.com/forum/selling-57920/",
       "audience": [
         "英文 eBay 卖家与小型转售商"
@@ -452,7 +452,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL17",
@@ -473,7 +473,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL18",
@@ -494,7 +494,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL19",
@@ -515,12 +515,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL20",
       "kind": "Source",
-      "name": "BiggerPockets Forums",
+      "name": "BiggerPockets 论坛",
       "url": "https://www.biggerpockets.com/forums",
       "audience": [
         "英文房东、物业投资人与小型出租业务经营者"
@@ -536,12 +536,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL21",
       "kind": "Source",
-      "name": "Reddit / paralegal、LawFirm 与 legaltech",
+      "name": "Reddit 律师助理、律所与法律科技板块",
       "url": "https://www.reddit.com/r/paralegal/",
       "audience": [
         "英文律师、律所运营与法律科技从业者"
@@ -557,12 +557,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL22",
       "kind": "Source",
-      "name": "Make Community / Hire a Pro",
+      "name": "Make 社区专业服务招聘板块",
       "url": "https://community.make.com/c/hire-a-pro/50",
       "audience": [
         "英文自动化买家、实施者与代理商"
@@ -578,12 +578,12 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL23",
       "kind": "Source",
-      "name": "Square Community",
+      "name": "Square 社区",
       "url": "https://community.squareup.com/",
       "audience": [
         "英文零售、餐饮、活动和本地服务商家"
@@ -599,7 +599,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     },
     {
       "id": "GL24",
@@ -620,7 +620,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "0079f6e964d4c37659ec5085c9a75bd3865f99a50960e2d6d818a62509153396"
+      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -642,7 +642,7 @@
         "accessedAt": "2026-10-15",
         "publishedAt": "2023-04-18"
       },
-      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+      "expectedSha256": "ddd5c174f758f27607cb8cb3202e035e5ac55b95a304c1e5c8b28cfb51253b68"
     },
     {
       "id": "EV-20261015-002",
@@ -662,7 +662,7 @@
         "accessedAt": "2026-10-15",
         "publishedAt": "2026-06-01"
       },
-      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+      "expectedSha256": "ddd5c174f758f27607cb8cb3202e035e5ac55b95a304c1e5c8b28cfb51253b68"
     },
     {
       "id": "EV-20261015-003",
@@ -681,7 +681,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-15"
       },
-      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+      "expectedSha256": "ddd5c174f758f27607cb8cb3202e035e5ac55b95a304c1e5c8b28cfb51253b68"
     },
     {
       "id": "EV-20261015-004",
@@ -700,7 +700,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-15"
       },
-      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+      "expectedSha256": "ddd5c174f758f27607cb8cb3202e035e5ac55b95a304c1e5c8b28cfb51253b68"
     },
     {
       "id": "IDEA-20261015-001",
@@ -708,7 +708,7 @@
       "title": "商家商品翻译后的术语清理与批量检查服务",
       "audience": "商品较多、已经机器翻译的海外 Shopify 商家",
       "problem": "品牌名误译、术语不一致与批量修订",
-      "earningHypothesis": "Agent 假设：限定语言及批次，交付术语表、疑似错误清单和经商家确认的修订文件，按批次收费；定价及成本未知。",
+      "earningHypothesis": "研究助手假设：限定语言及批次，交付术语表、疑似错误清单和经商家确认的修订文件，按批次收费；定价及成本未知。",
       "industry": [
         "电商运营",
         "本地化"
@@ -727,7 +727,7 @@
         "EV-20261015-004"
       ],
       "firstCollectedAt": "2026-10-15T21:02:00+08:00",
-      "expectedSha256": "4f746af846ad878c381e5138a47aa720b3f4213da479b5f46110afe424d00849"
+      "expectedSha256": "ddd5c174f758f27607cb8cb3202e035e5ac55b95a304c1e5c8b28cfb51253b68"
     }
   ],
   "trends/TREND-20261015-001.md": [
@@ -748,7 +748,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-15"
       },
-      "expectedSha256": "1972d9b13819b12540eb55089239bd00bcb19115491207e7600910a871d9ed85"
+      "expectedSha256": "eeb09dcb488561ab743484b0c120b642a5b063b99e5eb767d8c9514409e9f275"
     },
     {
       "id": "TREND-20261015-001",
@@ -768,7 +768,7 @@
         "是否存在配置服务需求？"
       ],
       "firstCollectedAt": "2026-10-15T21:02:00+08:00",
-      "expectedSha256": "1972d9b13819b12540eb55089239bd00bcb19115491207e7600910a871d9ed85"
+      "expectedSha256": "eeb09dcb488561ab743484b0c120b642a5b063b99e5eb767d8c9514409e9f275"
     }
   ],
   "ideas/IDEA-20261020-001.md": [
@@ -789,7 +789,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-20"
       },
-      "expectedSha256": "26ec64b1db7b2e2f0f310358622a7db0383581ee204192ee5f011581f3d48401"
+      "expectedSha256": "0a367253d39614d8a1ebb97aaf9117325231816e5d559acf81e94bb8d399f11e"
     },
     {
       "id": "EV-20261020-002",
@@ -808,7 +808,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-20"
       },
-      "expectedSha256": "26ec64b1db7b2e2f0f310358622a7db0383581ee204192ee5f011581f3d48401"
+      "expectedSha256": "0a367253d39614d8a1ebb97aaf9117325231816e5d559acf81e94bb8d399f11e"
     },
     {
       "id": "EV-20261021-001",
@@ -828,7 +828,7 @@
         "publishedAt": "2026-05-02",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "26ec64b1db7b2e2f0f310358622a7db0383581ee204192ee5f011581f3d48401"
+      "expectedSha256": "0a367253d39614d8a1ebb97aaf9117325231816e5d559acf81e94bb8d399f11e"
     },
     {
       "id": "IDEA-20261020-001",
@@ -836,7 +836,7 @@
       "title": "多语言短视频配音时长对齐与人工复核服务",
       "audience": "需要把中文短视频翻译并配成其他语言的创作者或小团队",
       "problem": "逐句翻译配音时长不同造成音画错位，批量人工调整耗时且强制变速可能影响听感",
-      "earningHypothesis": "Agent 假设：按单条视频或成片分钟数交付时长检测、对齐建议、局部重生成及人工复核；定价、成本和工时未知。",
+      "earningHypothesis": "研究助手假设：按单条视频或成片分钟数交付时长检测、对齐建议、局部重生成及人工复核；定价、成本和工时未知。",
       "industry": [
         "内容创作",
         "视频本地化"
@@ -855,7 +855,7 @@
         "EV-20261021-001"
       ],
       "firstCollectedAt": "2026-10-20T22:23:00+08:00",
-      "expectedSha256": "26ec64b1db7b2e2f0f310358622a7db0383581ee204192ee5f011581f3d48401"
+      "expectedSha256": "0a367253d39614d8a1ebb97aaf9117325231816e5d559acf81e94bb8d399f11e"
     }
   ],
   "ideas/IDEA-20261021-001.md": [
@@ -876,7 +876,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "51ef91742ca78e4fca4bf02f7b88dabe25bb91cb99c6a1a738fe542d319de5d7"
+      "expectedSha256": "959da1a53c908ffb52263cf3b2fe64a8eda0c4680689e500ac23ab8d380e10fb"
     },
     {
       "id": "IDEA-20261021-001",
@@ -884,7 +884,7 @@
       "title": "中文教学视频多模态预审与证据定位服务",
       "audience": "制作中文数学课程视频的教培机构和课程团队",
       "problem": "人工从头观看难以规模化发现口误、字幕、板书、公式、遮挡和显示缺陷",
-      "earningHypothesis": "Agent 假设：按视频分钟数交付机器预审加人工确认的疑似问题报告，稳定后提供本地批处理或内网部署；价格和成本未知。",
+      "earningHypothesis": "研究助手假设：按视频分钟数交付机器预审加人工确认的疑似问题报告，稳定后提供本地批处理或内网部署；价格和成本未知。",
       "industry": [
         "教育内容制作",
         "视频质检"
@@ -901,7 +901,7 @@
         "EV-20261021-002"
       ],
       "firstCollectedAt": "2026-10-21T12:00:00+08:00",
-      "expectedSha256": "51ef91742ca78e4fca4bf02f7b88dabe25bb91cb99c6a1a738fe542d319de5d7"
+      "expectedSha256": "959da1a53c908ffb52263cf3b2fe64a8eda0c4680689e500ac23ab8d380e10fb"
     }
   ],
   "ideas/IDEA-20261021-002.md": [
@@ -910,7 +910,7 @@
       "kind": "Evidence",
       "sourceId": "CN01",
       "url": "https://www.v2ex.com/t/1242500",
-      "claim": "作者转述线下 K12 客户希望把不可用的 Agent 原型做成讲义、OCR 批改和错题推荐 MVP",
+      "claim": "作者转述线下 K12 客户希望把不可用的智能体原型做成讲义、OCR 批改和错题推荐 MVP",
       "summary": "E1 客户接触转述；未核验采购、报价或付款。",
       "publishedAt": null,
       "accessedAt": null,
@@ -922,15 +922,15 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "331a48fac65019dadc961ce56937ee0c7b57c7ff1eed727251b2e021d81ac206"
+      "expectedSha256": "2d5a226257b78a6854aa5d39bed03c65c771fe5c7a0ced7a9c8b366dbe086746"
     },
     {
       "id": "IDEA-20261021-002",
       "kind": "Idea",
-      "title": "K12 教培机构 Agent 工作流集成与 MVP 交付",
+      "title": "K12 教培机构智能体工作流集成与 MVP 交付",
       "audience": "已有学生、作业和错题数据的国内线下一对一教培机构",
-      "problem": "机构自制 Agent 只有界面，数据库和 API 对接不可用，无法进入教师工作流",
-      "earningHypothesis": "Agent 假设：按两周诊断和窄范围 MVP 收费，后续按维护或私有部署收费；报价和合规成本未知。",
+      "problem": "机构自制智能体只有界面，数据库和 API 对接不可用，无法进入教师工作流",
+      "earningHypothesis": "研究助手假设：按两周诊断和窄范围 MVP 收费，后续按维护或私有部署收费；报价和合规成本未知。",
       "industry": [
         "K12 教培",
         "教育技术"
@@ -947,7 +947,7 @@
         "EV-20261021-003"
       ],
       "firstCollectedAt": "2026-10-21T12:00:00+08:00",
-      "expectedSha256": "331a48fac65019dadc961ce56937ee0c7b57c7ff1eed727251b2e021d81ac206"
+      "expectedSha256": "2d5a226257b78a6854aa5d39bed03c65c771fe5c7a0ced7a9c8b366dbe086746"
     }
   ],
   "ideas/IDEA-20261021-003.md": [
@@ -968,7 +968,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "75c94e5e6fae34fe1a46f1b463cb6e0da86ce45337425d7ff8b993ffe34017cc"
+      "expectedSha256": "26c19aabc96ad9cc4f6fbdeda946c54d3cab9eb040efaec8b45132ebb442a50b"
     },
     {
       "id": "EV-20261021-005",
@@ -987,7 +987,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "75c94e5e6fae34fe1a46f1b463cb6e0da86ce45337425d7ff8b993ffe34017cc"
+      "expectedSha256": "26c19aabc96ad9cc4f6fbdeda946c54d3cab9eb040efaec8b45132ebb442a50b"
     },
     {
       "id": "EV-20261021-006",
@@ -1006,7 +1006,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "75c94e5e6fae34fe1a46f1b463cb6e0da86ce45337425d7ff8b993ffe34017cc"
+      "expectedSha256": "26c19aabc96ad9cc4f6fbdeda946c54d3cab9eb040efaec8b45132ebb442a50b"
     },
     {
       "id": "IDEA-20261021-003",
@@ -1014,7 +1014,7 @@
       "title": "隐私与教师复核优先的 AI 批改试点实施服务",
       "audience": "正在评估统一 AI 批改工具的海外学校或教研组",
       "problem": "学校希望减少反馈工时并保持量规一致，同时面临隐私、公平、教师信任和复核成本",
-      "earningHypothesis": "Agent 假设：提供匿名离线样本评估、量规一致性测试、教师复核流程和风险清单，按小试点收费；预算未知。",
+      "earningHypothesis": "研究助手假设：提供匿名离线样本评估、量规一致性测试、教师复核流程和风险清单，按小试点收费；预算未知。",
       "industry": [
         "教育技术",
         "教师工作流"
@@ -1033,7 +1033,7 @@
         "EV-20261021-006"
       ],
       "firstCollectedAt": "2026-10-21T12:00:00+08:00",
-      "expectedSha256": "75c94e5e6fae34fe1a46f1b463cb6e0da86ce45337425d7ff8b993ffe34017cc"
+      "expectedSha256": "26c19aabc96ad9cc4f6fbdeda946c54d3cab9eb040efaec8b45132ebb442a50b"
     }
   ],
   "ideas/IDEA-20261021-004.md": [
@@ -1054,7 +1054,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
+      "expectedSha256": "684b5d4811da8caae1c56f0f5abfecdac0be422c77f276f489bb909de55d3d09"
     },
     {
       "id": "EV-20261021-008",
@@ -1073,14 +1073,14 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
+      "expectedSha256": "684b5d4811da8caae1c56f0f5abfecdac0be422c77f276f489bb909de55d3d09"
     },
     {
       "id": "EV-20261021-009",
       "kind": "Evidence",
       "sourceId": "GL02",
       "url": "https://support.upwork.com/hc/en-us/articles/43342677368467-Use-bots-and-other-automation-properly",
-      "claim": "Upwork 明确警告未授权 watcher、抓取和定时刷新可能导致账号限制",
+      "claim": "Upwork 明确警告未授权职位监测工具、抓取和定时刷新可能导致账号限制",
       "summary": "官方实施限制，只能在合规 API 权限内继续。",
       "publishedAt": null,
       "accessedAt": null,
@@ -1092,7 +1092,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
+      "expectedSha256": "684b5d4811da8caae1c56f0f5abfecdac0be422c77f276f489bb909de55d3d09"
     },
     {
       "id": "IDEA-20261021-004",
@@ -1100,7 +1100,7 @@
       "title": "合规 API 版自由职业机会筛选与邮件提醒",
       "audience": "依赖海外平台接单并需要细粒度职位筛选的自由职业者",
       "problem": "RSS 移除后需要反复查看职位，内置提醒的过滤和邮件体验不能满足部分用户",
-      "earningHypothesis": "Agent 假设：仅在获得平台 API 权限后提供过滤、摘要和邮件提醒订阅；API 资格和价格未知。",
+      "earningHypothesis": "研究助手假设：仅在获得平台 API 权限后提供过滤、摘要和邮件提醒订阅；API 资格和价格未知。",
       "industry": [
         "自由职业",
         "招聘平台"
@@ -1119,7 +1119,7 @@
         "EV-20261021-009"
       ],
       "firstCollectedAt": "2026-10-21T12:00:00+08:00",
-      "expectedSha256": "c70d91e5b5dc6a216f4cdb26578a78079afe11bbd5b5668ef6d611372ef63e7e"
+      "expectedSha256": "684b5d4811da8caae1c56f0f5abfecdac0be422c77f276f489bb909de55d3d09"
     }
   ],
   "ideas/IDEA-20261021-005.md": [
@@ -1140,7 +1140,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "7175a1a7df68b5bf7fd9d4c32b66132d02e26f9f5b765ffcbe4d1d5a42e70b3e"
+      "expectedSha256": "63b19eac4fdd43f245437a267ca078927b21173f013b716886859fa9f5859ea3"
     },
     {
       "id": "EV-20261021-011",
@@ -1159,7 +1159,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "7175a1a7df68b5bf7fd9d4c32b66132d02e26f9f5b765ffcbe4d1d5a42e70b3e"
+      "expectedSha256": "63b19eac4fdd43f245437a267ca078927b21173f013b716886859fa9f5859ea3"
     },
     {
       "id": "IDEA-20261021-005",
@@ -1167,7 +1167,7 @@
       "title": "QuickBooks 重复交易审计与清理前置报告服务",
       "audience": "银行流水重复或迁移后遗留大量未结项目的小企业与记账员",
       "problem": "逐笔定位、解释和清理费时，错误删除会破坏已完成对账",
-      "earningHypothesis": "Agent 假设：按账户或月份交付只读疑似重复、匹配理由、风险分级和建议动作报告；价格与复核工时未知。",
+      "earningHypothesis": "研究助手假设：按账户或月份交付只读疑似重复、匹配理由、风险分级和建议动作报告；价格与复核工时未知。",
       "industry": [
         "小企业财务运营",
         "记账"
@@ -1185,7 +1185,7 @@
         "EV-20261021-011"
       ],
       "firstCollectedAt": "2026-10-21T21:00:00+08:00",
-      "expectedSha256": "7175a1a7df68b5bf7fd9d4c32b66132d02e26f9f5b765ffcbe4d1d5a42e70b3e"
+      "expectedSha256": "63b19eac4fdd43f245437a267ca078927b21173f013b716886859fa9f5859ea3"
     }
   ],
   "ideas/IDEA-20261021-006.md": [
@@ -1207,7 +1207,7 @@
         "publishedAt": "2020-09-25",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
+      "expectedSha256": "5a10d10b035dafd1a52f2756b3d8574ea2ceb7fc3de951bbb6b7df7be74c8663"
     },
     {
       "id": "EV-20261021-013",
@@ -1227,7 +1227,7 @@
         "publishedAt": "2015-08-14",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
+      "expectedSha256": "5a10d10b035dafd1a52f2756b3d8574ea2ceb7fc3de951bbb6b7df7be74c8663"
     },
     {
       "id": "EV-20261021-014",
@@ -1247,7 +1247,7 @@
         "publishedAt": "2026-03-17",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
+      "expectedSha256": "5a10d10b035dafd1a52f2756b3d8574ea2ceb7fc3de951bbb6b7df7be74c8663"
     },
     {
       "id": "EV-20261021-020",
@@ -1267,7 +1267,7 @@
         "publishedAt": "2021-03-16",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
+      "expectedSha256": "5a10d10b035dafd1a52f2756b3d8574ea2ceb7fc3de951bbb6b7df7be74c8663"
     },
     {
       "id": "IDEA-20261021-006",
@@ -1275,7 +1275,7 @@
       "title": "机加工首件检验表生成与人工复核服务",
       "audience": "收到 PDF 或扫描图纸并用 Excel 制作首件检验报告的小型机加工厂",
       "problem": "逐项录入尺寸耗时易错，但 OCR 输出仍需合格人员复核",
-      "earningHypothesis": "Agent 假设：按图纸或批次交付气泡编号、检验表草稿、OCR 置信度和复核清单；定价与责任成本未知。",
+      "earningHypothesis": "研究助手假设：按图纸或批次交付气泡编号、检验表草稿、OCR 置信度和复核清单；定价与责任成本未知。",
       "industry": [
         "机加工",
         "质量管理"
@@ -1295,7 +1295,7 @@
         "EV-20261021-020"
       ],
       "firstCollectedAt": "2026-10-21T21:00:00+08:00",
-      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
+      "expectedSha256": "5a10d10b035dafd1a52f2756b3d8574ea2ceb7fc3de951bbb6b7df7be74c8663"
     }
   ],
   "ideas/IDEA-20261021-007.md": [
@@ -1317,7 +1317,7 @@
         "publishedAt": "2024-02-29",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "d70b61f35b1e830d0357290068cec56c79f404ebc8a64c43b67481bf6f47becd"
+      "expectedSha256": "4f376148062e92bae600e67fcafc7418f9a6a862bdeca9f3b8b93acc178c42a0"
     },
     {
       "id": "EV-20261021-016",
@@ -1337,7 +1337,7 @@
         "publishedAt": "2024-07-05",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "d70b61f35b1e830d0357290068cec56c79f404ebc8a64c43b67481bf6f47becd"
+      "expectedSha256": "4f376148062e92bae600e67fcafc7418f9a6a862bdeca9f3b8b93acc178c42a0"
     },
     {
       "id": "IDEA-20261021-007",
@@ -1345,7 +1345,7 @@
       "title": "医疗事先授权积压诊断与脱敏看板试点",
       "audience": "授权队列积压且各地点流程不一致的美国门诊和专科诊所",
       "problem": "难以区分内部提交等待与保险方决定等待，也难以用数据说明人员需求",
-      "earningHypothesis": "Agent 假设：只用脱敏汇总数据，按两周交付流程图、积压年龄、时长看板和建议；价格与采购路径未知。",
+      "earningHypothesis": "研究助手假设：只用脱敏汇总数据，按两周交付流程图、积压年龄、时长看板和建议；价格与采购路径未知。",
       "industry": [
         "医疗运营",
         "事先授权"
@@ -1363,7 +1363,7 @@
         "EV-20261021-016"
       ],
       "firstCollectedAt": "2026-10-21T21:00:00+08:00",
-      "expectedSha256": "d70b61f35b1e830d0357290068cec56c79f404ebc8a64c43b67481bf6f47becd"
+      "expectedSha256": "4f376148062e92bae600e67fcafc7418f9a6a862bdeca9f3b8b93acc178c42a0"
     }
   ],
   "ideas/IDEA-20261021-008.md": [
@@ -1384,7 +1384,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
+      "expectedSha256": "b7eb8537589abdc85180929ce7d6a9e84d2e18ec383f4fc42a27ff4b562e6623"
     },
     {
       "id": "EV-20261021-018",
@@ -1392,7 +1392,7 @@
       "sourceId": "GL16",
       "url": "https://community.ebay.com/forum/selling-57920/topic/how-would-you-go-about-inventorying-just-under-10000-postcards-157640/",
       "claim": "独立卖家称滚动在售列表让近万件明信片盘点产生遗漏",
-      "summary": "同站独立 E1；回复提供平台 Active Listings CSV 免费替代。",
+      "summary": "同站独立 E1；回复提供平台在售商品清单 CSV 免费替代。",
       "publishedAt": null,
       "accessedAt": null,
       "nature": "author_claim",
@@ -1403,7 +1403,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
+      "expectedSha256": "b7eb8537589abdc85180929ce7d6a9e84d2e18ec383f4fc42a27ff4b562e6623"
     },
     {
       "id": "EV-20261021-019",
@@ -1422,7 +1422,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
+      "expectedSha256": "b7eb8537589abdc85180929ce7d6a9e84d2e18ec383f4fc42a27ff4b562e6623"
     },
     {
       "id": "IDEA-20261021-008",
@@ -1430,7 +1430,7 @@
       "title": "eBay 长尾库存与在售清单差异审计工具",
       "audience": "维护数百到上万件长尾商品的小型 eBay 卖家",
       "problem": "平台报表、库存表和实物位置不一致，逐行复制、盘点和定位耗时",
-      "earningHypothesis": "Agent 假设：读取用户主动导出的 CSV 与表格，生成缺失、重复、位置为空和数量不一致的只读报告；价格未知。",
+      "earningHypothesis": "研究助手假设：读取用户主动导出的 CSV 与表格，生成缺失、重复、位置为空和数量不一致的只读报告；价格未知。",
       "industry": [
         "二手转售",
         "长尾电商"
@@ -1449,7 +1449,7 @@
         "EV-20261021-019"
       ],
       "firstCollectedAt": "2026-10-21T21:00:00+08:00",
-      "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
+      "expectedSha256": "b7eb8537589abdc85180929ce7d6a9e84d2e18ec383f4fc42a27ff4b562e6623"
     }
   ],
   "ideas/IDEA-20261021-009.md": [
@@ -1470,7 +1470,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "3cf06250c9dcda9189878579532f576fa66f2e52556ef0939265e5aa70d197fd"
+      "expectedSha256": "bf898e932f95447101b0542fb023b51d8b450c9f140ac40e3d6d0d7093ffa10c"
     },
     {
       "id": "EV-20261021-022",
@@ -1489,7 +1489,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "3cf06250c9dcda9189878579532f576fa66f2e52556ef0939265e5aa70d197fd"
+      "expectedSha256": "bf898e932f95447101b0542fb023b51d8b450c9f140ac40e3d6d0d7093ffa10c"
     },
     {
       "id": "EV-20261021-023",
@@ -1508,7 +1508,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "3cf06250c9dcda9189878579532f576fa66f2e52556ef0939265e5aa70d197fd"
+      "expectedSha256": "bf898e932f95447101b0542fb023b51d8b450c9f140ac40e3d6d0d7093ffa10c"
     },
     {
       "id": "IDEA-20261021-009",
@@ -1516,7 +1516,7 @@
       "title": "小型律所客户接洽数据整理与系统迁移实施",
       "audience": "仍用 Forms、Excel 或零散笔记并准备迁移系统的小型律所",
       "problem": "接洽统计、来源归因、案件状态和迁移规则依靠人工维护",
-      "earningHypothesis": "Agent 假设：按固定范围交付字段梳理、清洗、导入模板、看板和书面说明；定价与责任边界未知。",
+      "earningHypothesis": "研究助手假设：按固定范围交付字段梳理、清洗、导入模板、看板和书面说明；定价与责任边界未知。",
       "industry": [
         "法律运营"
       ],
@@ -1534,7 +1534,7 @@
         "EV-20261021-023"
       ],
       "firstCollectedAt": "2026-10-21T13:10:00+08:00",
-      "expectedSha256": "3cf06250c9dcda9189878579532f576fa66f2e52556ef0939265e5aa70d197fd"
+      "expectedSha256": "bf898e932f95447101b0542fb023b51d8b450c9f140ac40e3d6d0d7093ffa10c"
     }
   ],
   "ideas/IDEA-20261021-010.md": [
@@ -1555,7 +1555,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "84b3532def4dd312005b60b0bcf4e3a085d08175f0d28b811a82eb68f1ecc596"
+      "expectedSha256": "f9b9498833b60f12517ca6ea4184679faf4a24f5ab68b2c61b43713c2c476540"
     },
     {
       "id": "EV-20261021-025",
@@ -1574,7 +1574,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "84b3532def4dd312005b60b0bcf4e3a085d08175f0d28b811a82eb68f1ecc596"
+      "expectedSha256": "f9b9498833b60f12517ca6ea4184679faf4a24f5ab68b2c61b43713c2c476540"
     },
     {
       "id": "EV-20261021-026",
@@ -1593,7 +1593,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "84b3532def4dd312005b60b0bcf4e3a085d08175f0d28b811a82eb68f1ecc596"
+      "expectedSha256": "f9b9498833b60f12517ca6ea4184679faf4a24f5ab68b2c61b43713c2c476540"
     },
     {
       "id": "IDEA-20261021-010",
@@ -1601,7 +1601,7 @@
       "title": "小房东维修与资产记录清理迁移服务",
       "audience": "收据、设备和维修记录散落的 3–20 套物业自管房东",
       "problem": "报税或重复维修时难以追溯历史，可能重复花钱",
-      "earningHypothesis": "Agent 假设：按物业数交付一次性记录盘点、去重、台账和客户选定系统的导入包；价格未知。",
+      "earningHypothesis": "研究助手假设：按物业数交付一次性记录盘点、去重、台账和客户选定系统的导入包；价格未知。",
       "industry": [
         "出租物业运营"
       ],
@@ -1619,7 +1619,7 @@
         "EV-20261021-026"
       ],
       "firstCollectedAt": "2026-10-21T13:10:00+08:00",
-      "expectedSha256": "84b3532def4dd312005b60b0bcf4e3a085d08175f0d28b811a82eb68f1ecc596"
+      "expectedSha256": "f9b9498833b60f12517ca6ea4184679faf4a24f5ab68b2c61b43713c2c476540"
     }
   ],
   "ideas/IDEA-20261021-011.md": [
@@ -1641,7 +1641,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-01-13"
       },
-      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+      "expectedSha256": "1501986473bccd78daeea72ee8365273a30b1bbc77a07458224eb78283d5ad87"
     },
     {
       "id": "EV-20261021-028",
@@ -1661,7 +1661,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2025-05-08"
       },
-      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+      "expectedSha256": "1501986473bccd78daeea72ee8365273a30b1bbc77a07458224eb78283d5ad87"
     },
     {
       "id": "EV-20261021-029",
@@ -1681,7 +1681,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-14"
       },
-      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+      "expectedSha256": "1501986473bccd78daeea72ee8365273a30b1bbc77a07458224eb78283d5ad87"
     },
     {
       "id": "EV-20261021-030",
@@ -1701,7 +1701,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-18"
       },
-      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+      "expectedSha256": "1501986473bccd78daeea72ee8365273a30b1bbc77a07458224eb78283d5ad87"
     },
     {
       "id": "EV-20261021-031",
@@ -1721,7 +1721,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-08-26"
       },
-      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+      "expectedSha256": "1501986473bccd78daeea72ee8365273a30b1bbc77a07458224eb78283d5ad87"
     },
     {
       "id": "EV-20261021-032",
@@ -1741,7 +1741,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-09"
       },
-      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+      "expectedSha256": "1501986473bccd78daeea72ee8365273a30b1bbc77a07458224eb78283d5ad87"
     },
     {
       "id": "IDEA-20261021-011",
@@ -1749,7 +1749,7 @@
       "title": "中小企业 n8n 生产工作流实施与维护",
       "audience": "需要把 n8n 工作流做到生产可用的中小企业或自动化服务商",
       "problem": "集成常缺错误重试、监控、测试和运维文档，长期可靠性不足",
-      "earningHypothesis": "Agent 假设：固定范围两周实施包加有上限的按月维护；实际成交价与维护量未知。",
+      "earningHypothesis": "研究助手假设：固定范围两周实施包加有上限的按月维护；实际成交价与维护量未知。",
       "industry": [
         "中小企业运营",
         "自动化"
@@ -1772,7 +1772,7 @@
         "EV-20261021-032"
       ],
       "firstCollectedAt": "2026-10-21T13:10:00+08:00",
-      "expectedSha256": "ba4459cad92c4ab7c6d183c02be3850c191d6fdd3609531bb6be2055f50d0bc1"
+      "expectedSha256": "1501986473bccd78daeea72ee8365273a30b1bbc77a07458224eb78283d5ad87"
     }
   ],
   "ideas/IDEA-20261021-012.md": [
@@ -1794,7 +1794,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-09-18"
       },
-      "expectedSha256": "2a9e997ab6b4b2d71a66a36905d223561b36c92d256e693606a0bb7240d58d12"
+      "expectedSha256": "e4fb5b9fbe458c16d1720e056a519107dc7fc0065b74f37bfbaa4f9bc207b33e"
     },
     {
       "id": "EV-20261021-034",
@@ -1814,15 +1814,15 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-09-18"
       },
-      "expectedSha256": "2a9e997ab6b4b2d71a66a36905d223561b36c92d256e693606a0bb7240d58d12"
+      "expectedSha256": "e4fb5b9fbe458c16d1720e056a519107dc7fc0065b74f37bfbaa4f9bc207b33e"
     },
     {
       "id": "IDEA-20261021-012",
       "kind": "Idea",
       "title": "存量自动化流程固定价诊断与修复",
       "audience": "已有 Make 或 n8n 流程但卡在一个可复现故障的小企业用户",
-      "problem": "映射、过滤器、API、webhook 或错误处理失败，用户不需要重建整个系统",
-      "earningHypothesis": "Agent 假设：按单故障交付诊断、修复蓝图、测试记录和说明；获客、返工率与支持成本未知。",
+      "problem": "映射、过滤器、API、回调或错误处理失败，用户不需要重建整个系统",
+      "earningHypothesis": "研究助手假设：按单故障交付诊断、修复蓝图、测试记录和说明；获客、返工率与支持成本未知。",
       "industry": [
         "小企业自动化"
       ],
@@ -1839,7 +1839,7 @@
         "EV-20261021-034"
       ],
       "firstCollectedAt": "2026-10-21T13:25:00+08:00",
-      "expectedSha256": "2a9e997ab6b4b2d71a66a36905d223561b36c92d256e693606a0bb7240d58d12"
+      "expectedSha256": "e4fb5b9fbe458c16d1720e056a519107dc7fc0065b74f37bfbaa4f9bc207b33e"
     }
   ],
   "ideas/IDEA-20261021-013.md": [
@@ -1861,7 +1861,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-06"
       },
-      "expectedSha256": "d272f4f7407193ddfe3918f32b908295bdd956f10558fc2d7789fede0f54ffab"
+      "expectedSha256": "a7687cea5ca8b9db5ad940026dce9e18474a8156027905d20a1569a08516a11f"
     },
     {
       "id": "EV-20261021-036",
@@ -1881,7 +1881,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-06"
       },
-      "expectedSha256": "d272f4f7407193ddfe3918f32b908295bdd956f10558fc2d7789fede0f54ffab"
+      "expectedSha256": "a7687cea5ca8b9db5ad940026dce9e18474a8156027905d20a1569a08516a11f"
     },
     {
       "id": "IDEA-20261021-013",
@@ -1889,7 +1889,7 @@
       "title": "自动化代理商白标后端与可靠性交付",
       "audience": "有客户和项目范围但缺少稳定技术产能的自动化代理商",
       "problem": "代理商需要 API、数据库、幂等、重试、监控、测试和文档交付",
-      "earningHypothesis": "Agent 假设：按明确工作流收固定里程碑费，代理商保留客户关系；项目量和付款保障未知。",
+      "earningHypothesis": "研究助手假设：按明确工作流收固定里程碑费，代理商保留客户关系；项目量和付款保障未知。",
       "industry": [
         "自动化服务",
         "B2B 代理商"
@@ -1907,7 +1907,7 @@
         "EV-20261021-036"
       ],
       "firstCollectedAt": "2026-10-21T13:25:00+08:00",
-      "expectedSha256": "d272f4f7407193ddfe3918f32b908295bdd956f10558fc2d7789fede0f54ffab"
+      "expectedSha256": "a7687cea5ca8b9db5ad940026dce9e18474a8156027905d20a1569a08516a11f"
     }
   ],
   "ideas/IDEA-20261021-014.md": [
@@ -1929,7 +1929,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2025-04-15"
       },
-      "expectedSha256": "2c703785400423fdffb1854b411383ca59bb3d06acfe4a77d19f3f37e9869bc1"
+      "expectedSha256": "c63c28a0bf8dfe231fbfcef59dda7418ec84d69b613050a8317f52cbf7d4d6fb"
     },
     {
       "id": "EV-20261021-038",
@@ -1949,7 +1949,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2025-04-15"
       },
-      "expectedSha256": "2c703785400423fdffb1854b411383ca59bb3d06acfe4a77d19f3f37e9869bc1"
+      "expectedSha256": "c63c28a0bf8dfe231fbfcef59dda7418ec84d69b613050a8317f52cbf7d4d6fb"
     },
     {
       "id": "IDEA-20261021-014",
@@ -1957,7 +1957,7 @@
       "title": "垂直 SaaS 供应商 API 适配兼职",
       "audience": "持续接入不同供应商和客户私有 API 的垂直 SaaS 团队",
       "problem": "协议、鉴权、字段、重试和异常差异需要稳定后端开发者处理",
-      "earningHypothesis": "来源事实为任务/时薪；Agent 假设可按单一供应商适配、测试和交接里程碑收费，当前价格未知。",
+      "earningHypothesis": "来源事实为任务/时薪；研究助手假设可按单一供应商适配、测试和交接里程碑收费，当前价格未知。",
       "industry": [
         "垂直 SaaS",
         "酒店供应链"
@@ -1976,7 +1976,7 @@
         "EV-20261021-038"
       ],
       "firstCollectedAt": "2026-10-21T13:25:00+08:00",
-      "expectedSha256": "2c703785400423fdffb1854b411383ca59bb3d06acfe4a77d19f3f37e9869bc1"
+      "expectedSha256": "c63c28a0bf8dfe231fbfcef59dda7418ec84d69b613050a8317f52cbf7d4d6fb"
     }
   ],
   "ideas/IDEA-20261021-015.md": [
@@ -1998,7 +1998,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-08-06"
       },
-      "expectedSha256": "5ff1046a64b650483df5ebeee64eaf459f3b9398121512a013cddb3e0dbe3850"
+      "expectedSha256": "dde7e854e4cc798dc145fa51d2be85f0a3deb8570bfe782f85a9af3765d5fa4f"
     },
     {
       "id": "EV-20261021-040",
@@ -2018,7 +2018,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-03-31"
       },
-      "expectedSha256": "5ff1046a64b650483df5ebeee64eaf459f3b9398121512a013cddb3e0dbe3850"
+      "expectedSha256": "dde7e854e4cc798dc145fa51d2be85f0a3deb8570bfe782f85a9af3765d5fa4f"
     },
     {
       "id": "IDEA-20261021-015",
@@ -2026,7 +2026,7 @@
       "title": "Square 库存导入预检与差异报告",
       "audience": "需要把数百个商品、数量、成本和供应商字段导入 Square 的小型零售商",
       "problem": "导入后可能出现售罄、重复 SKU 或成本字段缺失，临近营业只能手工补录",
-      "earningHypothesis": "Agent 假设：交付脱敏文件预检、试导计划、前后只读差异和回滚清单；价格与愿付费程度未知。",
+      "earningHypothesis": "研究助手假设：交付脱敏文件预检、试导计划、前后只读差异和回滚清单；价格与愿付费程度未知。",
       "industry": [
         "线下零售",
         "POS"
@@ -2044,7 +2044,7 @@
         "EV-20261021-040"
       ],
       "firstCollectedAt": "2026-10-21T13:45:00+08:00",
-      "expectedSha256": "5ff1046a64b650483df5ebeee64eaf459f3b9398121512a013cddb3e0dbe3850"
+      "expectedSha256": "dde7e854e4cc798dc145fa51d2be85f0a3deb8570bfe782f85a9af3765d5fa4f"
     }
   ],
   "ideas/IDEA-20261021-016.md": [
@@ -2065,7 +2065,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "f2db253a273daeeffabb24751ccdee143be8fee784c56b4da360ac8c59485e18"
+      "expectedSha256": "b20807656a8ea7a6fbfe5dec5238b164401306412b6ada71e30440081983688d"
     },
     {
       "id": "IDEA-20261021-016",
@@ -2073,7 +2073,7 @@
       "title": "临时活动 Square POS 订单预填可行性与原型",
       "audience": "使用多台 Square Stand、纸质点单和中央厨房的活动餐饮组织",
       "problem": "收银员逐项录入十余种商品造成队列延迟和转录错误，但线上下单可能冲击厨房节奏",
-      "earningHypothesis": "Agent 假设：先交付 API/设备支持矩阵和最小原型，可行后再做二维码订单预填；预算与平台边界未知。",
+      "earningHypothesis": "研究助手假设：先交付 API/设备支持矩阵和最小原型，可行后再做二维码订单预填；预算与平台边界未知。",
       "industry": [
         "活动餐饮",
         "POS"
@@ -2090,7 +2090,7 @@
         "EV-20261021-041"
       ],
       "firstCollectedAt": "2026-10-21T13:45:00+08:00",
-      "expectedSha256": "f2db253a273daeeffabb24751ccdee143be8fee784c56b4da360ac8c59485e18"
+      "expectedSha256": "b20807656a8ea7a6fbfe5dec5238b164401306412b6ada71e30440081983688d"
     }
   ],
   "ideas/IDEA-20261021-017.md": [
@@ -2112,7 +2112,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2025-01-29"
       },
-      "expectedSha256": "c5beadc814a3a75877ce0c4a7aad56caa3fd9a36d7cacc391410022edc9d4e3f"
+      "expectedSha256": "cfa0424da7f3b0b906ad0bd7a60da3ba1d047006b09f9f5ac4c10150cec6f712"
     },
     {
       "id": "EV-20261021-043",
@@ -2132,7 +2132,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2025-02-06"
       },
-      "expectedSha256": "c5beadc814a3a75877ce0c4a7aad56caa3fd9a36d7cacc391410022edc9d4e3f"
+      "expectedSha256": "cfa0424da7f3b0b906ad0bd7a60da3ba1d047006b09f9f5ac4c10150cec6f712"
     },
     {
       "id": "IDEA-20261021-017",
@@ -2140,7 +2140,7 @@
       "title": "汽修门店跨系统 KPI 对账与日报模板",
       "audience": "同时使用 RO Writer 管工单和 AutoVitals 管技师工时的独立汽修店",
       "problem": "两套系统各有部分数据，难以统一查看技师工时、返工和拒绝项目转化",
-      "earningHypothesis": "Agent 假设：交付字段定义、导出对账规则、日报模板和书面更新流程；原生报表可能已解决。",
+      "earningHypothesis": "研究助手假设：交付字段定义、导出对账规则、日报模板和书面更新流程；原生报表可能已解决。",
       "industry": [
         "汽修门店"
       ],
@@ -2157,7 +2157,7 @@
         "EV-20261021-043"
       ],
       "firstCollectedAt": "2026-10-21T13:45:00+08:00",
-      "expectedSha256": "c5beadc814a3a75877ce0c4a7aad56caa3fd9a36d7cacc391410022edc9d4e3f"
+      "expectedSha256": "cfa0424da7f3b0b906ad0bd7a60da3ba1d047006b09f9f5ac4c10150cec6f712"
     }
   ],
   "ideas/IDEA-20261021-018.md": [
@@ -2179,14 +2179,14 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-06-11"
       },
-      "expectedSha256": "2c76984954356637822faa78880d8647bc92085f02aa99b3ace34326f0c2dc73"
+      "expectedSha256": "216c6fc415175631e28a1fe9f6f086351aa06816123ab4a28a80d0de0835216b"
     },
     {
       "id": "EV-20261021-045",
       "kind": "Evidence",
       "sourceId": "CN01",
       "url": "https://www.v2ex.com/t/1219555",
-      "claim": "供应方回复估价 2–5 万元，并建议一期推迟独立 App 与视频上传",
+      "claim": "供应方回复估价 2–5 万元，并建议一期推迟独立应用与视频上传",
       "summary": "供应方报价与范围反证，不代表买方预算或成交。",
       "publishedAt": null,
       "accessedAt": null,
@@ -2199,7 +2199,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-06-11"
       },
-      "expectedSha256": "2c76984954356637822faa78880d8647bc92085f02aa99b3ace34326f0c2dc73"
+      "expectedSha256": "216c6fc415175631e28a1fe9f6f086351aa06816123ab4a28a80d0de0835216b"
     },
     {
       "id": "IDEA-20261021-018",
@@ -2207,7 +2207,7 @@
       "title": "广告招牌行业工单 MVP 梳理与后端试点",
       "audience": "依靠微信沟通客户需求、报价、派工和安装验收的广告招牌企业",
       "problem": "现场照片、尺寸、材质、预算、安装进度和售后记录分散，且难以判断一期范围与开发成本",
-      "earningHypothesis": "Agent 假设：先交付流程梳理、角色权限、状态机和原型，再按里程碑实现小程序加后台的后端试点；实际预算未知。",
+      "earningHypothesis": "研究助手假设：先交付流程梳理、角色权限、状态机和原型，再按里程碑实现小程序加后台的后端试点；实际预算未知。",
       "industry": [
         "广告制作安装",
         "现场服务"
@@ -2225,7 +2225,7 @@
         "EV-20261021-045"
       ],
       "firstCollectedAt": "2026-10-21T14:10:00+08:00",
-      "expectedSha256": "2c76984954356637822faa78880d8647bc92085f02aa99b3ace34326f0c2dc73"
+      "expectedSha256": "216c6fc415175631e28a1fe9f6f086351aa06816123ab4a28a80d0de0835216b"
     }
   ]
 }
