@@ -19,7 +19,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "CN02",
@@ -39,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "CN03",
@@ -59,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "CN04",
@@ -80,7 +80,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "CN05",
@@ -100,7 +100,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL01",
@@ -120,7 +120,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL02",
@@ -140,7 +140,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL03",
@@ -161,7 +161,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL04",
@@ -182,7 +182,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL05",
@@ -202,7 +202,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL06",
@@ -222,7 +222,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL07",
@@ -242,7 +242,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL08",
@@ -263,7 +263,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL09",
@@ -285,7 +285,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL10",
@@ -306,7 +306,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "CN06",
@@ -327,7 +327,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL11",
@@ -348,7 +348,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL12",
@@ -369,7 +369,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL13",
@@ -390,7 +390,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL14",
@@ -411,7 +411,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL15",
@@ -432,7 +432,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL16",
@@ -453,7 +453,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL17",
@@ -474,7 +474,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL18",
@@ -495,7 +495,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL19",
@@ -516,7 +516,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL20",
@@ -537,7 +537,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL21",
@@ -558,7 +558,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL22",
@@ -579,7 +579,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL23",
@@ -600,7 +600,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL24",
@@ -621,7 +621,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL25",
@@ -642,7 +642,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL26",
@@ -663,7 +663,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL27",
@@ -684,7 +684,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL28",
@@ -704,7 +704,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "CN07",
@@ -725,7 +725,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL29",
@@ -746,7 +746,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     },
     {
       "id": "GL30",
@@ -767,7 +767,28 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "180215630d43607250551dc3ba6e9a335ea727b2e219e50fd135908339e8e333"
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
+    },
+    {
+      "id": "GL31",
+      "kind": "Source",
+      "name": "MuseScore 乐谱软件社区",
+      "url": "https://musescore.org/en/forum",
+      "audience": [
+        "作曲者、演奏者、合唱团和音乐教师"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21T22:31:38+08:00",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "85298bb59b64a1cb0f57878148fb02366bc1ce7f5ef0671ae14b62c2866e0a89"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -3054,6 +3075,96 @@
       ],
       "firstCollectedAt": "2026-10-21T22:26:38+08:00",
       "expectedSha256": "95c5ed4471b287579cfeb61bb837c499a18fbed3b35e20384c2f9767612d0190"
+    }
+  ],
+  "ideas/IDEA-20261021-032.md": [
+    {
+      "id": "EV-20261021-063",
+      "kind": "Evidence",
+      "sourceId": "GL31",
+      "url": "https://musescore.org/en/node/331386",
+      "claim": "需要把特定歌曲音频转成包含旋律、和弦及简单伴奏的可演奏谱，且符合个人演奏水平",
+      "summary": "历史 E3 付费意向：原作者明确表示愿付费，请人将指定歌曲音频转成适合自己水平的简谱面/五线谱，并列出和弦名、大谱表和简单音符等要求；回复提供学习建议与其他歌曲，未见实际成交或付款。慈善演出目的不自动代表获得转录授权。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T22:31:38+08:00",
+      "legacyDates": {
+        "publishedAt": "2022-04-19",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "485c7e62519387c31f4ceac7b12b4890175eff8b0a11fcfa5cf76ab19736b1f0"
+    },
+    {
+      "id": "IDEA-20261021-032",
+      "kind": "Idea",
+      "title": "入门演奏者的音频听写与难度适配乐谱交付",
+      "audience": "找不到适用乐谱、无法自己听写的键盘入门演奏者",
+      "problem": "需要把特定歌曲音频转成包含旋律、和弦及简单伴奏的可演奏谱，且符合个人演奏水平",
+      "earningHypothesis": "研究助手假设：在权利允许的范围内，按曲长、声部和难度提供听写、简化与可编辑乐谱，约定修改次数。报价、授权及实际工时未知。",
+      "industry": [
+        "音乐服务"
+      ],
+      "sideHustleTypes": [
+        "听写与编配"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-063"
+      ],
+      "firstCollectedAt": "2026-10-21T22:31:38+08:00",
+      "expectedSha256": "485c7e62519387c31f4ceac7b12b4890175eff8b0a11fcfa5cf76ab19736b1f0"
+    }
+  ],
+  "ideas/IDEA-20261021-033.md": [
+    {
+      "id": "EV-20261021-064",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://v2ex.com/t/1052153",
+      "claim": "不熟悉手机设置、基础应用讲解和家庭协助流程，担心误操作及更换系统后的学习成本",
+      "summary": "历史 E1 作者问题：发帖者为长辈准备 iPhone，列出功能开关、照片导出、远程协助和应用讲解等问题。回复质疑强迫更换已习惯系统，并指出远程协助与信任风险；未有付费委托。原帖技术观点只作当时体验，不当作当前系统功能事实。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T22:31:38+08:00",
+      "legacyDates": {
+        "publishedAt": "2024-06-24",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "3741edcbe2684fa29002e0b47272db1c2a8469ea6339901ab755d0161862e662"
+    },
+    {
+      "id": "IDEA-20261021-033",
+      "kind": "Idea",
+      "title": "长辈手机基础配置与家庭数字使用辅导",
+      "audience": "需要为长辈配置智能手机并远程协助的成年子女",
+      "problem": "不熟悉手机设置、基础应用讲解和家庭协助流程，担心误操作及更换系统后的学习成本",
+      "earningHypothesis": "研究助手假设：按次提供基础配置、常用操作示范与图片步骤卡，面向子女明确服务边界；不保管密码、不操作资金账户。预算、当地需求和复访频率未知。",
+      "industry": [
+        "家庭数字服务"
+      ],
+      "sideHustleTypes": [
+        "使用辅导"
+      ],
+      "markets": [
+        "国内"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-064"
+      ],
+      "firstCollectedAt": "2026-10-21T22:31:38+08:00",
+      "expectedSha256": "3741edcbe2684fa29002e0b47272db1c2a8469ea6339901ab755d0161862e662"
     }
   ]
 }
