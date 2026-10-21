@@ -99,8 +99,9 @@ class CatalogTests(unittest.TestCase):
         status,_,body=LocalWebApp(self.root).dispatch('GET','/')
         page=body.decode('utf-8')
         self.assertEqual(status,200)
-        for marker in ('source-hostname-count','idea-status-counts','research-status','access-status','selected-count'):
+        for marker in ('source-hostname-count','idea-status-counts','research-status','access-status','selected-count','advanced-filters'):
             self.assertIn(marker,page)
+        self.assertIn('value="idea" checked',page)
 
     def test_malformed_repository_data_returns_a_bounded_error(self):
         from local_web.app import LocalWebApp

@@ -8,5 +8,6 @@
 .metrics{grid-template-columns:repeat(4,1fr)}
 .metrics article{gap:.75rem}
 .metrics small{color:var(--muted);font-size:.7rem;line-height:1.35;text-align:right}
+.advanced-filters{margin-top:1rem}.advanced-filters summary{color:var(--accent);font-size:.82rem;cursor:pointer}.advanced-filters[open] summary{margin-bottom:.5rem}
 @media(max-width:800px){.metrics article{display:block}.metrics strong{display:block;margin-top:.35rem}.metrics small{display:block;margin-top:.25rem;text-align:left}}
 @media(max-width:480px){.metrics{grid-template-columns:1fr 1fr}.metrics article{display:block;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.metrics article:nth-child(2n){border-right:0}.metrics article:nth-last-child(-n+2){border-bottom:0}.metrics strong{font-size:1.6rem}}

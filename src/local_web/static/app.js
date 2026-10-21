@@ -1,5 +1,5 @@
 const labels={source:'来源',trend:'趋势',idea:'点子'};
-const state={records:[],meta:{},query:'',kind:'',evidence:'',researchStatus:'',accessStatus:''};
+const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',accessStatus:''};
 const list=document.querySelector('#record-list');
 const empty=document.querySelector('#empty');
 const errorBox=document.querySelector('#error');
