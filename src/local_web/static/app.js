@@ -1,10 +1,12 @@
 const labels={source:'来源',trend:'趋势',idea:'点子'};
-const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',accessStatus:''};
+const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',accessStatus:'',compareIds:new Set()};
 const list=document.querySelector('#record-list');
 const empty=document.querySelector('#empty');
 const errorBox=document.querySelector('#error');
 const dialog=document.querySelector('#detail');
 const detail=document.querySelector('#detail-content');
+const comparePanel=document.querySelector('#compare-panel');
+const compareList=document.querySelector('#compare-list');
 
 function filtered(){
   const query=state.query.trim().toLocaleLowerCase('zh-CN');
@@ -19,6 +21,13 @@ function text(tag,className,value){const node=document.createElement(tag);if(cla
 function render(){
   const records=filtered();list.replaceChildren();
   records.forEach(record=>{
+    const row=document.createElement('div');row.className='record-row';
+    if(record.kind==='idea'){
+      const label=document.createElement('label');label.className='compare-toggle';
+      const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.checked=state.compareIds.has(record.id);checkbox.disabled=!checkbox.checked&&state.compareIds.size>=3;checkbox.setAttribute('aria-label',`选择比较：${record.title}`);
+      checkbox.addEventListener('change',()=>{if(checkbox.checked)state.compareIds.add(record.id);else state.compareIds.delete(record.id);render();});
+      label.append(checkbox,text('span','compare-toggle-text','比较'));row.append(label);
+    }
     const button=document.createElement('button');button.type='button';button.className='record';button.dataset.kind=record.kind;button.dataset.id=record.id;
     const top=document.createElement('span');top.className='record-top';top.append(text('span','kind',labels[record.kind]),text('span','record-id',record.id));
     const title=text('strong','record-title',record.title);
@@ -26,10 +35,21 @@ function render(){
     const meta=document.createElement('span');meta.className='record-meta';
     [record.marketOrSource,record.evidence,record.researchStatus||record.accessStatus,record.updatedAt].filter(Boolean).forEach(value=>meta.append(text('span','tag',value)));
     if(record.evidenceNote)meta.append(text('span','tag',record.evidenceNote));
-    button.append(top,title,summary,meta);button.addEventListener('click',()=>openDetail(record));list.append(button);
+    button.append(top,title,summary,meta);button.addEventListener('click',()=>openDetail(record));row.append(button);list.append(row);
   });
+  renderCompare();
   list.setAttribute('aria-busy','false');empty.hidden=records.length!==0;
   document.querySelector('#result-count').textContent=`显示 ${records.length} / ${state.records.length} 条`;
+}
+
+function renderCompare(){
+  const selected=state.records.filter(record=>record.kind==='idea'&&state.compareIds.has(record.id));
+  comparePanel.hidden=selected.length===0;compareList.replaceChildren();
+  selected.forEach(record=>{
+    const card=document.createElement('article');card.className='compare-card';
+    card.append(text('strong','compare-card-title',record.title),text('span','tag',record.researchStatus||'未知状态'),text('span','tag',record.evidence||'证据未知'),text('p','compare-card-summary',record.summary||'暂无摘要'));
+    const remove=document.createElement('button');remove.type='button';remove.className='compare-remove';remove.textContent='移出比较';remove.addEventListener('click',()=>{state.compareIds.delete(record.id);render();});card.append(remove);compareList.append(card);
+  });
 }
 
 async function openDetail(record){
@@ -54,7 +74,7 @@ document.querySelectorAll('input[name="kind"]').forEach(input=>input.addEventLis
 document.querySelector('#evidence').addEventListener('change',event=>{state.evidence=event.target.value;render();});
 document.querySelector('#research-status').addEventListener('change',event=>{state.researchStatus=event.target.value;render();});
 document.querySelector('#access-status').addEventListener('change',event=>{state.accessStatus=event.target.value;render();});
-document.querySelector('#reset').addEventListener('click',()=>{state.query='';state.kind='';state.evidence='';state.researchStatus='';state.accessStatus='';document.querySelector('#search').value='';document.querySelector('input[name="kind"][value=""]').checked=true;document.querySelector('#evidence').value='';document.querySelector('#research-status').value='';document.querySelector('#access-status').value='';render();});
+document.querySelector('#reset').addEventListener('click',()=>{state.query='';state.kind='';state.evidence='';state.researchStatus='';state.accessStatus='';state.compareIds.clear();document.querySelector('#search').value='';document.querySelector('input[name="kind"][value=""]').checked=true;document.querySelector('#evidence').value='';document.querySelector('#research-status').value='';document.querySelector('#access-status').value='';render();});
 dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
 

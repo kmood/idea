@@ -46,6 +46,10 @@
       </aside>
       <section class="results" id="records" tabindex="-1">
         <div class="results-heading"><div><p class="eyebrow">RESEARCH RECORDS</p><h2>资料列表</h2></div><p id="result-count" aria-live="polite">读取中…</p></div>
+        <section id="compare-panel" class="compare-panel" aria-labelledby="compare-title" hidden>
+          <div class="compare-heading"><div><h3 id="compare-title">候选比较</h3><p>最多选择 3 个点子；完整字段见比较简报。</p></div><a href="https://github.com/kmood/idea/blob/main/docs/opportunity-comparison-2026-10-21.md" target="_blank" rel="noreferrer">打开简报</a></div>
+          <div id="compare-list" class="compare-list"></div>
+        </section>
         <div id="record-list" class="record-list" aria-busy="true"></div>
         <div id="empty" class="empty" hidden><strong>没有匹配资料</strong><p>调整搜索词或清除筛选条件。</p></div>
         <div id="error" class="empty error" role="alert" hidden><strong>资料读取失败</strong><p>请确认服务从仓库根目录启动。</p></div>
