@@ -60,6 +60,8 @@
 
 | GL37 | [DV Info Net 影像从业者论坛](https://www.dvinfo.net/forum/) | 英文婚礼与活动摄影师、剪辑师；专业论坛 | 后期积压、外包交付与返工 | 2026-10-22：2013年具体外包经验讨论九条发言可读 | B，历史样本低频 |
 
+| GL38 | [Jotform 公开支持问答](https://www.jotform.com/answers/) | 英文表单用户、小企业与活动组织者；厂商独立问答 | PDF表单、支付、自动化及原生限制 | 2026-10-22：2015年PDF支付问题及用户接受替代的回复可读 | B，历史样本低频 |
+
 ## 来源组合与轮巡
 
 - 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22、GL23 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
@@ -217,3 +219,9 @@
 - GL37：last_attempt / last_success=2026-10-22；[婚礼剪辑外包](https://www.dvinfo.net/forum/wedding-event-videography-techniques/513327-outsourcing-editing.html)，2013-01-09至01-10，九条公开发言可读；属历史问题与经验，不采旧价格为现价。下次找近期工作室直接委托和完成结果，历史讨论降频。
 - GL31：last_attempt=2026-10-22；331386本轮403，last_success保留2026-10-21旧阅读，不更新为本轮成功。历史听写意向未因此证伪，未重新核验原结论；继续降频，待公开可读条件变化再复检。
 - 婚礼摄影Flickr/Pentax/其他社区仅搜索定位未读，不计可挖掘来源；衣物改制探索未形成合格原页。未读供应方PDF报价不计采购证据。
+
+### 本轮复检（2026-10-22，00:26 +08:00）
+
+- GL38：厂商公开问答，受众为表单用户及小企业；last_attempt / last_success=2026-10-22。[PDF支付问题](https://www.jotform.com/answers/578258-payment-tool-in-fillable-pdf)2015-05-28原问与05-29回复可读；厂商解释限制后用户明确改用在线表单。已解决的旧问题不据此建点子；不把旧产品限制当当前官方能力。下次找近期未解决具体流程及采购，旧帖降频。
+- GL32：last_attempt / last_success=2026-10-22；[表单提交与既有库字段](https://community.airtable.com/other-questions-13/fillable-form-to-submit-request-11947)，2020-02-06原帖及2023-06-17回复可读。原生表单与字段操作可处理大量诉求，后续PDF脚本为方案供给；未见付费，不新增通用表单实施变体。
+- PDF-XChange、PDF24、Google Workspace及Reddit线索只检索未读，不计可挖掘来源或成交；国内家教/维修探索未命中合格具体原页。
