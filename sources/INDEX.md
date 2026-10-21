@@ -56,6 +56,8 @@
 
 | GL35 | [VideoHelp 影音技术论坛](https://forum.videohelp.com/) | 英文家庭录像持有人与数字化从业者；专业论坛 | 录像带转档、质量与外包信任 | 2026-10-22：2025年家庭录像转档求助及19条回复可读 | B，历史案例低频 |
 
+| GL36 | [BladeForums 刃具工艺论坛](https://www.bladeforums.com/) | 英文工具使用者与磨刃从业者；专业论坛 | 普通厨刀/工具磨刃的报价、质量与复购 | 2026-10-22：2023年外包磨刃讨论第一页可读，负面反馈多 | B，历史样本低频 |
+
 ## 来源组合与轮巡
 
 - 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22、GL23 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
@@ -197,3 +199,8 @@
 
 - GL35：专业影音论坛；last_attempt / last_success=2026-10-22；[脆弱家庭录像转档](https://forum.videohelp.com/threads/419272-Recommendations-for-Digitizing-a-Sentimental-Slightly-Damaged-VHS)发布2025-10-18，正文及19条公开发言（含主帖）可读，形成历史付费意向；不下载私人影像附件。下一次补近期完成结果和本地服务条件，历史求助低频。
 - GL30：last_attempt / last_success=2026-10-22；已读[冲洗质量与自助取舍第二页](https://www.photrio.com/forum/threads/bellini-vs-jobo-e6-kits.210974/page-2)（2024-12-31起回复），有供应方服务自述和用户外包质量顾虑；不把胶片、照片和录像带混为同一需求，不按此新建胶片点子。下一次找明确委托与验收。
+
+### 本轮复检（2026-10-22，00:11 +08:00）
+
+- GL36：last_attempt / last_success=2026-10-22；[磨刃外包讨论](https://www.bladeforums.com/threads/would-you-pay-to-have-a-knife-sharpened.1955537/)第一页可读，2023-10-19历史案例，第二页未读；用户回复和供方探路分开，仅支持E1，不按泛泛表态升级采购。下次找近期普通日用刀具真实交付及本地复购，旧讨论降频。
+- GL17：last_attempt / last_success=2026-10-22；[工具库存管理](https://www.garagejournal.com/forum/threads/tool-inventory-management.514286/)旧页复检可读，2023-03-31；表格、RFID及管理纪律是强替代，未发现新订单，不新增泛库存软件方向。下次优先近期采用结果；WoodworkingTalk和中文机加工检索未命中合格具体页，不计新源。
