@@ -33,7 +33,7 @@ function render(){
     const title=text('strong','record-title',record.title);
     const summary=text('span','record-summary',record.summary||'暂无说明');
     const meta=document.createElement('span');meta.className='record-meta';
-    [record.marketOrSource,record.evidence,record.researchStatus||record.accessStatus,record.updatedAt].filter(Boolean).forEach(value=>meta.append(text('span','tag',value)));
+    [record.marketOrSource,record.fit,record.evidenceLevel||record.evidence,record.researchStatus||record.accessStatus,record.updatedAt].filter(Boolean).forEach(value=>meta.append(text('span','tag',value)));
     if(record.evidenceNote)meta.append(text('span','tag',record.evidenceNote));
     button.append(top,title,summary,meta);button.addEventListener('click',()=>openDetail(record));row.append(button);list.append(row);
   });

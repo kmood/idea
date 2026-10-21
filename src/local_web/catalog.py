@@ -8,6 +8,7 @@ from urllib.parse import urlsplit
 INDEXES={'source':Path('sources/INDEX.md'),'trend':Path('trends/INDEX.md'),'idea':Path('ideas/INDEX.md')}
 LINK=re.compile(r'^\[([^\]]+)\]\(([^)]+)\)$')
 ID=re.compile(r'^[A-Z][A-Z0-9-]{1,79}$')
+EVIDENCE=re.compile(r'\b(E[0-3])\b')
 
 
 def tables(text):
@@ -41,6 +42,11 @@ def access_status(value):
     return '未知'
 
 
+def evidence_level(value):
+    match=EVIDENCE.search(value or '')
+    return match.group(1) if match else None
+
+
 def ordered_options(values, preferred):
     present=set(values)
     return [value for value in preferred if value in present] + sorted(present-set(preferred))
@@ -64,12 +70,13 @@ def load_rows(root,kind,index_path):
             record_id,target=link(cells[0]);title,_=link(cells[1])
             record=dict(id=record_id,kind=kind,title=title,summary=cells[4],marketOrSource=cells[2],
                         evidence=cells[3],evidenceNote=('存在采购/报价/付款信号，具体类型见详情。' if cells[3].startswith('E3') else None),
+                        fit=cells[4],evidenceLevel=evidence_level(cells[3]),
                         status=cells[5],researchStatus=cells[5],updatedAt=cells[6],url=None,
                         documentPath=document_path(index_path,target))
         elif kind=='trend' and len(cells)>=5:
             record_id,target=link(cells[0]);title,_=link(cells[1])
             record=dict(id=record_id,kind=kind,title=title,summary=cells[3],marketOrSource=cells[2],
-                        evidence=cells[3].split('，',1)[0] or None,status=cells[3],researchStatus=cells[3],updatedAt=cells[4],url=None,
+                        evidence=cells[3].split('，',1)[0] or None,evidenceLevel=evidence_level(cells[3]),status=cells[3],researchStatus=cells[3],updatedAt=cells[4],url=None,
                         documentPath=document_path(index_path,target))
         elif kind=='source' and len(cells)>=6:
             record_id=cells[0];title,url=link(cells[1])
@@ -110,6 +117,31 @@ def load_catalog(root):
         'sourceMetrics':{'entryCount':counts['source'],'hostnameCount':len(hostnames)},
     }
     return {'meta':meta,'records':records}
+
+
+def validate_catalog(root):
+    """Check stable, public Markdown references without inspecting private records."""
+    root=Path(root).resolve();errors=[];warnings=[]
+    try:
+        catalog=load_catalog(root)
+        records=catalog['records']
+    except (OSError,UnicodeError,ValueError) as exc:
+        return {'ok':False,'errors':['目录无法读取：'+type(exc).__name__],'warnings':[]}
+    for kind in INDEXES:
+        ids=[record['id'] for record in records if record['kind']==kind]
+        duplicates=sorted({record_id for record_id in ids if ids.count(record_id)>1})
+        if duplicates:errors.append(f'{kind} ID 重复：'+', '.join(duplicates))
+    for record in records:
+        if record['kind'] in ('idea','trend'):
+            path=root/record['documentPath']
+            if not path.is_file():errors.append(f"{record['id']} 正文不存在")
+        if record['kind']=='idea' and record['researchStatus'] not in {'待验证','候选','精选','搁置'}:
+            errors.append(f"{record['id']} 研究状态非法")
+        if record['kind']=='source' and record.get('accessStatus')=='未知':
+            warnings.append(f"{record['id']} 访问状态未知")
+    counts=catalog['meta']['counts']
+    if counts['idea']==0:warnings.append('当前没有点子记录')
+    return {'ok':not errors,'errors':errors,'warnings':warnings}
 
 
 def find_record(root,kind,record_id):

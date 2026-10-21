@@ -6,7 +6,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from .catalog import find_record, load_catalog
+from .catalog import find_record, load_catalog, validate_catalog
 from .markdown import render_markdown
 
 
@@ -36,6 +36,7 @@ class LocalWebApp:
         if method not in ('GET','HEAD'):return self.error(405,'METHOD_NOT_ALLOWED','Only GET and HEAD are supported')
         path=unquote(urlsplit(target).path)
         if path=='/api/catalog':return self.json(200,load_catalog(self.root))
+        if path=='/api/consistency':return self.json(200,validate_catalog(self.root))
         if path.startswith('/api/documents/'):
             parts=path.strip('/').split('/')
             if len(parts)!=4 or parts[0:2]!=['api','documents'] or not parts[2] or not parts[3] or parts[3] in ('.','..'):

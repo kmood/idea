@@ -34,6 +34,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(catalog['meta']['sourceMetrics'],{'entryCount':1,'hostnameCount':0})
         idea=next(item for item in catalog['records'] if item['kind']=='idea')
         self.assertEqual((idea['id'],idea['evidence'],idea['status'],idea['researchStatus']),('IDEA-1','E2；付费未知','待验证','待验证'))
+        self.assertEqual((idea['fit'],idea['evidenceLevel']),('有条件适合','E2'))
         source=next(item for item in catalog['records'] if item['kind']=='source')
         self.assertEqual((source['evidence'],source['url'],source['accessStatus']),(None,None,'可读'))
         self.assertEqual(catalog['meta']['phase'],'集中收集')
@@ -111,3 +112,15 @@ class CatalogTests(unittest.TestCase):
         error=json.loads(body)['error']
         self.assertEqual((status,error['code']),(500,'REPOSITORY_ERROR'))
         self.assertNotIn('private.md',error['message'])
+
+    def test_consistency_endpoint_reports_missing_public_documents(self):
+        from local_web.app import LocalWebApp
+        status,_,body=LocalWebApp(self.root).dispatch('GET','/api/consistency')
+        result=json.loads(body)
+        self.assertEqual((status,result['ok'],result['errors']),(200,True,[]))
+        (self.root/'ideas/IDEA-1.md').unlink()
+        status,_,body=LocalWebApp(self.root).dispatch('GET','/api/consistency')
+        result=json.loads(body)
+        self.assertEqual(status,200)
+        self.assertFalse(result['ok'])
+        self.assertIn('IDEA-1 正文不存在',result['errors'])
