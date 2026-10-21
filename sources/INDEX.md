@@ -64,6 +64,8 @@
 
 | GL39 | [Ghost 出版与开发者社区](https://forum.ghost.org/) | 英文独立出版者、自托管站长与开发者；厂商问答 | 内容/会员迁移、邮件及服务器维护 | 2026-10-22：2025年VPS迁移求助及自助完成反馈可读 | B，历史样本低频 |
 
+| CN08 | [Flarum 中文社区](https://discuss.flarum.org.cn/) | 中文站长、社区运营者与开发者；专业软件社区 | 社区迁移、扩展、运维与原生替代 | 2026-10-22：具体迁移问答正文可读，原帖日期未知 | B，日期待补低频 |
+
 ## 来源组合与轮巡
 
 - 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22、GL23 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
@@ -232,3 +234,9 @@
 
 - GL06：last_attempt / last_success=2026-10-22；市场目录及[后端部署采购](https://meta.discourse.org/t/paid-backend-setup-for-new-discourse-instance-self-hosted-docker/400431)可读，2026-04-10买方预算及范围明确，已自动关闭，形成历史E3，不当当前订单。[wpForo迁移](https://meta.discourse.org/t/migrate-from-wpforo-to-discourse/400777)实际为供应方推广，不能凭标题当买方；不增迁移点子。下次优先近期开放采购及完成反馈。
 - GL39：厂商社区、受众为独立出版者及自托管站长；last_attempt / last_success=2026-10-22。[VPS迁移求助](https://forum.ghost.org/t/urgent-help-needed-migrating-ghost-blog-to-new-vps/55191)，2025-02-11至02-17，17条发言可读，作者先完成迁移再解决邮件，免费社区及官方指引构成强替代，不新建迁移点子。[官方迁移服务](https://ghost.org/move-to-ghost/)本轮可读，免费服务有计划/范围条件，不能当所有自托管迁移均免费；付款和用户个案资格未知。下次找当前未覆盖的真实采购，历史教程求助低频。
+
+### 本轮复检（2026-10-22，00:36 +08:00）
+
+- GL06：last_attempt / last_success=2026-10-22；[成员API迁移委托](https://meta.discourse.org/t/paid-gig-seeking-discourse-developer-for-api-user-creation-and-automated-approval/399083)2026-03-23，买方当日确认选人，未见完成/付款；形成历史E3，不推定仍开放。下次看近期买方、完成反馈与平台允许流程。
+- CN08：中文专业社区，站长/社区运营受众，last_attempt / last_success=2026-10-22；/d/3916/5首次超时，一次改用原帖根地址[FreeFlarum迁出求助](https://discuss.flarum.org.cn/d/3916)后正文及回复可读。页面有前端加载错误但静态问答可读；发布日期未知，不当近期讨论。用户接受官方导出指引，未见付费，未新建迁移点子。下一次补日期及近期未解决实际委托，不能声称全站交互或登录区可用。
+- 英文Flarum社区仅搜索未读，不按语言分站增加名义来源；本轮只新增一个中文域名。
