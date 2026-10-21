@@ -54,6 +54,8 @@
 
 | GL34 | [园林从业者交流网](https://landscapejuicenetwork.com/) | 英文独立园丁与景观服务商；专业论坛 | 小庭院养护、报价与路线安排 | 2026-10-21：2025年独立园丁定期割草报价与回复可读 | B，历史样本低频 |
 
+| GL35 | [VideoHelp 影音技术论坛](https://forum.videohelp.com/) | 英文家庭录像持有人与数字化从业者；专业论坛 | 录像带转档、质量与外包信任 | 2026-10-22：2025年家庭录像转档求助及19条回复可读 | B，历史案例低频 |
+
 ## 来源组合与轮巡
 
 - 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22、GL23 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
@@ -190,3 +192,8 @@
 
 - GL18：last_attempt=2026-10-22；[转行美容的从业讨论](https://www.salongeek.com/threads/anyone-else-made-beauty-their-career-change.339290/)及[上门美容设备问题](https://www.salongeek.com/threads/mobile-therapist-equipment-facials.339466/)均403。未重试、不绕限制、不以搜索结果正文片段替代已读原页；last_success保留2026-10-21旧样本，不把本轮算成功。搜索线索显示上门服务的交通/装卸议题，但不能据此新增点子。此前部分受限，本轮继续受限，后续降低此域频率；只有公开可读具体页或用户授权浏览器能正常访问时再复检。
 - 宠物美容论坛、PatternReview及The Sewing Place的新行业探索均未命中可读具体页，尚未建为可挖掘来源。下一轮换来源和查询，避免在已受限美容站点密集访问。
+
+### 本轮复检（2026-10-22，00:06 +08:00）
+
+- GL35：专业影音论坛；last_attempt / last_success=2026-10-22；[脆弱家庭录像转档](https://forum.videohelp.com/threads/419272-Recommendations-for-Digitizing-a-Sentimental-Slightly-Damaged-VHS)发布2025-10-18，正文及19条公开发言（含主帖）可读，形成历史付费意向；不下载私人影像附件。下一次补近期完成结果和本地服务条件，历史求助低频。
+- GL30：last_attempt / last_success=2026-10-22；已读[冲洗质量与自助取舍第二页](https://www.photrio.com/forum/threads/bellini-vs-jobo-e6-kits.210974/page-2)（2024-12-31起回复），有供应方服务自述和用户外包质量顾虑；不把胶片、照片和录像带混为同一需求，不按此新建胶片点子。下一次找明确委托与验收。
