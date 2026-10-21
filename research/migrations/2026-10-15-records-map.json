@@ -19,7 +19,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "CN02",
@@ -39,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "CN03",
@@ -59,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "CN04",
@@ -80,7 +80,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "CN05",
@@ -101,7 +101,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL01",
@@ -121,7 +121,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL02",
@@ -141,7 +141,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL03",
@@ -162,7 +162,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL04",
@@ -183,7 +183,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL05",
@@ -203,7 +203,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL06",
@@ -223,7 +223,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL07",
@@ -243,7 +243,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL08",
@@ -264,7 +264,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL09",
@@ -286,7 +286,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL10",
@@ -307,7 +307,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "CN06",
@@ -328,7 +328,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL11",
@@ -349,7 +349,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL12",
@@ -370,7 +370,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL13",
@@ -391,7 +391,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL14",
@@ -412,7 +412,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL15",
@@ -433,7 +433,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL16",
@@ -454,7 +454,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL17",
@@ -475,7 +475,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL18",
@@ -496,7 +496,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL19",
@@ -517,7 +517,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL20",
@@ -538,7 +538,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL21",
@@ -559,7 +559,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL22",
@@ -580,7 +580,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL23",
@@ -601,7 +601,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL24",
@@ -622,7 +622,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL25",
@@ -643,7 +643,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL26",
@@ -664,7 +664,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL27",
@@ -685,7 +685,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL28",
@@ -705,7 +705,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "CN07",
@@ -726,7 +726,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL29",
@@ -747,7 +747,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL30",
@@ -768,7 +768,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL31",
@@ -789,7 +789,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL32",
@@ -810,7 +810,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     },
     {
       "id": "GL33",
@@ -831,7 +831,28 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "a4c3addf1a7dc9d4c7139ee594d8f914a94cb097f9c83b1fcb09191addf8905a"
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
+    },
+    {
+      "id": "GL34",
+      "kind": "Source",
+      "name": "园林从业者交流网",
+      "url": "https://landscapejuicenetwork.com/",
+      "audience": [
+        "独立园丁与景观服务商"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21T23:51:41+08:00",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "617f765305a3b16740de1af508cd2a549fb05cde3fd5576ed79b1cc75b29cec6"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -3411,6 +3432,51 @@
       ],
       "firstCollectedAt": "2026-10-21T23:46:41+08:00",
       "expectedSha256": "5f9663335fbd6fc19a0b613f242449f8ec2b28c15e55a341f0dc1e206ff6f58b"
+    }
+  ],
+  "ideas/IDEA-20261021-038.md": [
+    {
+      "id": "EV-20261021-070",
+      "kind": "Evidence",
+      "sourceId": "GL34",
+      "url": "https://landscapejuicenetwork.com/forum/topics/lawn-cut-prices-2025",
+      "claim": "独立园丁自述定期割草经营与小庭院路线差异",
+      "summary": "历史E1经营自述；交通、季节性和本地适用性未知，无付款凭证",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T23:51:41+08:00",
+      "legacyDates": {
+        "publishedAt": "2025-01-14",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "52ffd34300577ba3f5515a0291db18abc56484011158346cca179d14e1b71ddc"
+    },
+    {
+      "id": "IDEA-20261021-038",
+      "kind": "Idea",
+      "title": "同片区小庭院定期割草与边缘清理",
+      "audience": "需要定期维护小草坪的住户",
+      "problem": "草坪持续维护和路线成本",
+      "earningHypothesis": "研究助手假设：限定片区按次或周期提供割草及边缘清理，本地适用性未知。",
+      "industry": [
+        "园林养护"
+      ],
+      "sideHustleTypes": [
+        "定期现场服务"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-070"
+      ],
+      "firstCollectedAt": "2026-10-21T23:51:41+08:00",
+      "expectedSha256": "52ffd34300577ba3f5515a0291db18abc56484011158346cca179d14e1b71ddc"
     }
   ]
 }
