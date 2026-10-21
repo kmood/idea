@@ -9,8 +9,9 @@
 - [资料与历史规格（已批准）](SPEC-records-history.md)
 - [来源采集与研究规格（已批准）](SPEC-source-research.md)
 - [资料与历史技术计划（已完成归档）](tasks/records-history/plan.md)
-- [来源采集技术计划（待审阅）](tasks/plan.md)
+- [来源采集技术计划（已批准）](tasks/plan.md)
 - [当前来源采集任务清单](tasks/todo.md)
+- [项目检验与优化建议（2026-10-21）](docs/project-optimization-review-2026-10-21.md)
 - [趋势与灵感](trends/INDEX.md)
 - [网站目录](sources/INDEX.md)
 - [Agent 工作规范](AGENTS.md)
@@ -48,4 +49,4 @@ python3 -m compileall -q src/records
 命令支持 init、status、request（JSON 文件）、export/import、backup/restore、legacy-preview/legacy-apply。
 私人状态使用 `request --scope personal`；研究入口拒绝私人字段。`.local/` 和 SQLite 文件默认不入 Git。
 
-资料与历史模块的 13 项任务已完成，37 项测试通过。接口、迁移、同步和恢复操作见 [操作说明](docs/records-operations.md)。
+资料与历史模块的 13 项任务已完成，来源采集模块 R01–R19 已完成。最新检查范围与结果见 [项目检验](docs/project-optimization-review-2026-10-21.md)，后续进度以任务清单为准。接口、迁移、同步和恢复操作见 [操作说明](docs/records-operations.md)。

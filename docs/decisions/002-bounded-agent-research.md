@@ -2,7 +2,7 @@
 
 ## 状态与日期
 
-Accepted，2026-10-15。source-research 规格已批准，本决策及技术计划待审阅；尚未实施。
+Accepted，2026-10-15；本决策及技术计划于 2026-10-16 获批准。R01–R19 已实现并完成受限公网试运行，详见 [任务清单](../../tasks/todo.md) 与 [试运行报告](../../research/runs/source-research-pilot.md)；正式 Markdown 与自动化数据入口尚未切换。下方背景和决策提案保留初稿时的设计依据。
 
 ## 背景
 

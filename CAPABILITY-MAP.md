@@ -28,7 +28,7 @@ records-history → source-research → opportunity-review → local-web → sch
 
 | 模块 | 规格 | 状态 |
 | --- | --- | --- |
-| records-history | [资料与历史](SPEC-records-history.md) | 已实现；37 项测试通过，正式迁移未切换 |
+| records-history | [资料与历史](SPEC-records-history.md) | T01–T13 已完成，见归档任务清单；正式迁移未切换 |
 | source-research | [来源采集与研究](SPEC-source-research.md) | R01–R19 已完成；继续执行有界研究轮次 |
 | opportunity-review | 尚未编写 | 待基础契约确定 |
 | local-web | [本机研究看板](SPEC-local-web.md) | 只读切片已实现；私人操作待正式状态入口 |
