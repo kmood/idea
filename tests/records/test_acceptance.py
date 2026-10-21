@@ -43,9 +43,18 @@ class AcceptanceTests(StoreCase):
         replica = self.path.parent/'replica.sqlite3'
         self.value(Exchange(replica).import_research(json.loads(export.read_text()), 'import'))
         replica_store = ResearchStore(replica)
-        first_page = self.value(replica_store.list_records(limit=100))
-        second_page = self.value(replica_store.list_records(cursor=first_page['nextCursor'], limit=100))
-        self.assertEqual(len(first_page['items']) + len(second_page['items']),len(preview['records']))
+        imported_ids, seen_cursors = [], set()
+        cursor = 0
+        while True:
+            page = self.value(replica_store.list_records(cursor=cursor, limit=100))
+            imported_ids.extend(item['id'] for item in page['items'])
+            cursor = page['nextCursor']
+            if cursor is None:
+                break
+            self.assertNotIn(cursor, seen_cursors, '分页游标不得循环')
+            seen_cursors.add(cursor)
+        self.assertEqual(len(imported_ids), len(set(imported_ids)))
+        self.assertEqual(set(imported_ids), set(migrated['recordIds']))
         backup, restored = self.path.parent/'backup.sqlite3', self.path.parent/'restored.sqlite3'
         self.value(backup_local(self.path, backup)); self.value(restore_local(backup, restored))
         self.assertTrue(self.value(PersonalStore(restored).read_record('IDEA-20261015-001'))['favorite'])
