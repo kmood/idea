@@ -103,6 +103,7 @@ def load_catalog(root):
         'idea':dict(Counter(item['researchStatus'] for item in records if item['kind']=='idea')),
     }
     idea_statuses=[item['researchStatus'] for item in records if item['kind']=='idea']
+    idea_fits=[item['fit'] for item in records if item['kind']=='idea' and item.get('fit')]
     source_access=[item.get('accessStatus','未知') for item in records if item['kind']=='source']
     hostnames={urlsplit(item['url']).hostname.lower() for item in records if item['kind']=='source' and item.get('url') and urlsplit(item['url']).hostname}
     meta={
@@ -112,6 +113,7 @@ def load_catalog(root):
         'selectedCount':status_counts['idea'].get('精选',0),
         'filters':{
             'ideaResearchStatus':ordered_options(idea_statuses,('待验证','候选','搁置','精选')),
+            'ideaFit':ordered_options(idea_fits,('较适合','有条件适合','暂不适合')),
             'sourceAccessStatus':ordered_options(source_access,('可读','受限','未知')),
         },
         'sourceMetrics':{'entryCount':counts['source'],'hostnameCount':len(hostnames)},

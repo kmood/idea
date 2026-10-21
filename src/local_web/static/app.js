@@ -1,5 +1,5 @@
 const labels={source:'来源',trend:'趋势',idea:'点子'};
-const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',accessStatus:'',compareIds:new Set()};
+const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',ideaFit:'',accessStatus:'',compareIds:new Set()};
 const list=document.querySelector('#record-list');
 const empty=document.querySelector('#empty');
 const errorBox=document.querySelector('#error');
@@ -12,7 +12,7 @@ function filtered(){
   const query=state.query.trim().toLocaleLowerCase('zh-CN');
   return state.records.filter(record=>{
     const haystack=[record.id,record.title,record.summary,record.marketOrSource,record.evidence,record.status].filter(Boolean).join(' ').toLocaleLowerCase('zh-CN');
-    return (!query||haystack.includes(query))&&(!state.kind||record.kind===state.kind)&&(!state.evidence||(record.evidence||'').includes(state.evidence))&&(!state.researchStatus||(record.kind==='idea'&&record.researchStatus===state.researchStatus))&&(!state.accessStatus||(record.kind==='source'&&record.accessStatus===state.accessStatus));
+    return (!query||haystack.includes(query))&&(!state.kind||record.kind===state.kind)&&(!state.evidence||(record.evidence||'').includes(state.evidence))&&(!state.researchStatus||(record.kind==='idea'&&record.researchStatus===state.researchStatus))&&(!state.ideaFit||(record.kind==='idea'&&record.fit===state.ideaFit))&&(!state.accessStatus||(record.kind==='source'&&record.accessStatus===state.accessStatus));
   });
 }
 
@@ -68,19 +68,22 @@ document.querySelectorAll('input[name="kind"]').forEach(input=>input.addEventLis
   if(state.kind==='idea')state.accessStatus='';
   if(state.kind==='source')state.researchStatus='';
   document.querySelector('#research-status').value=state.researchStatus;
+  document.querySelector('#idea-fit').value=state.ideaFit;
   document.querySelector('#access-status').value=state.accessStatus;
   updateFilterAvailability();render();
 }));
 document.querySelector('#evidence').addEventListener('change',event=>{state.evidence=event.target.value;render();});
 document.querySelector('#research-status').addEventListener('change',event=>{state.researchStatus=event.target.value;render();});
+document.querySelector('#idea-fit').addEventListener('change',event=>{state.ideaFit=event.target.value;render();});
 document.querySelector('#access-status').addEventListener('change',event=>{state.accessStatus=event.target.value;render();});
-document.querySelector('#reset').addEventListener('click',()=>{state.query='';state.kind='';state.evidence='';state.researchStatus='';state.accessStatus='';state.compareIds.clear();document.querySelector('#search').value='';document.querySelector('input[name="kind"][value=""]').checked=true;document.querySelector('#evidence').value='';document.querySelector('#research-status').value='';document.querySelector('#access-status').value='';render();});
+document.querySelector('#reset').addEventListener('click',()=>{state.query='';state.kind='';state.evidence='';state.researchStatus='';state.ideaFit='';state.accessStatus='';state.compareIds.clear();document.querySelector('#search').value='';document.querySelector('input[name="kind"][value=""]').checked=true;document.querySelector('#evidence').value='';document.querySelector('#research-status').value='';document.querySelector('#idea-fit').value='';document.querySelector('#access-status').value='';render();});
 dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
 
 function setOptions(selector,values,emptyLabel){const element=document.querySelector(selector);element.replaceChildren(new Option(emptyLabel,''),...values.map(value=>new Option(value,value)));}
 function updateFilterAvailability(){
   document.querySelector('#research-status').disabled=state.kind==='source';
+  document.querySelector('#idea-fit').disabled=state.kind==='source';
   document.querySelector('#access-status').disabled=state.kind==='idea';
 }
 function statusSummary(counts){return ['待验证','候选','搁置'].filter(value=>counts[value]).map(value=>`${value} ${counts[value]}`).join(' · ')||'暂无状态统计';}
@@ -90,10 +93,12 @@ function applyCatalog(catalog){
   document.querySelector('#selected-count').textContent=catalog.meta.selectedCount??0;
   document.querySelector('#source-hostname-count').textContent=`不同 hostname ${catalog.meta.sourceMetrics.hostnameCount}`;
   document.querySelector('#idea-status-counts').textContent=statusSummary(catalog.meta.statusCounts.idea||{});
-  const researchOptions=catalog.meta.filters.ideaResearchStatus||[];const accessOptions=catalog.meta.filters.sourceAccessStatus||[];
+  const researchOptions=catalog.meta.filters.ideaResearchStatus||[];const fitOptions=catalog.meta.filters.ideaFit||[];const accessOptions=catalog.meta.filters.sourceAccessStatus||[];
   if(state.researchStatus&&!researchOptions.includes(state.researchStatus))state.researchStatus='';
+  if(state.ideaFit&&!fitOptions.includes(state.ideaFit))state.ideaFit='';
   if(state.accessStatus&&!accessOptions.includes(state.accessStatus))state.accessStatus='';
   setOptions('#research-status',researchOptions,'全部点子状态');document.querySelector('#research-status').value=state.researchStatus;
+  setOptions('#idea-fit',fitOptions,'全部匹配度');document.querySelector('#idea-fit').value=state.ideaFit;
   setOptions('#access-status',accessOptions,'全部来源状态');document.querySelector('#access-status').value=state.accessStatus;
   updateFilterAvailability();render();
 }

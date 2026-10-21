@@ -30,6 +30,7 @@ class CatalogTests(unittest.TestCase):
         catalog=load_catalog(self.root)
         self.assertEqual(catalog['meta']['counts'],{'source':1,'trend':1,'idea':1})
         self.assertEqual(catalog['meta']['filters']['ideaResearchStatus'],['待验证'])
+        self.assertEqual(catalog['meta']['filters']['ideaFit'],['有条件适合'])
         self.assertEqual(catalog['meta']['filters']['sourceAccessStatus'],['可读'])
         self.assertEqual(catalog['meta']['sourceMetrics'],{'entryCount':1,'hostnameCount':0})
         idea=next(item for item in catalog['records'] if item['kind']=='idea')
@@ -100,7 +101,7 @@ class CatalogTests(unittest.TestCase):
         status,_,body=LocalWebApp(self.root).dispatch('GET','/')
         page=body.decode('utf-8')
         self.assertEqual(status,200)
-        for marker in ('source-hostname-count','idea-status-counts','research-status','access-status','selected-count','advanced-filters','compare-panel','compare-list','refresh','check-consistency','refresh-status'):
+        for marker in ('source-hostname-count','idea-status-counts','research-status','idea-fit','access-status','selected-count','advanced-filters','compare-panel','compare-list','refresh','check-consistency','refresh-status'):
             self.assertIn(marker,page)
         self.assertIn('value="idea" checked',page)
 
