@@ -204,3 +204,8 @@
 
 - GL36：last_attempt / last_success=2026-10-22；[磨刃外包讨论](https://www.bladeforums.com/threads/would-you-pay-to-have-a-knife-sharpened.1955537/)第一页可读，2023-10-19历史案例，第二页未读；用户回复和供方探路分开，仅支持E1，不按泛泛表态升级采购。下次找近期普通日用刀具真实交付及本地复购，旧讨论降频。
 - GL17：last_attempt / last_success=2026-10-22；[工具库存管理](https://www.garagejournal.com/forum/threads/tool-inventory-management.514286/)旧页复检可读，2023-03-31；表格、RFID及管理纪律是强替代，未发现新订单，不新增泛库存软件方向。下次优先近期采用结果；WoodworkingTalk和中文机加工检索未命中合格具体页，不计新源。
+
+### 本轮复检（2026-10-22，00:16 +08:00）
+
+- GL23：last_attempt / last_success=2026-10-22；复读[库存导入售罄讨论](https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Item-inventory-quantities-showing-Sold-Out-after-importing/td-p/847561)，2026-08-06原帖至08-11回复共四条公开发言可读。没有新的购买或最终修复结果，维持数量导入E1；下一次仅在独立商家采购、官方修复或回复更新时复检，避免重复刷旧页。
+- 国内本地服务（宠物照料、陪诊、自行车维修、餐饮摄影）及骑行论坛探索未取得合格具体原帖；Cycling Weekly命中企业采访，未作原始用户需求证据、未入库且未访问，经营规模与维修时效说法未核验。不新增来源，不以新闻转述填充买方样本。
