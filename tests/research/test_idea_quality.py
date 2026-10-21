@@ -9,7 +9,7 @@ class IdeaLibraryQualityTests(unittest.TestCase):
         root=Path(__file__).resolve().parents[2]
         result=validate_idea_library(root)
         self.assertEqual(result['violations'],[])
-        self.assertEqual((result['validCount'],result['target']),(10,100))
+        self.assertEqual((result['validCount'],result['target']),(13,100))
 
     def test_incomplete_idea_is_not_counted_as_valid(self):
         from research.idea_quality import validate_idea_library

@@ -11,12 +11,12 @@
 | CN03 | [NodeSeek](https://www.nodeseek.com/) | 中文技术、主机与开发交流 | 技术、Dev、测评中的部署/监控痛点 | 帖子列表可读；交易、抽奖和推广噪声较多 | B |
 | CN04 | [LINUX DO](https://linux.do/) | 中文技术交流 | 工具体验、产品反馈；具体分类下一轮核验 | 本轮仅取得有限公开话题；不推定其他分区可访问 | B，部分可读 |
 | CN05 | [知无不言](https://www.wearesellers.com/) | 中文跨境卖家、运营与美工 | AI 素材、广告工作流、运营提效的具体问题 | 2026-10-15：根首页可读；Home.html 与两个具体帖子请求失败，各重试一次后停止；部分悬赏受限 | 待讨论采样 |
-| CN06 | [食品伙伴网论坛 / 生产与质量管理](https://bbs.foodmate.net/forum-37-1.html) | 中文食品工厂、质量与生产人员 | 批次追溯、审厂记录、投料与效期管理 | 2026-10-21：入口和近期具体讨论可读；首个样本含方案推广倾向，只用于发现与反证，不当作买方需求 | B，小众垂直 |
+| CN06 | [食品伙伴网论坛 / 生产与质量管理](https://bbs.foodmate.net/forum-37-1.html) | 中文食品工厂、质量与生产人员 | 批次追溯、审厂记录、投料与效期管理 | 2026-10-21：入口和两篇近期讨论可读；内容均偏方案供给，仍无独立买方样本 | B，小众垂直 |
 | GL01 | [Indie Hackers](https://www.indiehackers.com/) | 英文独立创业者 | 产品复盘、获客困难、用户评论；收入自述需交叉核验 | 首页可读；/groups 本次直接访问失败，不用其摘要替代正文 | B |
 | GL02 | [Hacker News / Ask](https://news.ycombinator.com/ask) | 英文开发者与创业者 | Ask HN 求推荐、替代工具、工作流程讨论 | 问答列表可读；高票不等于付费意愿 | A |
 | GL03 | [Reddit / smallbusiness](https://www.reddit.com/r/smallbusiness/) | 英文小企业经营者问答 | 日常运营、软件选型、人工操作成本 | 2026-10-15：已读客服政策质检原帖及回复；禁止发市场调研/推广帖，购买证据未确认 | A |
 | GL04 | [Shopify Community](https://community.shopify.com/) | 英文商家与电商开发者 | Technical Q&A、Shopify Apps、Shopify Flow、库存与订单问题 | 2026-10-15：已读翻译导出/延迟两帖并核对官方能力；旧需求不可当当前缺口 | A |
-| GL05 | [n8n Community](https://community.n8n.io/) | 英文自动化用户与开发者 | Questions、Jobs；连接器、流程故障、小企业项目 | 列表可读；许可、交付和维护成本须另行核验 | A |
+| GL05 | [n8n Community](https://community.n8n.io/) | 英文自动化用户与开发者 | Questions、Jobs；连接器、流程故障、小企业项目 | 2026-10-21：Jobs 入口和多篇具体招聘可读；有当前采购、报价和持续维护信号，但报价不等于成交 | A，采购信号 |
 | GL06 | [Discourse Meta](https://meta.discourse.org/) | 英文社区运营者与开发者 | Support、Feature、Self-hosting；插件和运营工作流 | 列表可读；区分软件缺陷、配置问题与可收费需求 | B |
 | GL07 | [Reddit / msp](https://www.reddit.com/r/msp/) | 英文托管 IT 服务商、咨询与交付团队 | 新客户接入、资料交接、凭据收集、流程标准化 | 2026-10-20：搜索发现多篇具体讨论，但本机 Reader 按站点访问限制拒绝；未生成需求证据 | A，换授权浏览器适配后复检 |
 | GL08 | [Hugging Face Forums / Beginners](https://discuss.huggingface.co/c/beginners/5) | 英文 AI 开发者与实践者 | 模型管线落地、音视频处理、现有方案失效 | 2026-10-21：入口及具体配音同步讨论可读；回复混有长篇方案，需区分原作者问题与回复者建议 | A |
@@ -29,11 +29,15 @@
 | GL15 | [AccountingWEB / Any Answers](https://www.accountingweb.co.uk/any-answers) | 英文会计与税务从业者 | 对账、客户资料缺失、记账纠错与软件迁移 | 2026-10-21：入口及具体讨论可读；本轮命中内容偏旧，降频并优先寻找近期从业者样本 | B，低频 |
 | GL16 | [eBay Community / Selling](https://community.ebay.com/forum/selling-57920/) | 英文 eBay 卖家与小型转售商 | 库存位置、成本记录、退款、报表和批量运营 | 2026-10-21：入口及近期具体讨论可读；税务建议不可直接采信，卖家自述与平台能力需交叉核验 | A，主流平台 |
 | GL17 | [The Garage Journal](https://www.garagejournal.com/forum/) | 英文车库、维修、工具与小型工坊从业者/爱好者 | 工具库存、零件位置、项目工时与现场记录 | 2026-10-21：多个具体讨论可读；专业用户与爱好者混合，付费意愿通常较弱 | B，小众实用 |
+| GL18 | [Salon Geek](https://www.salongeek.com/) | 英文美容、美发和沙龙经营者 | 爽约、预约、押金、候补名单与门店排期 | 2026-10-21：旧讨论可由搜索读取，直接访问部分返回 403；成熟预约系统替代强，近期样本偏推广 | B，受限低频 |
+| GL19 | [Elsmar Cove Quality and Business Standards](https://elsmar.com/elsmarqualityforum/) | 英文质量工程、制造与合规从业者 | 来料检验、质量记录、ISO 审核与表单控制 | 2026-10-21：论坛和具体讨论可读，站点仍活跃；本轮需求样本为历史案例 | B，小众垂直 |
+| GL20 | [BiggerPockets Forums](https://www.biggerpockets.com/forums) | 英文房东、物业投资人与小型出租业务经营者 | 维修记录、资产清单、收据、税务交接与物业软件 | 2026-10-21：近期具体讨论可读；市场调研帖和供应商推广多，需优先识别真实房东经历 | A，主流垂直 |
+| GL21 | [Reddit / paralegal、LawFirm 与 legaltech](https://www.reddit.com/r/paralegal/) | 英文律师、律所运营与法律科技从业者 | 客户接洽、统计报表、表格迁移与隐私边界 | 2026-10-21：会话浏览器读到具体讨论；同一平台多个板块只算一个来源域，现有律所系统替代强 | A，部分可读 |
 
 ## 来源组合与轮巡
 
-- 主流发现层：GL02、GL03、GL04、GL11、GL16 等覆盖面大、更新频繁，用于发现重复问题和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
-- 小众垂直层：CN06、GL12–GL15、GL17 等更容易出现专业流程、术语和现有替代，用于理解交付边界；样本偏旧或人群混合时明确降权。
+- 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20 等覆盖面大、更新频繁，用于发现重复问题和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
+- 小众垂直层：CN06、GL12–GL15、GL17、GL19、GL21 等更容易出现专业流程、术语和现有替代，用于理解交付边界；样本偏旧、同域或人群混合时明确降权。
 - 社区类型不能替代证据质量。主流站的高互动不等于愿付费，小众站的一篇具体帖子也不等于市场规模；升级点子仍需独立样本或采购信号。
 
 ## 收录和复检规则
@@ -69,5 +73,11 @@
 | CN06 | 2026-10-21 | 2026-10-21 | 已读 [中小食品厂批次追溯讨论](https://bbs.foodmate.net/thread-1442018-1-1.html)；帖子称纸质记录与事后补录普遍，但带方案推广倾向，需另找食品厂人员独立样本 |
 | GL16 | 2026-10-21 | 2026-10-21 | 已读 [税务/记账与退款报表](https://community.ebay.com/forum/selling-57920/topic/taxbookeeping-questions-reports-refunds-158993/)、[近万张明信片盘点](https://community.ebay.com/forum/selling-57920/topic/how-would-you-go-about-inventorying-just-under-10000-postcards-157640/)；具体卖家样本可读 |
 | GL17 | 2026-10-21 | 2026-10-21 | 已读 [工具库存管理](https://www.garagejournal.com/forum/threads/tool-inventory-management.514286/) 与 [简单库存程序讨论](https://www.garagejournal.com/forum/threads/very-simple-home-or-business-inventory-program.540527/)；免费表格替代强，暂不生成点子 |
+| GL05 | 2026-10-21 | 2026-10-21 | 已读 [生产自动化工程师招聘](https://community.n8n.io/t/hiring-n8n-automation-engineer/249502?tl=en0)、[会计工作流实施招聘](https://community.n8n.io/t/looking-for-n8n-automation-builder-accounting-workflow-specialist/112489?tl=en)、[东南亚小型付费项目](https://community.n8n.io/t/hiring-ai-n8n-builders-in-sea-for-small-paid-sme-automation-jobs-singapore/321311) 与 [$35/小时持续职位](https://community.n8n.io/t/hiring-shopify-tracking-n8n-specialist-part-time-ongoing-35-hr-guaranteed-revenue-share/322445)；采购信号明确，报价与实际成交分开记录 |
+| CN06 | 2026-10-21 | 2026-10-21 | 复读 [批次追溯讨论](https://bbs.foodmate.net/thread-1442018-1-1.html)，并读 [纸质记录与审厂讨论](https://bbs.foodmate.net/thread-1442073-1-1.html)；两篇均偏方案供给，未升级为独立买方证据 |
+| GL18 | 2026-10-21 | 2026-10-21（搜索可读） | 已读 [爽约处理](https://www.salongeek.com/threads/how-do-you-deal-with-no-shows.332295/) 与 [取消/候补管理](https://www.salongeek.com/threads/cancellation-no-show-statistics-options-methods-to-fill-last-minute-openings.336645/)；押金、提醒和成熟预约系统已覆盖大部分问题，直接访问部分受限 |
+| GL19 | 2026-10-21 | 2026-10-21 | 已读 [用 Excel 记录来料检验](https://elsmar.com/elsmarqualityforum/threads/incoming-inspection-records-using-excel-file.81503/)；手写结果和大量录入是历史独立样本，同时要求仪器、审批和记录控制 |
+| GL20 | 2026-10-21 | 2026-10-21 | 已读 [五套房的库存与维修记录](https://www.biggerpockets.com/forums/48/topics/1276787-landlords-with-3-properties-how-do-you-track-inventory-and-maintenance) 及两篇同站补充讨论；真实经历与市场调研提问分开，Stessa、Buildium、簿记员和表格均为强替代 |
+| GL21 | 2026-10-21 | 2026-10-21（会话浏览） | 已读 [律所接洽统计](https://www.reddit.com/r/paralegal/comments/1q4zbz1/new_client_intake_tracking_help/)、[家事律所接洽求助](https://www.reddit.com/r/LawFirm/comments/1q06cxk/help_on_client_intake/) 与 [标准化反证](https://www.reddit.com/r/legaltech/comments/1vk0a22/what_does_client_intake_actually_look_like_at/)；同域样本不冒充跨站证据 |
 
-以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 CN06、GL08–GL17；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。
+以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 CN06、GL08–GL21；Reddit 内容由公开会话浏览读取，但 Reader 限制未解除，不伪造其成功游标。

@@ -18,7 +18,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "CN02",
@@ -38,7 +38,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "CN03",
@@ -58,7 +58,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "CN04",
@@ -78,7 +78,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "CN05",
@@ -98,7 +98,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL01",
@@ -118,7 +118,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL02",
@@ -138,7 +138,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL03",
@@ -159,7 +159,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL04",
@@ -180,7 +180,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL05",
@@ -200,7 +200,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL06",
@@ -220,7 +220,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL07",
@@ -240,7 +240,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL08",
@@ -261,7 +261,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL09",
@@ -283,7 +283,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL10",
@@ -304,7 +304,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "CN06",
@@ -325,7 +325,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL11",
@@ -346,7 +346,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL12",
@@ -367,7 +367,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL13",
@@ -388,7 +388,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL14",
@@ -409,7 +409,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL15",
@@ -430,7 +430,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL16",
@@ -451,7 +451,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     },
     {
       "id": "GL17",
@@ -472,7 +472,91 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "7bb6b21c93f49ac33ebf72f5e6150c37f76e97beb62d5cae7569bc3e40861a04"
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+    },
+    {
+      "id": "GL18",
+      "kind": "Source",
+      "name": "Salon Geek",
+      "url": "https://www.salongeek.com/",
+      "audience": [
+        "英文美容、美发和沙龙经营者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "restricted",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+    },
+    {
+      "id": "GL19",
+      "kind": "Source",
+      "name": "Elsmar Cove Quality and Business Standards",
+      "url": "https://elsmar.com/elsmarqualityforum/",
+      "audience": [
+        "英文质量工程、制造与合规从业者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+    },
+    {
+      "id": "GL20",
+      "kind": "Source",
+      "name": "BiggerPockets Forums",
+      "url": "https://www.biggerpockets.com/forums",
+      "audience": [
+        "英文房东、物业投资人与小型出租业务经营者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
+    },
+    {
+      "id": "GL21",
+      "kind": "Source",
+      "name": "Reddit / paralegal、LawFirm 与 legaltech",
+      "url": "https://www.reddit.com/r/paralegal/",
+      "audience": [
+        "英文律师、律所运营与法律科技从业者"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "4c14aa6fa5c4ff4b0fe1d42fbac99d830816305ccb6d86dd43df954de7e538ed"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -1059,7 +1143,7 @@
         "publishedAt": "2020-09-25",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "e3b0800bea9e5f8c3704fb44fe23d5e00996ea21cfc3f2efb3c5478598dabe1d"
+      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
     },
     {
       "id": "EV-20261021-013",
@@ -1079,7 +1163,7 @@
         "publishedAt": "2015-08-14",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "e3b0800bea9e5f8c3704fb44fe23d5e00996ea21cfc3f2efb3c5478598dabe1d"
+      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
     },
     {
       "id": "EV-20261021-014",
@@ -1099,7 +1183,27 @@
         "publishedAt": "2026-03-17",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "e3b0800bea9e5f8c3704fb44fe23d5e00996ea21cfc3f2efb3c5478598dabe1d"
+      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
+    },
+    {
+      "id": "EV-20261021-020",
+      "kind": "Evidence",
+      "sourceId": "GL19",
+      "url": "https://elsmar.com/elsmarqualityforum/threads/incoming-inspection-records-using-excel-file.81503/",
+      "claim": "独立论坛用户称来料检验结果仍以手写整理且数量很多，希望转为 Excel",
+      "summary": "跨站历史 E1；回复同时强调仪器编号、审批权限和记录控制。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "publishedAt": "2021-03-16",
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
     },
     {
       "id": "IDEA-20261021-006",
@@ -1123,10 +1227,11 @@
       "evidenceIds": [
         "EV-20261021-012",
         "EV-20261021-013",
-        "EV-20261021-014"
+        "EV-20261021-014",
+        "EV-20261021-020"
       ],
       "firstCollectedAt": "2026-10-21T21:00:00+08:00",
-      "expectedSha256": "e3b0800bea9e5f8c3704fb44fe23d5e00996ea21cfc3f2efb3c5478598dabe1d"
+      "expectedSha256": "9960b8bb2fde23c396155edc52219a88ef7170d1eb6343b665f94315e67120de"
     }
   ],
   "ideas/IDEA-20261021-007.md": [
@@ -1281,6 +1386,287 @@
       ],
       "firstCollectedAt": "2026-10-21T21:00:00+08:00",
       "expectedSha256": "7f6b3bc06ed4ec70063a907197f9a31de00eea86e9740f7fd99526f29e364a74"
+    }
+  ],
+  "ideas/IDEA-20261021-009.md": [
+    {
+      "id": "EV-20261021-021",
+      "kind": "Evidence",
+      "sourceId": "GL21",
+      "url": "https://www.reddit.com/r/paralegal/comments/1q4zbz1/new_client_intake_tracking_help/",
+      "claim": "小型律所员工用 Excel 跟踪客户接洽并手工计算月度和年度统计",
+      "summary": "E1 用户工作流；现有系统报表和数据透视表可能已足够。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "3cf06250c9dcda9189878579532f576fa66f2e52556ef0939265e5aa70d197fd"
+    },
+    {
+      "id": "EV-20261021-022",
+      "kind": "Evidence",
+      "sourceId": "GL21",
+      "url": "https://www.reddit.com/r/LawFirm/comments/1q06cxk/help_on_client_intake/",
+      "claim": "家事律所在系统迁移前使用 Forms 与表格，并询问机构或顾问协助",
+      "summary": "E3 采购意图；没有报价、成交或付款证明。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "3cf06250c9dcda9189878579532f576fa66f2e52556ef0939265e5aa70d197fd"
+    },
+    {
+      "id": "EV-20261021-023",
+      "kind": "Evidence",
+      "sourceId": "GL21",
+      "url": "https://www.reddit.com/r/legaltech/comments/1vk0a22/what_does_client_intake_actually_look_like_at/",
+      "claim": "法律科技讨论指出客户接洽已有大量标准化产品",
+      "summary": "成熟产品与标准流程反证。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "律所接洽仍是缺少现成工具的空白市场",
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "3cf06250c9dcda9189878579532f576fa66f2e52556ef0939265e5aa70d197fd"
+    },
+    {
+      "id": "IDEA-20261021-009",
+      "kind": "Idea",
+      "title": "小型律所客户接洽数据整理与系统迁移实施",
+      "audience": "仍用 Forms、Excel 或零散笔记并准备迁移系统的小型律所",
+      "problem": "接洽统计、来源归因、案件状态和迁移规则依靠人工维护",
+      "earningHypothesis": "Agent 假设：按固定范围交付字段梳理、清洗、导入模板、看板和书面说明；定价与责任边界未知。",
+      "industry": [
+        "法律运营"
+      ],
+      "sideHustleTypes": [
+        "数据整理服务",
+        "系统迁移"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-021",
+        "EV-20261021-022",
+        "EV-20261021-023"
+      ],
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "expectedSha256": "3cf06250c9dcda9189878579532f576fa66f2e52556ef0939265e5aa70d197fd"
+    }
+  ],
+  "ideas/IDEA-20261021-010.md": [
+    {
+      "id": "EV-20261021-024",
+      "kind": "Evidence",
+      "sourceId": "GL20",
+      "url": "https://www.biggerpockets.com/forums/48/topics/1276787-landlords-with-3-properties-how-do-you-track-inventory-and-maintenance",
+      "claim": "五套物业用户称整理收据和表格花费数天，并因历史缺失重复支付维修费",
+      "summary": "E1 真实用户经历；未表达购买意愿。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "84b3532def4dd312005b60b0bcf4e3a085d08175f0d28b811a82eb68f1ecc596"
+    },
+    {
+      "id": "EV-20261021-025",
+      "kind": "Evidence",
+      "sourceId": "GL20",
+      "url": "https://www.biggerpockets.com/forums/899/topics/1252929-landlords-of-5-50-units-how-do-you-actually-keep-track-of-everything",
+      "claim": "另一发帖者称 Sheets、短信和记忆随物业数量增加而失效",
+      "summary": "同站支持样本，但帖子具有市场调研语气。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "84b3532def4dd312005b60b0bcf4e3a085d08175f0d28b811a82eb68f1ecc596"
+    },
+    {
+      "id": "EV-20261021-026",
+      "kind": "Evidence",
+      "sourceId": "GL20",
+      "url": "https://www.biggerpockets.com/forums/52/topics/1283315-how-do-you-stay-organized-managing-a-small-rental-portfolio",
+      "claim": "回复指出瓶颈可能是执行流程，部分房东仍回到表格",
+      "summary": "现有物业软件、簿记员和表格构成强替代。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "author_claim",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": "小房东普遍需要购买新的独立 SaaS",
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21"
+      },
+      "expectedSha256": "84b3532def4dd312005b60b0bcf4e3a085d08175f0d28b811a82eb68f1ecc596"
+    },
+    {
+      "id": "IDEA-20261021-010",
+      "kind": "Idea",
+      "title": "小房东维修与资产记录清理迁移服务",
+      "audience": "收据、设备和维修记录散落的 3–20 套物业自管房东",
+      "problem": "报税或重复维修时难以追溯历史，可能重复花钱",
+      "earningHypothesis": "Agent 假设：按物业数交付一次性记录盘点、去重、台账和客户选定系统的导入包；价格未知。",
+      "industry": [
+        "出租物业运营"
+      ],
+      "sideHustleTypes": [
+        "数据整理服务",
+        "系统迁移"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-024",
+        "EV-20261021-025",
+        "EV-20261021-026"
+      ],
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "expectedSha256": "84b3532def4dd312005b60b0bcf4e3a085d08175f0d28b811a82eb68f1ecc596"
+    }
+  ],
+  "ideas/IDEA-20261021-011.md": [
+    {
+      "id": "EV-20261021-027",
+      "kind": "Evidence",
+      "sourceId": "GL05",
+      "url": "https://community.n8n.io/t/hiring-n8n-automation-engineer/249502?tl=en0",
+      "claim": "招聘方要求生产级 API、数据库、消息渠道、重试、监控和文档能力",
+      "summary": "E3 采购意图；询问可用时间与费率，未证明付款。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-01-13"
+      },
+      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+    },
+    {
+      "id": "EV-20261021-028",
+      "kind": "Evidence",
+      "sourceId": "GL05",
+      "url": "https://community.n8n.io/t/looking-for-n8n-automation-builder-accounting-workflow-specialist/112489?tl=en",
+      "claim": "会计机构招聘 n8n 实施者处理数据、文档、邮件、提醒、报表和 QuickBooks 集成",
+      "summary": "独立 E3 采购意图；没有成交或付款记录。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2025-05-08"
+      },
+      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+    },
+    {
+      "id": "EV-20261021-029",
+      "kind": "Evidence",
+      "sourceId": "GL05",
+      "url": "https://community.n8n.io/t/hiring-ai-n8n-builders-in-sea-for-small-paid-sme-automation-jobs-singapore/321311",
+      "claim": "新加坡团队向东南亚独立实施者提供固定范围的小型付费自动化项目",
+      "summary": "近期 E3 采购意图；回复者报价 150–500 美元是供应方报价，非付款。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-10-14"
+      },
+      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+    },
+    {
+      "id": "EV-20261021-030",
+      "kind": "Evidence",
+      "sourceId": "GL05",
+      "url": "https://community.n8n.io/t/hiring-shopify-tracking-n8n-specialist-part-time-ongoing-35-hr-guaranteed-revenue-share/322445",
+      "claim": "招聘方发布持续兼职并写明每小时 35 美元，同时要求客户沟通",
+      "summary": "近期 E3 报价/采购信号；未核验雇佣或付款。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "quote",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-10-18"
+      },
+      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
+    },
+    {
+      "id": "IDEA-20261021-011",
+      "kind": "Idea",
+      "title": "中小企业 n8n 生产工作流实施与维护",
+      "audience": "需要把 n8n 工作流做到生产可用的中小企业或自动化服务商",
+      "problem": "集成常缺错误重试、监控、测试和运维文档，长期可靠性不足",
+      "earningHypothesis": "Agent 假设：固定范围两周实施包加有上限的按月维护；实际成交价与维护量未知。",
+      "industry": [
+        "中小企业运营",
+        "自动化"
+      ],
+      "sideHustleTypes": [
+        "实施服务",
+        "维护服务"
+      ],
+      "markets": [
+        "国内",
+        "海外"
+      ],
+      "researchStatus": "候选",
+      "evidenceIds": [
+        "EV-20261021-027",
+        "EV-20261021-028",
+        "EV-20261021-029",
+        "EV-20261021-030"
+      ],
+      "firstCollectedAt": "2026-10-21T13:10:00+08:00",
+      "expectedSha256": "52ebdb8cf0080dd4d9888c097ce9e8318a6f6ba38a97b8e3f407e087e8a9c880"
     }
   ]
 }
