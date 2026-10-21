@@ -80,6 +80,8 @@
 
 | GL41 | [Webflow 设计与实施社区](https://discourse.webflow.com/) | 英文设计师、开发者及委托方；厂商社区 | 页面交付、表单、设计与开发分工 | 2026-10-22：2021年买方落地页委托及后续回复可读 | B，历史样本低频 |
 
+| GL42 | [美国博物馆联盟公开论坛](https://community.aam-us.org/) | 英文博物馆工作人员与展示服务人员；专业协会社区 | 语音导览、观众体验与外包交付 | 2026-10-22：2015年具体导览讨论及回复可读 | B，历史样本低频 |
+
 ## 来源组合与轮巡
 
 - 主流发现层：GL02、GL03、GL04、GL11、GL16、GL20、GL22、GL23 等覆盖面大、更新频繁，用于发现重复问题、采购信号和交叉验证；每轮只抽样相关板块，避免被流量和推广主导。
@@ -290,3 +292,8 @@
 - CN11：last_attempt / last_success=2026-10-22；受控浏览器读[销售页视觉制作](https://www.ptt.cc/bbs/soho/M.1792383103.A.B4F.html)（2026-10-19），10月21日招募截止已过，预算与一周交付明确但格式/付款未知。下次看近期委托及实际验收，原页不重复抓取充数。
 - GL41：厂商专业社区，设计师/开发者与买方受众；last_attempt / last_success=2026-10-22。已读[首页及落地页模板委托](https://discourse.webflow.com/t/looking-for-a-webflow-designer-to-create-a-landing-page/171094)（2021-05-14至05-18）四条发言，转简报沟通不等于成交。下次找近期原始委托与完成反馈，旧样本降频；Webflow新社区和旧论坛属于同一平台，不按入口堆数。
 - 新近周招募帖、专业人才目录及简历只检索未读，不算原始需求；网页实施与销售长图视觉不能未核格式就混同。未保存联系方式及私人简报。
+
+## 2026-10-22 展览导览与装裱复检
+
+- GL42：专业协会公开社区，受众为博物馆工作人员；last_attempt / last_success=2026-10-22。[自助导览讨论](https://community.aam-us.org/communities/community-home/digestviewer/viewthread?CommunityKey=d34b2dfb-4151-4629-a59a-553d0ae428d9&GroupId=31&MID=3154&hlmlt=VT)2015-03-19至03-24，八条公开发言可读，形成历史E1；页面只读无需登录，未采联系方式。下次仅有近期买方或完成反馈再采样，旧供应介绍和价格不当当前需求。
+- GL27：last_attempt / last_success=2026-10-22；[超大幅面装裱](https://www.thegrumble.com/threads/how-to-mount-oversized-art-over-60-on-both-sides.102157/)本轮抽读原问题及早期回复，可读但未复核整条线程；所读部分未见新交易结果，保持029历史E1，不重复新增。下次有作者实际外协反馈再复检。
