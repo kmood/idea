@@ -19,7 +19,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "CN02",
@@ -39,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "CN03",
@@ -59,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "CN04",
@@ -79,7 +79,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "CN05",
@@ -99,7 +99,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-15"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL01",
@@ -119,7 +119,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL02",
@@ -139,7 +139,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL03",
@@ -160,7 +160,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL04",
@@ -181,7 +181,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL05",
@@ -201,7 +201,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL06",
@@ -221,7 +221,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL07",
@@ -241,7 +241,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL08",
@@ -262,7 +262,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL09",
@@ -284,7 +284,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL10",
@@ -305,7 +305,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "CN06",
@@ -326,7 +326,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL11",
@@ -347,7 +347,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL12",
@@ -368,7 +368,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL13",
@@ -389,7 +389,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL14",
@@ -410,7 +410,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL15",
@@ -431,7 +431,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL16",
@@ -452,7 +452,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL17",
@@ -473,7 +473,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL18",
@@ -494,7 +494,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL19",
@@ -515,7 +515,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL20",
@@ -536,7 +536,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL21",
@@ -557,7 +557,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL22",
@@ -578,7 +578,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL23",
@@ -599,7 +599,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     },
     {
       "id": "GL24",
@@ -620,7 +620,28 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "256402d17ef267cde936c113fa92c126b8c6aaece663e9f7cdca3ed2719b97aa"
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
+    },
+    {
+      "id": "GL25",
+      "kind": "Source",
+      "name": "Shopify 社区近期招聘与应用测试讨论",
+      "url": "https://community.shopify.com/",
+      "audience": [
+        "英文 Shopify 商家、应用开发者与电商项目负责人"
+      ],
+      "languages": [
+        "en"
+      ],
+      "accessStatus": "readable",
+      "lastAttempt": null,
+      "lastSuccess": null,
+      "firstCollectedAt": "2026-10-21",
+      "legacyDates": {
+        "lastAttempt": "2026-10-21",
+        "lastSuccess": "2026-10-21"
+      },
+      "expectedSha256": "a45a683f5660a477adbba35c3faabf6b9e7d85686194cd2bbaddf31566ff7256"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -2226,6 +2247,186 @@
       ],
       "firstCollectedAt": "2026-10-21T14:10:00+08:00",
       "expectedSha256": "216c6fc415175631e28a1fe9f6f086351aa06816123ab4a28a80d0de0835216b"
+    }
+  ],
+  "ideas/IDEA-20261021-019.md": [
+    {
+      "id": "EV-20261021-046",
+      "kind": "Evidence",
+      "sourceId": "GL25",
+      "url": "https://community.shopify.com/t/looking-for-a-shopify-developer/630973",
+      "claim": "Shopify 店主寻找持续开发者处理主题、应用集成、故障修复和性能改进",
+      "summary": "E1 原始采购意向；未公开预算、选人或付款。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T15:20:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-06-04"
+      },
+      "expectedSha256": "1279897f7aac674f479185d3ff4206b0bf61bb2543ed07e7b2c6ec988276d536"
+    },
+    {
+      "id": "EV-20261021-047",
+      "kind": "Evidence",
+      "sourceId": "GL25",
+      "url": "https://community.shopify.com/t/shopify-expert-developer-ongoing-overflow-work/659089/11",
+      "claim": "Shopify 项目负责人寻找面向英国和澳大利亚品牌的溢出开发者",
+      "summary": "E1 合作需求；要求英语沟通、可靠响应和项目制小时计费。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T15:20:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-07-31"
+      },
+      "expectedSha256": "1279897f7aac674f479185d3ff4206b0bf61bb2543ed07e7b2c6ec988276d536"
+    },
+    {
+      "id": "IDEA-20261021-019",
+      "kind": "Idea",
+      "title": "Shopify 商家固定范围维护与应用集成",
+      "audience": "需要长期维护 Shopify 店铺的海外商家和电商项目负责人",
+      "problem": "主题改动、应用集成、故障修复和性能改进缺少安全测试、变更记录和明确首个任务",
+      "earningHypothesis": "研究助手推断：按单个故障、主题改动或应用集成提供固定范围工单，完成首单后再讨论按月维护；预算和成交未知。",
+      "industry": [
+        "电商运营"
+      ],
+      "sideHustleTypes": [
+        "平台维护",
+        "应用集成"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-046",
+        "EV-20261021-047"
+      ],
+      "firstCollectedAt": "2026-10-21T15:20:00+08:00",
+      "expectedSha256": "1279897f7aac674f479185d3ff4206b0bf61bb2543ed07e7b2c6ec988276d536"
+    }
+  ],
+  "ideas/IDEA-20261021-020.md": [
+    {
+      "id": "EV-20261021-048",
+      "kind": "Evidence",
+      "sourceId": "GL25",
+      "url": "https://community.shopify.com/t/looking-for-shopify-merchants-developers-to-test-a-supplier-invoice-product-cost-app/667048",
+      "claim": "供应商发票行项目需要匹配 Shopify 商品、复核收货数量和产品成本",
+      "summary": "E1 具体案例与测试需求；没有商家付款证据。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T15:20:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-08-16"
+      },
+      "expectedSha256": "286f0f8e92addae3099ca4ad983e9528a0fb273a7f81fd1ef0378878b697786d"
+    },
+    {
+      "id": "EV-20261021-049",
+      "kind": "Evidence",
+      "sourceId": "GL25",
+      "url": "https://community.shopify.com/t/offer-free-beta-app-to-automate-inventory-receiving-from-pdf-packing-slips-doctostock/631100",
+      "claim": "PDF 或图片收货单需要提取行项目、匹配变体并人工批准库存更新",
+      "summary": "E1 独立案例；免费测试换反馈，不是付费证明。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": null,
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T15:20:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-06-04"
+      },
+      "expectedSha256": "286f0f8e92addae3099ca4ad983e9528a0fb273a7f81fd1ef0378878b697786d"
+    },
+    {
+      "id": "IDEA-20261021-020",
+      "kind": "Idea",
+      "title": "Shopify 供应商发票到库存成本的核对与复核",
+      "audience": "从供应商 PDF、图片或纸质单据接收货物的海外 Shopify 小商家",
+      "problem": "供应商命名、SKU、条码和包装描述不一致，人工匹配数量与成本后才能安全更新库存",
+      "earningHypothesis": "研究助手推断：提供脱敏发票批量预检、匹配置信度报告和人工复核清单；付费意愿和发票量未知。",
+      "industry": [
+        "电商运营"
+      ],
+      "sideHustleTypes": [
+        "数据核对",
+        "文档解析"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-048",
+        "EV-20261021-049"
+      ],
+      "firstCollectedAt": "2026-10-21T15:20:00+08:00",
+      "expectedSha256": "286f0f8e92addae3099ca4ad983e9528a0fb273a7f81fd1ef0378878b697786d"
+    }
+  ],
+  "ideas/IDEA-20261021-021.md": [
+    {
+      "id": "EV-20261021-050",
+      "kind": "Evidence",
+      "sourceId": "GL01",
+      "url": "https://www.indiehackers.com/post/revenue-share-saas-mvp-0656885ea3",
+      "claim": "独立创业者寻找开发者构建包含 Stripe 条件扣款、证明上传和定时任务的 SaaS MVP",
+      "summary": "E1 合作需求；提出有上限的收入分成，没有现金预算或成交结果。",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-21T15:20:00+08:00",
+      "legacyDates": {
+        "accessedAt": "2026-10-21",
+        "publishedAt": "2026-01-04"
+      },
+      "expectedSha256": "b853210330d4827074f57f7be293922362615e492e54caf06439499fa228f422"
+    },
+    {
+      "id": "IDEA-20261021-021",
+      "kind": "Idea",
+      "title": "条件扣款与目标打卡 SaaS 的支付可靠性 MVP",
+      "audience": "希望把目标、证明材料和失败惩罚绑定的海外独立创业者",
+      "problem": "需要认证、目标截止时间、证明上传、Stripe 订阅、条件扣款和后台定时任务，支付失败或证明规则含糊会破坏信任",
+      "earningHypothesis": "来源事实与研究助手推断：按固定范围交付支付与后台任务 MVP，或采用有上限的收入分成；分成不是现金收入保证。",
+      "industry": [
+        "SaaS 产品"
+      ],
+      "sideHustleTypes": [
+        "支付集成",
+        "后端 MVP"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261021-050"
+      ],
+      "firstCollectedAt": "2026-10-21T15:20:00+08:00",
+      "expectedSha256": "b853210330d4827074f57f7be293922362615e492e54caf06439499fa228f422"
     }
   ]
 }

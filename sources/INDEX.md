@@ -36,6 +36,7 @@
 | GL22 | [Make 社区专业服务招聘板块](https://community.make.com/c/hire-a-pro/50) | 英文自动化买家、实施者与代理商 | 付费排障、长期维护、白标交付、行业系统集成与成交后反馈 | 2026-10-21：入口和多篇具体招聘/结果更新可读；供应方报价很多，必须与买方预算、选人和上线结果分开 | A，采购与结果信号 |
 | GL23 | [Square 社区](https://community.squareup.com/) | 英文零售、餐饮、活动和本地服务商家 | POS、库存导入、成本报表、订单 API 与门店工作流 | 2026-10-21：入口及近期具体商家讨论可读；平台缺陷可能由官方修复，定制服务必须先核对现有功能与 API 边界 | A，主流平台 |
 | GL24 | [AutoShopOwner](https://www.autoshopowner.com/forums/) | 英文汽修店主、服务顾问和行业服务商 | 工单、报价、技师工时、KPI、门店软件与经营流程 | 2026-10-21：论坛及具体店主讨论可读；教练/供应商文章较多，优先采用可识别的门店用户问题 | B，小众垂直 |
+| GL25 | [Shopify 社区近期招聘与应用测试讨论](https://community.shopify.com/) | 英文 Shopify 商家、应用开发者与电商项目负责人 | 主题维护、应用集成、供应商发票匹配、库存成本复核和测试反馈 | 2026-10-21：具体讨论可读；部分页面限流，未把摘要当成证据；商家预算与付款需后续核验 | A，主流平台 |
 
 ## 来源组合与轮巡
 
@@ -87,6 +88,7 @@
 | CN01 | 2026-10-21 | 2026-10-21 | 已读 [广告招牌行业工单系统报价咨询](https://www.v2ex.com/t/1219555)：2026-06-11 发布，项目方给出客户、后台和安装师傅完整流程并询问 MVP 报价与一期范围；供应方 2–5 万元估价不冒充买方预算。另读微信服务商历史失败讨论，因规则现状冲突未生成点子 |
 | GL23 | 2026-10-21 | 2026-10-21 | 已读 [库存导入后全部售罄](https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Item-inventory-quantities-showing-Sold-Out-after-importing/td-p/847561)、[成本与供应商字段未进入报表](https://community.squareup.com/t5/Retail-eCommerce/Unit-Cost-and-Vendor-Entered-for-new-inventory-in-Item-Library/m-p/839768/highlight/true) 和 [食品节订单预填到 Square POS](https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Seeking-Web-App-Order-Form-to-push-into-Square-POS-Cart-for-a/td-p/843781)；前两帖为独立商家，第三帖是具体项目需求但无采购表达 |
 | GL24 | 2026-10-21 | 2026-10-21 | 已读 [RO Writer 与 AutoVitals 的 KPI 汇总](https://www.autoshopowner.com/forums/topic/20742-ro-writer-auto-vitals-do-you-use-this-combo-in-your-shop/)；店主已自建 Google Sheet，回复指出后台报表和厂商培训可能直接解决，作为强替代保留 |
+| GL25 | 2026-10-21 | 2026-10-21 | 已读 Shopify 商家长期开发、Shopify 发票/库存应用测试两类具体讨论；供应预算、选人和付款未知；下次复核商家测试结果与实际采购 |
 
 以上为已读范围，不是按时间完整遍历网站的游标。2026-10-21 新增 CN06、GL08–GL24；Reddit 内容由公开会话浏览读取，但读取器限制未解除，不伪造其成功游标。
 

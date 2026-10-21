@@ -16,16 +16,17 @@ class AcceptanceTests(StoreCase):
         preview = self.value(preview_legacy(root, mapping))
         self.assertEqual(preview['unresolved'], [])
         migrated = self.value(apply_preview(root, preview, self.path, 'rehearsal'))
-        self.assertEqual(len(migrated['recordIds']), 103)
+        self.assertEqual(len(migrated['recordIds']),len(preview['records']))
         for id in ('CN01', 'CN05', 'CN06', 'GL03', 'GL04', 'GL07', 'GL08', 'GL09', 'GL10',
                    'GL11', 'GL12', 'GL13', 'GL14', 'GL15', 'GL16', 'GL17',
-                   'GL18', 'GL19', 'GL20', 'GL21', 'GL22', 'GL23', 'GL24',
+                   'GL18', 'GL19', 'GL20', 'GL21', 'GL22', 'GL23', 'GL24', 'GL25',
                    'IDEA-20261015-001', 'IDEA-20261020-001', 'IDEA-20261021-001',
                    'IDEA-20261021-004', 'IDEA-20261021-005', 'IDEA-20261021-006',
                    'IDEA-20261021-007', 'IDEA-20261021-008', 'IDEA-20261021-009',
                    'IDEA-20261021-010', 'IDEA-20261021-011', 'IDEA-20261021-012',
                    'IDEA-20261021-013', 'IDEA-20261021-014', 'IDEA-20261021-015',
                    'IDEA-20261021-016', 'IDEA-20261021-017', 'IDEA-20261021-018',
+                   'IDEA-20261021-019', 'IDEA-20261021-020', 'IDEA-20261021-021',
                    'TREND-20261015-001'):
             record = self.value(self.store.read_record(id))['record']
             self.assertTrue(record['legacy']['originalText'])
@@ -44,7 +45,7 @@ class AcceptanceTests(StoreCase):
         replica_store = ResearchStore(replica)
         first_page = self.value(replica_store.list_records(limit=100))
         second_page = self.value(replica_store.list_records(cursor=first_page['nextCursor'], limit=100))
-        self.assertEqual(len(first_page['items']) + len(second_page['items']), 103)
+        self.assertEqual(len(first_page['items']) + len(second_page['items']),len(preview['records']))
         backup, restored = self.path.parent/'backup.sqlite3', self.path.parent/'restored.sqlite3'
         self.value(backup_local(self.path, backup)); self.value(restore_local(backup, restored))
         self.assertTrue(self.value(PersonalStore(restored).read_record('IDEA-20261015-001'))['favorite'])
