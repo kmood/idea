@@ -6,7 +6,7 @@
 
 | ID | 网站与入口 | 受众/类型 | 优先观察入口与信号 | 访问实测与限制 | 优先级 |
 | --- | --- | --- | --- | --- | --- |
-| CN01 | [V2EX 奇思妙想与远程工作](https://www.v2ex.com/go/ideas) | 中文开发者、创意讨论与远程协作 | 求工具、重复操作、兼职交付和现有方案不满意；追踪讨论回复 | 2026-10-21：列表及具体帖子可读；招聘帖会过时，必须记录发布日期和后续回复 | A |
+| CN01 | [V2EX 奇思妙想、外包与行业系统讨论](https://www.v2ex.com/go/ideas) | 中文开发者、创业者、行业项目方与远程协作 | 求工具、重复操作、兼职交付、外包采购和现有方案不满意；追踪讨论回复 | 2026-10-21：列表及具体帖子可读；供给推广多，招聘和采购帖会过时，必须记录发布日期和后续回复 | A |
 | CN02 | [电鸭](https://eleduck.com/) | 中文远程工作与自由职业 | 机会、项目、自由职业、曝光/反馈；区分全职招聘与小项目 | 导航可读，本次未取得完整帖子列表；需浏览器或搜索补充 | A，补验后轮巡 |
 | CN03 | [NodeSeek](https://www.nodeseek.com/) | 中文技术、主机与开发交流 | 技术、Dev、测评中的部署/监控痛点 | 帖子列表可读；交易、抽奖和推广噪声较多 | B |
 | CN04 | [LINUX DO](https://linux.do/) | 中文技术交流 | 工具体验、产品反馈；具体分类下一轮核验 | 本轮仅取得有限公开话题；不推定其他分区可访问 | B，部分可读 |
@@ -84,6 +84,7 @@
 | GL21 | 2026-10-21 | 2026-10-21（会话浏览） | 已读 [律所接洽统计](https://www.reddit.com/r/paralegal/comments/1q4zbz1/new_client_intake_tracking_help/)、[家事律所接洽求助](https://www.reddit.com/r/LawFirm/comments/1q06cxk/help_on_client_intake/) 与 [标准化反证](https://www.reddit.com/r/legaltech/comments/1vk0a22/what_does_client_intake_actually_look_like_at/)；同域样本不冒充跨站证据 |
 | GL22 | 2026-10-21 | 2026-10-21 | 已读 [愿付费修复现有流程](https://community.make.com/t/make-freelancer-needed-for-project/115431)、[长期 Airtable + Make 维护岗位](https://community.make.com/t/hiring-long-term-airtable-make-automation-systems-specialist-18-25-hr/113873)、[白标实施伙伴招募](https://community.make.com/t/looking-for-white-label-make-com-automation-developers-agency-partner/116649?page=2) 和 [选人及上线结果](https://community.make.com/t/hiring-make-com-specialist-with-mindbody-api-experience/111598/18)；最后一帖确认已聘用、流程上线和后续合作，但未公开付款凭证 |
 | CN01 | 2026-10-21 | 2026-10-21 | 已读 [海外酒店分销 SaaS 后端兼职](https://www.v2ex.com/t/1125476)：2025-04-15 发布，明确每日 2–3 小时、任务/时薪、API 适配和短周会；属于历史采购样本，当前是否招聘未知 |
+| CN01 | 2026-10-21 | 2026-10-21 | 已读 [广告招牌行业工单系统报价咨询](https://www.v2ex.com/t/1219555)：2026-06-11 发布，项目方给出客户、后台和安装师傅完整流程并询问 MVP 报价与一期范围；供应方 2–5 万元估价不冒充买方预算。另读微信服务商历史失败讨论，因规则现状冲突未生成点子 |
 | GL23 | 2026-10-21 | 2026-10-21 | 已读 [库存导入后全部售罄](https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Item-inventory-quantities-showing-Sold-Out-after-importing/td-p/847561)、[成本与供应商字段未进入报表](https://community.squareup.com/t5/Retail-eCommerce/Unit-Cost-and-Vendor-Entered-for-new-inventory-in-Item-Library/m-p/839768/highlight/true) 和 [食品节订单预填到 Square POS](https://community.squareup.com/t5/Orders-Menu-Items-Catalog/Seeking-Web-App-Order-Form-to-push-into-Square-POS-Cart-for-a/td-p/843781)；前两帖为独立商家，第三帖是具体项目需求但无采购表达 |
 | GL24 | 2026-10-21 | 2026-10-21 | 已读 [RO Writer 与 AutoVitals 的 KPI 汇总](https://www.autoshopowner.com/forums/topic/20742-ro-writer-auto-vitals-do-you-use-this-combo-in-your-shop/)；店主已自建 Google Sheet，回复指出后台报表和厂商培训可能直接解决，作为强替代保留 |
 
