@@ -5408,5 +5408,50 @@
       "firstCollectedAt": "2026-10-22T16:45:10+08:00",
       "expectedSha256": "8787830c624694e47870a1fad0c8cf3f79195f0b0ced53d76d5573c6a0a8a8a6"
     }
+  ],
+  "ideas/IDEA-20261022-031.md": [
+    {
+      "id": "EV-20261022-031",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/sos-inventory-automating-work-order/113328",
+      "claim": "SOS Inventory 用户公开寻找销售单/库存到批量工单的 Make API 回写及后续维护",
+      "summary": "E3具体买方求助与报价信号；回复报价125–695美元，未见接受、付款或上线",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "quote",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:50:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-08-12",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "245ed4b0165debf2926b0dfd444ed6764028068d5523f226e81bd6ec49d576f7"
+    },
+    {
+      "id": "IDEA-20261022-031",
+      "kind": "Idea",
+      "title": "SOS Inventory 批量销售单到工单的回写与维护",
+      "audience": "海外使用 SOS Inventory 的库存/生产小企业",
+      "problem": "需要将批量销售单和库存数据可靠写回工单，防重复并可处理 API 失败和系统更新",
+      "earningHypothesis": "研究助手推断：先做 API 权限/载荷诊断，再交付一个沙盒工单、幂等键、异常日志和运行手册；付款未知。",
+      "industry": [
+        "库存与生产订单集成"
+      ],
+      "sideHustleTypes": [
+        "固定范围业务系统 API 集成"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-031"
+      ],
+      "firstCollectedAt": "2026-10-22T16:50:10+08:00",
+      "expectedSha256": "245ed4b0165debf2926b0dfd444ed6764028068d5523f226e81bd6ec49d576f7"
+    }
   ]
 }
