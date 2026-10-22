@@ -5453,5 +5453,50 @@
       "firstCollectedAt": "2026-10-22T16:50:10+08:00",
       "expectedSha256": "245ed4b0165debf2926b0dfd444ed6764028068d5523f226e81bd6ec49d576f7"
     }
+  ],
+  "ideas/IDEA-20261022-032.md": [
+    {
+      "id": "EV-20261022-032",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/i-need-help-with-a-scenario-to-connect-the-whatsapp-cloud-api-with-google-sheets/115156",
+      "claim": "业务方公开寻找 WhatsApp Cloud API 与 Google Sheets 的消息同步自动化",
+      "summary": "E3具体买方求助与报价；回复给出75–250美元单向固定切片，未见接受、付款或上线",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "quote",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:55:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-09-14",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "b345378b98ae05ea97e24fae64cdbf1408dde202e829d10b7d073dfa864b5015"
+    },
+    {
+      "id": "IDEA-20261022-032",
+      "kind": "Idea",
+      "title": "WhatsApp Cloud API 消息与 Google Sheets 的双向同步",
+      "audience": "海外小企业及个人业务",
+      "problem": "需要将 WhatsApp 入站消息写入表格或从表格发送消息，并处理验证、去重和失败日志",
+      "earningHypothesis": "研究助手推断：先按固定小包交付单向消息流与端到端测试，再扩展双向或CRM；付款未知。",
+      "industry": [
+        "消息 API 集成"
+      ],
+      "sideHustleTypes": [
+        "固定范围消息工作流交付"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-032"
+      ],
+      "firstCollectedAt": "2026-10-22T16:55:10+08:00",
+      "expectedSha256": "b345378b98ae05ea97e24fae64cdbf1408dde202e829d10b7d073dfa864b5015"
+    }
   ]
 }
