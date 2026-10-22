@@ -408,3 +408,5 @@
 - GL49：公共区域机构采购，英文个人顾问受众、发展项目传播行业；last_attempt / last_success=2026-10-22。[品牌整包公告](https://www.mrcmekong.org/employment-mrc/design-and-development-of-the-project-brand-identity-introductory-publications-and-promotional-items)2026-10-14发布、10-27截止及[七页任务书](https://www.mrcmekong.org/wp-content/uploads/2026/10/FINAL_TOR.pdf)全文已读，形成022当前E3。五年资历、英语评审、印刷支持且金额未知，不能当轻量模板小单；下次有授标/验收或另一明确小包再采。
 - CN20：高校公共采购，中文图书馆与服务商受众、特色文献数字化行业；last_attempt / last_success=2026-10-22。[馆藏数字化公告](https://www.ymu.edu.cn/info/1161/79971.htm)2026-07-02原文可读，07-13截止；45天在校整包、扫描/少数民族文字及平台合并，不分标段，不接受联合体，完整采购文件另收费未获取。本轮不拆成个人录入小单，不计新点子，不把53.55万元整包预算当个人收入。下次寻找明确个人承接范围及专业能力证据，旧公告低频。
 - 06:52轮巡GL44：last_attempt / last_success=2026-10-22；2026-068[原采购PDF](https://pidswebs.pids.gov.ph/CDN/document/1772013507_699ec7c3e5aa3.pdf)仍可读，本轮抽查首页，未见授标材料，013等级不变，不把旧截止改当前；下次仅近期相关采购或实际结果再采。
+
+| GL40 | [Shopify 社区订单与 Flow 讨论](https://community.shopify.com/) | 英文 Shopify 商家；厂商问答 | 夜间订单暂存、履约放行、取消窗口与 Flow 查询 | 2026-10-22：具体订单暂存求助页可读；原帖为单一商家，未见报价/付款，需与平台原生功能区分 | B，新增低频 |
