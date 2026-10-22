@@ -429,6 +429,6 @@
 
 | GL49 | [Airtable 小型网球学院管理系统求助](https://community.airtable.com/base-design-9/looking-for-help-structuring-a-management-system-for-a-small-tennis-academy-47592) | 阿根廷小型体育培训机构；厂商社区 | 历史收费、出勤、教练薪资、季度价格、权限与自动化 | 2026-10-22：完整原帖与回复可读；买方明确需求和预算有限，回复提到约120美元/15席位，但无选人、付款或上线 | B，新增低频 |
 
-| GL50 | [Freelancer 体育学院管理系统项目](https://www.freelancer.com/projects/management/sports-academy-management-system) | 印度体育学院客户；公开项目平台 | 预约、日历、学生/教练档案、出勤、表现评估、自动提醒 | 2026-10-22：完整项目页可读，预算12500–37500印度卢比、按交付支付，98份提案和多档报价；仍开放竞标，未见授标/付款/上线 | B，新增低频 |
+| GL51 | [Freelancer 体育学院管理系统项目](https://www.freelancer.com/projects/management/sports-academy-management-system) | 印度体育学院客户；公开项目平台 | 预约、日历、学生/教练档案、出勤、表现评估、自动提醒 | 2026-10-22：完整项目页可读，预算12500–37500印度卢比、按交付支付，98份提案和多档报价；仍开放竞标，未见授标/付款/上线 | B，新增低频 |
 
 | GL51 | [NocoBase 人事与培训管理系统求助](https://forum.nocobase.com/t/looking-for-nocobase-developer-for-hr-training-management-system/10756) | 海外小团队；低代码厂商论坛 | HR、培训、证书、关系数据、工作流、自托管部署 | 2026-10-22：完整原帖、3月重发及供应方回复可读；接受小时/项目/长期合作，未见预算付款上线 | B，新增低频 |
