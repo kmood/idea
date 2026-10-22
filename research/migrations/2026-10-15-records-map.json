@@ -5092,5 +5092,51 @@
       "firstCollectedAt": "2026-10-22T15:39:40+08:00",
       "expectedSha256": "fe6ed2967b8afd41bae52085a566a4542da8dde0cc250b72986a0f4487899459"
     }
+  ],
+  "ideas/IDEA-20261022-024.md": [
+    {
+      "id": "EV-20261022-024",
+      "kind": "Evidence",
+      "sourceId": "CN01",
+      "url": "https://global.v2ex.com/t/1197102",
+      "claim": "美国公司公开寻找中国 AI 技术合伙人或外包团队，开发并维护面向美国本地企业的 AI 客服 SaaS",
+      "summary": "当前E3公开合作采购意向，原帖称已有开发预算但未公开金额、授标或付款",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:05:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-03-10",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "834447b4a4a4d53dc7f6ef04a1551e81bbb9b9635709ae2f2808813bc53d752e"
+    },
+    {
+      "id": "IDEA-20261022-024",
+      "kind": "Idea",
+      "title": "AI 客服 SaaS 的跨境后端与持续交付",
+      "audience": "美国本地企业服务团队及其中国技术合作方",
+      "problem": "需要 AI 客服、多渠道接入、销售助手、内容生成、CRM 和持续技术维护",
+      "earningHypothesis": "研究助手推断：按固定 MVP 模块或里程碑承接后端/API/RAG/渠道集成，再按范围维护；实际付款未知。",
+      "industry": [
+        "SaaS 后端与 AI 应用交付"
+      ],
+      "sideHustleTypes": [
+        "跨境技术合作与固定范围交付"
+      ],
+      "markets": [
+        "美国",
+        "国内技术团队"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-024"
+      ],
+      "firstCollectedAt": "2026-10-22T16:05:10+08:00",
+      "expectedSha256": "834447b4a4a4d53dc7f6ef04a1551e81bbb9b9635709ae2f2808813bc53d752e"
+    }
   ]
 }
