@@ -77,6 +77,7 @@
 | CN13 | [Dcard 结婚与生活讨论](https://www.dcard.tw/f/marriage) | 中文备婚用户及生活服务消费者；交流社区 | 主持、摄影、服务选择与买方反馈 | 2026-10-22：主持风格原问题可读，日期及评论未取得 | B，部分可读低频 |
 
 | GL40 | [Google Ads 帮助社区](https://support.google.com/google-ads/community) | 英文广告主与运营人员；厂商公开问答 | 代运营选择、权限、费用及投放问题 | 2026-10-22：受控浏览器读2022年外包信任原问及四条回复；读取器只得框架 | B，工具差异/历史低频 |
+| GL50 | [One API GitHub 议题](https://github.com/songquanpeng/one-api/issues/2379) | 中文/繁体跨境业务团队与 AI API 运营者；公开合作采购 | AI Agent、模型聚合、跨境 API、SLA 与项目/月费合作 | 2026-10-22：具体议题正文及两条回复可读；单一买方、未见授标或付款，评论含供给方自荐 | A，采购信号 |
 
 | GL41 | [Webflow 设计与实施社区](https://discourse.webflow.com/) | 英文设计师、开发者及委托方；厂商社区 | 页面交付、表单、设计与开发分工 | 2026-10-22：2021年买方落地页委托及后续回复可读 | B，历史样本低频 |
 
