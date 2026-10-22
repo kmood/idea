@@ -434,3 +434,4 @@
 | GL51 | [NocoBase 人事与培训管理系统求助](https://forum.nocobase.com/t/looking-for-nocobase-developer-for-hr-training-management-system/10756) | 海外小团队；低代码厂商论坛 | HR、培训、证书、关系数据、工作流、自托管部署 | 2026-10-22：完整原帖、3月重发及供应方回复可读；接受小时/项目/长期合作，未见预算付款上线 | B，新增低频 |
 
 | GL53 | [墨尔本电视制作公司排班系统求助](https://community.airtable.com/base-design-9/melbourne-based-tv-production-company-looking-to-create-a-staff-freelancer-roster-setup-48840) | 澳大利亚电视制作公司；厂商社区 | 跨体育转播、广告、纪录片的员工/自由职业者排班、权限、导出和冲突检查 | 2026-10-22：完整原帖与4条回复可读；供应方展示原型，买方预约通话并准备Excel示例，未见预算/付款/上线 | B，新增低频 |
+| GL54 | [Freelancer 自动证书系统项目](https://www.freelancer.com/projects/web-development/Automated-Certificate-System-Development) | 约旦培训课程客户；公开项目平台 | PDF证书自动填充、邮件/WhatsApp发送、模板、批量和二维码 | 2026-10-22：完整项目页可读，显示Completed、按交付支付、预算10–20美元、34份提案和已验证付款方式；实际到账/验收未知 | B，已完成项目信号 |
