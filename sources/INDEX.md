@@ -426,3 +426,5 @@
 | GL47 | [Make + Airtable MCA CRM 审计求助](https://community.make.com/) | 英文 MCA 贷款经纪/基金方；自动化厂商社区 | 文档提取、去重、字段来源优先级、空值覆盖和联系人隔离 | 2026-10-22：多页具体回复可读；供应方给出 35–250 美元、225 欧元至 1,200 瑞郎审计报价，金融数据敏感，未见付款/上线 | B，采购意向/谨慎 |
 
 | GL48 | [HoneyBook 摄影工作室客户管理讨论](https://community.honeybook.com/) | 英文摄影工作室经营者；厂商社区 | HoneyBook、Acuity、Squarespace 的客户管理与预约工具选择 | 2026-10-22：主帖与5条回复可读；只有工具比较和交流意向，无具体付费委托或实施采购，暂不形成点子 | B，趋势观察 |
+
+| GL49 | [Airtable 小型网球学院管理系统求助](https://community.airtable.com/base-design-9/looking-for-help-structuring-a-management-system-for-a-small-tennis-academy-47592) | 阿根廷小型体育培训机构；厂商社区 | 历史收费、出勤、教练薪资、季度价格、权限与自动化 | 2026-10-22：完整原帖与回复可读；买方明确需求和预算有限，回复提到约120美元/15席位，但无选人、付款或上线 | B，新增低频 |
