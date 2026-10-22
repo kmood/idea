@@ -5363,5 +5363,50 @@
       "firstCollectedAt": "2026-10-22T16:40:10+08:00",
       "expectedSha256": "5a0b2c28770508df59b5a91094f614f8c2a246fadc01c56d2edcd92ec74bafaa"
     }
+  ],
+  "ideas/IDEA-20261022-030.md": [
+    {
+      "id": "EV-20261022-030",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/wordpress-make-com-brevo-integration-expert/115942",
+      "claim": "网站团队公开寻找 WordPress/Mailchimp 到 Brevo 的订阅链路迁移和 Make 集成",
+      "summary": "E3具体买方预算与范围；买方约25美元/小时，供应方报价75美元诊断及175–300美元阶段，未见付款或上线",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "quote",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:45:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-09-25",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "8787830c624694e47870a1fad0c8cf3f79195f0b0ced53d76d5573c6a0a8a8a6"
+    },
+    {
+      "id": "IDEA-20261022-030",
+      "kind": "Idea",
+      "title": "WordPress 从 Mailchimp 切换到 Brevo 的订阅链路迁移",
+      "audience": "海外小企业网站及营销负责人",
+      "problem": "需要将弹窗、表单和订阅页从 Mailchimp 切换到 Brevo，避免重复联系人和双发欢迎邮件",
+      "earningHypothesis": "研究助手推断：按固定小包交付一条订阅链路诊断、切换、测试和交接；付款未知。",
+      "industry": [
+        "营销自动化迁移"
+      ],
+      "sideHustleTypes": [
+        "邮件平台迁移与集成"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-030"
+      ],
+      "firstCollectedAt": "2026-10-22T16:45:10+08:00",
+      "expectedSha256": "8787830c624694e47870a1fad0c8cf3f79195f0b0ced53d76d5573c6a0a8a8a6"
+    }
   ]
 }
