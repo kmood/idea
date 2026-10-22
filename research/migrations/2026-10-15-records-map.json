@@ -19,7 +19,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN02",
@@ -39,7 +39,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN03",
@@ -59,7 +59,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN04",
@@ -80,7 +80,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN05",
@@ -101,7 +101,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL01",
@@ -121,7 +121,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL02",
@@ -141,7 +141,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL03",
@@ -162,7 +162,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL04",
@@ -183,7 +183,7 @@
         "lastAttempt": "2026-10-15",
         "lastSuccess": "2026-10-15"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL05",
@@ -203,7 +203,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-14"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL06",
@@ -224,7 +224,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL07",
@@ -244,7 +244,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-20"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL08",
@@ -265,7 +265,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL09",
@@ -287,7 +287,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL10",
@@ -308,7 +308,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN06",
@@ -329,7 +329,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL11",
@@ -350,7 +350,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL12",
@@ -371,7 +371,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL13",
@@ -392,7 +392,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL14",
@@ -413,7 +413,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL15",
@@ -434,7 +434,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL16",
@@ -455,7 +455,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL17",
@@ -476,7 +476,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL18",
@@ -497,7 +497,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL19",
@@ -518,7 +518,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL20",
@@ -539,7 +539,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL21",
@@ -560,7 +560,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL22",
@@ -581,7 +581,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL23",
@@ -602,7 +602,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL24",
@@ -623,7 +623,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL25",
@@ -644,7 +644,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL26",
@@ -665,7 +665,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL27",
@@ -686,7 +686,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL28",
@@ -706,7 +706,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN07",
@@ -727,7 +727,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL29",
@@ -748,7 +748,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL30",
@@ -769,7 +769,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL31",
@@ -790,7 +790,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL32",
@@ -811,7 +811,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL33",
@@ -832,7 +832,7 @@
         "lastAttempt": "2026-10-21",
         "lastSuccess": "2026-10-21"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL34",
@@ -853,7 +853,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL35",
@@ -874,7 +874,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL36",
@@ -895,7 +895,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL37",
@@ -916,7 +916,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL38",
@@ -937,7 +937,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL39",
@@ -958,7 +958,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN08",
@@ -979,7 +979,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN09",
@@ -999,7 +999,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN10",
@@ -1020,7 +1020,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN11",
@@ -1041,7 +1041,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN12",
@@ -1061,7 +1061,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN13",
@@ -1082,7 +1082,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL40",
@@ -1103,7 +1103,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL41",
@@ -1124,7 +1124,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL42",
@@ -1145,7 +1145,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN14",
@@ -1165,7 +1165,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL43",
@@ -1185,7 +1185,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL44",
@@ -1206,7 +1206,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN15",
@@ -1227,7 +1227,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL45",
@@ -1248,7 +1248,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN16",
@@ -1268,7 +1268,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL46",
@@ -1289,7 +1289,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL47",
@@ -1310,7 +1310,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL48",
@@ -1331,7 +1331,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN17",
@@ -1352,7 +1352,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN18",
@@ -1373,7 +1373,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN19",
@@ -1393,7 +1393,7 @@
       "legacyDates": {
         "lastAttempt": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL49",
@@ -1414,7 +1414,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "CN20",
@@ -1435,7 +1435,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     },
     {
       "id": "GL50",
@@ -1456,7 +1456,7 @@
         "lastAttempt": "2026-10-22",
         "lastSuccess": "2026-10-22"
       },
-      "expectedSha256": "cf31ce822abf98cb6593d6ac870d873f01ccb2013194b376398f4b998e7cfcb5"
+      "expectedSha256": "84a6e2177c56616ad50e44815c5e35e74e67e0c83a906a34d7cb118bdaacbb11"
     }
   ],
   "ideas/IDEA-20261015-001.md": [
@@ -5677,6 +5677,51 @@
       ],
       "firstCollectedAt": "2026-10-22T17:20:10+08:00",
       "expectedSha256": "2ba1c0719e1863692ea7d39f3f8fb0f071b0271d8e949b088b874ca9cae7b381"
+    }
+  ],
+  "ideas/IDEA-20261022-037.md": [
+    {
+      "id": "EV-20261022-037",
+      "kind": "Evidence",
+      "sourceId": "GL44",
+      "url": "https://community.make.com/t/help-with-getting-started-with-make/110947",
+      "claim": "小团队明确需要 Make/AI 工作流每周辅导并询问收费；供应方公开固定启动包和月度异步支持报价",
+      "summary": "买方询问每周时段与价格，供应方公开149美元一次 kickoff/review、399美元/月四次异步评审；无付款或续费结果",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E3",
+      "paymentSignal": "quote",
+      "rebutsClaim": "官方教程、社区、YouTube、AI 自助和平台伙伴是替代",
+      "firstCollectedAt": "2026-10-22T17:25:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-06-17",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "02393ca0451f36c0a910db931487cb973c12bbb40687c57160773a435c262c19"
+    },
+    {
+      "id": "IDEA-20261022-037",
+      "kind": "Idea",
+      "title": "Make 初学者 AI 工作流书面辅导与异步评审",
+      "audience": "海外创始人/小企业初学者",
+      "problem": "需要每周辅导、流程拆解、模块选择、错误处理和书面交接来搭建 AI 工作流",
+      "earningHypothesis": "固定149美元启动评审或399美元/月四次异步评审；为供应方公开报价，付款未知。",
+      "industry": [
+        "自动化培训与实施辅导"
+      ],
+      "sideHustleTypes": [
+        "固定启动包与异步评审"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "候选",
+      "evidenceIds": [
+        "EV-20261022-037"
+      ],
+      "firstCollectedAt": "2026-10-22T17:25:10+08:00",
+      "expectedSha256": "02393ca0451f36c0a910db931487cb973c12bbb40687c57160773a435c262c19"
     }
   ]
 }
