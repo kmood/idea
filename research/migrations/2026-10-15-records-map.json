@@ -5318,5 +5318,50 @@
       "firstCollectedAt": "2026-10-22T16:35:10+08:00",
       "expectedSha256": "9a9fde3b37e28a58066200eaec711a4ca3b8cf0764a15b6d25b3695bf8c6c56f"
     }
+  ],
+  "ideas/IDEA-20261022-029.md": [
+    {
+      "id": "EV-20261022-029",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/need-make-airtable-expert-to-finish-mca-crm-automation/113875",
+      "claim": "商业融资运营方公开寻找 Make/Airtable/AI 文件抽取流程的数据完整性审计与收尾实施",
+      "summary": "E1具体买方需求；回复提出95–400美元审计和固定实施，但未见接受、付款或修复结果",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:40:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-08-26",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "5a0b2c28770508df59b5a91094f614f8c2a246fadc01c56d2edcd92ec74bafaa"
+    },
+    {
+      "id": "IDEA-20261022-029",
+      "kind": "Idea",
+      "title": "商业融资申请资料的 AI 抽取与数据完整性审计",
+      "audience": "海外商业融资/MCA 运营方",
+      "problem": "需要防止重复商户、空值覆盖、经纪人与商户混淆及申请资料与银行流水来源优先级错误",
+      "earningHypothesis": "研究助手推断：用脱敏资料交付字段权威矩阵、回放测试和固定修复清单，再实施；付款未知。",
+      "industry": [
+        "金融业务后台自动化"
+      ],
+      "sideHustleTypes": [
+        "脱敏数据完整性审计与自动化修复"
+      ],
+      "markets": [
+        "美国"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-029"
+      ],
+      "firstCollectedAt": "2026-10-22T16:40:10+08:00",
+      "expectedSha256": "5a0b2c28770508df59b5a91094f614f8c2a246fadc01c56d2edcd92ec74bafaa"
+    }
   ]
 }
