@@ -410,3 +410,5 @@
 - 06:52轮巡GL44：last_attempt / last_success=2026-10-22；2026-068[原采购PDF](https://pidswebs.pids.gov.ph/CDN/document/1772013507_699ec7c3e5aa3.pdf)仍可读，本轮抽查首页，未见授标材料，013等级不变，不把旧截止改当前；下次仅近期相关采购或实际结果再采。
 
 | GL40 | [Shopify 社区订单与 Flow 讨论](https://community.shopify.com/) | 英文 Shopify 商家；厂商问答 | 夜间订单暂存、履约放行、取消窗口与 Flow 查询 | 2026-10-22：具体订单暂存求助页及完整回复可读；原帖为单一商家，未见报价/付款，需与平台原生功能区分 | B，新增低频 |
+
+| GL41 | [Shopify 社区 3PL 账单对账讨论](https://community.shopify.com/) | 英文 Shopify 商家与第三方仓储客户；厂商社区 | 3PL 分项账单、shipment/tracking 匹配、费率卡和异常复核 | 2026-10-22：具体讨论及多条回复可读；尚无真实差错、预算或付款，需区分研究发起者与回复推断 | B，新增低频 |
