@@ -5112,7 +5112,7 @@
         "publishedAt": "2026-03-10",
         "accessedAt": "2026-10-22"
       },
-      "expectedSha256": "834447b4a4a4d53dc7f6ef04a1551e81bbb9b9635709ae2f2808813bc53d752e"
+      "expectedSha256": "84ae5cf6a1bc0c5b6b0c118594241e305abf0e8c8d7b5e8ae4ed0713616393d2"
     },
     {
       "id": "IDEA-20261022-024",
@@ -5136,7 +5136,7 @@
         "EV-20261022-024"
       ],
       "firstCollectedAt": "2026-10-22T16:05:10+08:00",
-      "expectedSha256": "834447b4a4a4d53dc7f6ef04a1551e81bbb9b9635709ae2f2808813bc53d752e"
+      "expectedSha256": "84ae5cf6a1bc0c5b6b0c118594241e305abf0e8c8d7b5e8ae4ed0713616393d2"
     }
   ]
 }
