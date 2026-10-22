@@ -437,3 +437,5 @@
 | GL54 | [Freelancer 自动证书系统项目](https://www.freelancer.com/projects/web-development/Automated-Certificate-System-Development) | 约旦培训课程客户；公开项目平台 | PDF证书自动填充、邮件/WhatsApp发送、模板、批量和二维码 | 2026-10-22：完整项目页可读，显示Completed、按交付支付、预算10–20美元、34份提案和已验证付款方式；实际到账/验收未知 | B，已完成项目信号 |
 
 | GL55 | [小房东维修电话协调负担讨论](https://www.biggerpockets.com/forums/52/topics/1301941-tired-of-playing-phone-tag-for-tenant-maintenance-how-are-you-all-handling-this) | 美国/海外自主管理少量出租单元的小房东；房地产从业者论坛 | 租客报修 intake、承包商排期、授权上限、发票归档和紧急流程 | 2026-10-22：完整原帖与23条回复可读；明确工作日协调负担与轻量流程偏好，未见付款；现成物业管理/SaaS与供给展示为替代 | A，新增低频 |
+
+| GL56 | [有日常工作的小房东如何协调维修供应商](https://www.biggerpockets.com/forums/52/topics/1278042-how-do-you-coordinate-maintenance-vendors-when-you-have-a-day-job) | 美国/海外自主管理约4套单元的小房东；房地产从业者论坛 | 供应商可用性、租客进门、发票/收据、税务记录、紧急派单和状态通知 | 2026-10-22：完整原帖与多名回复可读；独立发帖者明确试过表格、Buildium和短信仍不顺，提出愿为简单维修工具付费功能；有全托管8–10%和现成工具替代，未见成交 | A，新增低频 |
