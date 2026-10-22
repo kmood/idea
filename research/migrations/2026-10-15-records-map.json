@@ -2497,7 +2497,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-01-13"
       },
-      "expectedSha256": "266ebe9755628e34d222de35fde8defd4510b442a1383274756ca4227ca1bbe0"
+      "expectedSha256": "07015537e6a0d3a9a5bed323fa3fa3e76e4602e1ed41496f7d970d30656549ec"
     },
     {
       "id": "EV-20261021-028",
@@ -2517,7 +2517,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2025-05-08"
       },
-      "expectedSha256": "266ebe9755628e34d222de35fde8defd4510b442a1383274756ca4227ca1bbe0"
+      "expectedSha256": "07015537e6a0d3a9a5bed323fa3fa3e76e4602e1ed41496f7d970d30656549ec"
     },
     {
       "id": "EV-20261021-029",
@@ -2537,7 +2537,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-14"
       },
-      "expectedSha256": "266ebe9755628e34d222de35fde8defd4510b442a1383274756ca4227ca1bbe0"
+      "expectedSha256": "07015537e6a0d3a9a5bed323fa3fa3e76e4602e1ed41496f7d970d30656549ec"
     },
     {
       "id": "EV-20261021-030",
@@ -2557,7 +2557,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-18"
       },
-      "expectedSha256": "266ebe9755628e34d222de35fde8defd4510b442a1383274756ca4227ca1bbe0"
+      "expectedSha256": "07015537e6a0d3a9a5bed323fa3fa3e76e4602e1ed41496f7d970d30656549ec"
     },
     {
       "id": "EV-20261021-031",
@@ -2577,7 +2577,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-08-26"
       },
-      "expectedSha256": "266ebe9755628e34d222de35fde8defd4510b442a1383274756ca4227ca1bbe0"
+      "expectedSha256": "07015537e6a0d3a9a5bed323fa3fa3e76e4602e1ed41496f7d970d30656549ec"
     },
     {
       "id": "EV-20261021-032",
@@ -2597,7 +2597,7 @@
         "accessedAt": "2026-10-21",
         "publishedAt": "2026-10-09"
       },
-      "expectedSha256": "266ebe9755628e34d222de35fde8defd4510b442a1383274756ca4227ca1bbe0"
+      "expectedSha256": "07015537e6a0d3a9a5bed323fa3fa3e76e4602e1ed41496f7d970d30656549ec"
     },
     {
       "id": "EV-20261021-066",
@@ -2617,7 +2617,7 @@
         "publishedAt": "2026-03-27",
         "accessedAt": "2026-10-21"
       },
-      "expectedSha256": "266ebe9755628e34d222de35fde8defd4510b442a1383274756ca4227ca1bbe0"
+      "expectedSha256": "07015537e6a0d3a9a5bed323fa3fa3e76e4602e1ed41496f7d970d30656549ec"
     },
     {
       "id": "IDEA-20261021-011",
@@ -2649,7 +2649,7 @@
         "EV-20261021-066"
       ],
       "firstCollectedAt": "2026-10-21T13:10:00+08:00",
-      "expectedSha256": "266ebe9755628e34d222de35fde8defd4510b442a1383274756ca4227ca1bbe0"
+      "expectedSha256": "07015537e6a0d3a9a5bed323fa3fa3e76e4602e1ed41496f7d970d30656549ec"
     }
   ],
   "ideas/IDEA-20261021-012.md": [
