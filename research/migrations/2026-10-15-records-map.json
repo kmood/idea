@@ -5273,5 +5273,50 @@
       "firstCollectedAt": "2026-10-22T16:25:10+08:00",
       "expectedSha256": "7024d4bcb2ea669f3750089dd40c43930e66b6e05d3ffa014589600bd862ea5f"
     }
+  ],
+  "ideas/IDEA-20261022-028.md": [
+    {
+      "id": "EV-20261022-028",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/etsy-automation-und-social-media-automation/108087",
+      "claim": "Etsy 按需印刷卖家公开寻求从设计稿生成商品页和社媒内容的自动化",
+      "summary": "E1具体卖家需求；回复展示Make演示并给出400–900欧元报价，未见接受或付款",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:35:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-04-27",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "9a9fde3b37e28a58066200eaec711a4ca3b8cf0764a15b6d25b3695bf8c6c56f"
+    },
+    {
+      "id": "IDEA-20261022-028",
+      "kind": "Idea",
+      "title": "按设计稿生成 Etsy 草稿商品页的自动化",
+      "audience": "海外 Etsy 按需印刷卖家",
+      "problem": "需要从设计稿、商品类型和价格生成标题、标签、描述并保留人工审批",
+      "earningHypothesis": "研究助手推断：固定范围交付 Google Sheets/Make/n8n 到 Etsy 草稿流程与词库刷新；付款未知。",
+      "industry": [
+        "电商商品上架自动化"
+      ],
+      "sideHustleTypes": [
+        "固定范围电商自动化交付"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-028"
+      ],
+      "firstCollectedAt": "2026-10-22T16:35:10+08:00",
+      "expectedSha256": "9a9fde3b37e28a58066200eaec711a4ca3b8cf0764a15b6d25b3695bf8c6c56f"
+    }
   ]
 }
