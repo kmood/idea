@@ -428,3 +428,5 @@
 | GL48 | [HoneyBook 摄影工作室客户管理讨论](https://community.honeybook.com/) | 英文摄影工作室经营者；厂商社区 | HoneyBook、Acuity、Squarespace 的客户管理与预约工具选择 | 2026-10-22：主帖与5条回复可读；只有工具比较和交流意向，无具体付费委托或实施采购，暂不形成点子 | B，趋势观察 |
 
 | GL49 | [Airtable 小型网球学院管理系统求助](https://community.airtable.com/base-design-9/looking-for-help-structuring-a-management-system-for-a-small-tennis-academy-47592) | 阿根廷小型体育培训机构；厂商社区 | 历史收费、出勤、教练薪资、季度价格、权限与自动化 | 2026-10-22：完整原帖与回复可读；买方明确需求和预算有限，回复提到约120美元/15席位，但无选人、付款或上线 | B，新增低频 |
+
+| GL50 | [Freelancer 体育学院管理系统项目](https://www.freelancer.com/projects/management/sports-academy-management-system) | 印度体育学院客户；公开项目平台 | 预约、日历、学生/教练档案、出勤、表现评估、自动提醒 | 2026-10-22：完整项目页可读，预算12500–37500印度卢比、按交付支付，98份提案和多档报价；仍开放竞标，未见授标/付款/上线 | B，新增低频 |
