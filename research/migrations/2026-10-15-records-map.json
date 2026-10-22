@@ -5228,5 +5228,50 @@
       "firstCollectedAt": "2026-10-22T16:20:10+08:00",
       "expectedSha256": "715b837b5393bae34a466c923174ed69c4d8b7b6a0e1f98adfd6db157ea18e12"
     }
+  ],
+  "ideas/IDEA-20261022-027.md": [
+    {
+      "id": "EV-20261022-027",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/need-someone-to-build-an-ai-automation-workflow-just-starting-out-willing-to-pay-flat-fee/105487",
+      "claim": "英国音乐代理商启动前公开寻找 Tally/Airtable/n8n 线索管道、人工审批和欠费暂停工作流，并偏好固定费用",
+      "summary": "E1具体买方启动需求；供应方报价149–499美元，未见接受、付款或上线回访",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:25:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-03-13",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "7024d4bcb2ea669f3750089dd40c43930e66b6e05d3ffa014589600bd862ea5f"
+    },
+    {
+      "id": "IDEA-20261022-027",
+      "kind": "Idea",
+      "title": "英国音乐代理商的人工审批与付款状态工作流",
+      "audience": "英国音乐领域小型代理商及非技术创始人",
+      "problem": "需要把 Tally、Airtable 和 n8n 连接成带双重审批与欠费暂停的可维护线索管道",
+      "earningHypothesis": "研究助手推断：固定范围交付状态机、付款保护、审计日志和文档，先卖诊断或首个切片；付款未知。",
+      "industry": [
+        "音乐代理商业务自动化"
+      ],
+      "sideHustleTypes": [
+        "固定范围自动化实施"
+      ],
+      "markets": [
+        "英国"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-027"
+      ],
+      "firstCollectedAt": "2026-10-22T16:25:10+08:00",
+      "expectedSha256": "7024d4bcb2ea669f3750089dd40c43930e66b6e05d3ffa014589600bd862ea5f"
+    }
   ]
 }
