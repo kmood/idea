@@ -5183,5 +5183,50 @@
       "firstCollectedAt": "2026-10-22T16:15:10+08:00",
       "expectedSha256": "739261890d8322011ac11e6c0cb9e5e33855f2c7f067d0c53a268cb77d3ddb7a"
     }
+  ],
+  "ideas/IDEA-20261022-026.md": [
+    {
+      "id": "EV-20261022-026",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/wedding-photographer-looking-for-help-building-a-make-automation-for-social-media-automation/106486",
+      "claim": "婚礼摄影师公开寻求 Drive/Sheets/AI文案到 Instagram 等平台的照片发布自动化",
+      "summary": "E1具体买方需求；回复中的149美元审计报价、平台建议和推广未证明接受或付款",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:20:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-03-26",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "715b837b5393bae34a466c923174ed69c4d8b7b6a0e1f98adfd6db157ea18e12"
+    },
+    {
+      "id": "IDEA-20261022-026",
+      "kind": "Idea",
+      "title": "婚礼摄影师的照片批次到社交平台发布自动化",
+      "audience": "海外婚礼摄影师及其内容发布人员",
+      "problem": "需要从Drive批次照片、Sheets标签生成AI文案并按审批状态发布到社交平台",
+      "earningHypothesis": "研究助手推断：按固定范围交付素材收集、标签映射、审批状态和社媒排程，再按平台扩展；付款未知。",
+      "industry": [
+        "婚礼摄影内容运营"
+      ],
+      "sideHustleTypes": [
+        "固定范围内容自动化交付"
+      ],
+      "markets": [
+        "海外"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-026"
+      ],
+      "firstCollectedAt": "2026-10-22T16:20:10+08:00",
+      "expectedSha256": "715b837b5393bae34a466c923174ed69c4d8b7b6a0e1f98adfd6db157ea18e12"
+    }
   ]
 }
