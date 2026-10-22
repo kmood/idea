@@ -5138,5 +5138,50 @@
       "firstCollectedAt": "2026-10-22T16:05:10+08:00",
       "expectedSha256": "84ae5cf6a1bc0c5b6b0c118594241e305abf0e8c8d7b5e8ae4ed0713616393d2"
     }
+  ],
+  "ideas/IDEA-20261022-025.md": [
+    {
+      "id": "EV-20261022-025",
+      "kind": "Evidence",
+      "sourceId": "GL22",
+      "url": "https://community.make.com/t/ai-agent-for-dj-business/113000",
+      "claim": "美国移动 DJ 业务公开寻求 Eventective/Gmail 线索资格、套餐报价、Calendly 和人工交接自动化",
+      "summary": "E1具体买方需求；多名供应方提出29–1000美元固定切片，但未见接受、付款或上线结果",
+      "publishedAt": null,
+      "accessedAt": null,
+      "nature": "fact",
+      "level": "E1",
+      "paymentSignal": "intent",
+      "rebutsClaim": null,
+      "firstCollectedAt": "2026-10-22T16:15:10+08:00",
+      "legacyDates": {
+        "publishedAt": "2026-08-05",
+        "accessedAt": "2026-10-22"
+      },
+      "expectedSha256": "739261890d8322011ac11e6c0cb9e5e33855f2c7f067d0c53a268cb77d3ddb7a"
+    },
+    {
+      "id": "IDEA-20261022-025",
+      "kind": "Idea",
+      "title": "活动 DJ 业务的线索资格筛选与人工交接自动化",
+      "audience": "美国活动 DJ 业务及其线索处理人员",
+      "problem": "需要解析 Eventective/Gmail 线索，按批准套餐回答问题、筛选意向并在异常或高意向时转人工",
+      "earningHypothesis": "研究助手推断：先按固定小包交付邮件解析、字段映射和交接状态，再扩展短信、日历和 CRM 同步；付款未知。",
+      "industry": [
+        "活动服务销售自动化"
+      ],
+      "sideHustleTypes": [
+        "固定范围 AI 工作流交付"
+      ],
+      "markets": [
+        "美国"
+      ],
+      "researchStatus": "待验证",
+      "evidenceIds": [
+        "EV-20261022-025"
+      ],
+      "firstCollectedAt": "2026-10-22T16:15:10+08:00",
+      "expectedSha256": "739261890d8322011ac11e6c0cb9e5e33855f2c7f067d0c53a268cb77d3ddb7a"
+    }
   ]
 }
