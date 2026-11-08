@@ -6,7 +6,7 @@
 | --- | --- | --- | --- |
 | records-history | 网站、趋势、点子、证据、个人操作与历史的保存和读取；稳定 ID、合并关联、持久化约束 | 无 | 重启后资料/选择不丢失，变更能追溯，合并不丢来源 |
 | source-research | 网站收录、公开讨论采样、初始集中收集、后续增量采集、核验去重与趋势/点子分类 | records-history | 可追溯来源的资料入库，证据弱的标注清晰，重复输入不产生重复项 |
-| opportunity-review | 跨行业适配判断、证据分析、精选 1–3 个方向及两周实验建议 | records-history | 入库与推荐分离，解释匹配原因与证据缺口，不把估计当成交 |
+| opportunity-review | 跨行业适配判断、证据分析、独立 readinessStatus、精选 1–3 个方向及分阶段探索周期建议 | records-history | 基础入库与候选/精选分离；解释匹配原因、证据缺口和建议周期，不把估计当成交 |
 | local-web | 本机与局域网浏览，搜索筛选、详情/历史、收藏/忽略/准备验证 | records-history、opportunity-review | 不同设备看到一致记录，个人操作持久化且不被采集覆盖 |
 | scheduled-sync | 既有定时任务接续、阶段切换、运行记录、有限重试、检查/提交/推送及网站数据刷新协调 | records-history、source-research、opportunity-review、local-web | 可断点恢复，无变化不重复提交，推送失败不丢本地成果，网页反映最近有效数据 |
 
