@@ -37,3 +37,29 @@
 - otherEmployerJobs 暴露同一买方另两个条目：“Spanish Website Translation Audit”（30–250 欧元，/projects/editing/spanish-website-translation-audit）与 “Flutter App In-App Purchase Expert Needed”（15–25 美元/小时）。前者是潜在的同买方第二个翻译类项目，可能对应 CN302 档案中 Tim R. “多次合作” 评价，但本轮不展开、不计复购，留待后续轮次回源该项目页核对买方身份与完成状态。
 
 结论不变：本页支持具体买方需求、选人（100 欧元中标）与平台完成状态，但登出态仍无法证明实际放款金额、译员净提现或总工时；CN302 档案评价显示的 105 欧元与本单投标 100 欧元的差异继续保留历史原句，不用结构化字段覆盖。候选仍为 0。
+
+## 2026-11-09 第二轮回源：同买方第二单落地，重复授标确认但实收仍不可见
+
+未登录只读两页（各约 1.1 MB，均 HTTP 200，共 2 次请求），解析 NGRX_STATE 内嵌 rawDocument 并逐字段比对。
+
+### Spanish Website Translation Audit（projectId=40449131）
+
+- 固定价，status=closed、subStatus=closed_awarded；startTime=2026-05-17 07:56 UTC、endTime=2026-05-24、latestActivityTime=2026-05-18 09:18 UTC。预算 30–250 欧元（EUR，exchangeRate 1.16151），bidStats：12 份提案、平均 50 欧元；rawDocument 仅内嵌 5 条投标样本，授标记录另在 selectedBids。
+- 买方原始需求：英文信息页已译为西班牙本土西语，要求对照英文源复核 610 个翻译键，查误译与生硬表达并给出润色替代；须使用买方 SimplyLocalize 工具，并有一次简短在线会议做工具说明（brief online call）——含一次性语音环节，与避免频繁英语语音的私人条件相关但不等同持续客服。
+- selectedBids 仅一条：TransManual24（孟加拉国 Dinajpur），amount=30 欧元、period=1 天、completed=true；sellerRating 5.0、reviewCount=94（账户累计，非本单评价）；userEarningsPercentage=7.02 为账户统计，不是本单放款。
+
+### 同一买方与重复授标的确认
+
+- 两项目 client 对象逐字段完全一致（registrationTime=1702472417000、迪拜地址、零评价、paymentVerified/emailVerified/phoneVerified/depositMade 均 true、profileComplete=false），且 CN303 页 otherEmployerJobs 曾列出本项目，确认同一买方。
+- 时间线：西语审核 2026-05-17 授标 30 欧元/1 天 → 阿语界面复核 2026-06-29 授标 100 欧元/3 天，相隔约 43 天，同一买方两次把项目授予同一团队 TransManual24，两单 selectedBids 均 completed=true。这是库内迄今最直接的“同买方→同供应方重复授标”平台结构化证据，可关闭上轮留下的“第二单是否存在、是否同供应方”未知。
+- 口径差异原样保留：两页内嵌的 TransManual24 reviewCount 分别为 94（西语页）与 97（阿语页，本轮复抓仍为 97），疑为页面快照/缓存口径不同，不自行统一。
+
+### 七层裁决与边界
+
+证据推进到“授标＋平台完成状态”层（两单均 closed_awarded、completed=true），但登出态 milestones/milestoneRequests 仍为空对象，无托管释放、放款金额、提现、银行到账、本单评价字段；买方零评价、depositMade 仅账户级验证。因此：
+
+- 可确认：真实需求、报价区间、授标选择、平台完成状态、同买方对同团队的重复授标；
+- 不可确认：30/100 欧元是否实际放款、译员净提现、总工时与复购付款；重复授标不等于两笔钱均已到账，不升 paid；
+- 该供应方为孟加拉国团队账户（2007 年注册、90+ 语言模板化投标），其路径不能直接等同于用户个人获客；一次性简短在线会议与英语沟通仍是门槛。
+
+结论：CN303 维持 E3、需补证，不进候选/精选；本轮回源把“复购”未知从无证据收窄为“重复授标已确认、重复实收未确认”。候选/精选仍 0/0。
