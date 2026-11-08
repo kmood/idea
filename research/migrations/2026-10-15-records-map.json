@@ -9412,7 +9412,7 @@
       "legacyDates": {
         "accessedAt": "2026-10-25"
       },
-      "expectedSha256": "c6b0199b923330a3536fea80248de50de3c4d7ff01c5c142fa1f9dc8f88f84cc"
+      "expectedSha256": "625a5693ac946925d5d130367804f6b4bcf81d61227efecf0b0ee92d2d68ef94"
     },
     {
       "id": "EV-20261025-007",
@@ -9433,7 +9433,7 @@
         "lastAttempt": "2026-11-09",
         "lastSuccess": "2026-11-09"
       },
-      "expectedSha256": "c6b0199b923330a3536fea80248de50de3c4d7ff01c5c142fa1f9dc8f88f84cc"
+      "expectedSha256": "625a5693ac946925d5d130367804f6b4bcf81d61227efecf0b0ee92d2d68ef94"
     },
     {
       "id": "IDEA-20261025-004",
@@ -9458,7 +9458,7 @@
         "EV-20261025-007"
       ],
       "firstCollectedAt": "2026-10-25T08:15:00+08:00",
-      "expectedSha256": "c6b0199b923330a3536fea80248de50de3c4d7ff01c5c142fa1f9dc8f88f84cc"
+      "expectedSha256": "625a5693ac946925d5d130367804f6b4bcf81d61227efecf0b0ee92d2d68ef94"
     }
   ],
   "ideas/IDEA-20261025-005.md": [
