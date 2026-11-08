@@ -334,7 +334,7 @@
 
 ### 本轮复检（2026-10-22，00:36 +08:00）
 
-- GL06：last_attempt / last_success=2026-10-22；[成员API迁移委托](https://meta.discourse.org/t/paid-gig-seeking-discourse-developer-for-api-user-creation-and-automated-approval/399083)2026-03-23，买方当日确认选人，未见完成/付款；形成历史E3，不推定仍开放。下次看近期买方、完成反馈与平台允许流程。
+- GL06：last_attempt / last_success=2026-10-22；[成员API迁移委托](https://meta.discourse.org/t/paid-gig-seeking-discourse-developer-for-api-user-creation-and-automated-approval/399083)2026-03-23，买方当日确认选人，未见完成/付款；形成历史E3，不推定仍开放。2026-11-09 回源（last_attempt / last_success=2026-11-09，官方 JSON HTTP 200）：全帖 5 个用户发言＋系统关闭消息，承接方第 4 楼转私信、买方当日称已找到人但无金额/合同，此后无交付、验收、付款或复购，2026-04-22 自动关闭，站内信息穷尽不再回源；买方为托管 Discourse Pro 计划，官方支持与原生导入工具为替代，E3 维持不升 paid。下次看近期买方、完成反馈与平台允许流程。
 - CN08：中文专业社区，站长/社区运营受众，last_attempt / last_success=2026-10-22；/d/3916/5首次超时，一次改用原帖根地址[FreeFlarum迁出求助](https://discuss.flarum.org.cn/d/3916)后正文及回复可读。页面有前端加载错误但静态问答可读；发布日期未知，不当近期讨论。用户接受官方导出指引，未见付费，未新建迁移点子。下一次补日期及近期未解决实际委托，不能声称全站交互或登录区可用。
 - 英文Flarum社区仅搜索未读，不按语言分站增加名义来源；本轮只新增一个中文域名。
 
