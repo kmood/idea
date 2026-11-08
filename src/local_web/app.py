@@ -8,6 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 from .catalog import find_record, load_catalog, validate_catalog
 from .markdown import render_markdown
+from records.personal import PersonalStore
 
 
 STATIC=Path(__file__).with_name('static')
@@ -16,7 +17,9 @@ HEADERS={'Content-Security-Policy':"default-src 'self'; script-src 'self'; style
 
 
 class LocalWebApp:
-    def __init__(self,root):self.root=Path(root).resolve()
+    def __init__(self, root, db_path=None):
+        self.root=Path(root).resolve()
+        self.db_path=Path(db_path).resolve() if db_path else None
 
     def response(self,status,body,content_type):
         headers=dict(HEADERS);headers['Content-Type']=content_type
@@ -27,14 +30,31 @@ class LocalWebApp:
 
     def error(self,status,code,message):return self.json(status,{'error':{'code':code,'message':message}})
 
-    def dispatch(self,method,target):
-        try:return self._dispatch(method,target)
+    def dispatch(self,method,target,body=b''):
+        try:return self._dispatch(method,target,body)
         except (OSError,UnicodeError,ValueError):
             return self.error(500,'REPOSITORY_ERROR','Repository data could not be read')
 
-    def _dispatch(self,method,target):
-        if method not in ('GET','HEAD'):return self.error(405,'METHOD_NOT_ALLOWED','Only GET and HEAD are supported')
+    def _dispatch(self,method,target,body=b''):
+        if method not in ('GET','HEAD','POST'):return self.error(405,'METHOD_NOT_ALLOWED','Only GET, HEAD and POST are supported')
         path=unquote(urlsplit(target).path)
+        if path=='/api/personal-state' and method=='POST':
+            return self._mark_not_applicable(body)
+        if path=='/api/personal-states' and method=='GET':
+            if self.db_path is None or not self.db_path.is_file():
+                return self.error(503,'PERSONAL_STATE_UNAVAILABLE','Personal state storage is not configured')
+            result=PersonalStore(self.db_path).ignored_ids()
+            return self.json(200,result)
+        if path.startswith('/api/personal-state/') and method in ('GET','HEAD'):
+            record_id=path.removeprefix('/api/personal-state/')
+            if not record_id or '/' in record_id or find_record(self.root,'idea',record_id) is None:
+                return self.error(404,'NOT_FOUND','Personal state was not found')
+            if self.db_path is None or not self.db_path.is_file():
+                return self.error(503,'PERSONAL_STATE_UNAVAILABLE','Personal state storage is not configured')
+            result=PersonalStore(self.db_path).read_record(record_id)
+            return self.json(200,result)
+        if method not in ('GET','HEAD'):
+            return self.error(405,'METHOD_NOT_ALLOWED','This endpoint does not accept that method')
         if path=='/api/catalog':return self.json(200,load_catalog(self.root))
         if path=='/api/consistency':return self.json(200,validate_catalog(self.root))
         if path.startswith('/api/documents/'):
@@ -55,17 +75,35 @@ class LocalWebApp:
                 body=render_markdown(document.read_text(encoding='utf-8'))
             return self.json(200,{'id':record['id'],'kind':kind,'title':record['title'],'html':body,'documentPath':record['documentPath']})
         static_name='index.html' if path in ('/','/index.html') else path.removeprefix('/assets/') if path.startswith('/assets/') else None
-        if static_name not in ('index.html','app.css','app.js'):return self.error(404,'NOT_FOUND','Resource was not found')
+        if static_name not in ('index.html','app.css','app.js','personal.css'):return self.error(404,'NOT_FOUND','Resource was not found')
         file=STATIC/static_name
         mime=mimetypes.guess_type(file.name)[0] or 'application/octet-stream'
         if mime.startswith('text/') or mime=='application/javascript':mime+='; charset=utf-8'
         return self.response(200,file.read_bytes(),mime)
 
+    def _mark_not_applicable(self, body):
+        if self.db_path is None or not self.db_path.is_file():
+            return self.error(503,'PERSONAL_STATE_UNAVAILABLE','Personal state storage is not configured')
+        try:
+            payload=json.loads(body.decode('utf-8'), parse_constant=lambda _: (_ for _ in ()).throw(ValueError()))
+        except (UnicodeError, ValueError, json.JSONDecodeError):
+            return self.error(400,'INVALID_JSON','Request body must be valid JSON')
+        if not isinstance(payload,dict) or set(payload)!={'id','expectedRevision','operationId'}:
+            return self.error(400,'INVALID_REQUEST','Request fields are invalid')
+        record_id=payload['id']
+        if find_record(self.root,'idea',record_id) is None:
+            return self.error(404,'NOT_FOUND','Idea was not found')
+        result=PersonalStore(self.db_path).set_personal_state(
+            record_id, payload['expectedRevision'], {'ignored':True}, payload['operationId'])
+        return self.json(200,result)
+
 
 def handler_for(app):
     class Handler(BaseHTTPRequestHandler):
         def handle_request(self,method):
-            status,headers,body=app.dispatch(method,self.path);self.send_response(status)
+            length=int(self.headers.get('Content-Length','0') or 0)
+            body=self.rfile.read(length) if method=='POST' else b''
+            status,headers,body=app.dispatch(method,self.path,body);self.send_response(status)
             for key,value in headers.items():self.send_header(key,value)
             self.send_header('Content-Length',str(len(body)));self.end_headers()
             if method!='HEAD':self.wfile.write(body)
@@ -76,8 +114,8 @@ def handler_for(app):
     return Handler
 
 
-def serve(root,host,port):
-    server=ThreadingHTTPServer((host,port),handler_for(LocalWebApp(root)))
+def serve(root,host,port,db_path=None):
+    server=ThreadingHTTPServer((host,port),handler_for(LocalWebApp(root,db_path)))
     print(f'Idea dashboard: http://{host}:{server.server_port}',flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass

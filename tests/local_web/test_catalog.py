@@ -36,6 +36,10 @@ class CatalogTests(unittest.TestCase):
         idea=next(item for item in catalog['records'] if item['kind']=='idea')
         self.assertEqual((idea['id'],idea['evidence'],idea['status'],idea['researchStatus']),('IDEA-1','E2；付费未知','待验证','待验证'))
         self.assertEqual((idea['fit'],idea['evidenceLevel']),('有条件适合','E2'))
+        self.assertEqual(idea['readinessStatus'],'需补证')
+        self.assertIn('acquisitionPath',idea['qualityFlags'])
+        self.assertEqual(catalog['meta']['filters']['ideaReadinessStatus'],['需补证'])
+        self.assertEqual(catalog['meta']['readinessCounts'],{'可行动':0,'需补证':1,'仅观察':0,'暂不适合':0})
         source=next(item for item in catalog['records'] if item['kind']=='source')
         self.assertEqual((source['evidence'],source['url'],source['accessStatus']),(None,None,'可读'))
         self.assertEqual(catalog['meta']['phase'],'集中收集')
@@ -101,7 +105,7 @@ class CatalogTests(unittest.TestCase):
         status,_,body=LocalWebApp(self.root).dispatch('GET','/')
         page=body.decode('utf-8')
         self.assertEqual(status,200)
-        for marker in ('source-hostname-count','idea-status-counts','research-status','idea-fit','access-status','selected-count','advanced-filters','compare-panel','compare-list','refresh','check-consistency','refresh-status','sort'):
+        for marker in ('source-hostname-count','idea-status-counts','research-status','idea-fit','access-status','readiness-status','personal-status','selected-count','advanced-filters','compare-panel','compare-list','refresh','check-consistency','refresh-status','sort'):
             self.assertIn(marker,page)
         self.assertIn('value="idea" checked',page)
 

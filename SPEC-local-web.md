@@ -1,6 +1,6 @@
 # 规格：本机研究看板（local-web）
 
-状态：用户于 2026-10-20 要求继续研究并开发可视化界面；沿用此前“后续不需要确认，直接继续”的授权。本规格对应已批准能力划分中的 `local-web`，首个切片只读，不切换现有 Markdown 权威入口。
+状态：用户于 2026-10-20 要求继续研究并开发可视化界面；2026-10-26 增加“本人不适用”私人操作。本规格对应已批准能力划分中的 `local-web`，研究资料仍由 Markdown 提供，私人操作通过显式 records SQLite 入口保存。
 
 ## 目标
 
@@ -30,6 +30,7 @@ PYTHONPATH=src python3 -m unittest discover -s tests/local_web -p 'test_*.py' -v
 
 - `GET /api/catalog` → `{meta, records}`；每项含 `id`、`kind`、`title`、`summary`、`marketOrSource`、`evidence`、`status`、`updatedAt` 和 `documentPath`。
 - `GET /api/documents/{kind}/{id}` → `{id, kind, title, html, documentPath}`。
+- `GET /api/personal-states` → `{ok:true,value:[ideaId...]}`，仅返回本人不适用点子 ID，不泄露备注等私人字段；未配置数据库返回 503。
 - 所有错误返回 `{error:{code,message}}`；不存在为 404，非法路径为 400。
 
 ## 样式与交互
@@ -40,11 +41,19 @@ PYTHONPATH=src python3 -m unittest discover -s tests/local_web -p 'test_*.py' -v
 
 先用 unittest 验证索引解析、路径限制、HTML 转义、API 结构及真实仓库读取，再用真实浏览器检查 320/768/1440 宽度、筛选、详情、空状态、键盘焦点和控制台错误。静态页面不加载第三方脚本、字体或图片。
 
+## 私人操作
+
+- 启动看板时通过 `--db` 指定已初始化并完成资料迁移的本机 records SQLite 数据库。
+- 点子详情提供“标记本人不适用”操作，调用 `PersonalStore.set_personal_state`，只写入个人 `ignored=true` 与个人历史。
+- 筛选区提供“本人适用性”筛选，可排除或仅查看 `ignored=true` 的点子；私人筛选只影响当前看板，不修改公开 Markdown。
+- 请求携带 `expectedRevision` 和唯一 `operationId`；重复提交同一操作只回放结果，并发版本冲突时不覆盖另一设备的选择。
+- 未配置 `--db` 时按钮保持不可用并说明原因；不使用浏览器 localStorage，不修改 Markdown、研究状态或公开研究包。
+
 ## 边界
 
 - 始终：只读仓库允许目录；转义正文；每次 API 请求读取最新 Markdown；保持稳定 ID 和未知值。
 - 已授权直接实施：新增本机只读服务、文档、测试和启动说明。
-- 后续切片：收藏、忽略、准备验证须调用 records-history 私人状态接口，不能只写浏览器 localStorage。
+- 后续切片：收藏、准备验证、私人备注及反馈仍须调用 records-history 私人状态接口，不能只写浏览器 localStorage。
 - 禁止：公网部署、任意文件读取、执行 Markdown 中的 HTML/脚本、把临时 R19 数据冒充正式索引、覆盖用户选择、加入账号/Cookie。
 
 ## 成功条件

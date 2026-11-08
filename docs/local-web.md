@@ -21,12 +21,23 @@ PYTHONPATH=src python3 -m local_web --root . --host 0.0.0.0 --port 8765
 ## 当前能力
 
 - 总览来源、趋势和点子数量。
-- 按关键词、资料类型、证据等级和状态筛选。
+- 按关键词、资料类型、证据等级和状态筛选；配置本机 records 数据库后，可按“本人适用性”排除或仅查看已标记为“本人不适用”的点子。
 - 查看仓库 Markdown 详情；未知信息保持未知，不按零值展示。
 - `GET /api/catalog` 返回统一目录；`GET /api/documents/{kind}/{id}` 返回安全渲染的详情。
-- 服务只接受 `GET` 和 `HEAD`，详情路径限定在仓库允许目录，页面不加载外部资源。
+- `GET /api/personal-states` 只返回已标记 `ignored=true` 的点子 ID，不返回备注或其他私人字段。
+- 资料接口只接受 `GET` 和 `HEAD`；私人标记接口额外接受受限的 `POST /api/personal-state`，详情路径限定在仓库允许目录，页面不加载外部资源。
 
-收藏、忽略和准备验证属于私人状态，当前切片暂未开放。后续会接入本机 records-history 状态存储，不使用浏览器临时状态代替。
+点子详情支持“标记本人不适用”。需要保存私人操作时，启动时显式传入已初始化并完成资料迁移的本机 records 数据库：
+
+```bash
+PYTHONPATH=src python3 -m local_web --root . --host 127.0.0.1 --port 8765 --db .local/records.sqlite3
+```
+
+操作写入 records-history 的 `ignored=true`，保留版本历史与操作幂等信息，不修改 Markdown、不进入研究导出，也不使用浏览器临时状态。未传 `--db` 时页面仍可只读浏览，操作按钮会说明无法保存。
+
+页面刷新时读取上述私人 ID 列表；未配置 `--db` 或数据库不可读时，适用性筛选默认显示全部点子，公开资料仍可正常浏览。
+
+收藏、准备验证、私人备注和反馈仍未开放。
 
 ## 验证
 

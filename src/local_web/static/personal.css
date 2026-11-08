@@ -1,0 +1,4 @@
+.personal-actions{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding:.85rem 1rem;border:1px solid var(--line);background:var(--accent-soft)}
+.personal-action{border:1px solid var(--accent);padding:.55rem .8rem;background:var(--surface);color:var(--accent);cursor:pointer}
+.personal-action:disabled{cursor:default;opacity:.7}
+.personal-action-status{color:var(--muted);font-size:.78rem;line-height:1.4}

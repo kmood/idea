@@ -4,6 +4,8 @@ from collections import Counter
 from pathlib import Path, PurePosixPath
 from urllib.parse import urlsplit
 
+from research.idea_quality import audit_idea_record
+
 
 INDEXES={'source':Path('sources/INDEX.md'),'trend':Path('trends/INDEX.md'),'idea':Path('ideas/INDEX.md')}
 LINK=re.compile(r'^\[([^\]]+)\]\(([^)]+)\)$')
@@ -85,6 +87,17 @@ def load_rows(root,kind,index_path):
                         documentPath=index_path.as_posix(),priority=cells[5])
         else:continue
         if not ID.fullmatch(record['id']):raise ValueError('Unsafe record id')
+        if kind == 'idea':
+            document = root / record['documentPath']
+            if document.is_file():
+                audit = audit_idea_record(record, document.read_text(encoding='utf-8'))
+            else:
+                audit = dict(readinessStatus='需补证', recencyStatus='未知', evidenceSignals=[],
+                             missing=['document'])
+            record.update(readinessStatus=audit['readinessStatus'],
+                          recencyStatus=audit['recencyStatus'],
+                          evidenceSignals=audit['evidenceSignals'],
+                          qualityFlags=audit['missing'])
         records.append(record)
     return records
 
@@ -102,6 +115,8 @@ def load_catalog(root):
         'trend':dict(Counter(item['status'] for item in records if item['kind']=='trend')),
         'idea':dict(Counter(item['researchStatus'] for item in records if item['kind']=='idea')),
     }
+    readiness_counter=Counter(item.get('readinessStatus','需补证') for item in records if item['kind']=='idea')
+    readiness_counts={status:readiness_counter[status] for status in ('可行动','需补证','仅观察','暂不适合')}
     idea_statuses=[item['researchStatus'] for item in records if item['kind']=='idea']
     idea_fits=[item['fit'] for item in records if item['kind']=='idea' and item.get('fit')]
     source_access=[item.get('accessStatus','未知') for item in records if item['kind']=='source']
@@ -114,9 +129,13 @@ def load_catalog(root):
         'filters':{
             'ideaResearchStatus':ordered_options(idea_statuses,('待验证','候选','搁置','精选')),
             'ideaFit':ordered_options(idea_fits,('较适合','有条件适合','暂不适合')),
+            'ideaReadinessStatus':ordered_options(
+                [item.get('readinessStatus','需补证') for item in records if item['kind']=='idea'],
+                ('可行动','需补证','仅观察','暂不适合')),
             'sourceAccessStatus':ordered_options(source_access,('可读','受限','未知')),
         },
         'sourceMetrics':{'entryCount':counts['source'],'hostnameCount':len(hostnames)},
+        'readinessCounts':readiness_counts,
     }
     return {'meta':meta,'records':records}
 

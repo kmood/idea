@@ -1,5 +1,5 @@
 const labels={source:'来源',trend:'趋势',idea:'点子'};
-const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',ideaFit:'',accessStatus:'',sort:'recent',compareIds:new Set()};
+const state={records:[],meta:{},query:'',kind:'idea',evidence:'',researchStatus:'',ideaFit:'',readinessStatus:'',accessStatus:'',personalStatus:'all',ignoredIds:new Set(),sort:'recent',compareIds:new Set()};
 const list=document.querySelector('#record-list');
 const empty=document.querySelector('#empty');
 const errorBox=document.querySelector('#error');
@@ -12,7 +12,8 @@ function filtered(){
   const query=state.query.trim().toLocaleLowerCase('zh-CN');
   return state.records.filter(record=>{
     const haystack=[record.id,record.title,record.summary,record.marketOrSource,record.evidence,record.status].filter(Boolean).join(' ').toLocaleLowerCase('zh-CN');
-    return (!query||haystack.includes(query))&&(!state.kind||record.kind===state.kind)&&(!state.evidence||(record.evidence||'').includes(state.evidence))&&(!state.researchStatus||(record.kind==='idea'&&record.researchStatus===state.researchStatus))&&(!state.ideaFit||(record.kind==='idea'&&record.fit===state.ideaFit))&&(!state.accessStatus||(record.kind==='source'&&record.accessStatus===state.accessStatus));
+    const ignored=record.kind==='idea'&&state.ignoredIds.has(record.id);
+    return (!query||haystack.includes(query))&&(!state.kind||record.kind===state.kind)&&(!state.evidence||(record.evidence||'').includes(state.evidence))&&(!state.researchStatus||(record.kind==='idea'&&record.researchStatus===state.researchStatus))&&(!state.ideaFit||(record.kind==='idea'&&record.fit===state.ideaFit))&&(!state.readinessStatus||(record.kind==='idea'&&record.readinessStatus===state.readinessStatus))&&(!state.accessStatus||(record.kind==='source'&&record.accessStatus===state.accessStatus))&&(state.personalStatus==='all'||record.kind!=='idea'||(state.personalStatus==='ignored'?ignored:!ignored));
   });
 }
 
@@ -33,7 +34,7 @@ function render(){
     const title=text('strong','record-title',record.title);
     const summary=text('span','record-summary',record.summary||'暂无说明');
     const meta=document.createElement('span');meta.className='record-meta';
-    [record.marketOrSource,record.fit,record.evidenceLevel||record.evidence,record.researchStatus||record.accessStatus,record.updatedAt].filter(Boolean).forEach(value=>meta.append(text('span','tag',value)));
+    [record.marketOrSource,record.fit,record.readinessStatus,record.evidenceLevel||record.evidence,record.researchStatus||record.accessStatus,record.updatedAt].filter(Boolean).forEach(value=>meta.append(text('span','tag',value)));
     if(record.evidenceNote)meta.append(text('span','tag',record.evidenceNote));
     button.append(top,title,summary,meta);button.addEventListener('click',()=>openDetail(record));row.append(button);list.append(row);
   });
@@ -54,7 +55,7 @@ function renderCompare(){
   comparePanel.hidden=selected.length===0;compareList.replaceChildren();
   selected.forEach(record=>{
     const card=document.createElement('article');card.className='compare-card';
-    card.append(text('strong','compare-card-title',record.title),text('span','tag',record.researchStatus||'未知状态'),text('span','tag',record.evidence||'证据未知'),text('p','compare-card-summary',record.summary||'暂无摘要'));
+    card.append(text('strong','compare-card-title',record.title),text('span','tag',record.readinessStatus||'质量状态未知'),text('span','tag',record.researchStatus||'未知状态'),text('span','tag',record.evidence||'证据未知'),text('p','compare-card-summary',record.summary||'暂无摘要'));
     const remove=document.createElement('button');remove.type='button';remove.className='compare-remove';remove.textContent='移出比较';remove.addEventListener('click',()=>{state.compareIds.delete(record.id);render();});card.append(remove);compareList.append(card);
   });
 }
@@ -65,8 +66,33 @@ async function openDetail(record){
     const response=await fetch(`/api/documents/${encodeURIComponent(record.kind)}/${encodeURIComponent(record.id)}`);
     if(!response.ok)throw new Error('detail');
     const document=await response.json();detail.innerHTML=document.html;
+    if(record.kind==='idea')await addPersonalAction(record);
     const heading=detail.querySelector('h1');if(heading)heading.tabIndex=-1;(heading||dialog.querySelector('.close')).focus();
   }catch{detail.replaceChildren(text('p','error-message','详情读取失败，请稍后重试。'));}
+}
+
+async function addPersonalAction(record){
+  const actions=document.createElement('section');actions.className='personal-actions';
+  const button=document.createElement('button');button.type='button';button.className='personal-action';button.textContent='标记本人不适用';
+  const status=document.createElement('span');status.className='personal-action-status';status.setAttribute('aria-live','polite');status.textContent='正在读取私人状态…';
+  actions.append(button,status);detail.prepend(actions);button.disabled=true;
+  let personal;
+  try{
+    const response=await fetch(`/api/personal-state/${encodeURIComponent(record.id)}`,{cache:'no-store'});
+    if(!response.ok)throw new Error('unavailable');
+    const result=await response.json();if(!result.ok)throw new Error('state');personal=result.value;
+    if(personal.ignored){button.textContent='已标记本人不适用';status.textContent='此选择仅保存在本机私人状态。';return;}
+    button.disabled=false;status.textContent='此选择仅保存在本机私人状态。';
+  }catch{status.textContent='需用 --db 指定本机 records 数据库后才能保存。';return;}
+  button.addEventListener('click',async()=>{
+    button.disabled=true;status.textContent='保存中…';
+    const operationId=`mark-not-applicable-${record.id}-${Date.now()}`;
+    try{
+      const response=await fetch('/api/personal-state',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:record.id,expectedRevision:personal.revision,operationId})});
+      const result=await response.json();if(!response.ok||!result.ok)throw new Error('save');
+      personal=result.value;state.ignoredIds.add(record.id);button.textContent='已标记本人不适用';status.textContent='已保存到本机私人状态。';render();
+    }catch{button.disabled=false;status.textContent='保存失败，请重试；不会修改研究资料。';}
+  });
 }
 
 document.querySelector('#search').addEventListener('input',event=>{state.query=event.target.value;render();});
@@ -77,14 +103,17 @@ document.querySelectorAll('input[name="kind"]').forEach(input=>input.addEventLis
   if(state.kind==='source')state.researchStatus='';
   document.querySelector('#research-status').value=state.researchStatus;
   document.querySelector('#idea-fit').value=state.ideaFit;
+  document.querySelector('#readiness-status').value=state.readinessStatus;
   document.querySelector('#access-status').value=state.accessStatus;
   updateFilterAvailability();render();
 }));
 document.querySelector('#evidence').addEventListener('change',event=>{state.evidence=event.target.value;render();});
 document.querySelector('#research-status').addEventListener('change',event=>{state.researchStatus=event.target.value;render();});
 document.querySelector('#idea-fit').addEventListener('change',event=>{state.ideaFit=event.target.value;render();});
+document.querySelector('#readiness-status').addEventListener('change',event=>{state.readinessStatus=event.target.value;render();});
 document.querySelector('#access-status').addEventListener('change',event=>{state.accessStatus=event.target.value;render();});
-document.querySelector('#reset').addEventListener('click',()=>{state.query='';state.kind='';state.evidence='';state.researchStatus='';state.ideaFit='';state.accessStatus='';state.sort='recent';state.compareIds.clear();document.querySelector('#search').value='';document.querySelector('#sort').value='recent';document.querySelector('input[name="kind"][value=""]').checked=true;document.querySelector('#evidence').value='';document.querySelector('#research-status').value='';document.querySelector('#idea-fit').value='';document.querySelector('#access-status').value='';render();});
+document.querySelector('#personal-status').addEventListener('change',event=>{state.personalStatus=event.target.value;render();});
+document.querySelector('#reset').addEventListener('click',()=>{state.query='';state.kind='';state.evidence='';state.researchStatus='';state.ideaFit='';state.readinessStatus='';state.accessStatus='';state.personalStatus='all';state.sort='recent';state.compareIds.clear();document.querySelector('#search').value='';document.querySelector('#sort').value='recent';document.querySelector('input[name="kind"][value=""]').checked=true;document.querySelector('#evidence').value='';document.querySelector('#research-status').value='';document.querySelector('#idea-fit').value='';document.querySelector('#readiness-status').value='';document.querySelector('#access-status').value='';document.querySelector('#personal-status').value='all';render();});
 dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
 
@@ -92,7 +121,9 @@ function setOptions(selector,values,emptyLabel){const element=document.querySele
 function updateFilterAvailability(){
   document.querySelector('#research-status').disabled=state.kind==='source';
   document.querySelector('#idea-fit').disabled=state.kind==='source';
+  document.querySelector('#readiness-status').disabled=state.kind==='source';
   document.querySelector('#access-status').disabled=state.kind==='idea';
+  document.querySelector('#personal-status').disabled=state.kind==='trend'||state.kind==='source';
 }
 function statusSummary(counts){return ['待验证','候选','搁置'].filter(value=>counts[value]).map(value=>`${value} ${counts[value]}`).join(' · ')||'暂无状态统计';}
 function applyCatalog(catalog){
@@ -101,18 +132,29 @@ function applyCatalog(catalog){
   document.querySelector('#selected-count').textContent=catalog.meta.selectedCount??0;
   document.querySelector('#source-hostname-count').textContent=`不同 hostname ${catalog.meta.sourceMetrics.hostnameCount}`;
   document.querySelector('#idea-status-counts').textContent=statusSummary(catalog.meta.statusCounts.idea||{});
-  const researchOptions=catalog.meta.filters.ideaResearchStatus||[];const fitOptions=catalog.meta.filters.ideaFit||[];const accessOptions=catalog.meta.filters.sourceAccessStatus||[];
+  const researchOptions=catalog.meta.filters.ideaResearchStatus||[];const fitOptions=catalog.meta.filters.ideaFit||[];const readinessOptions=catalog.meta.filters.ideaReadinessStatus||[];const accessOptions=catalog.meta.filters.sourceAccessStatus||[];
   if(state.researchStatus&&!researchOptions.includes(state.researchStatus))state.researchStatus='';
   if(state.ideaFit&&!fitOptions.includes(state.ideaFit))state.ideaFit='';
+  if(state.readinessStatus&&!readinessOptions.includes(state.readinessStatus))state.readinessStatus='';
   if(state.accessStatus&&!accessOptions.includes(state.accessStatus))state.accessStatus='';
   setOptions('#research-status',researchOptions,'全部点子状态');document.querySelector('#research-status').value=state.researchStatus;
   setOptions('#idea-fit',fitOptions,'全部匹配度');document.querySelector('#idea-fit').value=state.ideaFit;
+  setOptions('#readiness-status',readinessOptions,'全部质量状态');document.querySelector('#readiness-status').value=state.readinessStatus;
   setOptions('#access-status',accessOptions,'全部来源状态');document.querySelector('#access-status').value=state.accessStatus;
   updateFilterAvailability();render();
 }
+async function refreshPersonalStates(){
+  try{
+    const response=await fetch('/api/personal-states',{cache:'no-store'});
+    if(!response.ok)throw new Error('personal-state');
+    const result=await response.json();if(!result.ok)throw new Error('personal-state');
+    state.ignoredIds=new Set(result.value);
+  }catch{state.ignoredIds=new Set();}
+  render();
+}
 async function refreshCatalog(){
   const button=document.querySelector('#refresh');const status=document.querySelector('#refresh-status');button.disabled=true;status.textContent='读取中…';
-  try{const response=await fetch('/api/catalog',{cache:'no-store'});if(!response.ok)throw new Error('catalog');applyCatalog(await response.json());status.textContent='已刷新';}
+  try{const response=await fetch('/api/catalog',{cache:'no-store'});if(!response.ok)throw new Error('catalog');applyCatalog(await response.json());await refreshPersonalStates();status.textContent='已刷新';}
   catch{status.textContent=state.records.length?'刷新失败，保留当前资料':'资料读取失败';if(!state.records.length){list.hidden=true;errorBox.hidden=false;document.querySelector('#result-count').textContent='读取失败';}}
   finally{button.disabled=false;}
 }

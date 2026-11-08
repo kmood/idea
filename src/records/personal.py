@@ -25,6 +25,12 @@ class PersonalStore:
             return read(conn, id)
 
     @boundary
+    def ignored_ids(self) -> list[str]:
+        with closing(self.db.connect()) as conn:
+            rows = conn.execute('SELECT payload FROM personal_states').fetchall()
+            return sorted(json.loads(row[0])['recordId'] for row in rows if json.loads(row[0]).get('ignored') is True)
+
+    @boundary
     def set_personal_state(self, id: str, expected_revision: int | None, patch: dict, operation_id: str) -> dict:
         fields(patch, PRIVATE)
         for key in ('favorite', 'ignored'):
