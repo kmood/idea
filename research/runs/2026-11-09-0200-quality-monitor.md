@@ -1,0 +1,21 @@
+# 2026-11-09 02:00（Asia/Shanghai）质量守门运行记录：GL54 证书系统项目托管放款与验收边界回源（证据留痕、状态不变）
+
+- 研究问题：IDEA-20261022-045（培训证书批量生成与多渠道发送小包，需补证、已撤出近期行动池）的 GL54 只凭页面 Completed/Paid on delivery 记为 E3，本轮回源核验平台登出态是否存在本单里程碑放款、验收评价、提现/实收或复雇字段——这是区分“授标完成”与“个人实收”的关键未知；来源类型轮换回海外自由职业平台（上一轮为境外司法文书且域名阻断），行业为培训运营自动化、地区为约旦雇主/埃及中标者。
+- 范围与来源：未登录只读 GET `https://www.freelancer.com/projects/web-development/Automated-Certificate-System-Development`，HTTP 200、约 1.36 MB、无跳转；不登录、不绕付费墙/验证码，不访问卖家后台或私信。
+- 读取成功/失败：读取成功，无故障；与 CN321 同口径解析 Angular 登出态内嵌 JSON。
+- 核验到的原始字段：
+  - 项目状态：`status=closed`、`subStatus=closed_awarded`；startTime=1781109104000（2026-06-10 UTC），为历史项目。
+  - selectedBids 仅一条：username=Bary1999，埃及 Benha（countryCode=eg），amount=20 美元、period=3 天、`completed=true`；sellerRating average=5、reviewCount=4，属中标者账户累计信誉，不是本单评价。
+  - `milestones`、`milestoneRequests`、`milestoneDrafts`、`hourlyProjectMilestoneFees` 均为空对象 `{}`；employerFeedback/freelancerFeedback/projectFeedback 命中 0，全文 `rehire` 命中 0，disputed/refund 命中 0；无本单评价、里程碑放款、提现、银行到账或复雇字段。
+  - 雇主对象（约旦，countryCode=jo）verification：paymentVerified=true、emailVerified=true、phoneVerified=true、`depositMade=true`，雇主评分 4.88/9 条；depositMade 是雇主账户级托管押金验证，不是本单放款或中标者实收凭证。
+  - `Paid on delivery` 仍只是付款方式文案；预算 $10–20；`bidStats={bidCount:31, bidAvg:53}`，平均报价 53 美元对照 20 美元授标价显示低价竞争。
+- 数据漂移留痕：2026-10-22 历史摘录（点子正文、sources/INDEX GL54 行、迁移映射 summary）记“34 份提案”，当前页面结构化字段 bidCount=31。原因可能为撤标或平台口径变化，无法从登出态证实；按规则保留全部历史原句不改写，在点子证据段/历史表与 INDEX 行追加 2026-11-09 读数并标注差异。
+- 证据裁决：新增事实只支持“项目关闭授标、中标者、20 美元/3 天报价与 selectedBid completed 标记、雇主付款与托管押金验证”；不支持本单验收文本、里程碑放款、中标者提现/实收或复购。GL54 不升级 paid，IDEA-20261022-045 维持 E3、需补证、撤出近期行动池，候选/精选仍 0/0。
+- 减少的未知：把该平台登出态对本项目的最大可核验边界明确到字段级（与 CN321 同构），排除“页面存在未摘出的本单评价/放款记录”的可能；要改变结论只能依赖登录后台/卖家凭证或外部可核验结算材料，桌面阶段不再重复抓取同一项目页。
+- 反证/免费替代：现成 LMS/证书 SaaS、Canva/Word 模板、培训平台原生证书功能与人工制作为强替代；31 名投标者、平均报价 53 美元而授标 20 美元，叠加 WhatsApp Business API 合规与费用，提示低价竞争与利润不足，不能外推为可持续时薪。
+- 资料动作：更新 `ideas/IDEA-20261022-045.md`（证据段新增复核项、历史表追加一行）、`sources/INDEX.md` GL54 行（追加回源读数与漂移标注）；重算两文件在迁移映射中的 expectedSha256（点子文件 2 条、INDEX 178 条，整文件哈希）；映射 claim/summary 历史文本不改写。
+- 去重：无新增来源/点子，无合并；稳定 ID、URL 与历史证据含义保留。
+- 检查：legacy-preview 534 条、unresolved 为空、无 REVISION_CONFLICT；records 71/71、research 79/79、local_web 10/10 全绿；`git diff --check` 通过；`.local/` 零入库。
+- 剩余缺口：CN219 等境内政府采购站点解封；CN04 待 linux.do 恢复；台湾 .gov.tw 域名待网络恢复；本条目仍缺第二个近期证书自动化买方与同单放款/实收材料。
+- 故障：无。
+- 断点与下一步：分两个中文提交（资料留痕、运行记录与 STATE）推送并核验远程哈希；下一轮换行业与来源类型，优先境内可达的验收/合同公示类原始材料，避免连续 Freelancer 来源。
