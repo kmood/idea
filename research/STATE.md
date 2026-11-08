@@ -1,5 +1,7 @@
 # 运行状态
 
+- 2026-11-09 06:28 GL55/GL56 小房东维修协调两帖回源断点（讨论静默、付费意愿未转化、E2 维持、候选/精选 0/0）：BiggerPockets 两帖均 HTTP 200，10-22 后零新发言、无解决标记，GL55 顶层回答 21 条（23 为含楼中楼口径）、GL56 18 条；两发帖人无选型/付款回报，Joshua Hicks 自建工单软件仅为收据 AI 付费、称工单系统可有可无，Richard F. 质疑小规模痛点，反证增强；意向不升采购，不升 E3/paid，不再回源同帖。IDEA-20261022-046 追加两段回源与历史行，INDEX 仅 GL55/GL56 两行更新，重算指纹 INDEX 178 条＋点子 3 条、映射 diff 仅指纹行；预览 534 条 unresolved 为空，三套测试 71/79/10 全绿。剩余：czju 解封、CN219、CN04、.gov.tw、v2ex、威海 URL、GL48、正向小商户链条。详见 `research/runs/2026-11-09-0628-quality-monitor.md`。
+
 - 2026-11-09 06:17 GL06 Discourse 成员迁移帖回源断点（选人确认但交易链六层缺失、站内穷尽不再回源、候选/精选 0/0）：官方 JSON HTTP 200，全帖 5 条用户发言＋1 条系统关闭消息；买方 sjf1000 当日称 found someone，承接方 jahan_gagan 第 4 楼转私信，无金额/合同/交付/验收/付款/复购，2026-04-22 系统按 30 天规则自动关闭；托管 Pro 官方支持与原生导入/邀请工具为直接替代，E3/待验证维持不升 paid。IDEA-20261022-005 追加回源节与历史行，INDEX 仅 399083 一行更新（构建脚本误改 400431 行日期入仓前已纠正、未入仓），重算指纹 INDEX 178 条＋点子 2 条、映射 diff 仅指纹行；预览 534 条 unresolved 为空，三套测试 71/79/10 全绿。剩余：czju 解封、CN219、CN04、.gov.tw、v2ex、威海 URL、GL48、正向小商户链条。详见 `research/runs/2026-11-09-0617-quality-monitor.md`。
 
 - 2026-11-09 06:00 同买方 Flutter 小时单回源断点（closed_expired 未授标、复购边界收窄、候选/精选 0/0）：1 次请求 HTTP 200 解析 projectId=38715710，type=hourly、15–25 美元/小时、2024-10-23 挂牌、124 份提案均价 20，但 selectedBids 为空、到期未授标，无合同/交付/付款；client 注册时间与迪拜地址确认同账户，2024 快照 paymentVerified/depositMade=false 与 2026 页面 true 属时间差异。同买方行为链修正为开发小时单未雇→两笔小额翻译固定单重复授标，复购严格限定翻译固定单，不计此单、不升 paid。INDEX 重算指纹 178 条，预览 534 条 unresolved 为空，三套测试 71/79/10 全绿。剩余：czju 解封、CN219、CN04、.gov.tw、v2ex、威海 URL、GL48、正向小商户链条。详见 `research/runs/2026-11-09-0600-quality-monitor.md`。
