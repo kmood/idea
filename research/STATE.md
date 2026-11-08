@@ -1,5 +1,7 @@
 # 运行状态
 
+- 2026-11-09 06:50 PTT 超时改道与 GL11 QuickBooks 重复交易帖回源断点（免费流程主导、工具推广无采购、E2 维持、候选/精选 0/0）：PTT soho 两帖两次连接超时 HTTP 000（不第三次重试、不伪装，CN11 选人/付款未知挂起）；QuickBooks 948481 跳转规范化帖 29635（HTTP 200，totalPages=1），Question 无采纳、8 回复 102 浏览、活动止于 2023-10，三名独立用户重复问题均由版主免费流程答复，唯一商业提及为 TransactionPro 自助工具推广链接，无雇佣/验收/付款，折叠回复需登录未绕过；E2 不升 paid、同帖不再回源，1338727 留待后续。INDEX GL11 行与 IDEA-20261021-005 更新，重算指纹 178＋3 条、映射 diff 仅指纹行；预览 534 条 unresolved 为空，三套测试 71/79/10 全绿。剩余：czju 解封、CN219、CN04、.gov.tw、v2ex、GL48、威海 URL、ptt.cc、正向小商户链条。详见 `research/runs/2026-11-09-0650-quality-monitor.md`。
+
 - 2026-11-09 06:36 GL22 Etsy 上架自动化帖回源断点（三档报价并存、买方沉默、免费蓝图压缩付费空间、候选/精选 0/0）：Make 官方 JSON HTTP 200，16 条 post、无采纳答案、未关闭，最新楼层 10-20 即收录后零新发言；买方 Patrick_Schalk 仅 4-27 三条发言、索要邮箱转站外后沉默逾六个月。TinyOpsStudio 149 美元固定审计、Christo_Wilken 400–900 欧元固定价＋可下载 Make Blueprint、nigelyong 免费完整步骤三档并存，无接受/合同/交付/付款/复购，E1/待验证维持不升 paid，不再回源同帖；INDEX 无该帖独立行故不改，重算点子指纹 2 条、映射 diff 仅指纹行；预览 534 条 unresolved 为空，三套测试 71/79/10 全绿。剩余：czju 解封、CN219、CN04、.gov.tw、v2ex、威海 URL、GL48、正向小商户链条。详见 `research/runs/2026-11-09-0636-quality-monitor.md`。
 
 - 2026-11-09 06:28 GL55/GL56 小房东维修协调两帖回源断点（讨论静默、付费意愿未转化、E2 维持、候选/精选 0/0）：BiggerPockets 两帖均 HTTP 200，10-22 后零新发言、无解决标记，GL55 顶层回答 21 条（23 为含楼中楼口径）、GL56 18 条；两发帖人无选型/付款回报，Joshua Hicks 自建工单软件仅为收据 AI 付费、称工单系统可有可无，Richard F. 质疑小规模痛点，反证增强；意向不升采购，不升 E3/paid，不再回源同帖。IDEA-20261022-046 追加两段回源与历史行，INDEX 仅 GL55/GL56 两行更新，重算指纹 INDEX 178 条＋点子 3 条、映射 diff 仅指纹行；预览 534 条 unresolved 为空，三套测试 71/79/10 全绿。剩余：czju 解封、CN219、CN04、.gov.tw、v2ex、威海 URL、GL48、正向小商户链条。详见 `research/runs/2026-11-09-0628-quality-monitor.md`。
