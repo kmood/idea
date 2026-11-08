@@ -38,3 +38,15 @@
 - 现象：`IDEA-20261025-004` 正文内联为 `https://www.jl.gov.cn/ggzy/sysggzy/sysjyxx/syszchtgs/202605/t20260526_9631801.html`；Source 主记录为 `https://www.jl.gov.cn/ggzy/sysggzy/sysjyxx/syszfcg/ccszchtgs/202605/t20260526_9631801.html`。两者文档 ID 均为 9631801（长岭县第四中学大宗食材采购合同公示），仅栏目路径深度不同，非两个语义来源。
 - 处理：EV-20261025-007 按 DRIFT 规则采用 Source 主 URL，保留 sourceId=CN103，不新增编号、不改正文内联。
 - 待办：后续核验两条路径的可达性与 canonical 指向；若确认其中一条为失效别名，在来源索引统一并保留本表可逆记录。
+
+## 2026-11-09 补充：CN04 拆分复测（仍不具备改号条件）
+
+- 复测动作：为取得国企 AI 短视频讨论原帖 URL，普通 GET 访问 `linux.do/search.json` 与已知养猫帖 `t/topic/1441916`、站点首页，均连接超时（HTTP 000，非 403/验证码），判定为当前网络路径对 linux.do 整站不可达，未尝试登录或绕过。
+- 旁路检索：Bing 公开搜索（`site:linux.do 国企 AI 短视频 外包 300` 等）HTTP 200 但结果无任何 `linux.do/t/topic/` 链接；DuckDuckGo HTML 端点连接超时。搜索摘要不用于补位，未据此构造或猜测帖子 ID。
+- 裁决：拆分独立来源编号的前提（取得可复核原帖 URL）仍不满足。不新建以根 URL `https://linux.do/` 为地址的第二个 Source，避免两个来源同 URL 的新型冲突；CN04 维持现状（养猫帖与国企讨论共用编号，按具体 URL/日期定位），EV-20261024-028 保持 E1/author_claim/quote 不变。
+- 下一步：仅在 linux.do 恢复可达或出现可公开复核的原帖链接时再执行拆分与可逆映射；连续心跳不重复请求同一超时站点，下一轮轮换到其他证据缺口（CN313 双文档规范或其他行业来源）。
+
+## 2026-11-09 补充：CN103 DRIFT 验证进展（部分关闭）
+
+- 已验证：Source 主记录路径 `…/syszfcg/ccszchtgs/202605/t20260526_9631801.html` 于 2026-11-09 普通 GET 返回 200，无重定向、无 canonical 标签，为吉林省平台原生公示页；canonical 缺口关闭。
+- 仍待办：正文内联的 `…/sysjyxx/syszchtgs/…` 别名路径本轮未单独请求，双路径别名关系待下一轮可达性确认后统一，暂保留 DRIFT 记录与 EV-20261025-007 现有 URL 口径。
