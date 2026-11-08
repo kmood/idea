@@ -25,3 +25,15 @@
 ## 23:55 平台评价与付款的关联边界
 
 [CN306 Freelancer公开评价资格说明](https://www.freelancer.com/faq/topic.php?id=23)第13—23行写明：评价与项目完成、平台Milestone Payment有关，允许部分付款后将中标金额改为已付金额，再标记完成。[平台较新帮助页](https://www.freelancer.com/support/Payments/feedback-option)则区分固定价项目完成后的评价和时薪项目已付周里程碑后的评价；两页均未标生效日期，表述不完全一致，不能证明CN302各项目发生时适用的精确条件。平台规则是平台自身说明，不是独立流水。故CN302同名买方的三条公开评价可视作比单纯“已完成”更接近站内支付的信号，但不能将评价显示的50/800/85美元逐笔记为实际付款，更不能写成提款到银行、净回款或已跨期稳定复购。若取得对应项目详情/交易记录和买方身份核验，才可能进一步升级；现阶段候选维持0。
+
+
+## 2026-11-09 回源：项目40547881登出态结构化字段复核
+
+未登录只读项目页（HTTP 200，1.10 MB），解析页面 `webapp-state`（NGRX_STATE.projectsSeo 内嵌 rawDocument）取得结构化字段，与10-27人工行读互证：
+
+- 项目 `projectId=40547881`，title “Arabic UI Translation Verification”，固定价（type=fixed），status=closed、subStatus=closed_awarded；startTime=2026-06-29 21:21 UTC、latestActivityTime=2026-06-29 22:37 UTC，页面发布日期的相对时间由此得到绝对参照。预算 30–250 欧元（currencyDetails EUR，exchangeRate 1.14151），bidStats：9 份提案、平均报价 146 欧元。
+- selectedBids 仅一条：TransManual24（地址孟加拉国 Dinajpur），amount=100 欧元、period=3 天、completed=true；sellerRating average=5、reviewCount=97 为该团队账户累计信誉，不是本单评价；userEarningsPercentage=7.04 是平台对投标账户的统计字段，不是本单放款或净收入。
+- NGRX 状态中 `milestones:{}`、`milestoneRequests:{}` 均为空对象，employerFeedback/freelancerFeedback/projectFeedback 在登出态不存在；无里程碑放款、托管释放、提现、银行到账、本单评价或复雇字段。client 对象 rating 为 0 条评价，verification 仅 paymentVerified=true、emailVerified=true、phoneVerified=true、depositMade=true——depositMade 是买方账户级托管验证，不证明本单已付款。页面仍只有 “Paid on delivery” 付款方式标签。
+- otherEmployerJobs 暴露同一买方另两个条目：“Spanish Website Translation Audit”（30–250 欧元，/projects/editing/spanish-website-translation-audit）与 “Flutter App In-App Purchase Expert Needed”（15–25 美元/小时）。前者是潜在的同买方第二个翻译类项目，可能对应 CN302 档案中 Tim R. “多次合作” 评价，但本轮不展开、不计复购，留待后续轮次回源该项目页核对买方身份与完成状态。
+
+结论不变：本页支持具体买方需求、选人（100 欧元中标）与平台完成状态，但登出态仍无法证明实际放款金额、译员净提现或总工时；CN302 档案评价显示的 105 欧元与本单投标 100 欧元的差异继续保留历史原句，不用结构化字段覆盖。候选仍为 0。
