@@ -27,3 +27,9 @@ Shopify Flow原生功能、官方模板、社区免费答案和人工后台释�
 ## 可推翻当前结论的新证据
 
 需要商家明确原生方案测试失败的具体原因并发出采购，接受固定范围/金额，随后出现测试店验收、付款或正式上线。第二个免费问答或更多官方配置说明不足以升级。
+
+## 2026-11-09 回源：采纳答案仍是免费方案，采购未知未关闭
+
+HTTP 200 未登录只读复核原帖（Discourse 服务端渲染，46 KB 快照本地解析）。页面 schema.org 标记 answerCount=3：tim_tairli 的 created_at/标签查询、商家 hello_3463（店铺名 Jiminy’s）当天“按第一方案测试、有效再标 solution”的回复，以及 PieLab 于 2026-05-11 补发、2026-05-13 编辑的完整步骤——Get order data 用 `fulfillment_status:on_hold`，可加 `created_at:>=now-1d` 限定近 24 小时，For each 循环内执行 Release fulfillment hold。PieLab 回复被页面标记为 acceptedAnswer。
+
+采纳标记只说明平台侧把免费答案选为标准答案，不等于商家测试成功、正式上线或付费：商家本人最后发言仍停在 2026-04-15，没有测试结果、预算、报价或雇佣信号。免费供应商生态（社区答案＋官方原生动作）对配置类小包形成闭环反证，E1/需补证/撤出行动池维持。同页相关主题“Release Fulfilment Hold Once Inventory Arrives For Order”（2026-07-13）仅登记，未展开。
